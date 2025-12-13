@@ -1,31 +1,33 @@
-"use client"
+"use client";
 
-import { useState, useEffect, Suspense } from "react"
-import { useSearchParams } from "next/navigation"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { CitySelector } from "@/components/city-selector"
-import { ComparisonChart } from "@/components/comparison-chart"
-import { ComparisonTable } from "@/components/comparison-table"
-import { getAllCities, getCityData } from "@/lib/mock-data"
-import { chartExplanations } from "@/lib/chart-explanations"
-import { BarChart3, ArrowLeft } from "lucide-react"
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { CitySelector } from "@/components/city-selector";
+import { ComparisonChart } from "@/components/comparison-chart";
+import { ComparisonTable } from "@/components/comparison-table";
+import { getAllCities, getCityData } from "@/lib/mock-data";
+import { chartExplanations } from "@/lib/chart-explanations";
+import { BarChart3, ArrowLeft } from "lucide-react";
 
 function ComparePageContent() {
-  const searchParams = useSearchParams()
-  const allCities = getAllCities()
+  const searchParams = useSearchParams();
+  const allCities = getAllCities();
 
-  const [selectedCityIds, setSelectedCityIds] = useState<string[]>([])
+  const [selectedCityIds, setSelectedCityIds] = useState<string[]>([]);
 
   useEffect(() => {
-    const citiesParam = searchParams.get("cities")
+    const citiesParam = searchParams.get("cities");
     if (citiesParam) {
-      const cityIds = citiesParam.split(",").filter((id) => getCityData(id))
-      setSelectedCityIds(cityIds)
+      const cityIds = citiesParam.split(",").filter((id) => getCityData(id));
+      setSelectedCityIds(cityIds);
     }
-  }, [searchParams])
+  }, [searchParams]);
 
-  const selectedCities = selectedCityIds.map((id) => getCityData(id)).filter(Boolean) as any[]
+  const selectedCities = selectedCityIds
+    .map((id) => getCityData(id))
+    .filter(Boolean) as any[];
 
   return (
     <div className="min-h-screen">
@@ -54,7 +56,8 @@ function ComparePageContent() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-2">Compare Cities</h2>
           <p className="text-xl text-muted-foreground">
-            Select up to 4 cities to compare their financial metrics side by side
+            Select up to 4 cities to compare their financial metrics side by
+            side
           </p>
         </div>
       </section>
@@ -63,7 +66,9 @@ function ComparePageContent() {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-xl">
-            <label className="block text-sm font-medium mb-2">Select Cities to Compare</label>
+            <label className="block text-sm font-medium mb-2">
+              Select Cities to Compare
+            </label>
             <CitySelector
               cities={allCities}
               selectedCities={selectedCityIds}
@@ -91,28 +96,36 @@ function ComparePageContent() {
           {/* Comparison Charts */}
           <section className="py-8 bg-muted/30">
             <div className="container mx-auto px-4">
-              <h3 className="text-2xl font-bold mb-6">Financial Metrics Comparison</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                Financial Metrics Comparison
+              </h3>
 
               <div className="space-y-8">
                 <ComparisonChart
                   cities={selectedCities}
                   metricKey="netFinancialPosition"
                   title={chartExplanations.netFinancialPosition.title}
-                  description={chartExplanations.netFinancialPosition.description}
+                  description={
+                    chartExplanations.netFinancialPosition.description
+                  }
                 />
 
                 <ComparisonChart
                   cities={selectedCities}
                   metricKey="financialAssetsToLiabilities"
                   title={chartExplanations.financialAssetsToLiabilities.title}
-                  description={chartExplanations.financialAssetsToLiabilities.description}
+                  description={
+                    chartExplanations.financialAssetsToLiabilities.description
+                  }
                 />
 
                 <ComparisonChart
                   cities={selectedCities}
-                  metricKey="totalAssetsToLiabilities"
+                  metricKey="assetsToLiabilities"
                   title={chartExplanations.totalAssetsToLiabilities.title}
-                  description={chartExplanations.totalAssetsToLiabilities.description}
+                  description={
+                    chartExplanations.totalAssetsToLiabilities.description
+                  }
                 />
 
                 <ComparisonChart
@@ -131,16 +144,18 @@ function ComparePageContent() {
 
                 <ComparisonChart
                   cities={selectedCities}
-                  metricKey="netBookValueToCost"
+                  metricKey="netBookValueToCostOfTCA"
                   title={chartExplanations.netBookValueToCost.title}
                   description={chartExplanations.netBookValueToCost.description}
                 />
 
                 <ComparisonChart
                   cities={selectedCities}
-                  metricKey="governmentTransfersToRevenue"
+                  metricKey="externalTransfersToRevenue"
                   title={chartExplanations.governmentTransfersToRevenue.title}
-                  description={chartExplanations.governmentTransfersToRevenue.description}
+                  description={
+                    chartExplanations.governmentTransfersToRevenue.description
+                  }
                 />
               </div>
             </div>
@@ -149,7 +164,9 @@ function ComparePageContent() {
       ) : (
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <p className="text-lg text-muted-foreground">Select at least 2 cities to start comparing</p>
+            <p className="text-lg text-muted-foreground">
+              Select at least 2 cities to start comparing
+            </p>
           </div>
         </section>
       )}
@@ -157,11 +174,13 @@ function ComparePageContent() {
       {/* Footer */}
       <footer className="border-t py-8 bg-card">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Budget.City - Making municipal finances transparent and accessible</p>
+          <p>
+            Budget.City - Making municipal finances transparent and accessible
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 export default function ComparePage() {
@@ -175,5 +194,5 @@ export default function ComparePage() {
     >
       <ComparePageContent />
     </Suspense>
-  )
+  );
 }

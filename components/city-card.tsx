@@ -1,16 +1,22 @@
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import type { CityData } from "@/lib/types"
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import type { CityData } from "@/lib/types";
 
 interface CityCardProps {
-  city: CityData
+  city: CityData;
 }
 
 export function CityCard({ city }: CityCardProps) {
-  const latestYear = city.financialData[city.financialData.length - 1]
-  const latestMetrics = city.metrics[city.metrics.length - 1]
+  const latestYear = city.financialData[city.financialData.length - 1] || {};
+  const latestMetrics = city.metrics[city.metrics.length - 1] || {};
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("en-US", {
@@ -18,40 +24,52 @@ export function CityCard({ city }: CityCardProps) {
       currency: "USD",
       notation: "compact",
       maximumFractionDigits: 1,
-    }).format(value)
-  }
+    }).format(value);
+  };
 
   const formatPercent = (value: number) => {
-    return (value * 100).toFixed(1) + "%"
-  }
+    return (value * 100).toFixed(1) + "%";
+  };
 
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200">
       <CardHeader>
         <CardTitle>{city.info.name}</CardTitle>
-        <CardDescription>Population: {city.info.population.toLocaleString()}</CardDescription>
+        <CardDescription>
+          Population: {city.info.population.toLocaleString()}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="text-sm text-muted-foreground">Total Revenue</p>
-              <p className="text-lg font-semibold">{formatCurrency(latestYear.totalRevenue)}</p>
+              <p className="text-lg font-semibold">
+                {formatCurrency(latestYear.totalRevenue)}
+              </p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Net Debt/Revenue</p>
-              <p className="text-lg font-semibold">{formatPercent(latestMetrics.netDebtToRevenue)}</p>
+              <p className="text-lg font-semibold">
+                {formatPercent(latestMetrics.netDebtToRevenue)}
+              </p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="text-sm text-muted-foreground">Property Tax Rate</p>
-              <p className="text-lg font-semibold">{formatPercent(city.info.propertyTaxRate / 100)}</p>
+              <p className="text-lg font-semibold">
+                {formatPercent(city.info.propertyTaxRate / 100)}
+              </p>
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Assets/Liabilities</p>
-              <p className="text-lg font-semibold">{latestMetrics.totalAssetsToLiabilities.toFixed(2)}</p>
+              <p className="text-sm text-muted-foreground">
+                Assets/Liabilities
+              </p>
+              <p className="text-lg font-semibold">
+                {latestMetrics.assetsToLiabilities?.toFixed(2)}
+              </p>
             </div>
           </div>
 
@@ -64,5 +82,5 @@ export function CityCard({ city }: CityCardProps) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

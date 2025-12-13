@@ -1,33 +1,33 @@
-import { notFound } from "next/navigation"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { FinancialChart } from "@/components/financial-chart"
-import { SalesTaxBreakdown } from "@/components/sales-tax-breakdown"
-import { CityInfoCard } from "@/components/city-info-card"
-import { getCityData, getAllCities } from "@/lib/mock-data"
-import { chartExplanations } from "@/lib/chart-explanations"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BarChart3, ArrowLeft, GitCompare } from "lucide-react"
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { FinancialChart } from "@/components/financial-chart";
+import { SalesTaxBreakdown } from "@/components/sales-tax-breakdown";
+import { CityInfoCard } from "@/components/city-info-card";
+import { getCityData, getAllCities } from "@/lib/mock-data";
+import { chartExplanations } from "@/lib/chart-explanations";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
 
 interface CityPageProps {
   params: Promise<{
-    cityId: string
-  }>
+    cityId: string;
+  }>;
 }
 
 export async function generateStaticParams() {
-  const cities = getAllCities()
+  const cities = getAllCities();
   return cities.map((city) => ({
     cityId: city.info.id,
-  }))
+  }));
 }
 
 export default async function CityPage({ params }: CityPageProps) {
-  const { cityId } = await params
-  const cityData = getCityData(cityId)
+  const { cityId } = await params;
+  const cityData = getCityData(cityId);
 
   if (!cityData) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -62,7 +62,9 @@ export default async function CityPage({ params }: CityPageProps) {
       <section className="bg-gradient-to-b from-muted/50 to-background py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-2">{cityData.info.name}</h2>
-          <p className="text-xl text-muted-foreground">Financial Data & Analysis</p>
+          <p className="text-xl text-muted-foreground">
+            Financial Data & Analysis
+          </p>
         </div>
       </section>
 
@@ -76,7 +78,9 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Charts Grid */}
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h3 className="text-2xl font-bold mb-6">Financial Metrics Over Time</h3>
+          <h3 className="text-2xl font-bold mb-6">
+            Financial Metrics Over Time
+          </h3>
 
           <div className="space-y-12">
             {/* Net Financial Position */}
@@ -86,7 +90,9 @@ export default async function CityPage({ params }: CityPageProps) {
                   cityData={cityData}
                   metricKey="netFinancialPosition"
                   title={chartExplanations.netFinancialPosition.title}
-                  description={chartExplanations.netFinancialPosition.description}
+                  description={
+                    chartExplanations.netFinancialPosition.description
+                  }
                 />
               </div>
               <Card className="bg-muted/30">
@@ -95,13 +101,17 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {chartExplanations.netFinancialPosition.whatItMeans}
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {chartExplanations.netFinancialPosition.whatToLookFor}
                     </p>
@@ -117,7 +127,9 @@ export default async function CityPage({ params }: CityPageProps) {
                   cityData={cityData}
                   metricKey="financialAssetsToLiabilities"
                   title={chartExplanations.financialAssetsToLiabilities.title}
-                  description={chartExplanations.financialAssetsToLiabilities.description}
+                  description={
+                    chartExplanations.financialAssetsToLiabilities.description
+                  }
                 />
               </div>
               <Card className="bg-muted/30">
@@ -126,15 +138,25 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.financialAssetsToLiabilities.whatItMeans}
+                      {
+                        chartExplanations.financialAssetsToLiabilities
+                          .whatItMeans
+                      }
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.financialAssetsToLiabilities.whatToLookFor}
+                      {
+                        chartExplanations.financialAssetsToLiabilities
+                          .whatToLookFor
+                      }
                     </p>
                   </div>
                 </CardContent>
@@ -146,9 +168,11 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
-                  metricKey="totalAssetsToLiabilities"
+                  metricKey="assetsToLiabilities"
                   title={chartExplanations.totalAssetsToLiabilities.title}
-                  description={chartExplanations.totalAssetsToLiabilities.description}
+                  description={
+                    chartExplanations.totalAssetsToLiabilities.description
+                  }
                 />
               </div>
               <Card className="bg-muted/30">
@@ -157,13 +181,17 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {chartExplanations.totalAssetsToLiabilities.whatItMeans}
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {chartExplanations.totalAssetsToLiabilities.whatToLookFor}
                     </p>
@@ -188,12 +216,20 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
-                    <p className="text-sm text-muted-foreground">{chartExplanations.netDebtToRevenue.whatItMeans}</p>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {chartExplanations.netDebtToRevenue.whatItMeans}
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
-                    <p className="text-sm text-muted-foreground">{chartExplanations.netDebtToRevenue.whatToLookFor}</p>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {chartExplanations.netDebtToRevenue.whatToLookFor}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -215,12 +251,20 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
-                    <p className="text-sm text-muted-foreground">{chartExplanations.interestToRevenue.whatItMeans}</p>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {chartExplanations.interestToRevenue.whatItMeans}
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
-                    <p className="text-sm text-muted-foreground">{chartExplanations.interestToRevenue.whatToLookFor}</p>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {chartExplanations.interestToRevenue.whatToLookFor}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -231,7 +275,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
-                  metricKey="netBookValueToCost"
+                  metricKey="netBookValueToCostOfTCA"
                   title={chartExplanations.netBookValueToCost.title}
                   description={chartExplanations.netBookValueToCost.description}
                 />
@@ -242,11 +286,17 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
-                    <p className="text-sm text-muted-foreground">{chartExplanations.netBookValueToCost.whatItMeans}</p>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {chartExplanations.netBookValueToCost.whatItMeans}
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {chartExplanations.netBookValueToCost.whatToLookFor}
                     </p>
@@ -260,9 +310,11 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
-                  metricKey="governmentTransfersToRevenue"
+                  metricKey="externalTransfersToRevenue"
                   title={chartExplanations.governmentTransfersToRevenue.title}
-                  description={chartExplanations.governmentTransfersToRevenue.description}
+                  description={
+                    chartExplanations.governmentTransfersToRevenue.description
+                  }
                 />
               </div>
               <Card className="bg-muted/30">
@@ -271,15 +323,25 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">Understanding the Metric</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.governmentTransfersToRevenue.whatItMeans}
+                      {
+                        chartExplanations.governmentTransfersToRevenue
+                          .whatItMeans
+                      }
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.governmentTransfersToRevenue.whatToLookFor}
+                      {
+                        chartExplanations.governmentTransfersToRevenue
+                          .whatToLookFor
+                      }
                     </p>
                   </div>
                 </CardContent>
@@ -300,9 +362,11 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Footer */}
       <footer className="border-t py-8 bg-card">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Budget.City - Making municipal finances transparent and accessible</p>
+          <p>
+            Budget.City - Making municipal finances transparent and accessible
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }

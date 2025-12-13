@@ -1,53 +1,60 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Card } from "@/components/ui/card"
-import type { CityData } from "@/lib/types"
+import { useState } from "react";
+import Link from "next/link";
+import { Card } from "@/components/ui/card";
+import type { CityData } from "@/lib/types";
 
 interface CityMapProps {
-  cities: CityData[]
+  cities: CityData[];
 }
 
 export function CityMap({ cities }: CityMapProps) {
-  const [hoveredCity, setHoveredCity] = useState<string | null>(null)
+  const [hoveredCity, setHoveredCity] = useState<string | null>(null);
 
   // Calculate bounds for the map
-  const lats = cities.map((c) => c.info.latitude)
-  const lngs = cities.map((c) => c.info.longitude)
-  const minLat = Math.min(...lats) - 0.1
-  const maxLat = Math.max(...lats) + 0.1
-  const minLng = Math.min(...lngs) - 0.1
-  const maxLng = Math.max(...lngs) + 0.1
+  const lats = cities.map((c) => c.info.latitude);
+  const lngs = cities.map((c) => c.info.longitude);
+  const minLat = Math.min(...lats) - 0.1;
+  const maxLat = Math.max(...lats) + 0.1;
+  const minLng = Math.min(...lngs) - 0.1;
+  const maxLng = Math.max(...lngs) + 0.1;
 
   // Function to convert lat/lng to SVG coordinates
   const latLngToXY = (lat: number, lng: number) => {
-    const x = ((lng - minLng) / (maxLng - minLng)) * 100
-    const y = ((maxLat - lat) / (maxLat - minLat)) * 100
-    return { x, y }
-  }
+    const x = ((lng - minLng) / (maxLng - minLng)) * 100;
+    const y = ((maxLat - lat) / (maxLat - minLat)) * 100;
+    return { x, y };
+  };
 
   // Get color based on net debt to revenue ratio
   const getColorForRatio = (ratio: number) => {
-    if (ratio < 0.5) return "oklch(0.696 0.17 162.48)" // green - good
-    if (ratio < 1.0) return "oklch(0.769 0.188 70.08)" // yellow - moderate
-    if (ratio < 1.5) return "oklch(0.646 0.222 41.116)" // orange - concerning
-    return "oklch(0.577 0.245 27.325)" // red - high
-  }
+    if (ratio < 0.5) return "oklch(0.696 0.17 162.48)"; // green - good
+    if (ratio < 1.0) return "oklch(0.769 0.188 70.08)"; // yellow - moderate
+    if (ratio < 1.5) return "oklch(0.646 0.222 41.116)"; // orange - concerning
+    return "oklch(0.577 0.245 27.325)"; // red - high
+  };
 
   return (
     <div className="relative w-full h-[500px]">
       <svg viewBox="0 0 100 100" className="w-full h-full">
         {/* Map background */}
-        <rect x="0" y="0" width="100" height="100" fill="var(--color-muted)" opacity="0.3" />
+        <rect
+          x="0"
+          y="0"
+          width="100"
+          height="100"
+          fill="var(--color-muted)"
+          opacity="0.3"
+        />
 
         {/* City markers */}
         {cities.map((city) => {
-          const { x, y } = latLngToXY(city.info.latitude, city.info.longitude)
-          const latestMetrics = city.metrics[city.metrics.length - 1]
-          const ratio = latestMetrics.netDebtToRevenue
-          const color = getColorForRatio(ratio)
-          const isHovered = hoveredCity === city.info.id
+          const { x, y } = latLngToXY(city.info.latitude, city.info.longitude);
+          const latestMetrics = city.metrics[city.metrics.length - 1] || {};
+          const ratio = latestMetrics.netDebtToRevenue;
+          const color = getColorForRatio(ratio);
+          const isHovered = hoveredCity === city.info.id;
 
           return (
             <g key={city.info.id}>
@@ -91,7 +98,7 @@ export function CityMap({ cities }: CityMapProps) {
                 </>
               )}
             </g>
-          )
+          );
         })}
       </svg>
 
@@ -100,23 +107,35 @@ export function CityMap({ cities }: CityMapProps) {
         <h4 className="text-sm font-semibold mb-2">Net Debt to Revenue</h4>
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "oklch(0.696 0.17 162.48)" }} />
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.696 0.17 162.48)" }}
+            />
             <span className="text-xs">{"< 0.5 (Excellent)"}</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "oklch(0.769 0.188 70.08)" }} />
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.769 0.188 70.08)" }}
+            />
             <span className="text-xs">{"0.5 - 1.0 (Good)"}</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "oklch(0.646 0.222 41.116)" }} />
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.646 0.222 41.116)" }}
+            />
             <span className="text-xs">{"1.0 - 1.5 (Moderate)"}</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "oklch(0.577 0.245 27.325)" }} />
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.577 0.245 27.325)" }}
+            />
             <span className="text-xs">{"> 1.5 (High)"}</span>
           </div>
         </div>
       </Card>
     </div>
-  )
+  );
 }
