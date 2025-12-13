@@ -1,0 +1,243 @@
+import type { CityData } from "./types"
+import { calculateMetrics } from "./csv-processor"
+
+// Mock data for Dallas area cities
+export const mockCitiesData: CityData[] = [
+  {
+    info: {
+      id: "dallas",
+      name: "Dallas",
+      population: 1304379,
+      propertyTaxRate: 0.79,
+      salesTaxBreakdown: [
+        { category: "Public Safety", percentage: 35, amount: 450000000 },
+        { category: "Transportation", percentage: 25, amount: 320000000 },
+        { category: "Parks & Recreation", percentage: 15, amount: 192000000 },
+        { category: "Community Services", percentage: 15, amount: 192000000 },
+        { category: "Administration", percentage: 10, amount: 128000000 },
+      ],
+      latitude: 32.7767,
+      longitude: -96.797,
+    },
+    financialData: [
+      {
+        year: 2020,
+        totalRevenue: 3800000000,
+        totalAssets: 12000000000,
+        totalLiabilities: 4500000000,
+        financialAssets: 2000000000,
+        netDebt: 2500000000,
+        interest: 180000000,
+        governmentTransfers: 380000000,
+        netBookValue: 6500000000,
+        costOfTangibleCapitalAssets: 10000000000,
+      },
+      {
+        year: 2021,
+        totalRevenue: 4000000000,
+        totalAssets: 12500000000,
+        totalLiabilities: 4600000000,
+        financialAssets: 2200000000,
+        netDebt: 2400000000,
+        interest: 175000000,
+        governmentTransfers: 400000000,
+        netBookValue: 6800000000,
+        costOfTangibleCapitalAssets: 10500000000,
+      },
+      {
+        year: 2022,
+        totalRevenue: 4200000000,
+        totalAssets: 13000000000,
+        totalLiabilities: 4700000000,
+        financialAssets: 2400000000,
+        netDebt: 2300000000,
+        interest: 170000000,
+        governmentTransfers: 420000000,
+        netBookValue: 7100000000,
+        costOfTangibleCapitalAssets: 11000000000,
+      },
+    ],
+    metrics: [],
+  },
+  {
+    info: {
+      id: "fort-worth",
+      name: "Fort Worth",
+      population: 935508,
+      propertyTaxRate: 0.75,
+      salesTaxBreakdown: [
+        { category: "Public Safety", percentage: 40, amount: 280000000 },
+        { category: "Transportation", percentage: 22, amount: 154000000 },
+        { category: "Parks & Recreation", percentage: 18, amount: 126000000 },
+        { category: "Community Services", percentage: 12, amount: 84000000 },
+        { category: "Administration", percentage: 8, amount: 56000000 },
+      ],
+      latitude: 32.7555,
+      longitude: -97.3308,
+    },
+    financialData: [
+      {
+        year: 2020,
+        totalRevenue: 2500000000,
+        totalAssets: 8000000000,
+        totalLiabilities: 3000000000,
+        financialAssets: 1500000000,
+        netDebt: 1500000000,
+        interest: 120000000,
+        governmentTransfers: 250000000,
+        netBookValue: 4500000000,
+        costOfTangibleCapitalAssets: 6500000000,
+      },
+      {
+        year: 2021,
+        totalRevenue: 2700000000,
+        totalAssets: 8500000000,
+        totalLiabilities: 3100000000,
+        financialAssets: 1600000000,
+        netDebt: 1500000000,
+        interest: 118000000,
+        governmentTransfers: 270000000,
+        netBookValue: 4800000000,
+        costOfTangibleCapitalAssets: 7000000000,
+      },
+      {
+        year: 2022,
+        totalRevenue: 2900000000,
+        totalAssets: 9000000000,
+        totalLiabilities: 3200000000,
+        financialAssets: 1700000000,
+        netDebt: 1500000000,
+        interest: 115000000,
+        governmentTransfers: 290000000,
+        netBookValue: 5100000000,
+        costOfTangibleCapitalAssets: 7500000000,
+      },
+    ],
+    metrics: [],
+  },
+  {
+    info: {
+      id: "plano",
+      name: "Plano",
+      population: 285494,
+      propertyTaxRate: 0.5,
+      salesTaxBreakdown: [
+        { category: "Public Safety", percentage: 38, amount: 95000000 },
+        { category: "Transportation", percentage: 28, amount: 70000000 },
+        { category: "Parks & Recreation", percentage: 20, amount: 50000000 },
+        { category: "Community Services", percentage: 9, amount: 22500000 },
+        { category: "Administration", percentage: 5, amount: 12500000 },
+      ],
+      latitude: 33.0198,
+      longitude: -96.6989,
+    },
+    financialData: [
+      {
+        year: 2020,
+        totalRevenue: 650000000,
+        totalAssets: 2500000000,
+        totalLiabilities: 800000000,
+        financialAssets: 500000000,
+        netDebt: 300000000,
+        interest: 25000000,
+        governmentTransfers: 65000000,
+        netBookValue: 1400000000,
+        costOfTangibleCapitalAssets: 2000000000,
+      },
+      {
+        year: 2021,
+        totalRevenue: 700000000,
+        totalAssets: 2700000000,
+        totalLiabilities: 850000000,
+        financialAssets: 550000000,
+        netDebt: 300000000,
+        interest: 24000000,
+        governmentTransfers: 70000000,
+        netBookValue: 1500000000,
+        costOfTangibleCapitalAssets: 2100000000,
+      },
+      {
+        year: 2022,
+        totalRevenue: 750000000,
+        totalAssets: 2900000000,
+        totalLiabilities: 900000000,
+        financialAssets: 600000000,
+        netDebt: 300000000,
+        interest: 23000000,
+        governmentTransfers: 75000000,
+        netBookValue: 1600000000,
+        costOfTangibleCapitalAssets: 2200000000,
+      },
+    ],
+    metrics: [],
+  },
+  {
+    info: {
+      id: "arlington",
+      name: "Arlington",
+      population: 394266,
+      propertyTaxRate: 0.72,
+      salesTaxBreakdown: [
+        { category: "Public Safety", percentage: 42, amount: 147000000 },
+        { category: "Transportation", percentage: 24, amount: 84000000 },
+        { category: "Parks & Recreation", percentage: 16, amount: 56000000 },
+        { category: "Community Services", percentage: 11, amount: 38500000 },
+        { category: "Administration", percentage: 7, amount: 24500000 },
+      ],
+      latitude: 32.7357,
+      longitude: -97.1081,
+    },
+    financialData: [
+      {
+        year: 2020,
+        totalRevenue: 900000000,
+        totalAssets: 3200000000,
+        totalLiabilities: 1400000000,
+        financialAssets: 700000000,
+        netDebt: 700000000,
+        interest: 55000000,
+        governmentTransfers: 90000000,
+        netBookValue: 1800000000,
+        costOfTangibleCapitalAssets: 2500000000,
+      },
+      {
+        year: 2021,
+        totalRevenue: 950000000,
+        totalAssets: 3400000000,
+        totalLiabilities: 1450000000,
+        financialAssets: 750000000,
+        netDebt: 700000000,
+        interest: 53000000,
+        governmentTransfers: 95000000,
+        netBookValue: 1900000000,
+        costOfTangibleCapitalAssets: 2600000000,
+      },
+      {
+        year: 2022,
+        totalRevenue: 1000000000,
+        totalAssets: 3600000000,
+        totalLiabilities: 1500000000,
+        financialAssets: 800000000,
+        netDebt: 700000000,
+        interest: 51000000,
+        governmentTransfers: 100000000,
+        netBookValue: 2000000000,
+        costOfTangibleCapitalAssets: 2700000000,
+      },
+    ],
+    metrics: [],
+  },
+]
+
+// Calculate metrics for each city
+mockCitiesData.forEach((city) => {
+  city.metrics = city.financialData.map(calculateMetrics)
+})
+
+export function getCityData(cityId: string): CityData | undefined {
+  return mockCitiesData.find((city) => city.info.id === cityId)
+}
+
+export function getAllCities(): CityData[] {
+  return mockCitiesData
+}
