@@ -49,7 +49,9 @@ export function CityCard({ city }: CityCardProps) {
               </p>
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Net Debt/Revenue</p>
+              <p className="text-sm text-muted-foreground">
+                Net Debt / Revenue
+              </p>
               <p className="text-lg font-semibold">
                 {formatPercent(latestMetrics.netDebtToRevenue)}
               </p>
@@ -58,17 +60,17 @@ export function CityCard({ city }: CityCardProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="text-sm text-muted-foreground">Property Tax Rate</p>
+              <p className="text-sm text-muted-foreground">Asset Life</p>
               <p className="text-lg font-semibold">
-                {formatPercent(city.info.propertyTaxRate / 100)}
+                {formatPercent(latestMetrics.netBookValueToCostOfTCA)}
               </p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">
-                Assets/Liabilities
+                Interest / Revenue
               </p>
               <p className="text-lg font-semibold">
-                {latestMetrics.assetsToLiabilities?.toFixed(2)}
+                {formatPercent(latestMetrics.interestToRevenue)}
               </p>
             </div>
           </div>

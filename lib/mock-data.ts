@@ -1,5 +1,6 @@
 import type { CityData } from "./types";
-import { calculateMetrics, readACFR } from "./csv-processor";
+import { readACFR } from "./csv-processor";
+import { calculateACFRMetrics } from "./format-acfr-data";
 
 // Mock data for Dallas area cities
 export const mockCitiesData: CityData[] = [
@@ -7,7 +8,7 @@ export const mockCitiesData: CityData[] = [
     info: {
       id: "dallas",
       name: "Dallas",
-      population: 1304379,
+      population: 1385989,
       propertyTaxRate: 0.79,
       salesTaxBreakdown: [
         { category: "Public Safety", percentage: 35, amount: 450000000 },
@@ -24,28 +25,9 @@ export const mockCitiesData: CityData[] = [
   },
   {
     info: {
-      id: "fort-worth",
-      name: "Fort Worth",
-      population: 935508,
-      propertyTaxRate: 0.75,
-      salesTaxBreakdown: [
-        { category: "Public Safety", percentage: 40, amount: 280000000 },
-        { category: "Transportation", percentage: 22, amount: 154000000 },
-        { category: "Parks & Recreation", percentage: 18, amount: 126000000 },
-        { category: "Community Services", percentage: 12, amount: 84000000 },
-        { category: "Administration", percentage: 8, amount: 56000000 },
-      ],
-      latitude: 32.7555,
-      longitude: -97.3308,
-    },
-    financialData: [],
-    metrics: [],
-  },
-  {
-    info: {
       id: "plano",
       name: "Plano",
-      population: 285494,
+      population: 299262,
       propertyTaxRate: 0.5,
       salesTaxBreakdown: [
         { category: "Public Safety", percentage: 38, amount: 95000000 },
@@ -84,7 +66,8 @@ export const mockCitiesData: CityData[] = [
 // // Calculate metrics for each city
 mockCitiesData.forEach((city) => {
   const financialData = readACFR("data/acfr/" + city.info.id + ".csv");
-  city.metrics = financialData.map(calculateMetrics);
+  city.financialData = financialData;
+  city.metrics = financialData.map(calculateACFRMetrics);
 });
 
 export function getCityData(cityId: string): CityData | undefined {

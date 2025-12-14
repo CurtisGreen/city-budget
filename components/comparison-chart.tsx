@@ -1,81 +1,114 @@
-"use client"
+"use client";
 
-import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Legend } from "recharts"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-import type { CityData } from "@/lib/types"
-import { calculateAverageMetrics } from "@/lib/csv-processor"
-import { getAllCities } from "@/lib/mock-data"
+import {
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
+import type { CityData } from "@/lib/types";
+import { calculateAverageMetrics } from "@/lib/format-acfr-data";
 
 interface ComparisonChartProps {
-  cities: CityData[]
-  metricKey: keyof CityData["metrics"][0]
-  title: string
-  description: string
-  formatValue?: (value: number) => string
+  cities: CityData[];
+  metricKey: keyof CityData["metrics"][0];
+  title: string;
+  description: string;
+  formatValue?: (value: number) => string;
 }
 
-const CITY_COLORS = ["hsl(var(--chart-1))", "hsl(var(--chart-2))", "hsl(var(--chart-4))", "hsl(var(--chart-5))"]
+const CITY_COLORS = [
+  "var(--chart-1)",
+  "var(--chart-2)",
+  "var(--chart-4)",
+  "var(--chart-5)",
+];
 
-export function ComparisonChart({ cities, metricKey, title, description, formatValue }: ComparisonChartProps) {
-  const allCities = getAllCities()
-  const averageMetrics = calculateAverageMetrics(allCities.map((c) => c.financialData))
+export function ComparisonChart({
+  cities,
+  metricKey,
+  title,
+  description,
+  formatValue,
+}: ComparisonChartProps) {
+  console.log(cities);
+  const averageMetrics = calculateAverageMetrics(
+    cities.map((c) => c.financialData)
+  );
 
   // Get all unique years
-  const years = new Set<number>()
+  const years = new Set<number>();
   cities.forEach((city) => {
-    city.financialData.forEach((data) => years.add(data.year))
-  })
-  const sortedYears = Array.from(years).sort()
+    city.financialData.forEach((data) => years.add(data.fiscalYear));
+  });
+  const sortedYears = Array.from(years).sort();
 
   // Prepare chart data
   const chartData = sortedYears.map((year) => {
-    const dataPoint: any = { year }
+    const dataPoint: any = { year };
 
-    cities.forEach((city, index) => {
-      const yearIndex = city.financialData.findIndex((d) => d.year === year)
+    cities.forEach((city) => {
+      const yearIndex = city.financialData.findIndex(
+        (d) => d.fiscalYear === year
+      );
       if (yearIndex !== -1) {
-        dataPoint[`city${index}`] = city.metrics[yearIndex][metricKey] as number
+        dataPoint[city.info.id] = city.metrics[yearIndex][metricKey] as number;
       }
-    })
+    });
 
     // Add average
     const avgIndex = averageMetrics.findIndex((_, i) => {
-      const allYears = allCities[0].financialData.map((d) => d.year)
-      return allYears[i] === year
-    })
+      const allYears = cities[0].financialData.map((d) => d.fiscalYear);
+      return allYears[i] === year;
+    });
+
     if (avgIndex !== -1) {
-      dataPoint.average = averageMetrics[avgIndex][metricKey] as number
+      dataPoint.average = averageMetrics[avgIndex][metricKey] as number;
     }
 
-    return dataPoint
-  })
+    return dataPoint;
+  });
 
   const defaultFormatter = (value: number) => {
     if (Math.abs(value) >= 1000000000) {
-      return `$${(value / 1000000000).toFixed(1)}B`
+      return `$${(value / 1000000000).toFixed(1)}B`;
     } else if (Math.abs(value) >= 1000000) {
-      return `$${(value / 1000000).toFixed(1)}M`
+      return `$${(value / 1000000).toFixed(1)}M`;
     } else if (value >= 1 || value <= -1) {
-      return value.toFixed(2)
+      return value.toFixed(2);
     } else {
-      return (value * 100).toFixed(1) + "%"
+      return (value * 100).toFixed(1) + "%";
     }
-  }
+  };
 
-  const formatter = formatValue || defaultFormatter
+  const formatter = formatValue || defaultFormatter;
 
-  const config: any = {}
+  const config: any = {};
   cities.forEach((city, index) => {
-    config[`city${index}`] = {
+    config[city.info.id] = {
       label: city.info.name,
       color: CITY_COLORS[index % CITY_COLORS.length],
-    }
-  })
+    };
+  });
   config.average = {
     label: "Average",
-    color: "hsl(var(--chart-3))",
-  }
+    color: "var(--chart-3)",
+  };
 
   return (
     <Card>
@@ -86,18 +119,27 @@ export function ComparisonChart({ cities, metricKey, title, description, formatV
       <CardContent>
         <ChartContainer config={config} className="h-[350px]">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart
+              data={chartData}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
               <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
               <XAxis dataKey="year" className="text-xs" />
               <YAxis tickFormatter={formatter} className="text-xs" />
-              <ChartTooltip content={<ChartTooltipContent formatter={(value) => formatter(value as number)} />} />
+              <ChartTooltip
+                content={
+                  <ChartTooltipContent
+                    formatter={(value) => formatter(value as number)}
+                  />
+                }
+              />
               <Legend />
 
               {cities.map((city, index) => (
                 <Line
                   key={city.info.id}
                   type="monotone"
-                  dataKey={`city${index}`}
+                  dataKey={city.info.id}
                   stroke={CITY_COLORS[index % CITY_COLORS.length]}
                   strokeWidth={2}
                   name={city.info.name}
@@ -108,7 +150,7 @@ export function ComparisonChart({ cities, metricKey, title, description, formatV
               <Line
                 type="monotone"
                 dataKey="average"
-                stroke="var(--color-average)"
+                // stroke="var(--color-average)"
                 strokeWidth={2}
                 strokeDasharray="5 5"
                 name="Average"
@@ -119,5 +161,5 @@ export function ComparisonChart({ cities, metricKey, title, description, formatV
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

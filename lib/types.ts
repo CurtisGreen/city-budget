@@ -52,4 +52,5 @@ export interface ChartExplanation {
   description: string;
   whatItMeans: string;
   whatToLookFor: string;
+  note?: string;
 }

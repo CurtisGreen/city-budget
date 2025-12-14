@@ -1,9 +1,22 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import type { CityData } from "@/lib/types"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import type { CityData } from "@/lib/types";
 
 interface ComparisonTableProps {
-  cities: CityData[]
+  cities: CityData[];
 }
 
 export function ComparisonTable({ cities }: ComparisonTableProps) {
@@ -13,16 +26,16 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
       currency: "USD",
       notation: "compact",
       maximumFractionDigits: 1,
-    }).format(value)
-  }
+    }).format(value);
+  };
 
   const formatPercent = (value: number) => {
-    return (value * 100).toFixed(2) + "%"
-  }
+    return (value * 100).toFixed(2) + "%";
+  };
 
   const formatRatio = (value: number) => {
-    return value.toFixed(2)
-  }
+    return value.toFixed(2);
+  };
 
   return (
     <Card>
@@ -37,7 +50,10 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
               <TableRow>
                 <TableHead className="font-semibold">Metric</TableHead>
                 {cities.map((city) => (
-                  <TableHead key={city.info.id} className="text-center font-semibold">
+                  <TableHead
+                    key={city.info.id}
+                    className="text-center font-semibold"
+                  >
                     {city.info.name}
                   </TableHead>
                 ))}
@@ -63,78 +79,87 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
               <TableRow>
                 <TableCell className="font-medium">Total Revenue</TableCell>
                 {cities.map((city) => {
-                  const latest = city.financialData[city.financialData.length - 1]
+                  const latest =
+                    city.financialData[city.financialData.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
                       {formatCurrency(latest.totalRevenue)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Total Assets</TableCell>
+                <TableCell className="font-medium">Asset Life</TableCell>
                 {cities.map((city) => {
-                  const latest = city.financialData[city.financialData.length - 1]
+                  const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
-                      {formatCurrency(latest.totalAssets)}
+                      {formatPercent(latest.netBookValueToCostOfTCA)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Total Liabilities</TableCell>
+                <TableCell className="font-medium">
+                  Financial Assets / Liabilities
+                </TableCell>
                 {cities.map((city) => {
-                  const latest = city.financialData[city.financialData.length - 1]
+                  const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
-                      {formatCurrency(latest.totalLiabilities)}
+                      {formatRatio(latest.financialAssetsToLiabilities)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Net Financial Position</TableCell>
+                <TableCell className="font-medium">
+                  Net Financial Position
+                </TableCell>
                 {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1]
+                  const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
                       {formatCurrency(latest.netFinancialPosition)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Assets/Liabilities Ratio</TableCell>
+                <TableCell className="font-medium">
+                  External Transfers / Revenue
+                </TableCell>
                 {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1]
+                  const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
-                      {formatRatio(latest.totalAssetsToLiabilities)}
+                      {formatPercent(latest.externalTransfersToRevenue)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Net Debt/Revenue</TableCell>
+                <TableCell className="font-medium">
+                  Net Debt / Revenue
+                </TableCell>
                 {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1]
+                  const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
                       {formatRatio(latest.netDebtToRevenue)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">Interest/Revenue</TableCell>
                 {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1]
+                  const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
                       {formatPercent(latest.interestToRevenue)}
                     </TableCell>
-                  )
+                  );
                 })}
               </TableRow>
             </TableBody>
@@ -142,5 +167,5 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

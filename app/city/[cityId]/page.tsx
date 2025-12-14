@@ -8,6 +8,7 @@ import { getCityData, getAllCities } from "@/lib/mock-data";
 import { chartExplanations } from "@/lib/chart-explanations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
+import { calculateAverageMetrics } from "@/lib/format-acfr-data";
 
 interface CityPageProps {
   params: Promise<{
@@ -24,6 +25,10 @@ export async function generateStaticParams() {
 
 export default async function CityPage({ params }: CityPageProps) {
   const { cityId } = await params;
+  const allCities = getAllCities();
+  const averageCityMetrics = calculateAverageMetrics(
+    allCities.map((c) => c.financialData)
+  );
   const cityData = getCityData(cityId);
 
   if (!cityData) {
@@ -88,6 +93,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="netFinancialPosition"
                   title={chartExplanations.netFinancialPosition.title}
                   description={
@@ -125,6 +131,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="financialAssetsToLiabilities"
                   title={chartExplanations.financialAssetsToLiabilities.title}
                   description={
@@ -168,6 +175,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="assetsToLiabilities"
                   title={chartExplanations.totalAssetsToLiabilities.title}
                   description={
@@ -205,6 +213,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="netDebtToRevenue"
                   title={chartExplanations.netDebtToRevenue.title}
                   description={chartExplanations.netDebtToRevenue.description}
@@ -231,6 +240,14 @@ export default async function CityPage({ params }: CityPageProps) {
                       {chartExplanations.netDebtToRevenue.whatToLookFor}
                     </p>
                   </div>
+                  {chartExplanations.netDebtToRevenue.note && (
+                    <div>
+                      <h4 className="font-semibold text-sm mb-1">Note</h4>
+                      <p className="text-sm text-muted-foreground">
+                        {chartExplanations.netDebtToRevenue.note}
+                      </p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </div>
@@ -240,6 +257,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="interestToRevenue"
                   title={chartExplanations.interestToRevenue.title}
                   description={chartExplanations.interestToRevenue.description}
@@ -275,6 +293,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="netBookValueToCostOfTCA"
                   title={chartExplanations.netBookValueToCost.title}
                   description={chartExplanations.netBookValueToCost.description}
@@ -310,10 +329,11 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
+                  averageCityMetrics={averageCityMetrics}
                   metricKey="externalTransfersToRevenue"
-                  title={chartExplanations.governmentTransfersToRevenue.title}
+                  title={chartExplanations.externalTransfersToRevenue.title}
                   description={
-                    chartExplanations.governmentTransfersToRevenue.description
+                    chartExplanations.externalTransfersToRevenue.description
                   }
                 />
               </div>
@@ -327,10 +347,7 @@ export default async function CityPage({ params }: CityPageProps) {
                       Understanding the Metric
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      {
-                        chartExplanations.governmentTransfersToRevenue
-                          .whatItMeans
-                      }
+                      {chartExplanations.externalTransfersToRevenue.whatItMeans}
                     </p>
                   </div>
                   <div>
@@ -339,7 +356,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     </h4>
                     <p className="text-sm text-muted-foreground">
                       {
-                        chartExplanations.governmentTransfersToRevenue
+                        chartExplanations.externalTransfersToRevenue
                           .whatToLookFor
                       }
                     </p>
@@ -362,9 +379,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Footer */}
       <footer className="border-t py-8 bg-card">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>
-            Budget.City - Making municipal finances transparent and accessible
-          </p>
+          <p>Budget.City - Making municipal finances easy and accessible</p>
         </div>
       </footer>
     </div>
