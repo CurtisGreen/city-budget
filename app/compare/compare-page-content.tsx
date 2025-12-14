@@ -8,8 +8,9 @@ import { CitySelector } from "@/components/city-selector";
 import { ComparisonChart } from "@/components/comparison-chart";
 import { ComparisonTable } from "@/components/comparison-table";
 import { chartExplanations } from "@/lib/chart-explanations";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft } from "lucide-react";
-import { CityData } from "@/lib/types";
+import { CityData, CityMetrics } from "@/lib/types";
 
 export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const getCityData = (cityId: string) =>
@@ -29,6 +30,16 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const selectedCities = selectedCityIds
     .map((id) => getCityData(id))
     .filter(Boolean) as CityData[];
+
+  const metricKeys = [
+    "netFinancialPosition",
+    "financialAssetsToLiabilities",
+    "assetsToLiabilities",
+    "netDebtToRevenue",
+    "interestToRevenue",
+    "netBookValueToCostOfTCA",
+    "externalTransfersToRevenue",
+  ];
 
   return (
     <div className="min-h-screen">
@@ -101,64 +112,58 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                 Financial Metrics Comparison
               </h3>
 
-              <div className="space-y-8">
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="netFinancialPosition"
-                  title={chartExplanations.netFinancialPosition.title}
-                  description={
-                    chartExplanations.netFinancialPosition.description
-                  }
-                />
-
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="financialAssetsToLiabilities"
-                  title={chartExplanations.financialAssetsToLiabilities.title}
-                  description={
-                    chartExplanations.financialAssetsToLiabilities.description
-                  }
-                />
-
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="assetsToLiabilities"
-                  title={chartExplanations.totalAssetsToLiabilities.title}
-                  description={
-                    chartExplanations.totalAssetsToLiabilities.description
-                  }
-                />
-
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="netDebtToRevenue"
-                  title={chartExplanations.netDebtToRevenue.title}
-                  description={chartExplanations.netDebtToRevenue.description}
-                />
-
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="interestToRevenue"
-                  title={chartExplanations.interestToRevenue.title}
-                  description={chartExplanations.interestToRevenue.description}
-                />
-
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="netBookValueToCostOfTCA"
-                  title={chartExplanations.netBookValueToCost.title}
-                  description={chartExplanations.netBookValueToCost.description}
-                />
-
-                <ComparisonChart
-                  cities={selectedCities}
-                  metricKey="externalTransfersToRevenue"
-                  title={chartExplanations.externalTransfersToRevenue.title}
-                  description={
-                    chartExplanations.externalTransfersToRevenue.description
-                  }
-                />
-              </div>
+              {/* <div className="space-y-8">
+                {metricKeys.map((metricKey) => (
+                  <ComparisonChart
+                    key={metricKey}
+                    cities={selectedCities}
+                    metricKey={metricKey as keyof CityMetrics}
+                    title={chartExplanations[metricKey].title}
+                    description={chartExplanations[metricKey].description}
+                  />
+                ))}
+              </div> */}
+              {metricKeys.map((metricKey) => (
+                <div
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+                  key={metricKey}
+                >
+                  <div className="lg:col-span-2">
+                    <ComparisonChart
+                      // key={metricKey}
+                      cities={selectedCities}
+                      metricKey={metricKey as keyof CityMetrics}
+                      title={chartExplanations[metricKey].title}
+                      description={chartExplanations[metricKey].description}
+                    />
+                  </div>
+                  <Card className="bg-muted/30">
+                    <CardHeader>
+                      <CardTitle className="text-base">
+                        What This Means
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-sm mb-1">
+                          Understanding the Metric
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {chartExplanations.netFinancialPosition.whatItMeans}
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-1">
+                          What to Look For
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {chartExplanations.netFinancialPosition.whatToLookFor}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
             </div>
           </section>
         </>

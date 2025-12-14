@@ -18,7 +18,7 @@ export const chartExplanations: Record<string, ChartExplanation> = {
     whatToLookFor:
       "Higher ratios (above 1.0) indicate strong liquidity. Values below 0.5 may indicate liquidity concerns.",
   },
-  totalAssetsToLiabilities: {
+  assetsToLiabilities: {
     title: "Total Assets to Total Liabilities",
     description: "The ratio of all assets to all liabilities",
     whatItMeans:
@@ -44,7 +44,7 @@ export const chartExplanations: Record<string, ChartExplanation> = {
     whatToLookFor:
       "An increasing trend limits future choices and can crowd out basic services. A decreasing trend improves flexibility and budget health.",
   },
-  netBookValueToCost: {
+  netBookValueToCostOfTCA: {
     title: "Net Book Value to Cost of Tangible Capital Assets",
     description: "The ratio of current asset value to original cost",
     whatItMeans:
