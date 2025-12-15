@@ -93,7 +93,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
+                  averageCityMetrics={[]}
                   metricKey="netFinancialPosition"
                   title={chartExplanations.netFinancialPosition.title}
                   description={
@@ -170,16 +170,16 @@ export default async function CityPage({ params }: CityPageProps) {
               </Card>
             </div>
 
-            {/* Total Assets to Liabilities */}
+            {/* Assets to Liabilities */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2">
                 <FinancialChart
                   cityData={cityData}
                   averageCityMetrics={averageCityMetrics}
                   metricKey="assetsToLiabilities"
-                  title={chartExplanations.totalAssetsToLiabilities.title}
+                  title={chartExplanations.assetsToLiabilities.title}
                   description={
-                    chartExplanations.totalAssetsToLiabilities.description
+                    chartExplanations.assetsToLiabilities.description
                   }
                 />
               </div>
@@ -193,7 +193,7 @@ export default async function CityPage({ params }: CityPageProps) {
                       Understanding the Metric
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.totalAssetsToLiabilities.whatItMeans}
+                      {chartExplanations.assetsToLiabilities.whatItMeans}
                     </p>
                   </div>
                   <div>
@@ -201,7 +201,7 @@ export default async function CityPage({ params }: CityPageProps) {
                       What to Look For
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.totalAssetsToLiabilities.whatToLookFor}
+                      {chartExplanations.assetsToLiabilities.whatToLookFor}
                     </p>
                   </div>
                 </CardContent>
@@ -295,8 +295,10 @@ export default async function CityPage({ params }: CityPageProps) {
                   cityData={cityData}
                   averageCityMetrics={averageCityMetrics}
                   metricKey="netBookValueToCostOfTCA"
-                  title={chartExplanations.netBookValueToCost.title}
-                  description={chartExplanations.netBookValueToCost.description}
+                  title={chartExplanations.netBookValueToCostOfTCA.title}
+                  description={
+                    chartExplanations.netBookValueToCostOfTCA.description
+                  }
                 />
               </div>
               <Card className="bg-muted/30">
@@ -309,7 +311,7 @@ export default async function CityPage({ params }: CityPageProps) {
                       Understanding the Metric
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netBookValueToCost.whatItMeans}
+                      {chartExplanations.netBookValueToCostOfTCA.whatItMeans}
                     </p>
                   </div>
                   <div>
@@ -317,7 +319,7 @@ export default async function CityPage({ params }: CityPageProps) {
                       What to Look For
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netBookValueToCost.whatToLookFor}
+                      {chartExplanations.netBookValueToCostOfTCA.whatToLookFor}
                     </p>
                   </div>
                 </CardContent>

@@ -46,7 +46,6 @@ export function ComparisonChart({
   description,
   formatValue,
 }: ComparisonChartProps) {
-  console.log(cities);
   const averageMetrics = calculateAverageMetrics(
     cities.map((c) => c.financialData)
   );
@@ -105,10 +104,6 @@ export function ComparisonChart({
       color: CITY_COLORS[index % CITY_COLORS.length],
     };
   });
-  config.average = {
-    label: "Average",
-    color: "var(--chart-3)",
-  };
 
   return (
     <Card>
@@ -117,7 +112,7 @@ export function ComparisonChart({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={config} className="h-[350px]">
+        <ChartContainer className="h-[350px]">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={chartData}

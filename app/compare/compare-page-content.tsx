@@ -32,7 +32,6 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
     .filter(Boolean) as CityData[];
 
   const metricKeys = [
-    "netFinancialPosition",
     "financialAssetsToLiabilities",
     "assetsToLiabilities",
     "netDebtToRevenue",
@@ -112,31 +111,20 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                 Financial Metrics Comparison
               </h3>
 
-              {/* <div className="space-y-8">
-                {metricKeys.map((metricKey) => (
-                  <ComparisonChart
-                    key={metricKey}
-                    cities={selectedCities}
-                    metricKey={metricKey as keyof CityMetrics}
-                    title={chartExplanations[metricKey].title}
-                    description={chartExplanations[metricKey].description}
-                  />
-                ))}
-              </div> */}
               {metricKeys.map((metricKey) => (
                 <div
-                  className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6"
                   key={metricKey}
                 >
                   <div className="lg:col-span-2">
                     <ComparisonChart
-                      // key={metricKey}
                       cities={selectedCities}
                       metricKey={metricKey as keyof CityMetrics}
                       title={chartExplanations[metricKey].title}
                       description={chartExplanations[metricKey].description}
                     />
                   </div>
+
                   <Card className="bg-muted/30">
                     <CardHeader>
                       <CardTitle className="text-base">
@@ -180,9 +168,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
       {/* Footer */}
       <footer className="border-t py-8 bg-card">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>
-            Budget.City - Making municipal finances transparent and accessible
-          </p>
+          <p>Budget.City - Making municipal finances accessible</p>
         </div>
       </footer>
     </div>

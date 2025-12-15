@@ -173,9 +173,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t py-8 bg-card">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>
-            Budget.City - Making municipal finances transparent and accessible
-          </p>
+          <p>Budget.City - Making municipal finances accessible</p>
           <p className="mt-2">
             Data sourced from municipal financial reports and audited statements
           </p>

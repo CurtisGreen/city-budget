@@ -68,19 +68,7 @@ export function FinancialChart({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer
-          config={{
-            cityValue: {
-              label: cityData.info.name,
-              color: "hsl(var(--chart-1))",
-            },
-            average: {
-              label: "Average",
-              color: "hsl(var(--chart-3))",
-            },
-          }}
-          // className="h-[300px]"
-        >
+        <ChartContainer>
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={chartData}
@@ -100,20 +88,21 @@ export function FinancialChart({
               <Line
                 type="monotone"
                 dataKey="cityValue"
-                // stroke="var(--color-cityValue)"
                 strokeWidth={2}
                 name={cityData.info.name}
                 dot={{ r: 4 }}
               />
-              <Line
-                type="monotone"
-                dataKey="average"
-                stroke="black"
-                strokeWidth={2}
-                strokeDasharray="5 5"
-                name="Average"
-                dot={{ r: 3 }}
-              />
+              {averageCityMetrics.length && (
+                <Line
+                  type="monotone"
+                  dataKey="average"
+                  stroke="black"
+                  strokeWidth={2}
+                  strokeDasharray="5 5"
+                  name="Average"
+                  dot={{ r: 3 }}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
         </ChartContainer>

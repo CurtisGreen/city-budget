@@ -11,7 +11,7 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
   },
   financialAssetsToLiabilities: {
-    title: "Financial Assets to Total Liabilities",
+    title: "Financial Assets to Liabilities",
     description: "The ratio of liquid assets to total debts",
     whatItMeans:
       "This measures how much of the city's debt could be paid off with readily available financial assets.",
