@@ -10,8 +10,20 @@ import { ComparisonTable } from "@/components/comparison-table";
 import { chartExplanations } from "@/lib/chart-explanations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft } from "lucide-react";
-import { CityData, CityMetrics } from "@/lib/types";
+import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
+
+const metricConfigs: {
+  key: keyof CityMetrics;
+  formatType: ChartFormatType;
+}[] = [
+  { key: "financialAssetsToLiabilities", formatType: "percent" },
+  { key: "assetsToLiabilities", formatType: "percent" },
+  { key: "netDebtToRevenue", formatType: "percent" },
+  { key: "interestToRevenue", formatType: "percent" },
+  { key: "netBookValueToCostOfTCA", formatType: "percent" },
+  { key: "externalTransfersToRevenue", formatType: "percent" },
+];
 
 export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const getCityData = (cityId: string) =>
@@ -32,15 +44,6 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
     .map((id) => getCityData(id))
     .filter(Boolean) as CityData[];
 
-  const metricKeys = [
-    "financialAssetsToLiabilities",
-    "assetsToLiabilities",
-    "netDebtToRevenue",
-    "interestToRevenue",
-    "netBookValueToCostOfTCA",
-    "externalTransfersToRevenue",
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -53,7 +56,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
             </div>
             <nav className="flex items-center gap-4">
               <Link href="/">
-                <Button variant="ghost">
+                <Button variant="ghost" className="cursor-pointer">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Home
                 </Button>
@@ -112,17 +115,20 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                 Financial Metrics Comparison
               </h3>
 
-              {metricKeys.map((metricKey) => (
+              {metricConfigs.map((metricConfig) => (
                 <div
                   className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6"
-                  key={metricKey}
+                  key={metricConfig.key}
                 >
                   <div className="lg:col-span-2">
                     <ComparisonChart
                       cities={selectedCities}
-                      metricKey={metricKey as keyof CityMetrics}
-                      title={chartExplanations[metricKey].title}
-                      description={chartExplanations[metricKey].description}
+                      metricKey={metricConfig.key}
+                      title={chartExplanations[metricConfig.key].title}
+                      description={
+                        chartExplanations[metricConfig.key].description
+                      }
+                      formatType={metricConfig.formatType}
                     />
                   </div>
 

@@ -1,7 +1,5 @@
 import { ChartFormatType } from "./types";
 
-// export const formatPercent = (value: number) => (value * 100).toFixed(1) + "%";
-
 const formatPercent = (value: number) => {
   return new Intl.NumberFormat("en-US", {
     style: "percent",

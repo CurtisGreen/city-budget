@@ -21,15 +21,17 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import type { CityData } from "@/lib/types";
+import type { ChartFormatType, CityData } from "@/lib/types";
 import { calculateAverageMetrics } from "@/lib/format-acfr-data";
+import { chartFormatters } from "@/lib/chart-utils";
 
 interface ComparisonChartProps {
   cities: CityData[];
   metricKey: keyof CityData["metrics"][0];
   title: string;
   description: string;
-  formatValue?: (value: number) => string;
+  formatType?: ChartFormatType;
+  showAverage?: boolean;
 }
 
 const CITY_COLORS = [
@@ -44,8 +46,9 @@ export function ComparisonChart({
   metricKey,
   title,
   description,
-  formatValue,
+  formatType = "percent",
 }: ComparisonChartProps) {
+  const formatter = chartFormatters[formatType];
   const averageMetrics = calculateAverageMetrics(
     cities.map((c) => c.financialData)
   );
@@ -82,20 +85,6 @@ export function ComparisonChart({
 
     return dataPoint;
   });
-
-  const defaultFormatter = (value: number) => {
-    if (Math.abs(value) >= 1000000000) {
-      return `$${(value / 1000000000).toFixed(1)}B`;
-    } else if (Math.abs(value) >= 1000000) {
-      return `$${(value / 1000000).toFixed(1)}M`;
-    } else if (value >= 1 || value <= -1) {
-      return value.toFixed(2);
-    } else {
-      return (value * 100).toFixed(1) + "%";
-    }
-  };
-
-  const formatter = formatValue || defaultFormatter;
 
   const config: any = {};
   cities.forEach((city, index) => {
@@ -145,10 +134,10 @@ export function ComparisonChart({
               <Line
                 type="monotone"
                 dataKey="average"
-                // stroke="var(--color-average)"
+                stroke="black"
                 strokeWidth={2}
                 strokeDasharray="5 5"
-                name="Average"
+                name="DFW"
                 dot={{ r: 3 }}
               />
             </LineChart>

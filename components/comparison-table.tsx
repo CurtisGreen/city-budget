@@ -68,14 +68,14 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                   </TableCell>
                 ))}
               </TableRow>
-              <TableRow>
+              {/* <TableRow>
                 <TableCell className="font-medium">Property Tax Rate</TableCell>
                 {cities.map((city) => (
                   <TableCell key={city.info.id} className="text-center">
                     {formatPercent(city.info.propertyTaxRate / 100)}
                   </TableCell>
                 ))}
-              </TableRow>
+              </TableRow> */}
               <TableRow>
                 <TableCell className="font-medium">Total Revenue</TableCell>
                 {cities.map((city) => {
@@ -152,7 +152,9 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Interest/Revenue</TableCell>
+                <TableCell className="font-medium">
+                  Interest / Revenue
+                </TableCell>
                 {cities.map((city) => {
                   const latest = city.metrics[city.metrics.length - 1];
                   return (

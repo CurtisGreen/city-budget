@@ -87,7 +87,7 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
             <nav className="flex items-center gap-4">
               <Link href="/">
-                <Button variant="ghost">
+                <Button variant="ghost" className="cursor-pointer">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Home
                 </Button>

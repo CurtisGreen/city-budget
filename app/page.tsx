@@ -21,10 +21,14 @@ export default function HomePage() {
             </div>
             <nav className="flex items-center gap-4">
               <Link href="/">
-                <Button variant="ghost">Home</Button>
+                <Button variant="ghost" className="cursor-pointer">
+                  Home
+                </Button>
               </Link>
               <Link href="/compare">
-                <Button variant="ghost">Compare Cities</Button>
+                <Button variant="ghost" className="cursor-pointer">
+                  Compare Cities
+                </Button>
               </Link>
             </nav>
           </div>
