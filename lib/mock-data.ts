@@ -1,5 +1,5 @@
 import type { CityData } from "./types";
-import { readACFR } from "./csv-processor";
+import { readACFR } from "./acfr-csv-processor";
 import { calculateACFRMetrics } from "./format-acfr-data";
 
 // Mock data for Dallas area cities
@@ -46,7 +46,7 @@ export const mockCitiesData: CityData[] = [
     info: {
       id: "arlington",
       name: "Arlington",
-      population: 394266,
+      population: 413955,
       propertyTaxRate: 0.72,
       salesTaxBreakdown: [
         { category: "Public Safety", percentage: 42, amount: 147000000 },

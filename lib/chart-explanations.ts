@@ -4,19 +4,19 @@ export const chartExplanations: Record<string, ChartExplanation> = {
   netFinancialPosition: {
     title: "Net Financial Position",
     description:
-      "The difference between financial assets and total liabilities",
+      "The difference between financial assets and total liabilities. This is the cumulative surplus/deficit the city has accumulated through successive budget cycles.",
     whatItMeans:
-      "This ratio shows whether the city has enough liquid financial resources to cover what it owes. A ratio below 1 means it would not be able to pay off its liabilities using only its financial assets.",
+      "A positive net financial position says the city has more financial assets than obligations and is in a better position to weather downturns, invest in infrastructure, or respond to emergencies without borrowing or service cuts. If this number is negative the city has spent more than it has saved and is relying on future revenue to pay past bills",
     whatToLookFor:
       "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
   },
   financialAssetsToLiabilities: {
     title: "Financial Assets to Liabilities",
-    description: "The ratio of liquid assets to total debts",
+    description: "The ratio of liquid assets to total liabilities",
     whatItMeans:
-      "This measures how much of the city's debt could be paid off with readily available financial assets.",
+      "This ratio shows whether the city has enough liquid financial resources to cover what it owes. A ratio below 1 means it would not be able to pay off its liabilities using only its financial assets.",
     whatToLookFor:
-      "Higher ratios (above 1.0) indicate strong liquidity. Values below 0.5 may indicate liquidity concerns.",
+      "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
   },
   assetsToLiabilities: {
     title: "Total Assets to Total Liabilities",

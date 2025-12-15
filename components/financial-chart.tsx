@@ -21,7 +21,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import type { CityData, CityMetrics } from "@/lib/types";
+import type { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
+import { chartFormatters } from "@/lib/chart-utils";
 
 interface FinancialChartProps {
   cityData: CityData;
@@ -29,7 +30,7 @@ interface FinancialChartProps {
   metricKey: keyof CityData["metrics"][0];
   title: string;
   description: string;
-  formatValue?: (value: number) => string;
+  formatType?: ChartFormatType;
 }
 
 export function FinancialChart({
@@ -38,7 +39,7 @@ export function FinancialChart({
   averageCityMetrics,
   title,
   description,
-  formatValue,
+  formatType = "percent",
 }: FinancialChartProps) {
   // Prepare chart data
   const chartData = cityData.metrics.map((metric, index) => ({
@@ -47,19 +48,7 @@ export function FinancialChart({
     average: averageCityMetrics[index]?.[metricKey] as number,
   }));
 
-  const defaultFormatter = (value: number) => {
-    if (Math.abs(value) >= 1000000000) {
-      return `$${(value / 1000000000).toFixed(1)}B`;
-    } else if (Math.abs(value) >= 1000000) {
-      return `$${(value / 1000000).toFixed(1)}M`;
-    } else if (value >= 1 || value <= -1) {
-      return value.toFixed(2);
-    } else {
-      return (value * 100).toFixed(1) + "%";
-    }
-  };
-
-  const formatter = formatValue || defaultFormatter;
+  const formatter = chartFormatters[formatType];
 
   return (
     <Card>

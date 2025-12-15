@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { getAllCities } from "@/lib/mock-data";
 import Link from "next/link";
 import { BarChart3, Map, TrendingUp } from "lucide-react";
+import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   const cities = getAllCities();
@@ -171,14 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8 bg-card">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Budget.City - Making municipal finances accessible</p>
-          <p className="mt-2">
-            Data sourced from municipal financial reports and audited statements
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

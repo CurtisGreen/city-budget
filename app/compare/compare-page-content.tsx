@@ -11,6 +11,7 @@ import { chartExplanations } from "@/lib/chart-explanations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft } from "lucide-react";
 import { CityData, CityMetrics } from "@/lib/types";
+import { Footer } from "@/components/footer";
 
 export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const getCityData = (cityId: string) =>
@@ -165,12 +166,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
         </section>
       )}
 
-      {/* Footer */}
-      <footer className="border-t py-8 bg-card">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Budget.City - Making municipal finances accessible</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

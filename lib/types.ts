@@ -54,3 +54,5 @@ export interface ChartExplanation {
   whatToLookFor: string;
   note?: string;
 }
+
+export type ChartFormatType = "percent" | "currency" | "number";

@@ -9,6 +9,8 @@ import { chartExplanations } from "@/lib/chart-explanations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
 import { calculateAverageMetrics } from "@/lib/format-acfr-data";
+import { ChartFormatType, CityMetrics } from "@/lib/types";
+import { Footer } from "@/components/footer";
 
 interface CityPageProps {
   params: Promise<{
@@ -22,6 +24,44 @@ export async function generateStaticParams() {
     cityId: city.info.id,
   }));
 }
+
+const metricConfigs: {
+  key: keyof CityMetrics;
+  formatType: ChartFormatType;
+  showAverage: boolean;
+}[] = [
+  {
+    key: "netFinancialPosition",
+    formatType: "currency",
+    showAverage: false,
+  },
+  {
+    key: "financialAssetsToLiabilities",
+    formatType: "percent",
+    showAverage: true,
+  },
+  {
+    key: "assetsToLiabilities",
+    formatType: "percent",
+    showAverage: true,
+  },
+  { key: "netDebtToRevenue", formatType: "percent", showAverage: true },
+  {
+    key: "interestToRevenue",
+    formatType: "percent",
+    showAverage: true,
+  },
+  {
+    key: "netBookValueToCostOfTCA",
+    formatType: "percent",
+    showAverage: true,
+  },
+  {
+    key: "externalTransfersToRevenue",
+    formatType: "percent",
+    showAverage: true,
+  },
+];
 
 export default async function CityPage({ params }: CityPageProps) {
   const { cityId } = await params;
@@ -88,284 +128,48 @@ export default async function CityPage({ params }: CityPageProps) {
           </h3>
 
           <div className="space-y-12">
-            {/* Net Financial Position */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={[]}
-                  metricKey="netFinancialPosition"
-                  title={chartExplanations.netFinancialPosition.title}
-                  description={
-                    chartExplanations.netFinancialPosition.description
-                  }
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netFinancialPosition.whatItMeans}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netFinancialPosition.whatToLookFor}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Financial Assets to Liabilities */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
-                  metricKey="financialAssetsToLiabilities"
-                  title={chartExplanations.financialAssetsToLiabilities.title}
-                  description={
-                    chartExplanations.financialAssetsToLiabilities.description
-                  }
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {
-                        chartExplanations.financialAssetsToLiabilities
-                          .whatItMeans
-                      }
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {
-                        chartExplanations.financialAssetsToLiabilities
-                          .whatToLookFor
-                      }
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Assets to Liabilities */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
-                  metricKey="assetsToLiabilities"
-                  title={chartExplanations.assetsToLiabilities.title}
-                  description={
-                    chartExplanations.assetsToLiabilities.description
-                  }
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.assetsToLiabilities.whatItMeans}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.assetsToLiabilities.whatToLookFor}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Net Debt to Revenue */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
-                  metricKey="netDebtToRevenue"
-                  title={chartExplanations.netDebtToRevenue.title}
-                  description={chartExplanations.netDebtToRevenue.description}
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netDebtToRevenue.whatItMeans}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netDebtToRevenue.whatToLookFor}
-                    </p>
-                  </div>
-                  {chartExplanations.netDebtToRevenue.note && (
+            {metricConfigs.map((config) => (
+              <div
+                className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+                key={config.key}
+              >
+                <div className="lg:col-span-2">
+                  <FinancialChart
+                    cityData={cityData}
+                    averageCityMetrics={
+                      config.showAverage ? averageCityMetrics : []
+                    }
+                    metricKey={config.key}
+                    title={chartExplanations[config.key].title}
+                    description={chartExplanations[config.key].description}
+                    formatType={config.formatType}
+                  />
+                </div>
+                <Card className="bg-muted/30">
+                  <CardHeader>
+                    <CardTitle className="text-base">What This Means</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-sm mb-1">Note</h4>
+                      <h4 className="font-semibold text-sm mb-1">
+                        Understanding the Metric
+                      </h4>
                       <p className="text-sm text-muted-foreground">
-                        {chartExplanations.netDebtToRevenue.note}
+                        {chartExplanations[config.key].whatItMeans}
                       </p>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Interest to Revenue */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
-                  metricKey="interestToRevenue"
-                  title={chartExplanations.interestToRevenue.title}
-                  description={chartExplanations.interestToRevenue.description}
-                />
+                    <div>
+                      <h4 className="font-semibold text-sm mb-1">
+                        What to Look For
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {chartExplanations[config.key].whatToLookFor}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.interestToRevenue.whatItMeans}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.interestToRevenue.whatToLookFor}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Net Book Value to Cost */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
-                  metricKey="netBookValueToCostOfTCA"
-                  title={chartExplanations.netBookValueToCostOfTCA.title}
-                  description={
-                    chartExplanations.netBookValueToCostOfTCA.description
-                  }
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netBookValueToCostOfTCA.whatItMeans}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.netBookValueToCostOfTCA.whatToLookFor}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Government Transfers to Revenue */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <FinancialChart
-                  cityData={cityData}
-                  averageCityMetrics={averageCityMetrics}
-                  metricKey="externalTransfersToRevenue"
-                  title={chartExplanations.externalTransfersToRevenue.title}
-                  description={
-                    chartExplanations.externalTransfersToRevenue.description
-                  }
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {chartExplanations.externalTransfersToRevenue.whatItMeans}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {
-                        chartExplanations.externalTransfersToRevenue
-                          .whatToLookFor
-                      }
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -378,12 +182,7 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t py-8 bg-card">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Budget.City - Making municipal finances easy and accessible</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
