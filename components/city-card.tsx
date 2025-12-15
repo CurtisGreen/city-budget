@@ -75,8 +75,11 @@ export function CityCard({ city }: CityCardProps) {
             </div>
           </div>
 
-          <Link href={`/city/${city.info.id}`} className="block">
-            <Button className="w-full mt-4 bg-transparent" variant="outline">
+          <Link href={`/city/${city.info.id}`}>
+            <Button
+              className="w-full mt-4 bg-transparent cursor-pointer"
+              variant="outline"
+            >
               View Details
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

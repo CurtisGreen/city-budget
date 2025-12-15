@@ -4,8 +4,9 @@ import { calculateACFRMetrics } from "./format-acfr-data";
 import { dallasInfo } from "@/data/info/dallas";
 import { arlingtonInfo } from "@/data/info/arlington";
 import { planoInfo } from "@/data/info/plano";
+import { irvingInfo } from "@/data/info/irving";
 
-const basicCityInfo = [dallasInfo, planoInfo, arlingtonInfo];
+const basicCityInfo = [dallasInfo, planoInfo, arlingtonInfo, irvingInfo];
 
 // Calculate metrics for each city
 export const cityData: CityData[] = basicCityInfo.map((info) => {

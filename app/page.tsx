@@ -112,16 +112,18 @@ export default function HomePage() {
           <h3 className="text-3xl font-bold mb-8 text-center">
             City Financial Overview
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cities.map((city) => (
-              <CityCard key={city.info.id} city={city} />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+            {cities
+              .toSorted((a, b) => b.info.population - a.info.population)
+              .map((city) => (
+                <CityCard key={city.info.id} city={city} />
+              ))}
           </div>
         </div>
       </section>
 
       {/* What We Track */}
-      <section className="py-12 md:py-16 bg-muted/30">
+      {/* <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold mb-8 text-center">
@@ -173,7 +175,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <Footer />

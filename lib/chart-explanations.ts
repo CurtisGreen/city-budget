@@ -19,12 +19,13 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
   },
   assetsToLiabilities: {
-    title: "Total Assets to Total Liabilities",
-    description: "The ratio of all assets to all liabilities",
+    title: "Assets to Liabilities",
+    description:
+      "The value of all the city's assets (including infrastructure) divided by its total liabilities.",
     whatItMeans:
-      "This shows the city's overall solvency - its ability to cover all debts with all assets.",
+      "A ratio above 1 means the city owns more than it owes (solvent). Below 1 means it owes more than it owns (insolvent).",
     whatToLookFor:
-      "Ratios above 2.0 are generally healthy. Declining trends may indicate growing debt burdens.",
+      "A downward trend means the city is becoming less solvent. An upward trend shows improving financial resilience.",
   },
   netDebtToRevenue: {
     title: "Net Debt to Total Revenues",
@@ -46,11 +47,12 @@ export const chartExplanations: Record<string, ChartExplanation> = {
   },
   netBookValueToCostOfTCA: {
     title: "Net Book Value to Cost of Tangible Capital Assets",
-    description: "The ratio of current asset value to original cost",
+    description:
+      "The current value of the city's physical assets compared to their original cost.",
     whatItMeans:
-      "This indicates the age and condition of the city's infrastructure - roads, buildings, equipment.",
+      "This indicates how well the city is maintaining its infrastructure. A low value means assets are aging and wearing out.",
     whatToLookFor:
-      "Higher values indicate newer infrastructure. Low values (below 0.5) suggest aging assets needing replacement.",
+      "A declining trend means the city is falling behind on maintenance. A stable or rising trend suggests it is keeping up.",
   },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",

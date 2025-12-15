@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import type { CityData } from "@/lib/types";
+import Image from "next/image";
 
 interface CityMapProps {
   cities: CityData[];
@@ -39,14 +40,7 @@ export function CityMap({ cities }: CityMapProps) {
     <div className="relative w-full h-[500px]">
       <svg viewBox="0 0 100 100" className="w-full h-full">
         {/* Map background */}
-        <rect
-          x="0"
-          y="0"
-          width="100"
-          height="100"
-          fill="var(--color-muted)"
-          opacity="0.3"
-        />
+        <image href="map.png" width={100} height={100} />
 
         {/* City markers */}
         {cities.map((city) => {
@@ -74,29 +68,25 @@ export function CityMap({ cities }: CityMapProps) {
               </Link>
 
               {/* City label */}
-              {isHovered && (
-                <>
-                  <rect
-                    x={x + 4}
-                    y={y - 3}
-                    width="20"
-                    height="6"
-                    fill="var(--color-card)"
-                    stroke="var(--color-border)"
-                    strokeWidth="0.2"
-                    rx="0.5"
-                  />
-                  <text
-                    x={x + 5}
-                    y={y + 1}
-                    fontSize="2.5"
-                    fill="var(--color-foreground)"
-                    className="font-medium pointer-events-none"
-                  >
-                    {city.info.name}
-                  </text>
-                </>
-              )}
+              <rect
+                x={x + 4}
+                y={y - 3}
+                width="20"
+                height="6"
+                fill="var(--color-card)"
+                stroke="var(--color-border)"
+                strokeWidth="0.2"
+                rx="0.5"
+              />
+              <text
+                x={x + 5}
+                y={y + 1}
+                fontSize="2.5"
+                fill="var(--color-foreground)"
+                className="font-medium pointer-events-none"
+              >
+                {city.info.name}
+              </text>
             </g>
           );
         })}
