@@ -9,6 +9,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "A positive net financial position says the city has more financial assets than obligations and is in a better position to weather downturns, invest in infrastructure, or respond to emergencies without borrowing or service cuts. If this number is negative the city has spent more than it has saved and is relying on future revenue to pay past bills",
     whatToLookFor:
       "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
+    positiveDirection: "up",
+    upwardDescription: "More Sustainable",
+    downwardDescription: "Less Sustainable",
   },
   financialAssetsToLiabilities: {
     title: "Financial Assets to Liabilities",
@@ -17,6 +20,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "This ratio shows whether the city has enough liquid financial resources to cover what it owes. A ratio below 1 means it would not be able to pay off its liabilities using only its financial assets.",
     whatToLookFor:
       "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
+    positiveDirection: "up",
+    upwardDescription: "More Sustainable",
+    downwardDescription: "Less Sustainable",
   },
   assetsToLiabilities: {
     title: "Assets to Liabilities",
@@ -26,6 +32,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "A ratio above 1 means the city owns more than it owes (solvent). Below 1 means it owes more than it owns (insolvent).",
     whatToLookFor:
       "A downward trend means the city is becoming less solvent. An upward trend shows improving financial resilience.",
+    positiveDirection: "up",
+    upwardDescription: "More Sustainable",
+    downwardDescription: "Less Sustainable",
   },
   netDebtToRevenue: {
     title: "Net Debt to Total Revenues",
@@ -36,6 +45,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
     whatToLookFor:
       "If the ratio is rising, debt is growing faster than income, this is unsustainable. If it's falling the city is gaining control of its obliations.",
     note: "If this graph shows a flat line after 0, this means the city has a net surplus (no net debt).",
+    positiveDirection: "down",
+    upwardDescription: "Less Sustainable",
+    downwardDescription: "More Sustainable",
   },
   interestToRevenue: {
     title: "Interest to Total Revenues",
@@ -44,6 +56,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "This shows how much of the city's income goes to servicing debt rather than providing services.",
     whatToLookFor:
       "An increasing trend limits future choices and can crowd out basic services. A decreasing trend improves flexibility and budget health.",
+    positiveDirection: "down",
+    upwardDescription: "Less Flexible",
+    downwardDescription: "More Flexible",
   },
   netBookValueToCostOfTCA: {
     title: "Net Book Value to Cost of Tangible Capital Assets",
@@ -53,6 +68,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "This indicates how well the city is maintaining its infrastructure. A low value means assets are aging and wearing out.",
     whatToLookFor:
       "A declining trend means the city is falling behind on maintenance. A stable or rising trend suggests it is keeping up.",
+    positiveDirection: "up",
+    upwardDescription: "More Flexible",
+    downwardDescription: "Less Flexible",
   },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",
@@ -61,5 +79,8 @@ export const chartExplanations: Record<string, ChartExplanation> = {
       "This shows how dependent the city is on government grants and other one-time transfers versus local revenue.",
     whatToLookFor:
       "If the trend is rising, the city is becoming more dependent on outside help. If it's falling, the city is strengthening its local revenue base.",
+    positiveDirection: "down",
+    upwardDescription: "More Vulnerable",
+    downwardDescription: "Less Vulnerable",
   },
 };

@@ -139,7 +139,7 @@ export function ComparisonChart({
                 stroke="black"
                 strokeWidth={2}
                 strokeDasharray="5 5"
-                name="DFW"
+                name="Average"
                 dot={{ r: 3 }}
               />
             </LineChart>

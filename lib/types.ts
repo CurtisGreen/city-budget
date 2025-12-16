@@ -53,6 +53,9 @@ export interface ChartExplanation {
   whatItMeans: string;
   whatToLookFor: string;
   note?: string;
+  positiveDirection: "up" | "down";
+  upwardDescription: string;
+  downwardDescription: string;
 }
 
 export type ChartFormatType = "percent" | "currency" | "number";

@@ -93,7 +93,10 @@ export default async function CityPage({ params }: CityPageProps) {
                 </Button>
               </Link>
               <Link href={`/compare?cities=${cityId}`}>
-                <Button variant="outline" className="bg-transparent">
+                <Button
+                  variant="outline"
+                  className="bg-transparent cursor-pointer"
+                >
                   <GitCompare className="mr-2 h-4 w-4" />
                   Compare
                 </Button>
