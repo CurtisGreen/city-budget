@@ -14,28 +14,23 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import type { CityData } from "@/lib/types";
+import Link from "next/link";
 
 interface ComparisonTableProps {
   cities: CityData[];
 }
 
 export function ComparisonTable({ cities }: ComparisonTableProps) {
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("en-US", {
+  const formatCurrency = (value: number) =>
+    new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(value);
-  };
 
-  const formatPercent = (value: number) => {
-    return (value * 100).toFixed(2) + "%";
-  };
-
-  const formatRatio = (value: number) => {
-    return value.toFixed(2);
-  };
+  const formatPercent = (value: number) => (value * 100).toFixed(2) + "%";
+  const formatRatio = (value: number) => value.toFixed(2);
 
   return (
     <Card>
@@ -166,6 +161,17 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
               </TableRow>
             </TableBody>
           </Table>
+        </div>
+        <div className="text-sm text-muted-foreground mt-4">
+          Population from{" "}
+          <Link
+            href="https://rdc.dfwmaps.com/pdfs/2025%20NCTCOG%20Population%20Estimates%20Publication.pdf"
+            className="underline"
+          >
+            NCTCOG 2025 estimate
+          </Link>
+          , all other stats from the city's Annual Comprehensive Financial
+          Report (ACFR) or budget
         </div>
       </CardContent>
     </Card>

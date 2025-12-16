@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { CityData } from "@/lib/types";
 import { Users, DollarSign, TrendingUp, Building } from "lucide-react";
+import Link from "next/link";
 
 interface CityInfoCardProps {
   cityData: CityData;
@@ -76,6 +77,17 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
               </p>
             </div>
           </div>
+        </div>
+        <div className="text-[11px] text-muted-foreground mt-4">
+          Population from{" "}
+          <Link
+            href="https://rdc.dfwmaps.com/pdfs/2025%20NCTCOG%20Population%20Estimates%20Publication.pdf"
+            className="underline"
+          >
+            NCTCOG 2025 estimate
+          </Link>
+          , all other stats from the city's Annual Comprehensive Financial
+          Report (ACFR) or budget
         </div>
       </CardContent>
     </Card>

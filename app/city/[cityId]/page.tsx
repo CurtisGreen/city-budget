@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { SalesTaxBreakdown } from "@/components/sales-tax-breakdown";
 import { CityInfoCard } from "@/components/city-info-card";
 import { getCityData, getAllCities } from "@/lib/city-data-source";
 import { chartConfigs } from "@/lib/chart-configs";
@@ -170,12 +169,12 @@ export default async function CityPage({ params }: CityPageProps) {
       </section>
 
       {/* Sales Tax Breakdown */}
-      <section className="py-8 bg-muted/30">
+      {/* <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6">Revenue Allocation</h3>
           <SalesTaxBreakdown cityInfo={cityData.info} />
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
