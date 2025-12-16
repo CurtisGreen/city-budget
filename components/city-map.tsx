@@ -69,6 +69,7 @@ export function CityMap({ cities }: CityMapProps) {
               {isHovered && (
                 <>
                   <rect
+                    id="second-layer"
                     x={x + 4}
                     y={y - 3}
                     width="20"
@@ -79,6 +80,7 @@ export function CityMap({ cities }: CityMapProps) {
                     rx="0.5"
                   />
                   <text
+                    id="first-layer"
                     x={x + 5}
                     y={y + 1}
                     fontSize="2.5"
@@ -89,6 +91,8 @@ export function CityMap({ cities }: CityMapProps) {
                   </text>
                 </>
               )}
+              <use xlinkHref="#second-layer" />
+              <use xlinkHref="#first-layer" />
             </g>
           );
         })}
