@@ -1,6 +1,6 @@
-import type { ChartExplanation } from "./types";
+import type { ChartConfig } from "./types";
 
-export const chartExplanations: Record<string, ChartExplanation> = {
+export const chartConfigs: Record<string, ChartConfig> = {
   netFinancialPosition: {
     title: "Net Financial Position",
     description:
@@ -71,6 +71,7 @@ export const chartExplanations: Record<string, ChartExplanation> = {
     positiveDirection: "up",
     upwardDescription: "More Flexible",
     downwardDescription: "Less Flexible",
+    range: [0.4, 0.8],
   },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",

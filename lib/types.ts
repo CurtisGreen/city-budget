@@ -47,7 +47,7 @@ export interface CityData {
   metrics: CityMetrics[];
 }
 
-export interface ChartExplanation {
+export interface ChartConfig {
   title: string;
   description: string;
   whatItMeans: string;
@@ -56,6 +56,7 @@ export interface ChartExplanation {
   positiveDirection: "up" | "down";
   upwardDescription: string;
   downwardDescription: string;
+  range?: [number | string, number | string];
 }
 
 export type ChartFormatType = "percent" | "currency" | "number";

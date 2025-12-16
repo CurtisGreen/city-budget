@@ -18,17 +18,16 @@ export function CityCard({ city }: CityCardProps) {
   const latestYear = city.financialData[city.financialData.length - 1] || {};
   const latestMetrics = city.metrics[city.metrics.length - 1] || {};
 
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("en-US", {
+  const formatCurrency = (value: number) =>
+    new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(value);
-  };
 
-  const formatPercent = (value: number) => {
-    return (value * 100).toFixed(1) + "%";
+  const formatPercent = (value: number, decimals: number) => {
+    return (value * 100).toFixed(decimals) + "%";
   };
 
   return (
@@ -53,7 +52,7 @@ export function CityCard({ city }: CityCardProps) {
                 Net Debt / Revenue
               </p>
               <p className="text-lg font-semibold">
-                {formatPercent(latestMetrics.netDebtToRevenue)}
+                {formatPercent(latestMetrics.netDebtToRevenue, 0)}
               </p>
             </div>
           </div>
@@ -62,7 +61,7 @@ export function CityCard({ city }: CityCardProps) {
             <div>
               <p className="text-sm text-muted-foreground">Asset Life</p>
               <p className="text-lg font-semibold">
-                {formatPercent(latestMetrics.netBookValueToCostOfTCA)}
+                {formatPercent(latestMetrics.netBookValueToCostOfTCA, 0)}
               </p>
             </div>
             <div>
@@ -70,7 +69,7 @@ export function CityCard({ city }: CityCardProps) {
                 Interest / Revenue
               </p>
               <p className="text-lg font-semibold">
-                {formatPercent(latestMetrics.interestToRevenue)}
+                {formatPercent(latestMetrics.interestToRevenue, 1)}
               </p>
             </div>
           </div>

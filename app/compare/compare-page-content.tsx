@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { CitySelector } from "@/components/city-selector";
 import { ComparisonChart } from "@/components/comparison-chart";
 import { ComparisonTable } from "@/components/comparison-table";
-import { chartExplanations } from "@/lib/chart-explanations";
+import { chartConfigs } from "@/lib/chart-configs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft } from "lucide-react";
 import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
@@ -125,10 +125,8 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                       cities={selectedCities}
                       allCities={allCities}
                       metricKey={metricConfig.key}
-                      title={chartExplanations[metricConfig.key].title}
-                      description={
-                        chartExplanations[metricConfig.key].description
-                      }
+                      title={chartConfigs[metricConfig.key].title}
+                      description={chartConfigs[metricConfig.key].description}
                       formatType={metricConfig.formatType}
                     />
                   </div>
@@ -145,7 +143,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                           Understanding the Metric
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          {chartExplanations[metricConfig.key].whatItMeans}
+                          {chartConfigs[metricConfig.key].whatItMeans}
                         </p>
                       </div>
                       <div>
@@ -153,7 +151,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                           What to Look For
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          {chartExplanations[metricConfig.key].whatToLookFor}
+                          {chartConfigs[metricConfig.key].whatToLookFor}
                         </p>
                       </div>
                     </CardContent>

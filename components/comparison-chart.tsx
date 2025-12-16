@@ -24,6 +24,7 @@ import {
 import type { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { calculateAverageMetrics } from "@/lib/format-acfr-data";
 import { chartFormatters } from "@/lib/chart-utils";
+import { chartConfigs } from "@/lib/chart-configs";
 
 interface ComparisonChartProps {
   cities: CityData[];
@@ -54,6 +55,7 @@ export function ComparisonChart({
   const averageMetrics = calculateAverageMetrics(
     allCities.map((c) => c.financialData)
   );
+  const chartConfig = chartConfigs[metricKey];
 
   // Get all unique years
   const years = new Set<number>();
@@ -102,8 +104,8 @@ export function ComparisonChart({
         <CardTitle className="text-lg">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer className="w-full h-100">
+      <CardContent className="flex">
+        <ChartContainer className="w-full">
           <ResponsiveContainer>
             <LineChart
               data={chartData}
@@ -111,7 +113,11 @@ export function ComparisonChart({
             >
               <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
               <XAxis dataKey="year" className="text-xs" />
-              <YAxis tickFormatter={formatter} className="text-xs" />
+              <YAxis
+                tickFormatter={formatter}
+                className="text-xs"
+                domain={chartConfig.range}
+              />
               <ChartTooltip
                 content={
                   <ChartTooltipContent
@@ -133,18 +139,33 @@ export function ComparisonChart({
                 />
               ))}
 
-              <Line
-                type="monotone"
-                dataKey="average"
-                stroke="black"
-                strokeWidth={2}
-                strokeDasharray="5 5"
-                name="Average"
-                dot={{ r: 3 }}
-              />
+              {averageMetrics.length && (
+                <Line
+                  type="monotone"
+                  dataKey="average"
+                  stroke="black"
+                  strokeWidth={2}
+                  strokeDasharray="5 5"
+                  name="Average"
+                  dot={{ r: 3 }}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
         </ChartContainer>
+        <div className="mb-10">
+          {chartConfig.positiveDirection == "up" ? (
+            <div className="h-full w-[15px] bg-gradient-to-b from-blue-300 to-orange-300 rounded-sm" />
+          ) : (
+            <div className="h-full w-[15px] bg-gradient-to-b from-orange-300 to-blue-300 rounded-sm" />
+          )}
+        </div>
+        <div className="mb-10 invisible md:visible">
+          <div className="h-full py-2 px-1 flex flex-col justify-between text-center text-[11px]">
+            <div>{chartConfig.upwardDescription}</div>
+            <div>{chartConfig.downwardDescription}</div>
+          </div>
+        </div>
       </CardContent>
     </Card>
   );

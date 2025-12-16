@@ -1,16 +1,16 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { FinancialChart } from "@/components/financial-chart";
 import { SalesTaxBreakdown } from "@/components/sales-tax-breakdown";
 import { CityInfoCard } from "@/components/city-info-card";
 import { getCityData, getAllCities } from "@/lib/city-data-source";
-import { chartExplanations } from "@/lib/chart-explanations";
+import { chartConfigs } from "@/lib/chart-configs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
 import { calculateAverageMetrics } from "@/lib/format-acfr-data";
 import { ChartFormatType, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
+import { ComparisonChart } from "@/components/comparison-chart";
 
 interface CityPageProps {
   params: Promise<{
@@ -137,16 +137,24 @@ export default async function CityPage({ params }: CityPageProps) {
                 key={config.key}
               >
                 <div className="lg:col-span-2">
-                  <FinancialChart
+                  <ComparisonChart
+                    cities={[cityData]}
+                    allCities={config.showAverage ? allCities : []}
+                    metricKey={config.key}
+                    title={chartConfigs[config.key].title}
+                    description={chartConfigs[config.key].description}
+                    formatType={config.formatType}
+                  />
+                  {/* <FinancialChart
                     cityData={cityData}
                     averageCityMetrics={
                       config.showAverage ? averageCityMetrics : []
                     }
                     metricKey={config.key}
-                    title={chartExplanations[config.key].title}
-                    description={chartExplanations[config.key].description}
+                    title={chartConfigs[config.key].title}
+                    description={chartConfigs[config.key].description}
                     formatType={config.formatType}
-                  />
+                  /> */}
                 </div>
                 <Card className="bg-muted/30">
                   <CardHeader>
@@ -158,7 +166,7 @@ export default async function CityPage({ params }: CityPageProps) {
                         Understanding the Metric
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        {chartExplanations[config.key].whatItMeans}
+                        {chartConfigs[config.key].whatItMeans}
                       </p>
                     </div>
                     <div>
@@ -166,7 +174,7 @@ export default async function CityPage({ params }: CityPageProps) {
                         What to Look For
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        {chartExplanations[config.key].whatToLookFor}
+                        {chartConfigs[config.key].whatToLookFor}
                       </p>
                     </div>
                   </CardContent>
