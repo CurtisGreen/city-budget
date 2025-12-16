@@ -1,7 +1,7 @@
 import { CityMap } from "@/components/city-map";
 import { CityCard } from "@/components/city-card";
 import { Button } from "@/components/ui/button";
-import { getAllCities } from "@/lib/mock-data";
+import { getAllCities } from "@/lib/city-data-source";
 import Link from "next/link";
 import { BarChart3, Map, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/footer";

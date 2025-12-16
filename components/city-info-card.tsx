@@ -21,7 +21,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
   };
 
   const formatPercent = (value: number) => {
-    return (value * 100).toFixed(2) + "%";
+    return (value * 100).toFixed(0) + "%";
   };
 
   return (

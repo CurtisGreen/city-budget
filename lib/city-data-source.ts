@@ -5,8 +5,25 @@ import { dallasInfo } from "@/data/info/dallas";
 import { arlingtonInfo } from "@/data/info/arlington";
 import { planoInfo } from "@/data/info/plano";
 import { irvingInfo } from "@/data/info/irving";
+import { garlandInfo } from "@/data/info/garland";
+import { addisonInfo } from "@/data/info/addison";
+import { carrolltonInfo } from "@/data/info/carrollton";
+import { farmersBranchInfo } from "@/data/info/farmers-branch";
+import { richardsonInfo } from "@/data/info/richardson";
+import { rowlettInfo } from "@/data/info/rowlett";
 
-const basicCityInfo = [dallasInfo, planoInfo, arlingtonInfo, irvingInfo];
+const basicCityInfo = [
+  dallasInfo,
+  planoInfo,
+  arlingtonInfo,
+  irvingInfo,
+  garlandInfo,
+  addisonInfo,
+  carrolltonInfo,
+  farmersBranchInfo,
+  richardsonInfo,
+  rowlettInfo,
+];
 
 // Calculate metrics for each city
 export const cityData: CityData[] = basicCityInfo.map((info) => {

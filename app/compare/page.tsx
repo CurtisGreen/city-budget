@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { getAllCities } from "@/lib/mock-data";
+import { getAllCities } from "@/lib/city-data-source";
 import { ComparePageContent } from "./compare-page-content";
 
 export default function ComparePage() {

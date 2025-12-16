@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import type { CityData } from "@/lib/types";
-import Image from "next/image";
 
 interface CityMapProps {
   cities: CityData[];
@@ -30,17 +29,16 @@ export function CityMap({ cities }: CityMapProps) {
 
   // Get color based on net debt to revenue ratio
   const getColorForRatio = (ratio: number) => {
-    if (ratio < 0) return "oklch(0.696 0.17 162.48)"; // green - good
-    if (ratio < 1.0) return "oklch(0.769 0.188 70.08)"; // yellow - moderate
-    if (ratio < 1.5) return "oklch(0.646 0.222 41.116)"; // orange - concerning
-    return "oklch(0.577 0.245 27.325)"; // red - high
+    if (ratio === 0) return "oklch(0.696 0.17 162.48)"; // green - excellent
+    if (ratio < 1.0) return "oklch(0.769 0.188 70.08)"; // yellow - okay
+    return "oklch(0.577 0.245 27.325)"; // red - poor
   };
 
   return (
     <div className="relative w-full h-[500px]">
       <svg viewBox="0 0 100 100" className="w-full h-full">
         {/* Map background */}
-        <image href="map.png" width={100} height={100} />
+        <image href="/map.png" width={100} height={100} />
 
         {/* City markers */}
         {cities.map((city) => {
@@ -68,25 +66,29 @@ export function CityMap({ cities }: CityMapProps) {
               </Link>
 
               {/* City label */}
-              <rect
-                x={x + 4}
-                y={y - 3}
-                width="20"
-                height="6"
-                fill="var(--color-card)"
-                stroke="var(--color-border)"
-                strokeWidth="0.2"
-                rx="0.5"
-              />
-              <text
-                x={x + 5}
-                y={y + 1}
-                fontSize="2.5"
-                fill="var(--color-foreground)"
-                className="font-medium pointer-events-none"
-              >
-                {city.info.name}
-              </text>
+              {isHovered && (
+                <>
+                  <rect
+                    x={x + 4}
+                    y={y - 3}
+                    width="20"
+                    height="6"
+                    fill="var(--color-card)"
+                    stroke="var(--color-border)"
+                    strokeWidth="0.2"
+                    rx="0.5"
+                  />
+                  <text
+                    x={x + 5}
+                    y={y + 1}
+                    fontSize="2.5"
+                    fill="var(--color-foreground)"
+                    className="font-medium pointer-events-none"
+                  >
+                    {city.info.name}
+                  </text>
+                </>
+              )}
             </g>
           );
         })}
@@ -101,28 +103,21 @@ export function CityMap({ cities }: CityMapProps) {
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.696 0.17 162.48)" }}
             />
-            <span className="text-xs">{"> 0 (Excellent)"}</span>
+            <span className="text-xs">{"= 0 (Excellent)"}</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.769 0.188 70.08)" }}
             />
-            <span className="text-xs">{"0 - 1.0 (Good)"}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: "oklch(0.646 0.222 41.116)" }}
-            />
-            <span className="text-xs">{"1.0 - 1.5 (Moderate)"}</span>
+            <span className="text-xs">{"0 - 1.0 (Okay)"}</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.577 0.245 27.325)" }}
             />
-            <span className="text-xs">{"> 1.5 (High)"}</span>
+            <span className="text-xs">{"> 1 (Poor)"}</span>
           </div>
         </div>
       </Card>

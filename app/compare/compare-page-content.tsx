@@ -123,6 +123,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                   <div className="lg:col-span-2">
                     <ComparisonChart
                       cities={selectedCities}
+                      allCities={allCities}
                       metricKey={metricConfig.key}
                       title={chartExplanations[metricConfig.key].title}
                       description={

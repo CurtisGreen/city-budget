@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FinancialChart } from "@/components/financial-chart";
 import { SalesTaxBreakdown } from "@/components/sales-tax-breakdown";
 import { CityInfoCard } from "@/components/city-info-card";
-import { getCityData, getAllCities } from "@/lib/mock-data";
+import { getCityData, getAllCities } from "@/lib/city-data-source";
 import { chartExplanations } from "@/lib/chart-explanations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
@@ -45,7 +45,7 @@ const metricConfigs: {
     formatType: "percent",
     showAverage: true,
   },
-  { key: "netDebtToRevenue", formatType: "percent", showAverage: true },
+  { key: "netDebtToRevenue", formatType: "number", showAverage: true },
   {
     key: "interestToRevenue",
     formatType: "percent",

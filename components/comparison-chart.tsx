@@ -21,13 +21,14 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import type { ChartFormatType, CityData } from "@/lib/types";
+import type { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { calculateAverageMetrics } from "@/lib/format-acfr-data";
 import { chartFormatters } from "@/lib/chart-utils";
 
 interface ComparisonChartProps {
   cities: CityData[];
-  metricKey: keyof CityData["metrics"][0];
+  allCities: CityData[];
+  metricKey: keyof CityMetrics;
   title: string;
   description: string;
   formatType?: ChartFormatType;
@@ -43,6 +44,7 @@ const CITY_COLORS = [
 
 export function ComparisonChart({
   cities,
+  allCities,
   metricKey,
   title,
   description,
@@ -50,7 +52,7 @@ export function ComparisonChart({
 }: ComparisonChartProps) {
   const formatter = chartFormatters[formatType];
   const averageMetrics = calculateAverageMetrics(
-    cities.map((c) => c.financialData)
+    allCities.map((c) => c.financialData)
   );
 
   // Get all unique years

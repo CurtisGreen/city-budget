@@ -56,9 +56,9 @@ export const chartExplanations: Record<string, ChartExplanation> = {
   },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",
-    description: "The percentage of revenue from state/federal transfers",
+    description: "The percentage of revenue from capital and operating grants",
     whatItMeans:
-      "This shows how dependent the city is on government grants and other transfers versus local revenue.",
+      "This shows how dependent the city is on government grants and other one-time transfers versus local revenue.",
     whatToLookFor:
       "If the trend is rising, the city is becoming more dependent on outside help. If it's falling, the city is strengthening its local revenue base.",
   },
