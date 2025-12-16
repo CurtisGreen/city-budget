@@ -3,40 +3,16 @@ import { CityCard } from "@/components/city-card";
 import { Button } from "@/components/ui/button";
 import { getAllCities } from "@/lib/city-data-source";
 import Link from "next/link";
-import { BarChart3, Map, TrendingUp } from "lucide-react";
+import { Map, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/footer";
-import { LogoButton } from "@/components/ui/logo-button";
+import { HomeNavbarMenu } from "@/components/home-navbar-menu";
 
 export default function HomePage() {
   const cities = getAllCities();
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="border-b bg-card">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <LogoButton />
-            <nav className="flex items-center gap-4">
-              <Link href="/">
-                <Button variant="ghost" className="cursor-pointer">
-                  Home
-                </Button>
-              </Link>
-              <Link href="/compare">
-                <Button variant="ghost" className="cursor-pointer">
-                  Compare Cities
-                </Button>
-              </Link>
-              <Link href="/about">
-                <Button variant="ghost" className="cursor-pointer">
-                  About
-                </Button>
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <HomeNavbarMenu />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-muted/50 to-background py-12 md:py-20">

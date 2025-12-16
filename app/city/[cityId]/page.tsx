@@ -5,7 +5,7 @@ import { CityInfoCard } from "@/components/city-info-card";
 import { getCityData, getAllCities } from "@/lib/city-data-source";
 import { chartConfigs } from "@/lib/chart-configs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
+import { ArrowLeft, GitCompare } from "lucide-react";
 import { ChartFormatType, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { ComparisonChart } from "@/components/comparison-chart";
