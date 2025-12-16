@@ -103,8 +103,8 @@ export function ComparisonChart({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer className="h-[350px]">
-          <ResponsiveContainer width="100%" height="100%">
+        <ChartContainer className="w-full h-100">
+          <ResponsiveContainer>
             <LineChart
               data={chartData}
               margin={{ top: 5, right: 30, left: 20, bottom: 5 }}

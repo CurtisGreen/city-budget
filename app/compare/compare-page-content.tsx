@@ -145,7 +145,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                           Understanding the Metric
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          {chartExplanations.netFinancialPosition.whatItMeans}
+                          {chartExplanations[metricConfig.key].whatItMeans}
                         </p>
                       </div>
                       <div>
@@ -153,7 +153,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                           What to Look For
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          {chartExplanations.netFinancialPosition.whatToLookFor}
+                          {chartExplanations[metricConfig.key].whatToLookFor}
                         </p>
                       </div>
                     </CardContent>
