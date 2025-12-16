@@ -5,6 +5,7 @@ import { getAllCities } from "@/lib/city-data-source";
 import Link from "next/link";
 import { BarChart3, Map, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/footer";
+import { LogoButton } from "@/components/ui/logo-button";
 
 export default function HomePage() {
   const cities = getAllCities();
@@ -15,10 +16,7 @@ export default function HomePage() {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <BarChart3 className="h-8 w-8" />
-              <h1 className="text-2xl font-bold">Budget.City</h1>
-            </div>
+            <LogoButton />
             <nav className="flex items-center gap-4">
               <Link href="/">
                 <Button variant="ghost" className="cursor-pointer">
@@ -28,6 +26,11 @@ export default function HomePage() {
               <Link href="/compare">
                 <Button variant="ghost" className="cursor-pointer">
                   Compare Cities
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button variant="ghost" className="cursor-pointer">
+                  About
                 </Button>
               </Link>
             </nav>

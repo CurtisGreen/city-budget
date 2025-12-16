@@ -7,10 +7,10 @@ import { getCityData, getAllCities } from "@/lib/city-data-source";
 import { chartConfigs } from "@/lib/chart-configs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft, GitCompare } from "lucide-react";
-import { calculateAverageMetrics } from "@/lib/format-acfr-data";
 import { ChartFormatType, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { ComparisonChart } from "@/components/comparison-chart";
+import { LogoButton } from "@/components/ui/logo-button";
 
 interface CityPageProps {
   params: Promise<{
@@ -66,9 +66,6 @@ const metricConfigs: {
 export default async function CityPage({ params }: CityPageProps) {
   const { cityId } = await params;
   const allCities = getAllCities();
-  const averageCityMetrics = calculateAverageMetrics(
-    allCities.map((c) => c.financialData)
-  );
   const cityData = getCityData(cityId);
 
   if (!cityData) {
@@ -81,10 +78,7 @@ export default async function CityPage({ params }: CityPageProps) {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <BarChart3 className="h-8 w-8" />
-              <h1 className="text-2xl font-bold">Budget.City</h1>
-            </div>
+            <LogoButton />
             <nav className="flex items-center gap-4">
               <Link href="/">
                 <Button variant="ghost" className="cursor-pointer">
@@ -145,16 +139,6 @@ export default async function CityPage({ params }: CityPageProps) {
                     description={chartConfigs[config.key].description}
                     formatType={config.formatType}
                   />
-                  {/* <FinancialChart
-                    cityData={cityData}
-                    averageCityMetrics={
-                      config.showAverage ? averageCityMetrics : []
-                    }
-                    metricKey={config.key}
-                    title={chartConfigs[config.key].title}
-                    description={chartConfigs[config.key].description}
-                    formatType={config.formatType}
-                  /> */}
                 </div>
                 <Card className="bg-muted/30">
                   <CardHeader>

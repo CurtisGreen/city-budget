@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, ArrowLeft } from "lucide-react";
 import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
+import { LogoButton } from "@/components/ui/logo-button";
 
 const metricConfigs: {
   key: keyof CityMetrics;
@@ -50,10 +51,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <BarChart3 className="h-8 w-8" />
-              <h1 className="text-2xl font-bold">Budget.City</h1>
-            </div>
+            <LogoButton />
             <nav className="flex items-center gap-4">
               <Link href="/">
                 <Button variant="ghost" className="cursor-pointer">
