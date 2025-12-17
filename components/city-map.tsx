@@ -29,8 +29,8 @@ export function CityMap({ cities }: CityMapProps) {
 
   // Get color based on net debt to revenue ratio
   const getColorForRatio = (ratio: number) => {
-    if (ratio === 0) return "oklch(0.696 0.17 162.48)"; // green - excellent
-    if (ratio < 1.0) return "oklch(0.769 0.188 70.08)"; // yellow - okay
+    if (ratio === 0) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (ratio < 1.0) return "oklch(0.769 0.188 70)"; // yellow - okay
     return "oklch(0.577 0.245 27.325)"; // red - poor
   };
 
@@ -105,21 +105,21 @@ export function CityMap({ cities }: CityMapProps) {
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: "oklch(0.696 0.17 162.48)" }}
+              style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
             />
             <span className="text-xs">{"= 0 (Excellent)"}</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: "oklch(0.769 0.188 70.08)" }}
+              style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
             />
             <span className="text-xs">{"0 - 1.0 (Okay)"}</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: "oklch(0.577 0.245 27.325)" }}
+              style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
             />
             <span className="text-xs">{"> 1 (Poor)"}</span>
           </div>
