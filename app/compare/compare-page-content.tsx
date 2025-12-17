@@ -83,7 +83,9 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
               Select Cities to Compare
             </label>
             <CitySelector
-              cities={allCities}
+              cities={allCities.toSorted((a, b) =>
+                a.info.id.localeCompare(b.info.id)
+              )}
               selectedCities={selectedCityIds}
               onSelectionChange={setSelectedCityIds}
               maxSelections={4}

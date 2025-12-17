@@ -12,6 +12,7 @@ import { farmersBranchInfo } from "@/data/info/farmers-branch";
 import { richardsonInfo } from "@/data/info/richardson";
 import { rowlettInfo } from "@/data/info/rowlett";
 import { friscoInfo } from "@/data/info/frisco";
+import { grapevineInfo } from "@/data/info/grapevine";
 
 const basicCityInfo = [
   dallasInfo,
@@ -25,6 +26,7 @@ const basicCityInfo = [
   richardsonInfo,
   rowlettInfo,
   friscoInfo,
+  grapevineInfo,
 ];
 
 // Calculate metrics for each city

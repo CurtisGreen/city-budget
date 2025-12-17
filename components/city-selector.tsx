@@ -1,35 +1,60 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import type { CityData } from "@/lib/types"
+import { useState } from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import type { CityData } from "@/lib/types";
 
 interface CitySelectorProps {
-  cities: CityData[]
-  selectedCities: string[]
-  onSelectionChange: (cityIds: string[]) => void
-  maxSelections?: number
+  cities: CityData[];
+  selectedCities: string[];
+  onSelectionChange: (cityIds: string[]) => void;
+  maxSelections?: number;
 }
 
-export function CitySelector({ cities, selectedCities, onSelectionChange, maxSelections = 4 }: CitySelectorProps) {
-  const [open, setOpen] = useState(false)
+const formatNumber = (value: number) => {
+  return new Intl.NumberFormat("en-US", {
+    style: "decimal",
+    notation: "compact",
+    maximumFractionDigits: 0,
+    maximumSignificantDigits: 3,
+  }).format(value);
+};
+
+export function CitySelector({
+  cities,
+  selectedCities,
+  onSelectionChange,
+  maxSelections = 4,
+}: CitySelectorProps) {
+  const [open, setOpen] = useState(false);
 
   const toggleCity = (cityId: string) => {
     if (selectedCities.includes(cityId)) {
-      onSelectionChange(selectedCities.filter((id) => id !== cityId))
+      onSelectionChange(selectedCities.filter((id) => id !== cityId));
     } else if (selectedCities.length < maxSelections) {
-      onSelectionChange([...selectedCities, cityId])
+      onSelectionChange([...selectedCities, cityId]);
     }
-  }
+  };
 
   const selectedCityNames = cities
     .filter((city) => selectedCities.includes(city.info.id))
     .map((city) => city.info.name)
-    .join(", ")
+    .join(", ");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -51,8 +76,9 @@ export function CitySelector({ cities, selectedCities, onSelectionChange, maxSel
             <CommandEmpty>No city found.</CommandEmpty>
             <CommandGroup>
               {cities.map((city) => {
-                const isSelected = selectedCities.includes(city.info.id)
-                const isDisabled = !isSelected && selectedCities.length >= maxSelections
+                const isSelected = selectedCities.includes(city.info.id);
+                const isDisabled =
+                  !isSelected && selectedCities.length >= maxSelections;
 
                 return (
                   <CommandItem
@@ -61,18 +87,23 @@ export function CitySelector({ cities, selectedCities, onSelectionChange, maxSel
                     onSelect={() => toggleCity(city.info.id)}
                     disabled={isDisabled}
                   >
-                    <Check className={cn("mr-2 h-4 w-4", isSelected ? "opacity-100" : "opacity-0")} />
+                    <Check
+                      className={cn(
+                        "mr-2 h-4 w-4",
+                        isSelected ? "opacity-100" : "opacity-0"
+                      )}
+                    />
                     {city.info.name}
                     <span className="ml-auto text-xs text-muted-foreground">
-                      Pop: {(city.info.population / 1000).toFixed(0)}K
+                      Pop: {formatNumber(city.info.population)}
                     </span>
                   </CommandItem>
-                )
+                );
               })}
             </CommandGroup>
           </CommandList>
         </Command>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
