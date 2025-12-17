@@ -105,11 +105,11 @@ export function ComparisonChart({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex">
-        <ChartContainer className="w-full">
+        <ChartContainer className="w-full min-h-[250px]">
           <ResponsiveContainer>
             <LineChart
               data={chartData}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
             >
               <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
               <XAxis dataKey="year" className="text-xs" />
@@ -160,7 +160,7 @@ export function ComparisonChart({
             <div className="h-full w-[15px] bg-gradient-to-b from-orange-300 to-blue-300 rounded-sm" />
           )}
         </div>
-        <div className="mb-10 invisible md:visible">
+        <div className="mb-10 hidden md:block">
           <div className="h-full py-2 px-1 flex flex-col justify-between text-center text-[11px]">
             <div>{chartConfig.upwardDescription}</div>
             <div>{chartConfig.downwardDescription}</div>
