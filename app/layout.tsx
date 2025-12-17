@@ -11,26 +11,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Budget.City - Dallas Area Municipal Financial Data",
-  description:
-    "Financial data for Dallas area cities. Compare budgets, debt levels, and spending patterns.",
-  generator: "v0.app",
+  title: "Budget.City",
+  description: "Financial data for Dallas area cities",
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
       {
         url: "/icon.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
   },
 };
 
