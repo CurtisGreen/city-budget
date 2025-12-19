@@ -14,6 +14,8 @@ import { rowlettInfo } from "@/data/info/rowlett";
 import { friscoInfo } from "@/data/info/frisco";
 import { grapevineInfo } from "@/data/info/grapevine";
 
+import { join } from "node:path";
+
 const basicCityInfo = [
   dallasInfo,
   planoInfo,
@@ -32,7 +34,7 @@ const basicCityInfo = [
 // Calculate metrics for each city
 const cityData: CityData[] = basicCityInfo.map((info) => {
   const financialData = readACFR(
-    process.cwd() + "/data/acfr/" + info.id + ".csv"
+    join(process.cwd(), "data/acfr", info.id + ".csv")
   );
   const metrics = financialData.map(calculateACFRMetrics);
   return { info, financialData, metrics };
