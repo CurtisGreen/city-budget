@@ -73,6 +73,8 @@ const LineGraph = ({ data }: LineGraphProps) => {
     })
     .join(" ");
 
+  console.log(pathD);
+
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
       {/* X Axis */}
@@ -95,7 +97,9 @@ const LineGraph = ({ data }: LineGraphProps) => {
 
       {/* Rounded Line */}
       <path
-        d={pathD}
+        // d={pathD}
+        d={`M 40 143.82174953255998 L 64.44444444444444 160 L 88.88888888888889 157.92155049357646 L 113.33333333333333 144.65107863045097 L 137.77777777777777 153.9932447375299 L 162.22222222222223 
+112.18420153199702 L 186.66666666666666 85.68366875087959 L 211.11111111111111 56.927963971933494 L 235.55555555555554 59.037777196968165 L 260 40`}
         fill="none"
         stroke="#1449e69d"
         strokeWidth={3}
