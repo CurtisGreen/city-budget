@@ -31,7 +31,9 @@ const basicCityInfo = [
 
 // Calculate metrics for each city
 const cityData: CityData[] = basicCityInfo.map((info) => {
-  const financialData = readACFR("data/acfr/" + info.id + ".csv");
+  const financialData = readACFR(
+    process.cwd() + "/data/acfr/" + info.id + ".csv"
+  );
   const metrics = financialData.map(calculateACFRMetrics);
   return { info, financialData, metrics };
 });

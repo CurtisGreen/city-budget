@@ -1,44 +1,9 @@
+import { getAllCities } from "@/lib/city-data-source";
 import { ImageResponse } from "next/og";
 
 const width = 300;
 const height = 200;
 const padding = 40;
-
-export const alt = "Budget.City";
-export const size = { width, height };
-
-export const contentType = "image/png";
-
-import { dallasInfo } from "@/data/info/dallas";
-import { arlingtonInfo } from "@/data/info/arlington";
-import { planoInfo } from "@/data/info/plano";
-import { irvingInfo } from "@/data/info/irving";
-import { garlandInfo } from "@/data/info/garland";
-import { addisonInfo } from "@/data/info/addison";
-import { carrolltonInfo } from "@/data/info/carrollton";
-import { farmersBranchInfo } from "@/data/info/farmers-branch";
-import { richardsonInfo } from "@/data/info/richardson";
-import { rowlettInfo } from "@/data/info/rowlett";
-import { friscoInfo } from "@/data/info/frisco";
-import { grapevineInfo } from "@/data/info/grapevine";
-import { CityData } from "@/lib/types";
-import { readACFR } from "@/lib/acfr-csv-processor";
-import { calculateACFRMetrics } from "@/lib/format-acfr-data";
-
-const basicCityInfo = [
-  dallasInfo,
-  planoInfo,
-  arlingtonInfo,
-  irvingInfo,
-  garlandInfo,
-  addisonInfo,
-  carrolltonInfo,
-  farmersBranchInfo,
-  richardsonInfo,
-  rowlettInfo,
-  friscoInfo,
-  grapevineInfo,
-];
 
 export default async function GET({
   params,
@@ -46,12 +11,7 @@ export default async function GET({
   params: Promise<{ cityId: string }>;
 }) {
   const { cityId } = await params;
-  // const cities = getAllCities();
-  const cities: CityData[] = basicCityInfo.map((info) => {
-    const financialData = readACFR("data/acfr/" + info.id + ".csv");
-    const metrics = financialData.map(calculateACFRMetrics);
-    return { info, financialData, metrics };
-  });
+  const cities = getAllCities();
   const city = cities.find((c) => c.info.id == cityId) || cities[0];
   const data = city.metrics.map((m) => ({
     year: m.fiscalYear,
@@ -109,7 +69,7 @@ const LineGraph = ({ data }: LineGraphProps) => {
     .map((d, i) => {
       const x = xScale(d.year);
       const y = yScale(d.value);
-      return `${i === 0 ? "M" : "L"} ${Math.round(x)} ${Math.round(y)}`;
+      return `${i === 0 ? "M" : "L"} ${x} ${y}`;
     })
     .join(" ");
 
@@ -133,7 +93,7 @@ const LineGraph = ({ data }: LineGraphProps) => {
         stroke="grey"
       />
 
-      {/* Line */}
+      {/* Rounded Line */}
       <path
         d={pathD}
         fill="none"
