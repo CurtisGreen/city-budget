@@ -5,6 +5,11 @@ const width = 300;
 const height = 200;
 const padding = 40;
 
+export const alt = "Budget.City";
+export const size = { width, height };
+
+export const contentType = "image/png";
+
 export default async function GET({
   params,
 }: {
@@ -72,8 +77,6 @@ const LineGraph = ({ data }: LineGraphProps) => {
       return `${i === 0 ? "M" : "L"} ${Math.round(x)} ${Math.round(y)}`;
     })
     .join(" ");
-  console.log(pathD);
-  console.error(pathD);
 
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
@@ -107,7 +110,6 @@ const LineGraph = ({ data }: LineGraphProps) => {
       {/* Line */}
       <path
         d={pathD}
-        // d={`M 40 129 L 64 160 L 89 52 L 113 40 L 138 55 L 162 60 L 187 45 L 211 69 L 236 118 L 260 114`}
         fill="none"
         stroke="#1449e69d"
         strokeWidth={3}
