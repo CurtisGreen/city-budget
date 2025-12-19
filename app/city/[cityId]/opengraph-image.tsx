@@ -30,7 +30,7 @@ export default async function GET({
           backgroundColor: "white",
         }}
       >
-        <div tw="text-black-600 mt-4" style={{ display: "flex" }}>
+        <div tw="text-slate-600 mt-4" style={{ display: "flex" }}>
           {city.info.name} - Net Financial Position
         </div>
         <LineGraph data={data} />

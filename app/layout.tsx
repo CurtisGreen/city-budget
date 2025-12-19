@@ -11,6 +11,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://budget.city"),
   title: "Budget.City",
   description: "Financial data for Dallas area cities",
   icons: {
