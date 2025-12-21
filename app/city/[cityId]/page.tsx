@@ -10,6 +10,7 @@ import { ChartFormatType, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { ComparisonChart } from "@/components/comparison-chart";
 import { LogoButton } from "@/components/ui/logo-button";
+import { PopulationChart } from "@/components/population-chart";
 
 interface CityPageProps {
   params: Promise<{
@@ -165,6 +166,14 @@ export default async function CityPage({ params }: CityPageProps) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Population chart */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
+          <PopulationChart cityInfos={[cityData.info]} />
         </div>
       </section>
 

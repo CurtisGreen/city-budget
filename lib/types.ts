@@ -27,10 +27,16 @@ export interface CityMetrics {
   externalTransfersToRevenue: number;
 }
 
+export interface Population {
+  year: number;
+  value: number;
+}
+
 export interface CityInfo {
   id: string;
   name: string;
   population: number;
+  populations: Population[];
   propertyTaxRate: number; // percentage
   salesTaxBreakdown: {
     category: string;

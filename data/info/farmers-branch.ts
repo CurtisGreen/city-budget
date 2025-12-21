@@ -4,6 +4,14 @@ export const farmersBranchInfo: CityInfo = {
   id: "farmers-branch",
   name: "Farmers Branch",
   population: 40246,
+  populations: [
+    { year: 1980, value: 24863 },
+    { year: 1990, value: 24250 },
+    { year: 2000, value: 27508 },
+    { year: 2010, value: 28616 },
+    { year: 2020, value: 35991 },
+    { year: 2025, value: 40246 },
+  ],
   propertyTaxRate: 0.72,
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },

@@ -4,6 +4,14 @@ export const rowlettInfo: CityInfo = {
   id: "rowlett",
   name: "Rowlett",
   population: 67519,
+  populations: [
+    { year: 1980, value: 7522 },
+    { year: 1990, value: 23260 },
+    { year: 2000, value: 44503 },
+    { year: 2010, value: 56199 },
+    { year: 2020, value: 62535 },
+    { year: 2025, value: 67519 },
+  ],
   propertyTaxRate: 0.72,
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },

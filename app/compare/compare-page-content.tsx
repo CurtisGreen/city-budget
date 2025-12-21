@@ -13,6 +13,7 @@ import { BarChart3, ArrowLeft } from "lucide-react";
 import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { LogoButton } from "@/components/ui/logo-button";
+import { PopulationChart } from "@/components/population-chart";
 
 const metricConfigs: {
   key: keyof CityMetrics;
@@ -158,6 +159,16 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                   </Card>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <section className="py-8 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <h3 className="text-2xl font-bold mb-6">
+                Other Metrics Comparison
+              </h3>
+
+              <PopulationChart cityInfos={selectedCities.map((c) => c.info)} />
             </div>
           </section>
         </>

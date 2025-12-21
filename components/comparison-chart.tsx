@@ -90,14 +90,6 @@ export function ComparisonChart({
     return dataPoint;
   });
 
-  const config: any = {};
-  cities.forEach((city, index) => {
-    config[city.info.id] = {
-      label: city.info.name,
-      color: CITY_COLORS[index % CITY_COLORS.length],
-    };
-  });
-
   return (
     <Card>
       <CardHeader>

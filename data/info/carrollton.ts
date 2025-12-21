@@ -4,6 +4,14 @@ export const carrolltonInfo: CityInfo = {
   id: "carrollton",
   name: "Carrollton",
   population: 136543,
+  populations: [
+    { year: 1980, value: 40595 },
+    { year: 1990, value: 82169 },
+    { year: 2000, value: 109576 },
+    { year: 2010, value: 119097 },
+    { year: 2020, value: 133434 },
+    { year: 2025, value: 136543 },
+  ],
   propertyTaxRate: 0.72,
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },

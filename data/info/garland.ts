@@ -4,6 +4,14 @@ export const garlandInfo: CityInfo = {
   id: "garland",
   name: "Garland",
   population: 251932,
+  populations: [
+    { year: 1980, value: 138857 },
+    { year: 1990, value: 180650 },
+    { year: 2000, value: 215768 },
+    { year: 2010, value: 226876 },
+    { year: 2020, value: 246018 },
+    { year: 2025, value: 251932 },
+  ],
   propertyTaxRate: 0.72,
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
