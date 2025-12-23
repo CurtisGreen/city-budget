@@ -1,19 +1,17 @@
 "use client";
 
 import * as React from "react";
-import * as RechartsPrimitive from "recharts";
 
 import { cn } from "@/lib/utils";
+import { Legend, ResponsiveContainer, Tooltip } from "recharts";
 
-function ChartContainer({
+export function ChartContainer({
   id,
   className,
   children,
   ...props
 }: React.ComponentProps<"div"> & {
-  children: React.ComponentProps<
-    typeof RechartsPrimitive.ResponsiveContainer
-  >["children"];
+  children: React.ComponentProps<typeof ResponsiveContainer>["children"];
 }) {
   const uniqueId = React.useId();
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
@@ -28,21 +26,18 @@ function ChartContainer({
       )}
       {...props}
     >
-      <RechartsPrimitive.ResponsiveContainer>
-        {children}
-      </RechartsPrimitive.ResponsiveContainer>
+      <ResponsiveContainer>{children}</ResponsiveContainer>
     </div>
   );
 }
 
-const ChartTooltip = RechartsPrimitive.Tooltip;
+export const ChartTooltip = Tooltip;
 
-function ChartTooltipContent({
+export function ChartTooltipContent({
   payload,
   className,
   formatter,
-}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
-  React.ComponentProps<"div">) {
+}: React.ComponentProps<typeof Tooltip> & React.ComponentProps<"div">) {
   if (!payload?.length) return null;
 
   return (
@@ -85,6 +80,4 @@ function ChartTooltipContent({
   );
 }
 
-const ChartLegend = RechartsPrimitive.Legend;
-
-export { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend };
+export const ChartLegend = Legend;

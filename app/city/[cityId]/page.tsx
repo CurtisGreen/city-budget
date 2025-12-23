@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer";
 import { ComparisonChart } from "@/components/comparison-chart";
 import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
+import { StackedBarChart } from "@/components/stacked-bar-chart";
 
 interface CityPageProps {
   params: Promise<{
@@ -174,6 +175,45 @@ export default async function CityPage({ params }: CityPageProps) {
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
           <PopulationChart cityInfos={[cityData.info]} />
+          {cityData.info.propertyValues && (
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+              <div className="lg:col-span-2">
+                <StackedBarChart
+                  propertyValues={cityData.info.propertyValues}
+                />
+              </div>
+              <Card className="bg-muted/30">
+                <CardHeader>
+                  <CardTitle className="text-base">What This Means</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-sm mb-1">
+                      Understanding the Metric
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      M&O stands for Maintenance and Operations, I&S stands for
+                      Interest and Sinking The I&S portion is dedicated to
+                      paying off bonds or other long-term debt.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm mb-1">
+                      What to Look For
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      A rising I&S rate means more money has been borrowed
+                      resulting in less flexibility on the tax rate. If the cost
+                      of providing services rises faster than property values
+                      then an increased tax rate could be necessary to provide
+                      the same level of service. The same is true of the
+                      inverse.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          )}
         </div>
       </section>
 

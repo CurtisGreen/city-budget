@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Line,
-  LineChart,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  ResponsiveContainer,
-  Legend,
-} from "recharts";
+import { Line, LineChart, XAxis, YAxis, CartesianGrid, Legend } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   ChartContainer,
@@ -60,44 +52,41 @@ export function PopulationChart({ cityInfos }: ComparisonChartProps) {
         <CardTitle className="text-lg">Population</CardTitle>
       </CardHeader>
       <CardContent className="flex">
-        <ChartContainer className="w-full min-h-[250px]">
-          <ResponsiveContainer>
-            <LineChart
-              data={chartData}
-              margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
-              <XAxis
-                dataKey="year"
-                className="text-xs"
-                type="number"
-                tickCount={10}
-                domain={["dataMin", "dataMax"]}
-                interval={0}
-              />
-              <YAxis tickFormatter={formatter} className="text-xs" />
-              <ChartTooltip
-                content={
-                  <ChartTooltipContent
-                    formatter={(value) => formatter(value as number)}
-                  />
-                }
-              />
-              <Legend />
-
-              {cityInfos.map((city, index) => (
-                <Line
-                  key={city.id}
-                  type="monotone"
-                  dataKey={city.id}
-                  stroke={CITY_COLORS[index % CITY_COLORS.length]}
-                  strokeWidth={2}
-                  name={city.name}
-                  dot={{ r: 4 }}
+        <ChartContainer className="w-full min-h-[250px] max-h-[485px]">
+          <LineChart
+            data={chartData}
+            margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
+            <XAxis
+              dataKey="year"
+              className="text-xs"
+              type="number"
+              tickCount={10}
+              domain={["dataMin", "dataMax"]}
+            />
+            <YAxis tickFormatter={formatter} className="text-xs" />
+            <ChartTooltip
+              content={
+                <ChartTooltipContent
+                  formatter={(value) => formatter(value as number)}
                 />
-              ))}
-            </LineChart>
-          </ResponsiveContainer>
+              }
+            />
+            <Legend />
+
+            {cityInfos.map((city, index) => (
+              <Line
+                key={city.id}
+                type="monotone"
+                dataKey={city.id}
+                stroke={CITY_COLORS[index % CITY_COLORS.length]}
+                strokeWidth={2}
+                name={city.name}
+                dot={{ r: 4 }}
+              />
+            ))}
+          </LineChart>
         </ChartContainer>
       </CardContent>
     </Card>

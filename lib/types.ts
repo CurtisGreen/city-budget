@@ -32,11 +32,25 @@ export interface Population {
   value: number;
 }
 
+export interface PropertyValues {
+  fiscalYear: number;
+  // Maintenance & operations tax rate
+  // Used for regular expenses
+  moRate: number;
+  // Interest & sinking tax rate
+  // Used to pay off principal and interest on bonds or other long-term debt
+  isRate: number;
+  averageSFHTaxableValue: number;
+  averageSFHMarketValue?: number;
+  averageSFHCityTaxesPaid: number;
+}
+
 export interface CityInfo {
   id: string;
   name: string;
   population: number;
   populations: Population[];
+  propertyValues?: PropertyValues[];
   propertyTaxRate: number; // percentage
   salesTaxBreakdown: {
     category: string;
