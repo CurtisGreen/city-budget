@@ -22,4 +22,5 @@ export const arlingtonInfo: CityInfo = {
   ],
   latitude: 32.705,
   longitude: -97.122778,
+  area: 95.84,
 };

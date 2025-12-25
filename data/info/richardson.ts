@@ -22,4 +22,5 @@ export const richardsonInfo: CityInfo = {
   ],
   latitude: 32.991667,
   longitude: -96.703889,
+  area: 28.57,
 };

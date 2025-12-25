@@ -22,7 +22,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import type { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
-import { calculateAverageMetrics } from "@/lib/format-acfr-data";
+import { calculateAverageMetrics } from "@/lib/format-chart-data";
 import { chartFormatters } from "@/lib/chart-utils";
 import { chartConfigs } from "@/lib/chart-configs";
 
@@ -68,6 +68,7 @@ export function ComparisonChart({
   const chartData = sortedYears.map((year) => {
     const dataPoint: any = { year };
 
+    // Add all of the cities
     cities.forEach((city) => {
       const yearIndex = city.financialData.findIndex(
         (d) => d.fiscalYear === year

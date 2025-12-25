@@ -22,4 +22,5 @@ export const grapevineInfo: CityInfo = {
   ],
   latitude: 32.935,
   longitude: -97.085833,
+  area: 32.14,
 };

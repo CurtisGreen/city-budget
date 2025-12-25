@@ -22,4 +22,5 @@ export const garlandInfo: CityInfo = {
   ],
   latitude: 32.907222,
   longitude: -96.635278,
+  area: 57.13,
 };

@@ -14,6 +14,7 @@ import { PopulationChart } from "@/components/population-chart";
 import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
 import { PropertyTaxesPaidChart } from "@/components/property-tax-spent-chart";
+import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 
 interface CityPageProps {
   params: Promise<{
@@ -74,6 +75,18 @@ export default async function CityPage({ params }: CityPageProps) {
   if (!cityData) {
     notFound();
   }
+
+  const populationDensity = {
+    ...cityData.info,
+    data: cityData.info.populations.map((p) => ({
+      value: p.value / cityData.info.area,
+      year: p.year,
+    })),
+  };
+
+  const averagePopulationDensity = calculateAveragePopulationDensity(
+    allCities.map((c) => c.info)
+  );
 
   return (
     <div className="min-h-screen">
@@ -165,16 +178,9 @@ export default async function CityPage({ params }: CityPageProps) {
             {cityData.info.area && (
               <PopulationChart
                 title="Population Density"
-                subtitle="Population per square mile"
-                cities={[
-                  {
-                    ...cityData.info,
-                    data: cityData.info.populations.map((p) => ({
-                      value: p.value / cityData.info.area,
-                      year: p.year,
-                    })),
-                  },
-                ]}
+                subtitle="Population per square mile of land"
+                cities={[populationDensity]}
+                averageMetrics={averagePopulationDensity}
               />
             )}
           </div>

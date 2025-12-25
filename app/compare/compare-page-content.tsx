@@ -14,6 +14,7 @@ import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
+import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 
 const metricConfigs: {
   key: keyof CityMetrics;
@@ -45,6 +46,23 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const selectedCities = selectedCityIds
     .map((id) => getCityData(id))
     .filter(Boolean) as CityData[];
+
+  const populationData = selectedCities.map((cityData) => ({
+    ...cityData.info,
+    data: cityData.info.populations,
+  }));
+
+  const populationDensityData = selectedCities.map((cityData) => ({
+    ...cityData.info,
+    data: cityData.info.populations.map((p) => ({
+      value: p.value / cityData.info.area,
+      year: p.year,
+    })),
+  }));
+
+  const averagePopulationDensityData = calculateAveragePopulationDensity(
+    allCities.map((c) => c.info)
+  );
 
   return (
     <div className="min-h-screen">
@@ -166,24 +184,13 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
             <div className="container mx-auto px-4">
               <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <PopulationChart
-                  title="Population"
-                  cities={selectedCities.map((cityData) => ({
-                    ...cityData.info,
-                    data: cityData.info.populations,
-                  }))}
-                />
+                <PopulationChart title="Population" cities={populationData} />
                 {selectedCities.every((c) => c.info.area) && (
                   <PopulationChart
                     title="Population Density"
-                    subtitle="Population per square mile"
-                    cities={selectedCities.map((cityData) => ({
-                      ...cityData.info,
-                      data: cityData.info.populations.map((p) => ({
-                        value: p.value / cityData.info.area,
-                        year: p.year,
-                      })),
-                    }))}
+                    subtitle="Population per square mile of land"
+                    cities={populationDensityData}
+                    averageMetrics={averagePopulationDensityData}
                   />
                 )}
               </div>

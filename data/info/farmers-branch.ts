@@ -22,4 +22,5 @@ export const farmersBranchInfo: CityInfo = {
   ],
   latitude: 32.927222,
   longitude: -96.863889,
+  area: 11.88,
 };

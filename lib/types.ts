@@ -59,7 +59,7 @@ export interface CityInfo {
   }[];
   latitude: number;
   longitude: number;
-  area?: number;
+  area: number; // Land area
 }
 
 export interface CityData {

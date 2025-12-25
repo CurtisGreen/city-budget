@@ -22,4 +22,5 @@ export const irvingInfo: CityInfo = {
   ],
   latitude: 32.816667,
   longitude: -96.95,
+  area: 66.98,
 };

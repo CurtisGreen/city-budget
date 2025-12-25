@@ -1,6 +1,6 @@
 import type { CityData } from "./types";
 import { readACFR } from "./acfr-csv-processor";
-import { calculateACFRMetrics } from "./format-acfr-data";
+import { calculateACFRMetrics } from "./format-chart-data";
 import { dallasInfo } from "@/data/info/dallas";
 import { arlingtonInfo } from "@/data/info/arlington";
 import { planoInfo } from "@/data/info/plano";

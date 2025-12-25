@@ -22,4 +22,5 @@ export const carrolltonInfo: CityInfo = {
   ],
   latitude: 32.953611,
   longitude: -96.890278,
+  area: 36.66,
 };

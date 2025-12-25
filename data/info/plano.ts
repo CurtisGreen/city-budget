@@ -22,4 +22,5 @@ export const planoInfo: CityInfo = {
   ],
   latitude: 33.050278,
   longitude: -96.698889,
+  area: 71.69,
 };

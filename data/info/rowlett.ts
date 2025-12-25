@@ -22,4 +22,5 @@ export const rowlettInfo: CityInfo = {
   ],
   latitude: 32.902778,
   longitude: -96.544444,
+  area: 20.748,
 };

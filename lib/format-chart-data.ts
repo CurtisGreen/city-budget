@@ -1,4 +1,9 @@
-import type { CityFinancialData, CityMetrics } from "./types";
+import type {
+  CityFinancialData,
+  CityInfo,
+  CityMetrics,
+  Population,
+} from "./types";
 
 export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const totalAssets = data.currentAndOtherAssets + data.capitalAssets;
@@ -93,6 +98,34 @@ export function calculateAverageMetrics(
     });
 
   return averagePerYear;
+}
+
+export function calculateAveragePopulationDensity(
+  allCitiesData: CityInfo[]
+): Population[] {
+  // Group by year
+  const yearMap = new Map<number, Population[]>();
+
+  allCitiesData.forEach((cityData) => {
+    cityData.populations.forEach((pop) => {
+      if (!yearMap.has(pop.year)) {
+        yearMap.set(pop.year, []);
+      }
+      yearMap.get(pop.year)!.push(pop);
+    });
+  });
+
+  // Calculate average for each year
+  const populationDensityPerYear: Population[] = Array.from(yearMap.entries())
+    .sort(([a], [b]) => a - b)
+    .map(([year, dataPoints]) => ({
+      year,
+      value:
+        sum(dataPoints.map((d) => d.value)) /
+        sum(allCitiesData.map((c) => c.area)),
+    }));
+
+  return populationDensityPerYear;
 }
 
 function sum(numbers: number[]): number {

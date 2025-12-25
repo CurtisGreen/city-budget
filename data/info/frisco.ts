@@ -22,4 +22,5 @@ export const friscoInfo: CityInfo = {
   ],
   latitude: 33.141667,
   longitude: -96.821667,
+  area: 68.64,
 };
