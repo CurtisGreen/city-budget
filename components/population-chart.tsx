@@ -1,18 +1,33 @@
 "use client";
 
 import { Line, LineChart, XAxis, YAxis, CartesianGrid, Legend } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import type { ChartFormatType, CityInfo } from "@/lib/types";
 import { chartFormatters } from "@/lib/chart-utils";
 
+interface Data {
+  year: number;
+  value: number;
+}
+
 interface ComparisonChartProps {
-  cityInfos: CityInfo[];
-  formatType?: ChartFormatType;
+  cities: {
+    data: Data[];
+    id: string;
+    name: string;
+  }[];
+  title: string;
+  subtitle?: string;
 }
 
 const CITY_COLORS = [
@@ -22,13 +37,17 @@ const CITY_COLORS = [
   "var(--chart-5)",
 ];
 
-export function PopulationChart({ cityInfos }: ComparisonChartProps) {
+export function PopulationChart({
+  cities,
+  title,
+  subtitle,
+}: ComparisonChartProps) {
   const formatter = chartFormatters["number"];
 
   // Get all unique years
   const years = new Set<number>();
-  cityInfos.forEach((c) => {
-    c.populations.forEach(({ year }) => years.add(year));
+  cities.forEach((c) => {
+    c.data.forEach(({ year }) => years.add(year));
   });
   const sortedYears = Array.from(years).sort();
 
@@ -36,10 +55,10 @@ export function PopulationChart({ cityInfos }: ComparisonChartProps) {
   const chartData = sortedYears.map((year) => {
     const dataPoint: any = { year };
 
-    cityInfos.forEach((c) => {
-      const yearIndex = c.populations.findIndex((p) => p.year === year);
+    cities.forEach((c) => {
+      const yearIndex = c.data.findIndex((p) => p.year === year);
       if (yearIndex !== -1) {
-        dataPoint[c.id] = c.populations[yearIndex].value;
+        dataPoint[c.id] = c.data[yearIndex].value;
       }
     });
 
@@ -49,7 +68,8 @@ export function PopulationChart({ cityInfos }: ComparisonChartProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg">Population</CardTitle>
+        <CardTitle className="text-lg">{title}</CardTitle>
+        {subtitle && <CardDescription>{subtitle}</CardDescription>}
       </CardHeader>
       <CardContent className="flex">
         <ChartContainer className="w-full min-h-[250px] max-h-[485px]">
@@ -75,7 +95,7 @@ export function PopulationChart({ cityInfos }: ComparisonChartProps) {
             />
             <Legend />
 
-            {cityInfos.map((city, index) => (
+            {cities.map((city, index) => (
               <Line
                 key={city.id}
                 type="monotone"

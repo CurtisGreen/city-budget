@@ -164,11 +164,29 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
 
           <section className="py-8 bg-muted/30">
             <div className="container mx-auto px-4">
-              <h3 className="text-2xl font-bold mb-6">
-                Other Metrics Comparison
-              </h3>
-
-              <PopulationChart cityInfos={selectedCities.map((c) => c.info)} />
+              <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <PopulationChart
+                  title="Population"
+                  cities={selectedCities.map((cityData) => ({
+                    ...cityData.info,
+                    data: cityData.info.populations,
+                  }))}
+                />
+                {selectedCities.every((c) => c.info.area) && (
+                  <PopulationChart
+                    title="Population Density"
+                    subtitle="Population per square mile"
+                    cities={selectedCities.map((cityData) => ({
+                      ...cityData.info,
+                      data: cityData.info.populations.map((p) => ({
+                        value: p.value / cityData.info.area,
+                        year: p.year,
+                      })),
+                    }))}
+                  />
+                )}
+              </div>
             </div>
           </section>
         </>

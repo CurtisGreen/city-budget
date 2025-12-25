@@ -11,7 +11,9 @@ import { Footer } from "@/components/footer";
 import { ComparisonChart } from "@/components/comparison-chart";
 import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
-import { StackedBarChart } from "@/components/stacked-bar-chart";
+import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
+import { ChartExplanationCard } from "@/components/chart-explanation-card";
+import { PropertyTaxesPaidChart } from "@/components/property-tax-spent-chart";
 
 interface CityPageProps {
   params: Promise<{
@@ -141,29 +143,10 @@ export default async function CityPage({ params }: CityPageProps) {
                     formatType={config.formatType}
                   />
                 </div>
-                <Card className="bg-muted/30">
-                  <CardHeader>
-                    <CardTitle className="text-base">What This Means</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-sm mb-1">
-                        Understanding the Metric
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        {chartConfigs[config.key].whatItMeans}
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-sm mb-1">
-                        What to Look For
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        {chartConfigs[config.key].whatToLookFor}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <ChartExplanationCard
+                  understandingTheMetric={chartConfigs[config.key].whatItMeans}
+                  whatToLookFor={chartConfigs[config.key].whatToLookFor}
+                />
               </div>
             ))}
           </div>
@@ -174,45 +157,62 @@ export default async function CityPage({ params }: CityPageProps) {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
-          <PopulationChart cityInfos={[cityData.info]} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <PopulationChart
+              title="Population"
+              cities={[{ ...cityData.info, data: cityData.info.populations }]}
+            />
+            {cityData.info.area && (
+              <PopulationChart
+                title="Population Density"
+                subtitle="Population per square mile"
+                cities={[
+                  {
+                    ...cityData.info,
+                    data: cityData.info.populations.map((p) => ({
+                      value: p.value / cityData.info.area,
+                      year: p.year,
+                    })),
+                  },
+                ]}
+              />
+            )}
+          </div>
           {cityData.info.propertyValues && (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-              <div className="lg:col-span-2">
-                <StackedBarChart
-                  propertyValues={cityData.info.propertyValues}
-                />
-              </div>
-              <Card className="bg-muted/30">
-                <CardHeader>
-                  <CardTitle className="text-base">What This Means</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      Understanding the Metric
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      M&O stands for Maintenance and Operations, I&S stands for
+            <>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+                <div className="lg:col-span-2">
+                  <PropertyTaxRateChart
+                    propertyValues={cityData.info.propertyValues}
+                  />
+                </div>
+                <ChartExplanationCard
+                  understandingTheMetric="M&O stands for Maintenance and Operations, I&S stands for
                       Interest and Sinking The I&S portion is dedicated to
-                      paying off bonds or other long-term debt.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-1">
-                      What to Look For
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      A rising I&S rate means more money has been borrowed
+                      paying off bonds or other long-term debt."
+                  whatToLookFor="A rising I&S rate means more money has been borrowed,
                       resulting in less flexibility on the tax rate. If the cost
                       of providing services rises faster than property values
                       then an increased tax rate could be necessary to provide
                       the same level of service. The same is true of the
-                      inverse.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                      inverse."
+                />
+              </div>
+              {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+                <div className="lg:col-span-2">
+                  <PropertyTaxesPaidChart
+                    propertyValues={cityData.info.propertyValues}
+                  />
+                </div>
+                <ChartExplanationCard
+                  understandingTheMetric="Annual city tax bill for the property of the average single family house. 
+                  This does not take into account senior/disabled homestead exemptions."
+                  whatToLookFor="Property taxes are paid to the city, county, and ISD to fund services. 
+                  This chart shows the city's portion. The rate, value, market value, and prevailing incomes
+                   are all important variables to understand."
+                />
+              </div> */}
+            </>
           )}
         </div>
       </section>

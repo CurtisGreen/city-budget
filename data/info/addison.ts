@@ -105,8 +105,8 @@ export const addisonInfo: CityInfo = {
       fiscalYear: 2026,
       moRate: 0.4331,
       isRate: 0.175,
-      averageSFHCityTaxesPaid: 3051.92,
-      averageSFHTaxableValue: 501878,
+      // averageSFHCityTaxesPaid: 3051.92,
+      // averageSFHTaxableValue: 501878,
     },
   ],
   propertyTaxRate: 0.72,
@@ -119,4 +119,5 @@ export const addisonInfo: CityInfo = {
   ],
   latitude: 32.957778,
   longitude: -96.835,
+  area: 4.35,
 };

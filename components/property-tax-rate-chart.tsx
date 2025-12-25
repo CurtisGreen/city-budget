@@ -10,15 +10,19 @@ import {
   Legend,
   Line,
 } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 import { PropertyValues } from "@/lib/types";
 
-export const StackedBarChart = ({
+export const PropertyTaxRateChart = ({
   propertyValues,
-  className,
 }: {
   propertyValues: PropertyValues[];
-  className?: string;
 }) => {
   const data = propertyValues.map((pv) => ({
     ...pv,
@@ -27,9 +31,12 @@ export const StackedBarChart = ({
     "Total rate": Number((pv.moRate + pv.isRate).toFixed(4)),
   }));
   return (
-    <Card className={className}>
+    <Card>
       <CardHeader>
         <CardTitle className="text-lg">Property Tax Rate</CardTitle>
+        <CardDescription>
+          The city's portion of the property tax rate
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <BarChart

@@ -40,9 +40,9 @@ export interface PropertyValues {
   // Interest & sinking tax rate
   // Used to pay off principal and interest on bonds or other long-term debt
   isRate: number;
-  averageSFHTaxableValue: number;
+  averageSFHTaxableValue?: number;
   averageSFHMarketValue?: number;
-  averageSFHCityTaxesPaid: number;
+  averageSFHCityTaxesPaid?: number;
 }
 
 export interface CityInfo {
@@ -59,6 +59,7 @@ export interface CityInfo {
   }[];
   latitude: number;
   longitude: number;
+  area?: number;
 }
 
 export interface CityData {
