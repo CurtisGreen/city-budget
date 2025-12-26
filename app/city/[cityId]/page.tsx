@@ -175,14 +175,12 @@ export default async function CityPage({ params }: CityPageProps) {
               title="Population"
               cities={[{ ...cityData.info, data: cityData.info.populations }]}
             />
-            {cityData.info.area && (
-              <PopulationChart
-                title="Population Density"
-                subtitle="Population per square mile of land"
-                cities={[populationDensity]}
-                averageMetrics={averagePopulationDensity}
-              />
-            )}
+            <PopulationChart
+              title="Population Density"
+              subtitle="Population per square mile of land"
+              cities={[populationDensity]}
+              averageMetrics={averagePopulationDensity}
+            />
           </div>
           {cityData.info.propertyValues && (
             <>
@@ -198,10 +196,10 @@ export default async function CityPage({ params }: CityPageProps) {
                       paying off bonds or other long-term debt."
                   whatToLookFor="A rising I&S rate means more money has been borrowed,
                       resulting in less flexibility on the tax rate. If the cost
-                      of providing services rises faster than property values
+                      of providing services rises faster than property values,
                       then an increased tax rate could be necessary to provide
-                      the same level of service. The same is true of the
-                      inverse."
+                      the same level of service. Similarly, property values rising 
+                      faster than the cost of services can allow for a rate reduction."
                 />
               </div>
               {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
