@@ -60,6 +60,7 @@ export interface CityInfo {
   latitude: number;
   longitude: number;
   area: number; // Land area
+  notes?: string[];
 }
 
 export interface CityData {

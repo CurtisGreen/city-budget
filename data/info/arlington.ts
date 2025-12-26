@@ -85,4 +85,8 @@ export const arlingtonInfo: CityInfo = {
   latitude: 32.705,
   longitude: -97.122778,
   area: 95.84,
+  notes: [
+    `FY 2026 Budget: [...] the property tax base grew by 1.9% in FY 2026. While the total assessed value of property in Arlington has not decreased, this is the lowest rate of growth in assessed value since FY 2012—even lower than FY 2021, when property values were most severely impacted by the Covid-19 Pandemic.
+    This is not necessarily an indication of a slowdown in growth in market values but is largely a reflection of policy decisions by the Tarrant Appraisal District, which shifted state policy and elected not to reappraise properties in Tarrant County this year, notable impacting on the City's ability to generate revenue for programs and services for its residents.`,
+  ],
 };

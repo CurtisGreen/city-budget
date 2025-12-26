@@ -13,6 +13,68 @@ export const carrolltonInfo: CityInfo = {
     { year: 2025, value: 136543 },
   ],
   propertyTaxRate: 0.72,
+  propertyValues: [
+    {
+      fiscalYear: 2015,
+      moRate: 0.417389,
+      isRate: 0.197986,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.420043,
+      isRate: 0.192832,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.425787,
+      isRate: 0.177913,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.42779,
+      isRate: 0.17191,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.43022,
+      isRate: 0.16475,
+    },
+    {
+      fiscalYear: 2020,
+      moRate: 0.43887,
+      isRate: 0.1511,
+    },
+    {
+      fiscalYear: 2021,
+      moRate: 0.441146,
+      isRate: 0.146354,
+    },
+    {
+      fiscalYear: 2022,
+      moRate: 0.442807,
+      isRate: 0.139693,
+    },
+    {
+      fiscalYear: 2023,
+      moRate: 0.417274,
+      isRate: 0.145226,
+    },
+    {
+      fiscalYear: 2024,
+      moRate: 0.408525,
+      isRate: 0.145225,
+    },
+    {
+      fiscalYear: 2025,
+      moRate: 0.393162,
+      isRate: 0.145588,
+    },
+    {
+      fiscalYear: 2026,
+      moRate: 0.387652,
+      isRate: 0.149848,
+    },
+  ],
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
     { category: "Transportation", percentage: 24, amount: 84000000 },
