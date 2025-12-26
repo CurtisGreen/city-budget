@@ -192,7 +192,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 </div>
                 <ChartExplanationCard
                   understandingTheMetric="M&O stands for Maintenance and Operations, I&S stands for
-                      Interest and Sinking The I&S portion is dedicated to
+                      Interest and Sinking. The I&S portion is dedicated to
                       paying off bonds or other long-term debt."
                   whatToLookFor="A rising I&S rate means more money has been borrowed,
                       resulting in less flexibility on the tax rate. If the cost

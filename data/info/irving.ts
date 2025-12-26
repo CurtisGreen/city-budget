@@ -13,6 +13,68 @@ export const irvingInfo: CityInfo = {
     { year: 2025, value: 266162 },
   ],
   propertyTaxRate: 0.72,
+  propertyValues: [
+    {
+      fiscalYear: 2015,
+      moRate: 0.4518,
+      isRate: 0.1423,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.465,
+      isRate: 0.13,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.4641,
+      isRate: 0.1291,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.465,
+      isRate: 0.1291,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.4741,
+      isRate: 0.12,
+    },
+    {
+      fiscalYear: 2020,
+      moRate: 0.4741,
+      isRate: 0.12,
+    },
+    {
+      fiscalYear: 2021,
+      moRate: 0.4741,
+      isRate: 0.12,
+    },
+    {
+      fiscalYear: 2022,
+      moRate: 0.4641,
+      isRate: 0.13,
+    },
+    {
+      fiscalYear: 2023,
+      moRate: 0.4294,
+      isRate: 0.1597,
+    },
+    {
+      fiscalYear: 2024,
+      moRate: 0.4294,
+      isRate: 0.1597,
+    },
+    {
+      fiscalYear: 2025,
+      moRate: 0.4294,
+      isRate: 0.1597,
+    },
+    {
+      fiscalYear: 2026,
+      moRate: 0.4294,
+      isRate: 0.1597,
+    },
+  ],
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
     { category: "Transportation", percentage: 24, amount: 84000000 },
