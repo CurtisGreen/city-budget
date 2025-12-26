@@ -13,6 +13,68 @@ export const arlingtonInfo: CityInfo = {
     { year: 2025, value: 413955 },
   ],
   propertyTaxRate: 0.72,
+  propertyValues: [
+    {
+      fiscalYear: 2015,
+      moRate: 0.446,
+      isRate: 0.202,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.4538,
+      isRate: 0.191,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.4409,
+      isRate: 0.1989,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.4428,
+      isRate: 0.192,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.4467,
+      isRate: 0.1773,
+    },
+    {
+      fiscalYear: 2020,
+      moRate: 0.4085,
+      isRate: 0.214,
+    },
+    {
+      fiscalYear: 2021,
+      moRate: 0.4098,
+      isRate: 0.21,
+    },
+    {
+      fiscalYear: 2022,
+      moRate: 0.403,
+      isRate: 0.1968,
+    },
+    {
+      fiscalYear: 2023,
+      moRate: 0.408,
+      isRate: 0.1818,
+    },
+    {
+      fiscalYear: 2024,
+      moRate: 0.4146,
+      isRate: 0.1852,
+    },
+    {
+      fiscalYear: 2025,
+      moRate: 0.4146,
+      isRate: 0.1852,
+    },
+    {
+      fiscalYear: 2026,
+      moRate: 0.4446,
+      isRate: 0.1852,
+    },
+  ],
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
     { category: "Transportation", percentage: 24, amount: 84000000 },
