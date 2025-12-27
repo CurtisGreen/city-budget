@@ -6,8 +6,8 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  ResponsiveContainer,
   Legend,
+  Tooltip,
 } from "recharts";
 import {
   Card,
@@ -16,15 +16,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
+import { ChartTooltipContent } from "@/components/ui/chart";
 import type { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { calculateAverageMetrics } from "@/lib/format-chart-data";
 import { chartFormatters } from "@/lib/chart-utils";
 import { chartConfigs } from "@/lib/chart-configs";
+import { useId } from "react";
 
 interface ComparisonChartProps {
   cities: CityData[];
@@ -34,6 +31,7 @@ interface ComparisonChartProps {
   description: string;
   formatType?: ChartFormatType;
   showAverage?: boolean;
+  maximumFractionDigits?: number;
 }
 
 const CITY_COLORS = [
@@ -50,7 +48,11 @@ export function ComparisonChart({
   title,
   description,
   formatType = "percent",
+  maximumFractionDigits = 1,
 }: ComparisonChartProps) {
+  const uniqueId = useId();
+  const chartId = `chart-${uniqueId.replace(/:/g, "")}`;
+
   const formatter = chartFormatters[formatType];
   const averageMetrics = calculateAverageMetrics(
     allCities.map((c) => c.financialData)
@@ -92,60 +94,66 @@ export function ComparisonChart({
   });
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-lg">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex">
-        <ChartContainer className="w-full min-h-[250px]">
-          <ResponsiveContainer>
-            <LineChart
-              data={chartData}
-              margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
-              <XAxis dataKey="year" className="text-xs" />
-              <YAxis
-                tickFormatter={formatter}
-                className="text-xs"
-                domain={chartConfig.range}
-              />
-              <ChartTooltip
-                content={
-                  <ChartTooltipContent
-                    formatter={(value) => formatter(value as number)}
-                  />
-                }
-              />
-              <Legend />
-
-              {cities.map((city, index) => (
-                <Line
-                  key={city.info.id}
-                  type="monotone"
-                  dataKey={city.info.id}
-                  stroke={CITY_COLORS[index % CITY_COLORS.length]}
-                  strokeWidth={2}
-                  name={city.info.name}
-                  dot={{ r: 4 }}
+        <div
+          data-slot="chart"
+          data-chart={chartId}
+          className={"w-full aspect-video text-xs"}
+        >
+          <LineChart
+            data={chartData}
+            margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+            responsive
+            className="h-full"
+          >
+            <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
+            <XAxis dataKey="year" className="text-xs" />
+            <YAxis
+              tickFormatter={formatter}
+              className="text-xs"
+              domain={chartConfig.range}
+            />
+            <Tooltip
+              content={
+                <ChartTooltipContent
+                  formatter={(value) =>
+                    formatter(value as number, maximumFractionDigits)
+                  }
                 />
-              ))}
+              }
+            />
+            <Legend />
 
-              {averageMetrics.length && (
-                <Line
-                  type="monotone"
-                  dataKey="average"
-                  stroke="black"
-                  strokeWidth={2}
-                  strokeDasharray="5 5"
-                  name="Average"
-                  dot={{ r: 3 }}
-                />
-              )}
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+            {cities.map((city, index) => (
+              <Line
+                key={city.info.id}
+                type="monotone"
+                dataKey={city.info.id}
+                stroke={CITY_COLORS[index % CITY_COLORS.length]}
+                strokeWidth={2}
+                name={city.info.name}
+                dot={{ r: 4 }}
+              />
+            ))}
+
+            {averageMetrics.length && (
+              <Line
+                type="monotone"
+                dataKey="average"
+                stroke="black"
+                strokeWidth={2}
+                strokeDasharray="5 5"
+                name="Average"
+                dot={{ r: 3 }}
+              />
+            )}
+          </LineChart>
+        </div>
         <div className="mb-10">
           {chartConfig.positiveDirection == "up" ? (
             <div className="h-full w-[15px] bg-gradient-to-b from-blue-300 to-orange-300 rounded-sm" />

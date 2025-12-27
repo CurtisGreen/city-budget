@@ -17,7 +17,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     title: "Financial Assets to Liabilities",
     description: "The ratio of liquid assets to total liabilities",
     whatItMeans:
-      "This ratio shows whether the city has enough liquid financial resources to cover what it owes. A ratio below 1 means it would not be able to pay off its liabilities using only its financial assets.",
+      "This ratio shows whether the city has enough liquid financial resources to cover what it owes. A ratio below 100% means it would not be able to pay off its liabilities using only its financial assets.",
     whatToLookFor:
       "A rising trend means the city is improving its financial buffer. A falling trend suggests the city is becomign less able to handle its obligations without borrowing or cutting services.",
     positiveDirection: "up",
@@ -29,7 +29,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     description:
       "The value of all the city's assets (including infrastructure) divided by its total liabilities.",
     whatItMeans:
-      "A ratio above 1 means the city owns more than it owes (solvent). Below 1 means it owes more than it owns (insolvent).",
+      "A ratio above 100% means the city owns more than it owes (solvent). Below 100% means it owes more than it owns (insolvent).",
     whatToLookFor:
       "A downward trend means the city is becoming less solvent. An upward trend shows improving financial resilience.",
     positiveDirection: "up",
@@ -61,7 +61,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     downwardDescription: "More Flexible",
   },
   netBookValueToCostOfTCA: {
-    title: "Net Book Value to Cost of Tangible Capital Assets",
+    title: "Asset Life",
     description:
       "The current value of the city's physical assets compared to their original cost.",
     whatItMeans:

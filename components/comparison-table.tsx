@@ -29,8 +29,16 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
       maximumFractionDigits: 1,
     }).format(value);
 
-  const formatPercent = (value: number) => (value * 100).toFixed(2) + "%";
-  const formatRatio = (value: number) => value.toFixed(2);
+  const formatPercent = (value: number, decimals: number = 1) =>
+    (value * 100).toFixed(decimals) + "%";
+
+  const formatNumber = (value: number) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "decimal",
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(value);
+  };
 
   return (
     <Card>
@@ -43,7 +51,7 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="font-semibold">Metric</TableHead>
+                <TableHead className="font-semibold"></TableHead>
                 {cities.map((city) => (
                   <TableHead
                     key={city.info.id}
@@ -60,6 +68,16 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                 {cities.map((city) => (
                   <TableCell key={city.info.id} className="text-center">
                     {city.info.population.toLocaleString()}
+                  </TableCell>
+                ))}
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">
+                  Population Density
+                </TableCell>
+                {cities.map((city) => (
+                  <TableCell key={city.info.id} className="text-center">
+                    {formatNumber(city.info.population / city.info.area)}
                   </TableCell>
                 ))}
               </TableRow>
@@ -84,30 +102,6 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                 })}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Asset Life</TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.netBookValueToCostOfTCA)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">
-                  Financial Assets / Liabilities
-                </TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatRatio(latest.financialAssetsToLiabilities)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
                 <TableCell className="font-medium">
                   Net Financial Position
                 </TableCell>
@@ -120,15 +114,28 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                   );
                 })}
               </TableRow>
-              <TableRow>
+              {/* <TableRow>
                 <TableCell className="font-medium">
-                  External Transfers / Revenue
+                  Financial Assets / Liabilities
                 </TableCell>
                 {cities.map((city) => {
                   const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.externalTransfersToRevenue)}
+                      {formatPercent(latest.financialAssetsToLiabilities, 0)}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">
+                  Assets / Liabilities
+                </TableCell>
+                {cities.map((city) => {
+                  const latest = city.metrics[city.metrics.length - 1];
+                  return (
+                    <TableCell key={city.info.id} className="text-center">
+                      {formatPercent(latest.assetsToLiabilities, 0)}
                     </TableCell>
                   );
                 })}
@@ -141,7 +148,7 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                   const latest = city.metrics[city.metrics.length - 1];
                   return (
                     <TableCell key={city.info.id} className="text-center">
-                      {formatRatio(latest.netDebtToRevenue)}
+                      {formatPercent(latest.netDebtToRevenue, 0)}
                     </TableCell>
                   );
                 })}
@@ -159,6 +166,30 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                   );
                 })}
               </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Asset Life</TableCell>
+                {cities.map((city) => {
+                  const latest = city.metrics[city.metrics.length - 1];
+                  return (
+                    <TableCell key={city.info.id} className="text-center">
+                      {formatPercent(latest.netBookValueToCostOfTCA)}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">
+                  External Transfers / Revenue
+                </TableCell>
+                {cities.map((city) => {
+                  const latest = city.metrics[city.metrics.length - 1];
+                  return (
+                    <TableCell key={city.info.id} className="text-center">
+                      {formatPercent(latest.externalTransfersToRevenue)}
+                    </TableCell>
+                  );
+                })}
+              </TableRow> */}
             </TableBody>
           </Table>
         </div>
@@ -171,7 +202,7 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
             NCTCOG 2025 estimate
           </Link>
           , all other stats from the city's Annual Comprehensive Financial
-          Report (ACFR) or budget
+          Report (ACFR) and budget
         </div>
       </CardContent>
     </Card>

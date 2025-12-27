@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { CityInfoCard } from "@/components/city-info-card";
 import { getCityData, getAllCities } from "@/lib/city-data-source";
 import { chartConfigs } from "@/lib/chart-configs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, GitCompare } from "lucide-react";
 import { ChartFormatType, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
@@ -13,7 +12,6 @@ import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
 import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
-import { PropertyTaxesPaidChart } from "@/components/property-tax-spent-chart";
 import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 
 interface CityPageProps {
@@ -33,6 +31,7 @@ const metricConfigs: {
   key: keyof CityMetrics;
   formatType: ChartFormatType;
   showAverage: boolean;
+  maximumFractionDigits?: number;
 }[] = [
   {
     key: "netFinancialPosition",
@@ -43,13 +42,20 @@ const metricConfigs: {
     key: "financialAssetsToLiabilities",
     formatType: "percent",
     showAverage: true,
+    maximumFractionDigits: 0,
   },
   {
     key: "assetsToLiabilities",
     formatType: "percent",
     showAverage: true,
+    maximumFractionDigits: 0,
   },
-  { key: "netDebtToRevenue", formatType: "number", showAverage: true },
+  {
+    key: "netDebtToRevenue",
+    formatType: "percent",
+    showAverage: true,
+    maximumFractionDigits: 0,
+  },
   {
     key: "interestToRevenue",
     formatType: "percent",
@@ -154,6 +160,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     title={chartConfigs[config.key].title}
                     description={chartConfigs[config.key].description}
                     formatType={config.formatType}
+                    maximumFractionDigits={config.maximumFractionDigits}
                   />
                 </div>
                 <ChartExplanationCard

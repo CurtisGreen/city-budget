@@ -1,6 +1,14 @@
 "use client";
 
-import { Line, LineChart, XAxis, YAxis, CartesianGrid, Legend } from "recharts";
+import {
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Legend,
+  Tooltip,
+} from "recharts";
 import {
   Card,
   CardContent,
@@ -8,12 +16,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
-import { chartFormatters } from "@/lib/chart-utils";
+import { ChartTooltipContent } from "@/components/ui/chart";
+import { useId } from "react";
 
 interface Data {
   year: number;
@@ -50,6 +54,9 @@ export function PopulationChart({
   title,
   subtitle,
 }: ComparisonChartProps) {
+  const uniqueId = useId();
+  const chartId = `chart-${uniqueId.replace(/:/g, "")}`;
+
   // Get all unique years
   const years = new Set<number>();
   cities.forEach((c) => {
@@ -91,21 +98,26 @@ export function PopulationChart({
         {subtitle && <CardDescription>{subtitle}</CardDescription>}
       </CardHeader>
       <CardContent className="flex">
-        <ChartContainer className="w-full min-h-[250px] max-h-[485px]">
+        <div
+          data-slot="chart"
+          data-chart={chartId}
+          className={"w-full aspect-video text-xs"}
+        >
           <LineChart
             data={chartData}
             margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+            responsive
+            className="h-full"
           >
             <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
             <XAxis
               dataKey="year"
-              className="text-xs"
               type="number"
               tickCount={10}
               domain={["dataMin", "dataMax"]}
             />
             <YAxis tickFormatter={formatNumber} className="text-xs" />
-            <ChartTooltip
+            <Tooltip
               content={
                 <ChartTooltipContent
                   formatter={(value) => formatNumber(value as number)}
@@ -137,7 +149,7 @@ export function PopulationChart({
               />
             )}
           </LineChart>
-        </ChartContainer>
+        </div>
       </CardContent>
     </Card>
   );
