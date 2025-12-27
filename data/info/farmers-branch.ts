@@ -13,6 +13,68 @@ export const farmersBranchInfo: CityInfo = {
     { year: 2025, value: 40246 },
   ],
   propertyTaxRate: 0.72,
+  propertyValues: [
+    {
+      fiscalYear: 2015,
+      moRate: 0.5076,
+      isRate: 0.0884,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.5139,
+      isRate: 0.0884,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.5153,
+      isRate: 0.087,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.5177,
+      isRate: 0.0846,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.5167,
+      isRate: 0.0828,
+    },
+    {
+      fiscalYear: 2020,
+      moRate: 0.5273,
+      isRate: 0.0722,
+    },
+    {
+      fiscalYear: 2021,
+      moRate: 0.5062,
+      isRate: 0.0828,
+    },
+    {
+      fiscalYear: 2022,
+      moRate: 0.5272,
+      isRate: 0.0618,
+    },
+    {
+      fiscalYear: 2023,
+      moRate: 0.5308,
+      isRate: 0.0582,
+    },
+    {
+      fiscalYear: 2024,
+      moRate: 0.5204,
+      isRate: 0.0486,
+    },
+    {
+      fiscalYear: 2025,
+      moRate: 0.489265,
+      isRate: 0.054235,
+    },
+    {
+      fiscalYear: 2026,
+      moRate: 0.484575,
+      isRate: 0.058925,
+    },
+  ],
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
     { category: "Transportation", percentage: 24, amount: 84000000 },
