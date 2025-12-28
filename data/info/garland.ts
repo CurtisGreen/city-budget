@@ -12,6 +12,68 @@ export const garlandInfo: CityInfo = {
     { year: 2020, value: 246018 },
     { year: 2025, value: 251932 },
   ],
+  propertyValues: [
+    {
+      fiscalYear: 2015,
+      moRate: 0.394,
+      isRate: 0.3106,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.394,
+      isRate: 0.3106,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.394,
+      isRate: 0.3106,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.394,
+      isRate: 0.3106,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.394,
+      isRate: 0.3106,
+    },
+    {
+      fiscalYear: 2020,
+      moRate: 0.394,
+      isRate: 0.3756,
+    },
+    {
+      fiscalYear: 2021,
+      moRate: 0.394,
+      isRate: 0.3756,
+    },
+    {
+      fiscalYear: 2022,
+      moRate: 0.3814,
+      isRate: 0.3756,
+    },
+    {
+      fiscalYear: 2023,
+      moRate: 0.3411,
+      isRate: 0.3756,
+    },
+    {
+      fiscalYear: 2024,
+      moRate: 0.3141,
+      isRate: 0.3756,
+    },
+    {
+      fiscalYear: 2025,
+      moRate: 0.290448,
+      isRate: 0.399298,
+    },
+    {
+      fiscalYear: 2026,
+      moRate: 0.288657,
+      isRate: 0.401089,
+    },
+  ],
   propertyTaxRate: 0.72,
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },

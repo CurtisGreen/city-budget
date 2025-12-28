@@ -198,10 +198,11 @@ export default async function CityPage({ params }: CityPageProps) {
                   />
                 </div>
                 <ChartExplanationCard
-                  understandingTheMetric="M&O stands for Maintenance and Operations, I&S stands for
-                      Interest and Sinking. The I&S portion is dedicated to
-                      paying off bonds or other long-term debt."
-                  whatToLookFor="A rising I&S rate means more money has been borrowed,
+                  understandingTheMetric="The debt service portion is dedicated to paying off 
+                      bonds or other long-term debt.
+                      The operations portion of the property tax rate 
+                      is flexible and can be used as needed."
+                  whatToLookFor="A rising debt service rate means more money has been borrowed,
                       resulting in less flexibility on the tax rate. If the cost
                       of providing services rises faster than property values,
                       then an increased tax rate could be necessary to provide

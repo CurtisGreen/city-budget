@@ -26,8 +26,8 @@ export const PropertyTaxRateChart = ({
 }) => {
   const data = propertyValues.map((pv) => ({
     ...pv,
-    "M&O": pv.moRate,
-    "I&S": pv.isRate,
+    Operations: pv.moRate,
+    "Debt Service": pv.isRate,
     "Total rate": Number((pv.moRate + pv.isRate).toFixed(4)),
   }));
   return (
@@ -55,8 +55,8 @@ export const PropertyTaxRateChart = ({
           <YAxis width="auto" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="M&O" stackId="a" fill="var(--chart-1)" />
-          <Bar dataKey="I&S" stackId="a" fill="var(--chart-2)" />
+          <Bar dataKey="Operations" stackId="a" fill="var(--chart-1)" />
+          <Bar dataKey="Debt Service" stackId="a" fill="var(--chart-2)" />
           <Line
             type="monotone"
             dataKey="Total rate"
