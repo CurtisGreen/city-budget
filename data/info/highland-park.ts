@@ -12,6 +12,68 @@ export const highlandParkInfo: CityInfo = {
     { year: 2020, value: 8864 },
     { year: 2025, value: 8793 },
   ],
+  propertyValues: [
+    {
+      fiscalYear: 2015,
+      moRate: 0.22,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.22,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.22,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.22,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.22,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2020,
+      moRate: 0.23,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2021,
+      moRate: 0.23,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2022,
+      moRate: 0.23,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2023,
+      moRate: 0.23,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2024,
+      moRate: 0.22053,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2025,
+      moRate: 0.20855,
+      isRate: 0,
+    },
+    {
+      fiscalYear: 2026,
+      moRate: 0.200537,
+      isRate: 0,
+    },
+  ],
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
     { category: "Transportation", percentage: 24, amount: 84000000 },
