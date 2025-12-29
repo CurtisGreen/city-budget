@@ -12,7 +12,6 @@ export const irvingInfo: CityInfo = {
     { year: 2020, value: 256684 },
     { year: 2025, value: 266162 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

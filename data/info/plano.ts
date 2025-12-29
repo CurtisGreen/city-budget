@@ -12,7 +12,6 @@ export const planoInfo: CityInfo = {
     { year: 2020, value: 285494 },
     { year: 2025, value: 299262 },
   ],
-  propertyTaxRate: 0.5,
   propertyValues: [
     {
       fiscalYear: 2015,

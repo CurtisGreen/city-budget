@@ -12,7 +12,6 @@ export const dallasInfo: CityInfo = {
     { year: 2020, value: 1304379 },
     { year: 2025, value: 1385989 },
   ],
-  propertyTaxRate: 0.79,
   propertyValues: [
     {
       fiscalYear: 2015,

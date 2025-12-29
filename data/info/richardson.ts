@@ -12,7 +12,6 @@ export const richardsonInfo: CityInfo = {
     { year: 2020, value: 119469 },
     { year: 2025, value: 122745 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

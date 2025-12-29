@@ -12,7 +12,6 @@ export const farmersBranchInfo: CityInfo = {
     { year: 2020, value: 35991 },
     { year: 2025, value: 40246 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

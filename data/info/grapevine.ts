@@ -12,7 +12,6 @@ export const grapevineInfo: CityInfo = {
     { year: 2020, value: 50631 },
     { year: 2025, value: 52346 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

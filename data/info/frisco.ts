@@ -12,7 +12,6 @@ export const friscoInfo: CityInfo = {
     { year: 2020, value: 200509 },
     { year: 2025, value: 235615 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

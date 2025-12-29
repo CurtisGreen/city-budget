@@ -12,7 +12,6 @@ export const carrolltonInfo: CityInfo = {
     { year: 2020, value: 133434 },
     { year: 2025, value: 136543 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

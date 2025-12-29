@@ -51,7 +51,6 @@ export interface CityInfo {
   population: number;
   populations: Population[];
   propertyValues?: PropertyValues[];
-  propertyTaxRate: number; // percentage
   salesTaxBreakdown: {
     category: string;
     percentage: number;

@@ -19,10 +19,23 @@ import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 const metricConfigs: {
   key: keyof CityMetrics;
   formatType: ChartFormatType;
+  maximumFractionDigits?: number;
 }[] = [
-  { key: "financialAssetsToLiabilities", formatType: "percent" },
-  { key: "assetsToLiabilities", formatType: "percent" },
-  { key: "netDebtToRevenue", formatType: "percent" },
+  {
+    key: "financialAssetsToLiabilities",
+    formatType: "percent",
+    maximumFractionDigits: 0,
+  },
+  {
+    key: "assetsToLiabilities",
+    formatType: "percent",
+    maximumFractionDigits: 0,
+  },
+  {
+    key: "netDebtToRevenue",
+    formatType: "percent",
+    maximumFractionDigits: 0,
+  },
   { key: "interestToRevenue", formatType: "percent" },
   { key: "netBookValueToCostOfTCA", formatType: "percent" },
   { key: "externalTransfersToRevenue", formatType: "percent" },
@@ -147,6 +160,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                       title={chartConfigs[metricConfig.key].title}
                       description={chartConfigs[metricConfig.key].description}
                       formatType={metricConfig.formatType}
+                      maximumFractionDigits={metricConfig.maximumFractionDigits}
                     />
                   </div>
 

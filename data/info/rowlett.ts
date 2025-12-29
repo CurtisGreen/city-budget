@@ -12,7 +12,6 @@ export const rowlettInfo: CityInfo = {
     { year: 2020, value: 62535 },
     { year: 2025, value: 67519 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,

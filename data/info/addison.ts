@@ -109,7 +109,6 @@ export const addisonInfo: CityInfo = {
       // averageSFHTaxableValue: 501878,
     },
   ],
-  propertyTaxRate: 0.72,
   salesTaxBreakdown: [
     { category: "Public Safety", percentage: 42, amount: 147000000 },
     { category: "Transportation", percentage: 24, amount: 84000000 },

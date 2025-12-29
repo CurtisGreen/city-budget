@@ -12,7 +12,6 @@ export const arlingtonInfo: CityInfo = {
     { year: 2020, value: 394266 },
     { year: 2025, value: 413955 },
   ],
-  propertyTaxRate: 0.72,
   propertyValues: [
     {
       fiscalYear: 2015,
