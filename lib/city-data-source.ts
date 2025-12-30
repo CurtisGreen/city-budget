@@ -16,6 +16,7 @@ import { grapevineInfo } from "@/data/info/grapevine";
 
 import { join } from "node:path";
 import { highlandParkInfo } from "@/data/info/highland-park";
+import { coppellInfo } from "@/data/info/coppell";
 
 const basicCityInfo = [
   dallasInfo,
@@ -31,6 +32,7 @@ const basicCityInfo = [
   friscoInfo,
   grapevineInfo,
   highlandParkInfo,
+  coppellInfo,
 ];
 
 // Calculate metrics for each city
