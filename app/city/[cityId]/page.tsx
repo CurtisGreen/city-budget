@@ -236,7 +236,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
             <PieChart
-              title={"Revenue Distribution (FY 2024)"}
+              title={"Revenue Mix (FY 2024)"}
               property={cityData.info.revenueBySource.property}
               sales={cityData.info.revenueBySource.sales}
               hotel={cityData.info.revenueBySource.hotel}

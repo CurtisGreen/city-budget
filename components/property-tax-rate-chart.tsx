@@ -56,7 +56,7 @@ export const PropertyTaxRateChart = ({
             [&_.recharts-surface]:outline-hidden
           `}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
           <XAxis dataKey="fiscalYear" />
           <YAxis width="auto" />
           <Tooltip />

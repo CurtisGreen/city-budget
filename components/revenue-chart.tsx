@@ -67,7 +67,9 @@ export const RevenueChart = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg">Revenue Mix (FY 2024)</CardTitle>
+        <CardTitle className="text-lg">
+          Revenue Mix Comparison (FY 2024)
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <BarChart
@@ -79,7 +81,7 @@ export const RevenueChart = ({
           }}
           responsive
           data={data}
-          margin={{ top: 20, right: 10, left: 20, bottom: 20 }}
+          margin={{ top: 0, right: 10, left: 20, bottom: 0 }}
           className={`
             text-xs
             [&_.recharts-layer]:outline-hidden
@@ -99,7 +101,7 @@ export const RevenueChart = ({
             </pattern>
           </defs>
 
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
           <XAxis dataKey="name" />
           <YAxis width="auto" tickFormatter={formatter} />
           <Tooltip
