@@ -21,7 +21,7 @@ export default function About() {
               Budget.City is intended to make municipal finances more accessible
               for Dallas area cities. It's inspired by the{" "}
               <Link
-                href="https://www.strongtowns.org/finance-decoder"
+                href="https://www.strongtowns.org/decoder-resources"
                 className="text-blue-600 hover:underline"
               >
                 Strong Towns Finance Decoder
@@ -63,7 +63,7 @@ export default function About() {
             <p className="text-gray-600">
               If you have a Dallas area city you want to add, fill out the{" "}
               <Link
-                href="https://www.strongtowns.org/finance-decoder"
+                href="https://www.strongtowns.org/decoder-resources"
                 className="text-blue-600 hover:underline"
               >
                 Strong Towns Finance Decoder
