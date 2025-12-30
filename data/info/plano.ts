@@ -74,13 +74,11 @@ export const planoInfo: CityInfo = {
       isRate: 0.115,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 38, amount: 95000000 },
-    { category: "Transportation", percentage: 28, amount: 70000000 },
-    { category: "Parks & Recreation", percentage: 20, amount: 50000000 },
-    { category: "Community Services", percentage: 9, amount: 22500000 },
-    { category: "Administration", percentage: 5, amount: 12500000 },
-  ],
+  revenueBySource: {
+    property: 242281161,
+    sales: 120262825,
+    hotel: 12895296,
+  },
   latitude: 33.050278,
   longitude: -96.698889,
   area: 71.69,

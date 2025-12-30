@@ -74,13 +74,11 @@ export const arlingtonInfo: CityInfo = {
       isRate: 0.1852,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 42, amount: 147000000 },
-    { category: "Transportation", percentage: 24, amount: 84000000 },
-    { category: "Parks & Recreation", percentage: 16, amount: 56000000 },
-    { category: "Community Services", percentage: 11, amount: 38500000 },
-    { category: "Administration", percentage: 7, amount: 24500000 },
-  ],
+  revenueBySource: {
+    property: 224172000,
+    sales: 165531000,
+    hotel: 15477000,
+  },
   latitude: 32.705,
   longitude: -97.122778,
   area: 95.84,

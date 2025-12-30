@@ -74,13 +74,11 @@ export const richardsonInfo: CityInfo = {
       isRate: 0.21779,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 42, amount: 147000000 },
-    { category: "Transportation", percentage: 24, amount: 84000000 },
-    { category: "Parks & Recreation", percentage: 16, amount: 56000000 },
-    { category: "Community Services", percentage: 11, amount: 38500000 },
-    { category: "Administration", percentage: 7, amount: 24500000 },
-  ],
+  revenueBySource: {
+    property: 132912399,
+    sales: 53763370,
+    hotel: 5088522,
+  },
   latitude: 32.991667,
   longitude: -96.703889,
   area: 28.57,

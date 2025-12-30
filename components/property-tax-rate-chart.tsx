@@ -48,7 +48,12 @@ export const PropertyTaxRateChart = ({
           responsive
           data={data}
           margin={{ top: 20, right: 20, left: 30, bottom: 20 }}
-          className={"text-xs"}
+          className={`
+            text-xs
+            [&_.recharts-layer]:outline-hidden
+            [&_.recharts-sector[stroke='#fff']]:stroke-transparent
+            [&_.recharts-surface]:outline-hidden
+          `}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="fiscalYear" />

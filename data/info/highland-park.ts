@@ -74,13 +74,11 @@ export const highlandParkInfo: CityInfo = {
       isRate: 0,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 42, amount: 147000000 },
-    { category: "Transportation", percentage: 24, amount: 84000000 },
-    { category: "Parks & Recreation", percentage: 16, amount: 56000000 },
-    { category: "Community Services", percentage: 11, amount: 38500000 },
-    { category: "Administration", percentage: 7, amount: 24500000 },
-  ],
+  revenueBySource: {
+    property: 18400369,
+    sales: 8801419,
+    hotel: 0,
+  },
   latitude: 32.830278,
   longitude: -96.801111,
   area: 2.24,

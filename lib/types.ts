@@ -51,11 +51,11 @@ export interface CityInfo {
   population: number;
   populations: Population[];
   propertyValues?: PropertyValues[];
-  salesTaxBreakdown: {
-    category: string;
-    percentage: number;
-    amount: number;
-  }[];
+  revenueBySource?: {
+    property: number;
+    sales: number;
+    hotel: number;
+  };
   latitude: number;
   longitude: number;
   area: number; // Land area

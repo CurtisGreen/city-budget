@@ -74,13 +74,11 @@ export const irvingInfo: CityInfo = {
       isRate: 0.1597,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 42, amount: 147000000 },
-    { category: "Transportation", percentage: 24, amount: 84000000 },
-    { category: "Parks & Recreation", percentage: 16, amount: 56000000 },
-    { category: "Community Services", percentage: 11, amount: 38500000 },
-    { category: "Administration", percentage: 7, amount: 24500000 },
-  ],
+  revenueBySource: {
+    property: 223022000,
+    sales: 108213000,
+    hotel: 31981000,
+  },
   latitude: 32.816667,
   longitude: -96.95,
   area: 66.98,

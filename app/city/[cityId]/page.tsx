@@ -13,6 +13,7 @@ import { PopulationChart } from "@/components/population-chart";
 import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
 import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
+import { PieChart } from "@/components/ui/pie-chart";
 
 interface CityPageProps {
   params: Promise<{
@@ -94,6 +95,13 @@ export default async function CityPage({ params }: CityPageProps) {
     allCities.map((c) => c.info)
   );
 
+  const revenues = allCities
+    .map((c) => c.info.revenueBySource)
+    .filter((r) => !!r);
+  const totalProperty = revenues.reduce((acc, cur) => acc + cur.property, 0);
+  const totalSales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
+  const totalHotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -173,7 +181,7 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Population chart */}
+      {/* Other metrics */}
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
@@ -226,6 +234,23 @@ export default async function CityPage({ params }: CityPageProps) {
               </div> */}
             </>
           )}
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            {cityData.info.revenueBySource && (
+              <PieChart
+                title={cityData.info.name + " Revenue Distribution"}
+                property={cityData.info.revenueBySource.property}
+                sales={cityData.info.revenueBySource.sales}
+                hotel={cityData.info.revenueBySource.hotel}
+              />
+            )}
+            <PieChart
+              title="Average Revenue Distribution"
+              property={totalProperty}
+              sales={totalSales}
+              hotel={totalHotel}
+            />
+          </div>
         </div>
       </section>
 

@@ -106,7 +106,12 @@ export function ComparisonChart({
         <div
           data-slot="chart"
           data-chart={chartId}
-          className={"w-full aspect-video text-xs"}
+          className={`
+            w-full aspect-video text-xs
+            [&_.recharts-layer]:outline-hidden
+            [&_.recharts-sector[stroke='#fff']]:stroke-transparent
+            [&_.recharts-surface]:outline-hidden
+          `}
         >
           <LineChart
             data={chartData}

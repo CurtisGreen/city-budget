@@ -109,13 +109,11 @@ export const addisonInfo: CityInfo = {
       // averageSFHTaxableValue: 501878,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 42, amount: 147000000 },
-    { category: "Transportation", percentage: 24, amount: 84000000 },
-    { category: "Parks & Recreation", percentage: 16, amount: 56000000 },
-    { category: "Community Services", percentage: 11, amount: 38500000 },
-    { category: "Administration", percentage: 7, amount: 24500000 },
-  ],
+  revenueBySource: {
+    property: 35679220,
+    sales: 17298041,
+    hotel: 5374881,
+  },
   latitude: 32.957778,
   longitude: -96.835,
   area: 4.35,

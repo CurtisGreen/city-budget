@@ -102,13 +102,11 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 381545,
     },
   ],
-  salesTaxBreakdown: [
-    { category: "Public Safety", percentage: 35, amount: 450000000 },
-    { category: "Transportation", percentage: 25, amount: 320000000 },
-    { category: "Parks & Recreation", percentage: 15, amount: 192000000 },
-    { category: "Community Services", percentage: 15, amount: 192000000 },
-    { category: "Administration", percentage: 10, amount: 128000000 },
-  ],
+  revenueBySource: {
+    property: 1415798000,
+    sales: 439666000,
+    hotel: 109446000,
+  },
   latitude: 32.779167,
   longitude: -96.808889,
   area: 339.6,
