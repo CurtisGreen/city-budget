@@ -14,6 +14,7 @@ import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
 import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 import { PieChart } from "@/components/ui/pie-chart";
+import { RevenueChart } from "@/components/revenue-chart";
 
 interface CityPageProps {
   params: Promise<{
@@ -95,12 +96,10 @@ export default async function CityPage({ params }: CityPageProps) {
     allCities.map((c) => c.info)
   );
 
-  const revenues = allCities
-    .map((c) => c.info.revenueBySource)
-    .filter((r) => !!r);
-  const totalProperty = revenues.reduce((acc, cur) => acc + cur.property, 0);
-  const totalSales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
-  const totalHotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
+  const revenues = allCities.map((c) => c.info.revenueBySource);
+  const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
+  const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
+  const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
 
   return (
     <div className="min-h-screen">
@@ -236,19 +235,20 @@ export default async function CityPage({ params }: CityPageProps) {
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-            {cityData.info.revenueBySource && (
-              <PieChart
-                title={cityData.info.name + " Revenue Distribution"}
-                property={cityData.info.revenueBySource.property}
-                sales={cityData.info.revenueBySource.sales}
-                hotel={cityData.info.revenueBySource.hotel}
-              />
-            )}
             <PieChart
-              title="Average Revenue Distribution"
-              property={totalProperty}
-              sales={totalSales}
-              hotel={totalHotel}
+              title={"Revenue Distribution (FY 2024)"}
+              property={cityData.info.revenueBySource.property}
+              sales={cityData.info.revenueBySource.sales}
+              hotel={cityData.info.revenueBySource.hotel}
+            />
+            <RevenueChart
+              revenues={[
+                {
+                  name: cityData.info.name,
+                  revenue: cityData.info.revenueBySource,
+                },
+              ]}
+              average={{ property, sales, hotel }}
             />
           </div>
         </div>

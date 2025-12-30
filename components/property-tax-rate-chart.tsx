@@ -44,6 +44,7 @@ export const PropertyTaxRateChart = ({
             width: "100%",
             maxHeight: "485px",
             aspectRatio: "16 / 9",
+            minHeight: "250px",
           }}
           responsive
           data={data}

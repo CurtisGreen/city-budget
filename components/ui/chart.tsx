@@ -22,7 +22,10 @@ export function ChartTooltipContent({
       {payload
         .sort((a, b) => b?.value - a?.value)
         .map((item, index) => {
-          const indicatorColor = item.payload.fill || item.color;
+          // Handle striped pattern in bar chart for average
+          const indicatorColor = item.color?.includes("url")
+            ? "black"
+            : item.color;
 
           return (
             <div
@@ -42,9 +45,15 @@ export function ChartTooltipContent({
                 }
               />
               {item.name}
-              {item.value && item.name && formatter && (
+              {item.name && formatter && (
                 <span className="text-foreground font-mono font-medium tabular-nums">
-                  {formatter(item.value, item.name, item, index, item.payload)}
+                  {formatter(
+                    item.value || 0,
+                    item.name,
+                    item,
+                    index,
+                    item.payload
+                  )}
                 </span>
               )}
             </div>

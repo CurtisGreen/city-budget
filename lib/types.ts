@@ -32,6 +32,12 @@ export interface Population {
   value: number;
 }
 
+export interface RevenueBySource {
+  property: number;
+  sales: number;
+  hotel: number;
+}
+
 export interface PropertyValues {
   fiscalYear: number;
   // Maintenance & operations tax rate
@@ -51,11 +57,7 @@ export interface CityInfo {
   population: number;
   populations: Population[];
   propertyValues?: PropertyValues[];
-  revenueBySource?: {
-    property: number;
-    sales: number;
-    hotel: number;
-  };
+  revenueBySource: RevenueBySource;
   latitude: number;
   longitude: number;
   area: number; // Land area

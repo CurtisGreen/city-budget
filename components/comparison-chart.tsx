@@ -107,7 +107,10 @@ export function ComparisonChart({
           data-slot="chart"
           data-chart={chartId}
           className={`
-            w-full aspect-video text-xs
+            w-full 
+            aspect-video 
+            text-xs
+            min-h-[250px]
             [&_.recharts-layer]:outline-hidden
             [&_.recharts-sector[stroke='#fff']]:stroke-transparent
             [&_.recharts-surface]:outline-hidden

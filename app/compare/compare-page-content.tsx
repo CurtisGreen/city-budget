@@ -15,6 +15,7 @@ import { Footer } from "@/components/footer";
 import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
 import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
+import { RevenueChart } from "@/components/revenue-chart";
 
 const metricConfigs: {
   key: keyof CityMetrics;
@@ -76,6 +77,11 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const averagePopulationDensityData = calculateAveragePopulationDensity(
     allCities.map((c) => c.info)
   );
+
+  const revenues = allCities.map((c) => c.info.revenueBySource);
+  const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
+  const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
+  const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
 
   return (
     <div className="min-h-screen">
@@ -207,6 +213,15 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                     averageMetrics={averagePopulationDensityData}
                   />
                 )}
+              </div>
+              <div className="mt-6">
+                <RevenueChart
+                  revenues={selectedCities.map((c) => ({
+                    name: c.info.name,
+                    revenue: c.info.revenueBySource,
+                  }))}
+                  average={{ property, sales, hotel }}
+                />
               </div>
             </div>
           </section>

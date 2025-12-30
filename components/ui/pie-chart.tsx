@@ -120,17 +120,22 @@ export function PieChart({
       `}
     >
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-lg">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <RechartsPieChart
-          style={{ height: "100%", width: "100%" }}
+          style={{
+            height: "100%",
+            width: "100%",
+            maxHeight: "380px",
+            minHeight: "350px",
+          }}
           responsive
           margin={{
-            top: 0,
-            right: 80,
-            bottom: 0,
-            left: 80,
+            top: 10,
+            right: 50,
+            bottom: 10,
+            left: 50,
           }}
           className="text-sm select-none"
         >
@@ -144,9 +149,8 @@ export function PieChart({
             dataKey="value"
             isAnimationActive
             className="focus:outline-none"
-          >
-            <Legend />
-          </Pie>
+          />
+          <Legend />
           <Tooltip content={() => null} defaultIndex={0} />
         </RechartsPieChart>
       </CardContent>
