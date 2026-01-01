@@ -1,4 +1,3 @@
-import { CityMap } from "@/components/city-map";
 import { CityCard } from "@/components/city-card";
 import { Button } from "@/components/ui/button";
 import { getAllCities } from "@/lib/city-data-source";
@@ -6,9 +5,43 @@ import Link from "next/link";
 import { Map, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { HomeNavbarMenu } from "@/components/home-navbar-menu";
+import { LazyMap } from "@/components/lazy-map";
+import { GeoJSONFeature } from "@/lib/overpass-types";
+
+import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
+import { addisonGeoJson } from "@/data/geojson/addison-geojson";
+import { irvingGeoJson } from "@/data/geojson/irving-geojson";
+import { carrolltonGeoJson } from "@/data/geojson/carrollton-geojson";
+import { farmersBranchGeoJson } from "@/data/geojson/farmers-branch-geojson";
+import { richardsonGeoJson } from "@/data/geojson/richardson-geojson";
+import { garlandGeoJson } from "@/data/geojson/garland-geojson";
+import { rowlettGeoJson } from "@/data/geojson/rowlett-geojson";
+import { highlandParkGeoJson } from "@/data/geojson/highland-park-geojson";
+import { planoGeoJson } from "@/data/geojson/plano-geojson";
+import { coppellGeoJson } from "@/data/geojson/coppell-geojson";
+import { friscoGeoJson } from "@/data/geojson/frisco-geojson";
+import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
+import { arlingtonGeoJson } from "@/data/geojson/arlington-geojson";
 
 export default function HomePage() {
   const cities = getAllCities();
+
+  const features: GeoJSONFeature[] = [
+    ...dallasGeoJson.features,
+    ...addisonGeoJson.features,
+    ...irvingGeoJson.features,
+    ...carrolltonGeoJson.features,
+    ...farmersBranchGeoJson.features,
+    ...richardsonGeoJson.features,
+    ...garlandGeoJson.features,
+    ...rowlettGeoJson.features,
+    ...highlandParkGeoJson.features,
+    ...planoGeoJson.features,
+    ...coppellGeoJson.features,
+    ...friscoGeoJson.features,
+    ...grapevineGeoJson.features,
+    ...arlingtonGeoJson.features,
+  ] as GeoJSONFeature[];
 
   return (
     <div className="min-h-screen">
@@ -77,10 +110,11 @@ export default function HomePage() {
               Dallas Area Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
-              Cities colored by net debt to revenue ratio. Click on a city to
-              view detailed financial information.
+              Double-click on a city to view detailed financial information.
             </p>
-            <CityMap cities={cities} />
+            <div className="m-auto w-[300px] md:w-[700px]">
+              <LazyMap geoJSONFeatures={features} cities={cities} />
+            </div>
           </div>
         </div>
       </section>

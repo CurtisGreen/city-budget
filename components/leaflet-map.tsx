@@ -17,6 +17,7 @@ import {
 } from "@/lib/overpass-types";
 import { CityData } from "@/lib/types";
 import { useRouter } from "next/navigation";
+import { Card } from "./ui/card";
 
 const center: LatLngExpression = [32.9, -96.79];
 
@@ -137,25 +138,55 @@ export default function LeafletMap({
     });
 
   return (
-    <MapContainer
-      center={center}
-      zoom={10}
-      // scrollWheelZoom={false}
-      //   style={{ height: "400px", width: "100%" }}
-      // zoomControl={false}
-      doubleClickZoom={false}
-      // dragging={false}
-      className="h-[600px] w-[700px] m-10"
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {features
-        .filter((f): f is PolygonFeature => f.netDebtToRevenue != null)
-        .map((f, i) => (
-          <CityShape feature={f} key={f.name + i} />
-        ))}
-    </MapContainer>
+    <div>
+      {/* Legend */}
+      <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[160px] md:ml-[520px] mt-[-20px] gap-2">
+        <div className="text-sm font-semibold">Net Debt to Revenue</div>
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
+            />
+            <span className="text-xs">{"= 0 (Excellent)"}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
+            />
+            <span className="text-xs">{"0 - 1.0 (Okay)"}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
+            />
+            <span className="text-xs">{"> 1 (Poor)"}</span>
+          </div>
+        </div>
+      </Card>
+
+      <MapContainer
+        center={center}
+        zoom={10}
+        // scrollWheelZoom={false}
+        //   style={{ height: "400px", width: "100%" }}
+        // zoomControl={false}
+        doubleClickZoom={false}
+        // dragging={false}
+        className="h-[400px] md:h-[600px] w-[300px] md:w-[700px]"
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {features
+          .filter((f): f is PolygonFeature => f.netDebtToRevenue != null)
+          .map((f, i) => (
+            <CityShape feature={f} key={f.name + i} />
+          ))}
+      </MapContainer>
+    </div>
   );
 }
