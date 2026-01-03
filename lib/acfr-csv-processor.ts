@@ -41,8 +41,8 @@ const formatData = (row: Record<string, number>): CityFinancialData => ({
   operatingGrantsAndContributions: row["Operating Grants & Contributions"],
   capitalGrantsAndContributions: row["Capital Grants & Contributions"],
   debInterest: row["Debt service / interest"],
-  capitalAssetsNetofDepreciation:
-    row["Capital assets (net of depreciation/amortization)"],
+  // capitalAssetsNetofDepreciation:
+  //   row["Capital assets (net of depreciation/amortization)"],
   governmentCapitalAssetsNotBeingDepreciated:
     row["Government capital assets not being depreciated"],
   governmentCapitalAssetsBeingDepreciated:

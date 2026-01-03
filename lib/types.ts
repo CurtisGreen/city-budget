@@ -9,7 +9,7 @@ export interface CityFinancialData {
   operatingGrantsAndContributions: number;
   capitalGrantsAndContributions: number;
   debInterest: number;
-  capitalAssetsNetofDepreciation: number;
+  // capitalAssetsNetofDepreciation: number;
   governmentCapitalAssetsNotBeingDepreciated: number;
   governmentCapitalAssetsBeingDepreciated: number;
   businessCapitalAssetsNotBeingDepreciated: number;
