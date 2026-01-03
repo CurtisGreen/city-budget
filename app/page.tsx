@@ -22,6 +22,7 @@ import { coppellGeoJson } from "@/data/geojson/coppell-geojson";
 import { friscoGeoJson } from "@/data/geojson/frisco-geojson";
 import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
 import { arlingtonGeoJson } from "@/data/geojson/arlington-geojson";
+import { sachseGeoJson } from "@/data/geojson/sachse-geojson";
 
 export default function HomePage() {
   const cities = getAllCities();
@@ -41,6 +42,7 @@ export default function HomePage() {
     ...friscoGeoJson.features,
     ...grapevineGeoJson.features,
     ...arlingtonGeoJson.features,
+    ...sachseGeoJson.features,
   ] as GeoJSONFeature[];
 
   return (
