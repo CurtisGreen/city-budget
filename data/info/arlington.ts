@@ -83,7 +83,11 @@ export const arlingtonInfo: CityInfo = {
   longitude: -97.122778,
   area: 95.84,
   notes: [
-    `FY 2026 Budget: [...] the property tax base grew by 1.9% in FY 2026. While the total assessed value of property in Arlington has not decreased, this is the lowest rate of growth in assessed value since FY 2012—even lower than FY 2021, when property values were most severely impacted by the Covid-19 Pandemic.
-    This is not necessarily an indication of a slowdown in growth in market values but is largely a reflection of policy decisions by the Tarrant Appraisal District, which shifted state policy and elected not to reappraise properties in Tarrant County this year, notable impacting on the City's ability to generate revenue for programs and services for its residents.`,
+    `FY 2018 ACFR: Liabilities and deferred inflows of resources increased from $1.1B to $1.8B for the total government, an increase of 60%.
+    The increase is related to the recording of the OPEB liability and the additional amount of outstanding debt related to Special Obligation bonds.`,
+    `FY 2026 Budget: [...] the property tax base grew by 1.9% in FY 2026. 
+    While the total assessed value of property in Arlington has not decreased, this is the lowest rate of growth in assessed value since FY 2012—even lower than FY 2021, when property values were most severely impacted by the Covid-19 Pandemic.
+    This is not necessarily an indication of a slowdown in growth in market values but is largely a reflection of policy decisions by the Tarrant Appraisal District, which shifted state policy and elected not to reappraise properties in Tarrant County this year,
+    notable impacting on the City's ability to generate revenue for programs and services for its residents.`,
   ],
 };

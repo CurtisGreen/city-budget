@@ -117,4 +117,12 @@ export const addisonInfo: CityInfo = {
   latitude: 32.957778,
   longitude: -96.835,
   area: 4.35,
+  notes: [
+    `FY 2017 ACFR: Governmental activities increased the Town of Addison's net position by $25,518 [000s] primarily due to a $3.2 million
+    sale of town property and a $20.0 million decrease to pension expense as a result of a change in actuarial
+    assumptions related to the treatment of Ad Hoc COLA which are no longer considered recurring for future pension
+    obligations.`,
+    `FY 2023 ACFR: Overall expenses increased $17,284 [000s] primarily due to the increase in the net pension liability. 
+    In fiscal year 2022, there was a net pension asset, which further decreased overall expenses in that year.`,
+  ],
 };

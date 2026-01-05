@@ -110,4 +110,8 @@ export const dallasInfo: CityInfo = {
   latitude: 32.779167,
   longitude: -96.808889,
   area: 339.6,
+  notes: [
+    `FY 2016 ACFR: Long-term liabilities increased by $2.9 billion in the governmental activities 
+    due to a net increase in the net pension liability of $2.9 billion.`,
+  ],
 };

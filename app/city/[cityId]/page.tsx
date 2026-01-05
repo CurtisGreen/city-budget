@@ -254,13 +254,21 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Sales Tax Breakdown */}
-      {/* <section className="py-8 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h3 className="text-2xl font-bold mb-6">Revenue Allocation</h3>
-          <SalesTaxBreakdown cityInfo={cityData.info} />
-        </div>
-      </section> */}
+      {/* Notes */}
+      {cityData.info.notes && (
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <h3 className="text-2xl font-bold mb-6">Notes</h3>
+            <ul>
+              {cityData.info.notes.map((note) => (
+                <li key={note} className="list-disc">
+                  {note}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </div>

@@ -82,4 +82,9 @@ export const sachseInfo: CityInfo = {
   latitude: 32.976389,
   longitude: -96.586111,
   area: 9.77,
+  notes: [
+    `FY 2024 ACFR: The government's net position decreased by $11,435,251 during the current fiscal year. 
+    The primary cause was the reclassification of the PID fund to a governmental fund, and the reporting 
+    of the PID's special assessment debt in the governmental activities in FY24.`,
+  ],
 };
