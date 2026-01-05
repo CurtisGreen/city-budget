@@ -82,4 +82,9 @@ export const farmersBranchInfo: CityInfo = {
   latitude: 32.927222,
   longitude: -96.863889,
   area: 11.88,
+  notes: [
+    `FY 2019 ACFR: The City's total combined net position as presented on the Government-wide Statement of Net Position was $178,101,250, which
+    represents an increase of $25,225,621. This was primarily due to the impact of the Mercer Crossing planned development on the
+    City's west side`,
+  ],
 };

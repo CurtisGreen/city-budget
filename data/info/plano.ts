@@ -82,4 +82,10 @@ export const planoInfo: CityInfo = {
   latitude: 33.050278,
   longitude: -96.698889,
   area: 71.69,
+  notes: [
+    `FY 2025 budget: [...] a policy which continues to add to the budgetary challenge is a senior tax freeze which is
+    currently growing at an increase of 4.1% of additional households claiming the senior freeze. The senior
+    freeze has the potential of becoming the majority of residential properties by 2030 if the current rate of
+    growth is sustained`,
+  ],
 };

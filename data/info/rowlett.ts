@@ -82,4 +82,8 @@ export const rowlettInfo: CityInfo = {
   latitude: 32.902778,
   longitude: -96.544444,
   area: 20.748,
+  notes: [
+    `FY 2020 ACFR: In Program Revenues, capital grants and contributions also realized an increase of $13.5 million primarily due to developer contributions 
+    for construction related to TIRZ#2 North (Bayside), Magnolia Landing, Northhaven Phase 2 and various other projects.`,
+  ],
 };
