@@ -82,4 +82,11 @@ export const friscoInfo: CityInfo = {
   latitude: 33.141667,
   longitude: -96.821667,
   area: 68.64,
+  notes: [
+    `FY 2016 ACFR: In June 2016, the City issued General Obligation Refunding and Improvement Bonds, Series 2016, 
+    in the amount of $120,615,000 with a premium of $21,165,179.`,
+    `FY 2024 ACFR: Capital contributions decreased $159 million during the year, 
+    primarily due to the capital asset contributions under the master development agreement 
+    between the City and Omni PGA Frisco in the previous year.`,
+  ],
 };
