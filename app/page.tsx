@@ -24,6 +24,7 @@ import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
 import { arlingtonGeoJson } from "@/data/geojson/arlington-geojson";
 import { sachseGeoJson } from "@/data/geojson/sachse-geojson";
 import { universityParkGeoJson } from "@/data/geojson/university-park-geojson";
+import { grandPrairieGeoJson } from "@/data/geojson/grand-prairie-geojson";
 
 export default function HomePage() {
   const cities = getAllCities();
@@ -45,6 +46,7 @@ export default function HomePage() {
     ...arlingtonGeoJson.features,
     ...sachseGeoJson.features,
     ...universityParkGeoJson.features,
+    ...grandPrairieGeoJson.features,
   ] as GeoJSONFeature[];
 
   return (

@@ -19,6 +19,7 @@ import { highlandParkInfo } from "@/data/info/highland-park";
 import { coppellInfo } from "@/data/info/coppell";
 import { sachseInfo } from "@/data/info/sachse";
 import { universityParkInfo } from "@/data/info/university-park";
+import { grandPrairieInfo } from "@/data/info/grand-prairie";
 
 const basicCityInfo = [
   dallasInfo,
@@ -37,6 +38,7 @@ const basicCityInfo = [
   coppellInfo,
   sachseInfo,
   universityParkInfo,
+  grandPrairieInfo,
 ];
 
 // Calculate metrics for each city
