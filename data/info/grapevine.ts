@@ -82,4 +82,10 @@ export const grapevineInfo: CityInfo = {
   latitude: 32.935,
   longitude: -97.085833,
   area: 32.14,
+  notes: [
+    `FY 2024 ACFR: Two-thirds of the airport [DFW International Airport] properties are located within Grapevine city limits, 
+    and Grapevine participates in a legislatively mandated revenue share agreement with the cities of Fort Worth and Dallas.`,
+    `FY 2024 ACFR: Three eighths (3/8th) of one cent of the local sales tax is used to fund the 4B Transit Fund [for TEXRail through Trinity Metro]. 
+    One eighth (1/8th) of one cent of the local sales tax is used to fund the 4B Economic Development Fund.`,
+  ],
 };

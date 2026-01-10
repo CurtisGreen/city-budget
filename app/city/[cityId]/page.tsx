@@ -187,6 +187,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <PopulationChart
               title="Population"
+              subtitle="From US Census and latest NCTCOG estimates"
               cities={[{ ...cityData.info, data: cityData.info.populations }]}
             />
             <PopulationChart
