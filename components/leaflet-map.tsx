@@ -64,19 +64,23 @@ function CityShape({ feature }: { feature: PolygonFeature }) {
       className="duration-200"
       eventHandlers={{
         click() {
-          map.fitBounds([
-            [Math.min(...lats), Math.min(...lons)],
-            [Math.max(...lats), Math.max(...lons)],
-          ]);
-        },
-        dblclick() {
-          router.push(
-            `/city/${feature.name.replaceAll(" ", "-").toLowerCase()}`
+          map.fitBounds(
+            [
+              [Math.min(...lats), Math.min(...lons)],
+              [Math.max(...lats), Math.max(...lons)],
+            ],
+            {
+              animate: true,
+              duration: 0.8,
+              easeLinearity: 0.25,
+            }
           );
-          map.removeEventListener("click");
-          map.removeEventListener("dblclick");
-          map.removeEventListener("mouseover");
-          map.removeEventListener("mouseout");
+          setTimeout(() => {
+            router.push(
+              `/city/${feature.name.replaceAll(" ", "-").toLowerCase()}`
+            );
+            map.clearAllEventListeners();
+          }, 1000);
         },
         mouseover(e) {
           e.target.setStyle({ opacity: 1, fillOpacity: 0.5 });
