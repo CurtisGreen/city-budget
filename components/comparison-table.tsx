@@ -29,9 +29,6 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
       maximumFractionDigits: 1,
     }).format(value);
 
-  const formatPercent = (value: number, decimals: number = 1) =>
-    (value * 100).toFixed(decimals) + "%";
-
   const formatNumber = (value: number) => {
     return new Intl.NumberFormat("en-US", {
       style: "decimal",
@@ -81,14 +78,14 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                   </TableCell>
                 ))}
               </TableRow>
-              {/* <TableRow>
-                <TableCell className="font-medium">Property Tax Rate</TableCell>
+              <TableRow>
+                <TableCell className="font-medium">Land Area</TableCell>
                 {cities.map((city) => (
                   <TableCell key={city.info.id} className="text-center">
-                    {formatPercent(city.info.propertyTaxRate / 100)}
+                    {formatNumber(city.info.area)} mi<sup>2</sup>
                   </TableCell>
                 ))}
-              </TableRow> */}
+              </TableRow>
               <TableRow>
                 <TableCell className="font-medium">Total Revenue</TableCell>
                 {cities.map((city) => {
@@ -114,82 +111,6 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                   );
                 })}
               </TableRow>
-              {/* <TableRow>
-                <TableCell className="font-medium">
-                  Financial Assets / Liabilities
-                </TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.financialAssetsToLiabilities, 0)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">
-                  Assets / Liabilities
-                </TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.assetsToLiabilities, 0)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">
-                  Net Debt / Revenue
-                </TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.netDebtToRevenue, 0)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">
-                  Interest / Revenue
-                </TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.interestToRevenue)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Asset Life</TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.netBookValueToCostOfTCA)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">
-                  External Transfers / Revenue
-                </TableCell>
-                {cities.map((city) => {
-                  const latest = city.metrics[city.metrics.length - 1];
-                  return (
-                    <TableCell key={city.info.id} className="text-center">
-                      {formatPercent(latest.externalTransfersToRevenue)}
-                    </TableCell>
-                  );
-                })}
-              </TableRow> */}
             </TableBody>
           </Table>
         </div>
