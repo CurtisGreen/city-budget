@@ -48,17 +48,17 @@ export default function About() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Contact Me
+              Contact Me / Feedback
             </h2>
             <p className="text-gray-600 mb-2">
-              Create an issue on my{" "}
+              Fill out{" "}
               <Link
                 href="https://github.com/CurtisGreen/city-budget"
                 className="text-blue-600 hover:underline"
               >
-                github page
+                this form
               </Link>{" "}
-              if you need to get in touch.
+              if you find a problem or have any suggestions.
             </p>
             <p className="text-gray-600">
               If you have a Dallas area city you want to add, fill out the{" "}

@@ -26,6 +26,13 @@ export const Footer = () => {
           >
             Home
           </Link>
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLScMDDshJD5WTaYiHanzhJ_uUnqaRlkiaCSj-eCiGTFcL1-_9g/viewform?usp=dialog"
+            className="text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+            prefetch={false}
+          >
+            Feedback
+          </Link>
         </div>
         <p className="text-xs text-gray-400 dark:text-gray-500">
           © 2025 Budget.City - Making municipal finances easy and accessible
