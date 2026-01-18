@@ -15,6 +15,7 @@ import { ChartExplanationCard } from "@/components/chart-explanation-card";
 import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 import { PieChart } from "@/components/ui/pie-chart";
 import { RevenueChart } from "@/components/revenue-chart";
+import { ACFRDownloadButton } from "@/components/ui/acfr-download-button";
 
 interface CityPageProps {
   params: Promise<{
@@ -149,9 +150,12 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Charts Grid */}
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h3 className="text-2xl font-bold mb-6">
-            Financial Metrics Over Time
-          </h3>
+          <div className="flex mb-6">
+            <h3 className="text-2xl font-bold">Financial Metrics Over Time</h3>
+            <div className="mt-1 ml-1">
+              <ACFRDownloadButton cityData={cityData} />
+            </div>
+          </div>
 
           <div className="space-y-12">
             {metricConfigs.map((config) => (
@@ -173,6 +177,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 <ChartExplanationCard
                   understandingTheMetric={chartConfigs[config.key].whatItMeans}
                   whatToLookFor={chartConfigs[config.key].whatToLookFor}
+                  formula={chartConfigs[config.key].formula}
                 />
               </div>
             ))}

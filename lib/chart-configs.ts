@@ -12,6 +12,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
+    formula: "Current & other assets - (liabilities + deferred inflows)",
   },
   financialAssetsToLiabilities: {
     title: "Financial Assets to Liabilities",
@@ -23,6 +24,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
+    formula: "Current & other assets / (liabilities + deferred inflows)",
   },
   assetsToLiabilities: {
     title: "Assets to Liabilities",
@@ -35,6 +37,8 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
+    formula:
+      "(Current & other assets + capital assets + deferred outflows) / (liabilities + deferred inflows)",
   },
   netDebtToRevenue: {
     title: "Net Debt to Total Revenues",
@@ -48,6 +52,8 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "down",
     upwardDescription: "Less Sustainable",
     downwardDescription: "More Sustainable",
+    formula:
+      "If net financial position < 0 then 0 else net financial position / total revenue",
   },
   interestToRevenue: {
     title: "Interest to Total Revenues",
@@ -59,6 +65,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "down",
     upwardDescription: "Less Flexible",
     downwardDescription: "More Flexible",
+    formula: "Interest on long-term debt / total revenue",
   },
   netBookValueToCostOfTCA: {
     title: "Asset Life",
@@ -72,6 +79,8 @@ export const chartConfigs: Record<string, ChartConfig> = {
     upwardDescription: "More Flexible",
     downwardDescription: "Less Flexible",
     range: [0.4, 0.8],
+    formula:
+      "Capital assets / (government & business capital assets being depreciated + not being depreciated)",
   },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",
@@ -83,5 +92,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "down",
     upwardDescription: "More Vulnerable",
     downwardDescription: "Less Vulnerable",
+    formula:
+      "(Operating grants and contributions + capital grants and contributions) / total revenue",
   },
 };

@@ -9,13 +9,14 @@ import { ComparisonChart } from "@/components/comparison-chart";
 import { ComparisonTable } from "@/components/comparison-table";
 import { chartConfigs } from "@/lib/chart-configs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
 import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 import { RevenueChart } from "@/components/revenue-chart";
+import { ChartExplanationCard } from "@/components/chart-explanation-card";
 
 const metricConfigs: {
   key: keyof CityMetrics;
@@ -170,31 +171,13 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                     />
                   </div>
 
-                  <Card className="bg-muted/30">
-                    <CardHeader>
-                      <CardTitle className="text-base">
-                        What This Means
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div>
-                        <h4 className="font-semibold text-sm mb-1">
-                          Understanding the Metric
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          {chartConfigs[metricConfig.key].whatItMeans}
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-sm mb-1">
-                          What to Look For
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          {chartConfigs[metricConfig.key].whatToLookFor}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <ChartExplanationCard
+                    understandingTheMetric={
+                      chartConfigs[metricConfig.key].whatItMeans
+                    }
+                    whatToLookFor={chartConfigs[metricConfig.key].whatToLookFor}
+                    formula={chartConfigs[metricConfig.key].formula}
+                  />
                 </div>
               ))}
             </div>

@@ -1,15 +1,6 @@
-"use client";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { downloadACFR } from "@/lib/download-csv";
 import type { CityData } from "@/lib/types";
-import {
-  Users,
-  DollarSign,
-  TrendingUp,
-  Building,
-  Download,
-} from "lucide-react";
+import { Users, DollarSign, TrendingUp, Building } from "lucide-react";
 import Link from "next/link";
 
 interface CityInfoCardProps {
@@ -38,13 +29,6 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
     <Card>
       <CardHeader className="flex gap-1">
         <CardTitle className="text-lg">City Overview</CardTitle>
-        <div
-          className="hover:bg-accent hover:text-accent-foreground rounded-md py-1 px-2 transition-all cursor-pointer w-fit"
-          onClick={() => downloadACFR(cityData)}
-          title="Download ACFR data as CSV"
-        >
-          <Download className="h-5 w-5 text-muted-foreground" />
-        </div>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-2 gap-4">

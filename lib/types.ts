@@ -80,6 +80,7 @@ export interface ChartConfig {
   upwardDescription: string;
   downwardDescription: string;
   range?: [number | string, number | string];
+  formula: string;
 }
 
 export type ChartFormatType = "percent" | "currency" | "number";
