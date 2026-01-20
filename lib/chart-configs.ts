@@ -53,7 +53,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     upwardDescription: "Less Sustainable",
     downwardDescription: "More Sustainable",
     formula:
-      "If net financial position < 0 then 0 else net financial position / total revenue",
+      "If net financial position < 0, then -1 * net financial position / total revenue, else 0",
   },
   interestToRevenue: {
     title: "Interest to Total Revenues",
