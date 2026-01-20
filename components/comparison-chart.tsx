@@ -81,14 +81,7 @@ export function ComparisonChart({
     });
 
     // Add average
-    const avgIndex = averageMetrics.findIndex((_, i) => {
-      const foundCity = cities.find(
-        (c) => c.financialData?.[i].fiscalYear == year,
-      );
-      const curYear = foundCity?.financialData?.[i].fiscalYear;
-      return curYear === year;
-    });
-
+    const avgIndex = averageMetrics.findIndex((avg) => avg.fiscalYear === year);
     if (avgIndex !== -1) {
       dataPoint.average = averageMetrics[avgIndex][metricKey] as number;
     }

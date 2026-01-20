@@ -41,7 +41,7 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
 }
 
 export function calculateAverageMetrics(
-  allCitiesData: CityFinancialData[][]
+  allCitiesData: CityFinancialData[][],
 ): CityMetrics[] {
   // Group by year
   const yearMap = new Map<number, CityFinancialData[]>();
@@ -62,7 +62,7 @@ export function calculateAverageMetrics(
       const sumOfCities: CityFinancialData = {
         fiscalYear,
         currentAndOtherAssets: sum(
-          dataPoints.map((d) => d.currentAndOtherAssets)
+          dataPoints.map((d) => d.currentAndOtherAssets),
         ),
         capitalAssets: sum(dataPoints.map((d) => d.capitalAssets)),
         deferredOutflows: sum(dataPoints.map((d) => d.deferredOutflows)),
@@ -70,26 +70,23 @@ export function calculateAverageMetrics(
         deferredInflows: sum(dataPoints.map((d) => d.deferredInflows)),
         totalRevenue: sum(dataPoints.map((d) => d.totalRevenue)),
         operatingGrantsAndContributions: sum(
-          dataPoints.map((d) => d.operatingGrantsAndContributions)
+          dataPoints.map((d) => d.operatingGrantsAndContributions),
         ),
         capitalGrantsAndContributions: sum(
-          dataPoints.map((d) => d.capitalGrantsAndContributions)
+          dataPoints.map((d) => d.capitalGrantsAndContributions),
         ),
         debInterest: sum(dataPoints.map((d) => d.debInterest)),
-        // capitalAssetsNetofDepreciation: sum(
-        //   dataPoints.map((d) => d.capitalAssetsNetofDepreciation)
-        // ),
         governmentCapitalAssetsNotBeingDepreciated: sum(
-          dataPoints.map((d) => d.governmentCapitalAssetsNotBeingDepreciated)
+          dataPoints.map((d) => d.governmentCapitalAssetsNotBeingDepreciated),
         ),
         governmentCapitalAssetsBeingDepreciated: sum(
-          dataPoints.map((d) => d.governmentCapitalAssetsBeingDepreciated)
+          dataPoints.map((d) => d.governmentCapitalAssetsBeingDepreciated),
         ),
         businessCapitalAssetsNotBeingDepreciated: sum(
-          dataPoints.map((d) => d.businessCapitalAssetsNotBeingDepreciated)
+          dataPoints.map((d) => d.businessCapitalAssetsNotBeingDepreciated),
         ),
         businessCapitalAssetsBeingDepreciated: sum(
-          dataPoints.map((d) => d.businessCapitalAssetsBeingDepreciated)
+          dataPoints.map((d) => d.businessCapitalAssetsBeingDepreciated),
         ),
       };
 
@@ -100,7 +97,7 @@ export function calculateAverageMetrics(
 }
 
 export function calculateAveragePopulationDensity(
-  allCitiesData: CityInfo[]
+  allCitiesData: CityInfo[],
 ): Population[] {
   // Group by year
   const yearMap = new Map<number, Population[]>();
