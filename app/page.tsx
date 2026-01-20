@@ -22,8 +22,8 @@ export default function HomePage() {
               City Financial Data Visualized
             </h2>
             <p className="text-xl text-muted-foreground mb-8 text-pretty">
-              Compare budgets, debt levels, and spending patterns across
-              Dallas-area cities.
+              Compare budgets, debt levels, and spending patterns across DFW
+              cities.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="#map">
@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h3 className="text-3xl font-bold mb-2 text-center">
-              Dallas Area Financial Map
+              DFW Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
               Double-click on a city to view detailed financial information.
