@@ -55,7 +55,7 @@ export function ComparisonChart({
 
   const formatter = chartFormatters[formatType];
   const averageMetrics = calculateAverageMetrics(
-    allCities.map((c) => c.financialData)
+    allCities.map((c) => c.financialData),
   );
   const chartConfig = chartConfigs[metricKey];
 
@@ -73,7 +73,7 @@ export function ComparisonChart({
     // Add all of the cities
     cities.forEach((city) => {
       const yearIndex = city.financialData.findIndex(
-        (d) => d.fiscalYear === year
+        (d) => d.fiscalYear === year,
       );
       if (yearIndex !== -1) {
         dataPoint[city.info.id] = city.metrics[yearIndex][metricKey] as number;
@@ -83,7 +83,7 @@ export function ComparisonChart({
     // Add average
     const avgIndex = averageMetrics.findIndex((_, i) => {
       const foundCity = cities.find(
-        (c) => c.financialData?.[i].fiscalYear == year
+        (c) => c.financialData?.[i].fiscalYear == year,
       );
       const curYear = foundCity?.financialData?.[i].fiscalYear;
       return curYear === year;
@@ -114,11 +114,12 @@ export function ComparisonChart({
             [&_.recharts-layer]:outline-hidden
             [&_.recharts-sector[stroke='#fff']]:stroke-transparent
             [&_.recharts-surface]:outline-hidden
+            ml-[-10px]
           `}
         >
           <LineChart
             data={chartData}
-            margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+            margin={{ top: 5, right: 20, left: 0, bottom: 5 }}
             responsive
             className="h-full"
           >
