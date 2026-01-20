@@ -12,7 +12,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
-    formula: "Current & other assets - (liabilities + deferred inflows)",
+    formula: "Current & other assets - (Liabilities + Deferred inflows)",
   },
   financialAssetsToLiabilities: {
     title: "Financial Assets to Liabilities",
@@ -24,7 +24,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
-    formula: "Current & other assets / (liabilities + deferred inflows)",
+    formula: "Current & other assets / (Liabilities + Deferred inflows)",
   },
   assetsToLiabilities: {
     title: "Assets to Liabilities",
@@ -38,7 +38,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
     formula:
-      "(Current & other assets + capital assets + deferred outflows) / (liabilities + deferred inflows)",
+      "(Current & other assets + Capital assets + Deferred outflows) / (Liabilities + Deferred inflows)",
   },
   netDebtToRevenue: {
     title: "Net Debt to Total Revenues",
@@ -53,7 +53,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     upwardDescription: "Less Sustainable",
     downwardDescription: "More Sustainable",
     formula:
-      "If net financial position < 0, then -1 * net financial position / total revenue, else 0",
+      "If Net financial position < 0, then -1 * Net financial position / Total revenue, else 0",
   },
   interestToRevenue: {
     title: "Interest to Total Revenues",
@@ -65,7 +65,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "down",
     upwardDescription: "Less Flexible",
     downwardDescription: "More Flexible",
-    formula: "Interest on long-term debt / total revenue",
+    formula: "Interest on long-term debt / Total revenue",
   },
   netBookValueToCostOfTCA: {
     title: "Asset Life",
@@ -80,7 +80,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
     downwardDescription: "Less Flexible",
     range: [0.4, 0.8],
     formula:
-      "Capital assets / (government & business capital assets being depreciated + not being depreciated)",
+      "Capital assets / (Government & Business capital assets being depreciated + Not being depreciated)",
   },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",
@@ -93,6 +93,6 @@ export const chartConfigs: Record<string, ChartConfig> = {
     upwardDescription: "More Vulnerable",
     downwardDescription: "Less Vulnerable",
     formula:
-      "(Operating grants and contributions + capital grants and contributions) / total revenue",
+      "(Operating grants and contributions + Capital grants and contributions) / Total revenue",
   },
 };
