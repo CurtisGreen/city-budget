@@ -33,6 +33,7 @@ import { universityParkGeoJson } from "@/data/geojson/university-park-geojson";
 import { grandPrairieGeoJson } from "@/data/geojson/grand-prairie-geojson";
 import { mesquiteGeoJson } from "@/data/geojson/mesquite-geojson";
 import { fortWorthGeoJson } from "@/data/geojson/fort-worth-geojson";
+import { glennHeightsGeoJson } from "@/data/geojson/glenn-heights-geojson";
 
 import { join } from "node:path";
 import { highlandParkInfo } from "@/data/info/highland-park";
@@ -43,6 +44,7 @@ import { grandPrairieInfo } from "@/data/info/grand-prairie";
 import { mesquiteInfo } from "@/data/info/mesquite";
 import { fortWorthInfo } from "@/data/info/fort-worth";
 import { GeoJSONFeature } from "./overpass-types";
+import { glennHeightsInfo } from "@/data/info/glenn-heights";
 
 const basicCityInfo = [
   dallasInfo,
@@ -64,6 +66,7 @@ const basicCityInfo = [
   grandPrairieInfo,
   mesquiteInfo,
   fortWorthInfo,
+  glennHeightsInfo,
 ];
 
 // Calculate metrics for each city
@@ -103,4 +106,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...grandPrairieGeoJson.features,
   ...mesquiteGeoJson.features,
   ...fortWorthGeoJson.features,
+  ...glennHeightsGeoJson.features,
 ] as GeoJSONFeature[];
