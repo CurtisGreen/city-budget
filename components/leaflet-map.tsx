@@ -19,7 +19,7 @@ import { CityData } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { Card } from "./ui/card";
 
-const center: LatLngExpression = [32.9, -96.79];
+const center: LatLngExpression = [32.88, -96.79];
 
 type PolygonFeature =
   | {
@@ -44,14 +44,14 @@ function CityShape({ feature }: { feature: PolygonFeature }) {
   const lats =
     feature.type == "MultiPolygon"
       ? feature.coordinates.flatMap((c) =>
-          c.flatMap((c2) => c2.flatMap((c3) => c3[0]))
+          c.flatMap((c2) => c2.flatMap((c3) => c3[0])),
         )
       : feature.coordinates.flatMap((c) => c.flatMap((c2) => c2[0]));
 
   const lons =
     feature.type == "MultiPolygon"
       ? feature.coordinates.flatMap((c) =>
-          c.flatMap((c2) => c2.flatMap((c3) => c3[1]))
+          c.flatMap((c2) => c2.flatMap((c3) => c3[1])),
         )
       : feature.coordinates.flatMap((c) => c.flatMap((c2) => c2[1]));
 
@@ -71,16 +71,16 @@ function CityShape({ feature }: { feature: PolygonFeature }) {
             ],
             {
               animate: true,
-              duration: 0.8,
+              duration: 0.5,
               easeLinearity: 0.25,
-            }
+            },
           );
           setTimeout(() => {
             router.push(
-              `/city/${feature.name.replaceAll(" ", "-").toLowerCase()}`
+              `/city/${feature.name.replaceAll(" ", "-").toLowerCase()}`,
             );
             map.clearAllEventListeners();
-          }, 1000);
+          }, 600);
         },
         mouseover(e) {
           e.target.setStyle({ opacity: 1, fillOpacity: 0.5 });
@@ -119,10 +119,10 @@ export default function LeafletMap({
       const coordinates =
         f.geometry.type == "Polygon"
           ? ((f.geometry as GeoJSONPolygon).coordinates.map((c) =>
-              c.map(([lat, lon]) => [lon, lat])
+              c.map(([lat, lon]) => [lon, lat]),
             ) as LatLngTuple[][])
           : ((f.geometry as GeoJSONMultiPolygon).coordinates.map((c) =>
-              c.map((co) => co.map(([lat, lon]) => [lon, lat]))
+              c.map((co) => co.map(([lat, lon]) => [lon, lat])),
             ) as LatLngTuple[][][]);
 
       const city = cities.find((c) => c.info.name == f.properties.name);
