@@ -7,28 +7,28 @@ export const Footer = () => {
         <div className="flex justify-center space-x-4">
           <Link
             href="/about"
-            className="text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+            className="text-sm text-gray-500 hover:text-gray-600"
             prefetch={false}
           >
             About
           </Link>
           <Link
             href="/compare"
-            className="text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+            className="text-sm text-gray-500 hover:text-gray-600"
             prefetch={false}
           >
             Compare
           </Link>
           <Link
             href="/"
-            className="text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+            className="text-sm text-gray-500 hover:text-gray-600"
             prefetch={false}
           >
             Home
           </Link>
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScMDDshJD5WTaYiHanzhJ_uUnqaRlkiaCSj-eCiGTFcL1-_9g/viewform?usp=dialog"
-            className="text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+            className="text-sm text-gray-500 hover:text-gray-600"
             prefetch={false}
           >
             Feedback
@@ -38,8 +38,23 @@ export const Footer = () => {
           © 2025 Budget.City - Making municipal finances easy and accessible
         </p>
         <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
-          Thanks to Strong Towns and their Finance Decoder for inspiring this
-          site
+          Thanks to{" "}
+          <Link
+            href="https://www.strongtowns.org"
+            className="hover:text-gray-600 underline"
+            prefetch={false}
+          >
+            Strong Towns
+          </Link>{" "}
+          and their{" "}
+          <Link
+            href="https://www.strongtowns.org/decoder-resources"
+            className="hover:text-gray-600 underline"
+            prefetch={false}
+          >
+            Finance Decoder
+          </Link>{" "}
+          for inspiring this site
         </p>
         <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
           Data sourced from Annual Comprehensive Financial Reports (ACFR),

@@ -39,10 +39,10 @@ export default function About() {
               The majority of the information is taken directly from each city's
               Annual Comprehensive Financial Report (ACFR). You can find these
               easily by just searching [City Name] ACFR. I went through hundreds
-              of pages of these documents to collect the data presented here. I
-              double checked everything, but because of tedious data entry it's
-              possible there are mistakes. Please contact me through github if
-              you find any issues.
+              of pages of these documents with the help of several people to
+              collect the data presented here. I double checked everything, but
+              because of tedious data entry it's possible there are mistakes.
+              Please contact me through the form below if you find any issues.
             </p>
           </section>
 
@@ -53,7 +53,7 @@ export default function About() {
             <p className="text-gray-600 mb-2">
               Fill out{" "}
               <Link
-                href="https://github.com/CurtisGreen/city-budget"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScMDDshJD5WTaYiHanzhJ_uUnqaRlkiaCSj-eCiGTFcL1-_9g/viewform?usp=dialog"
                 className="text-blue-600 hover:underline"
               >
                 this form
