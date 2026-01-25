@@ -82,4 +82,7 @@ export const carrolltonInfo: CityInfo = {
   latitude: 32.953611,
   longitude: -96.890278,
   area: 36.66,
+  notes: [
+    "FY 2022 ACFR: Program revenues had a net increase of $11,805 [000s] primarily due to the receipt of fedral [sic] American Rescue Plan Act funding.",
+  ],
 };
