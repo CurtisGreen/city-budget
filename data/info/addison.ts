@@ -125,4 +125,18 @@ export const addisonInfo: CityInfo = {
     `FY 2023 ACFR: Overall expenses increased $17,284 [000s] primarily due to the increase in the net pension liability. 
     In fiscal year 2022, there was a net pension asset, which further decreased overall expenses in that year.`,
   ],
+  /*{
+    fiscalYear: 2026,
+    homesteadExemption: 20,
+    seniorDisabledExemption: 0,
+    averageHomesteadValue: 0,
+    averageHomesteadTaxableValue: 501878,
+    averageHomesteadTaxesPaid: 3052,
+  },
+  {
+    year: 2025,
+    averageMarketValue: 692591,
+    averageTaxableValue: 511759,
+  },
+  */
 };

@@ -85,4 +85,13 @@ export const carrolltonInfo: CityInfo = {
   notes: [
     "FY 2022 ACFR: Program revenues had a net increase of $11,805 [000s] primarily due to the receipt of fedral [sic] American Rescue Plan Act funding.",
   ],
+  /*{
+    fiscalYear: 2026,
+    homesteadExemption: 20,
+    seniorDisabledExemption: 110000,
+    averageHomesteadValue: 430061,
+    averageHomesteadTaxableValue: 352744,
+    averageHomesteadTaxesPaid: 1896,
+  },
+  */
 };
