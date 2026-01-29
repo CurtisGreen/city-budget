@@ -13,6 +13,18 @@ import { richardsonInfo } from "@/data/info/richardson";
 import { rowlettInfo } from "@/data/info/rowlett";
 import { friscoInfo } from "@/data/info/frisco";
 import { grapevineInfo } from "@/data/info/grapevine";
+import { highlandParkInfo } from "@/data/info/highland-park";
+import { coppellInfo } from "@/data/info/coppell";
+import { sachseInfo } from "@/data/info/sachse";
+import { universityParkInfo } from "@/data/info/university-park";
+import { grandPrairieInfo } from "@/data/info/grand-prairie";
+import { mesquiteInfo } from "@/data/info/mesquite";
+import { fortWorthInfo } from "@/data/info/fort-worth";
+import { GeoJSONFeature } from "./overpass-types";
+import { glennHeightsInfo } from "@/data/info/glenn-heights";
+import { mckinneyInfo } from "@/data/info/mckinney";
+import { duncanvilleInfo } from "@/data/info/duncanville";
+import { allenInfo } from "@/data/info/allen";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -36,19 +48,9 @@ import { fortWorthGeoJson } from "@/data/geojson/fort-worth-geojson";
 import { glennHeightsGeoJson } from "@/data/geojson/glenn-heights-geojson";
 import { mckinneyGeojson } from "@/data/geojson/mckinney-geojson";
 import { duncanvilleGeoJSON } from "@/data/geojson/duncanville-geojson";
+import { allenGeoJson } from "@/data/geojson/allen-geojson";
 
 import { join } from "node:path";
-import { highlandParkInfo } from "@/data/info/highland-park";
-import { coppellInfo } from "@/data/info/coppell";
-import { sachseInfo } from "@/data/info/sachse";
-import { universityParkInfo } from "@/data/info/university-park";
-import { grandPrairieInfo } from "@/data/info/grand-prairie";
-import { mesquiteInfo } from "@/data/info/mesquite";
-import { fortWorthInfo } from "@/data/info/fort-worth";
-import { GeoJSONFeature } from "./overpass-types";
-import { glennHeightsInfo } from "@/data/info/glenn-heights";
-import { mckinneyInfo } from "@/data/info/mckinney";
-import { duncanvilleInfo } from "@/data/info/duncanville";
 
 const basicCityInfo = [
   dallasInfo,
@@ -73,6 +75,7 @@ const basicCityInfo = [
   glennHeightsInfo,
   mckinneyInfo,
   duncanvilleInfo,
+  allenInfo,
 ];
 
 // Calculate metrics for each city
@@ -115,4 +118,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...glennHeightsGeoJson.features,
   ...mckinneyGeojson.features,
   ...duncanvilleGeoJSON.features,
+  ...allenGeoJson.features,
 ] as GeoJSONFeature[];

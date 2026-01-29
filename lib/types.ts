@@ -58,8 +58,8 @@ export interface CityInfo {
   populations: Population[];
   propertyValues?: PropertyValues[];
   revenueBySource: RevenueBySource;
-  latitude: number;
-  longitude: number;
+  latitude?: number;
+  longitude?: number;
   area: number; // Land area
   notes?: string[];
 }
