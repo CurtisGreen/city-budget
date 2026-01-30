@@ -36,11 +36,11 @@ const assetLifeConfig: ColorConfig = {
 
 const changeInAssetsToLiabilitiesConfig: ColorConfig = {
   greenLabel: ">= 30%",
-  yellowLabel: ">= -30%",
-  redLabel: "< -30%",
+  yellowLabel: ">= -20%",
+  redLabel: "< -20%",
   colorFunction: (ratio: number) => {
-    if (ratio >= 0.1) return "oklch(0.696 0.17 162)"; // green - excellent
-    if (ratio >= -0.1) return "oklch(0.769 0.188 70)"; // yellow - okay
+    if (ratio >= 0.2) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (ratio >= -0.2) return "oklch(0.769 0.188 70)"; // yellow - okay
     return "oklch(0.577 0.245 27)"; // red - poor
   },
   calculateValue: (cityMetrics: CityMetrics[]) =>
