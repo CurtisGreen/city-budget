@@ -15,11 +15,12 @@ import {
   GeoJSONMultiPolygon,
   GeoJSONPolygon,
 } from "@/lib/overpass-types";
-import { CityData } from "@/lib/types";
+import { CityData, CityMetrics } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { Card } from "./ui/card";
 import { Dropdown } from "./ui/dropdown";
 import { useState } from "react";
+import { ColorConfig, getColorConfig } from "@/lib/leaflet-map-color-configs";
 
 const center: LatLngExpression = [32.88, -96.79];
 
@@ -27,18 +28,16 @@ type PolygonFeature =
   | {
       name: string;
       coordinates: LatLngTuple[][][];
-      color: string;
-      netDebtToRevenue: number;
-      assetLife: number;
       type: "MultiPolygon";
+      colorConfig: ColorConfig;
+      cityMetrics: CityMetrics[];
     }
   | {
       name: string;
       coordinates: LatLngTuple[][];
-      color: string;
-      netDebtToRevenue: number;
-      assetLife: number;
       type: "Polygon";
+      colorConfig: ColorConfig;
+      cityMetrics: CityMetrics[];
     };
 
 function CityShape({
@@ -65,13 +64,13 @@ function CityShape({
         )
       : feature.coordinates.flatMap((c) => c.flatMap((c2) => c2[1]));
 
-  const value =
-    metric === "Net Debt to Revenue"
-      ? feature.netDebtToRevenue * 100
-      : feature.assetLife * 100;
+  const config = feature.colorConfig;
+  const value = config.calculateValue(feature.cityMetrics);
+  const color = config.colorFunction(value);
+
   return (
     <Polygon
-      pathOptions={{ color: feature.color }}
+      pathOptions={{ color }}
       positions={feature.coordinates}
       opacity={0.5}
       fillOpacity={0.2}
@@ -107,24 +106,12 @@ function CityShape({
       <Tooltip sticky>
         <b>{feature.name}</b>
         <div>
-          {metric} {Math.round(value)}%
+          {metric} {Math.round(value * 100)}%
         </div>
       </Tooltip>
     </Polygon>
   );
 }
-
-const getColorForNetDebtRatio = (ratio: number) => {
-  if (ratio === 0) return "oklch(0.696 0.17 162)"; // green - excellent
-  if (ratio < 1.0) return "oklch(0.769 0.188 70)"; // yellow - okay
-  return "oklch(0.577 0.245 27)"; // red - poor
-};
-
-const getColorForAssetLifeRatio = (ratio: number) => {
-  if (ratio >= 0.6) return "oklch(0.696 0.17 162)"; // green - excellent
-  if (ratio >= 0.5) return "oklch(0.769 0.188 70)"; // yellow - okay
-  return "oklch(0.577 0.245 27)"; // red - poor
-};
 
 export default function LeafletMap({
   geoJSONFeatures,
@@ -148,41 +135,29 @@ export default function LeafletMap({
 
       const city = cities.find((c) => c.info.name == f.properties.name);
 
-      const latestMetric = city?.metrics[city.metrics.length - 1];
-      const netDebtToRevenue = latestMetric?.netDebtToRevenue;
-      const assetLife = latestMetric?.netBookValueToCostOfTCA;
-      const color =
-        selectedMetric === "Net Debt to Revenue"
-          ? netDebtToRevenue != null
-            ? getColorForNetDebtRatio(netDebtToRevenue)
-            : "white"
-          : assetLife != null
-            ? getColorForAssetLifeRatio(assetLife)
-            : "white";
-
       return {
         name: f.properties.name,
         coordinates,
-        color,
-        netDebtToRevenue,
-        assetLife,
+        colorConfig: getColorConfig(selectedMetric),
         type: f.geometry.type,
+        cityMetrics: city ? city.metrics : [],
       };
     });
 
-  const greenLabel =
-    selectedMetric === "Net Debt to Revenue" ? "= 0" : ">= 60%";
-  const yellowLabel =
-    selectedMetric === "Net Debt to Revenue" ? "0 - 1.0" : ">= 50%";
-  const redLabel = selectedMetric === "Net Debt to Revenue" ? "> 1" : "< 50%";
+  const { greenLabel, yellowLabel, redLabel } = getColorConfig(selectedMetric);
 
   return (
     <div>
       {/* Legend */}
-      <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[160px] md:ml-[520px] mt-[-20px] gap-2">
+      <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[100px] md:ml-[520px] mt-[-20px] gap-2">
         <div className="text-sm font-semibold">
           <Dropdown
-            options={["Net Debt to Revenue", "Asset Life"]}
+            options={[
+              "Net Debt to Revenue",
+              "Asset Life",
+              "10-Year Change in Assets Life",
+              "10-Year Change in Assets to Liabilities",
+            ]}
             onSelectionChange={setSelectedMetric}
           />
         </div>
@@ -226,10 +201,7 @@ export default function LeafletMap({
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {features
-          .filter(
-            (f): f is PolygonFeature =>
-              f.netDebtToRevenue != null || f.assetLife != null,
-          )
+          .filter((f): f is PolygonFeature => f.type != "Point")
           .map((f, i) => (
             <CityShape feature={f} key={f.name + i} metric={selectedMetric} />
           ))}
