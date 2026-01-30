@@ -8,7 +8,6 @@ import { CitySelector } from "@/components/city-selector";
 import { ComparisonChart } from "@/components/comparison-chart";
 import { ComparisonTable } from "@/components/comparison-table";
 import { chartConfigs } from "@/lib/chart-configs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
@@ -76,7 +75,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   }));
 
   const averagePopulationDensityData = calculateAveragePopulationDensity(
-    allCities.map((c) => c.info)
+    allCities.map((c) => c.info),
   );
 
   const revenues = allCities.map((c) => c.info.revenueBySource);
@@ -123,7 +122,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
             </label>
             <CitySelector
               cities={allCities.toSorted((a, b) =>
-                a.info.id.localeCompare(b.info.id)
+                a.info.id.localeCompare(b.info.id),
               )}
               selectedCities={selectedCityIds}
               onSelectionChange={setSelectedCityIds}

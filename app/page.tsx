@@ -77,7 +77,7 @@ export default function HomePage() {
               DFW Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
-              Double-click on a city to view detailed financial information.
+              Click on a city to view detailed financial information.
             </p>
             <div className="m-auto w-[300px] md:w-[700px]">
               <LazyMap geoJSONFeatures={geoJsonFeatures} cities={cities} />

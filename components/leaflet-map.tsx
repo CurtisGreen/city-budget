@@ -18,6 +18,8 @@ import {
 import { CityData } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { Card } from "./ui/card";
+import { Dropdown } from "./ui/dropdown";
+import { useState } from "react";
 
 const center: LatLngExpression = [32.88, -96.79];
 
@@ -27,6 +29,7 @@ type PolygonFeature =
       coordinates: LatLngTuple[][][];
       color: string;
       netDebtToRevenue: number;
+      assetLife: number;
       type: "MultiPolygon";
     }
   | {
@@ -34,10 +37,17 @@ type PolygonFeature =
       coordinates: LatLngTuple[][];
       color: string;
       netDebtToRevenue: number;
+      assetLife: number;
       type: "Polygon";
     };
 
-function CityShape({ feature }: { feature: PolygonFeature }) {
+function CityShape({
+  feature,
+  metric,
+}: {
+  feature: PolygonFeature;
+  metric: string;
+}) {
   const router = useRouter();
   const map = useMap();
 
@@ -55,6 +65,10 @@ function CityShape({ feature }: { feature: PolygonFeature }) {
         )
       : feature.coordinates.flatMap((c) => c.flatMap((c2) => c2[1]));
 
+  const value =
+    metric === "Net Debt to Revenue"
+      ? feature.netDebtToRevenue * 100
+      : feature.assetLife * 100;
   return (
     <Polygon
       pathOptions={{ color: feature.color }}
@@ -93,16 +107,22 @@ function CityShape({ feature }: { feature: PolygonFeature }) {
       <Tooltip sticky>
         <b>{feature.name}</b>
         <div>
-          Net Debt / Revenue {Math.round(feature.netDebtToRevenue * 100)}%
+          {metric} {Math.round(value)}%
         </div>
       </Tooltip>
     </Polygon>
   );
 }
 
-const getColorForRatio = (ratio: number) => {
+const getColorForNetDebtRatio = (ratio: number) => {
   if (ratio === 0) return "oklch(0.696 0.17 162)"; // green - excellent
   if (ratio < 1.0) return "oklch(0.769 0.188 70)"; // yellow - okay
+  return "oklch(0.577 0.245 27)"; // red - poor
+};
+
+const getColorForAssetLifeRatio = (ratio: number) => {
+  if (ratio >= 0.6) return "oklch(0.696 0.17 162)"; // green - excellent
+  if (ratio >= 0.5) return "oklch(0.769 0.188 70)"; // yellow - okay
   return "oklch(0.577 0.245 27)"; // red - poor
 };
 
@@ -113,6 +133,7 @@ export default function LeafletMap({
   geoJSONFeatures: GeoJSONFeature[];
   cities: CityData[];
 }) {
+  const [selectedMetric, setSelectedMetric] = useState("Net Debt to Revenue");
   const features = geoJSONFeatures
     .filter((f) => ["Polygon", "MultiPolygon"].includes(f.geometry.type))
     .map((f) => {
@@ -127,46 +148,65 @@ export default function LeafletMap({
 
       const city = cities.find((c) => c.info.name == f.properties.name);
 
-      const netDebtToRevenue =
-        city?.metrics[city.metrics.length - 1].netDebtToRevenue;
+      const latestMetric = city?.metrics[city.metrics.length - 1];
+      const netDebtToRevenue = latestMetric?.netDebtToRevenue;
+      const assetLife = latestMetric?.netBookValueToCostOfTCA;
       const color =
-        netDebtToRevenue != null ? getColorForRatio(netDebtToRevenue) : "white";
+        selectedMetric === "Net Debt to Revenue"
+          ? netDebtToRevenue != null
+            ? getColorForNetDebtRatio(netDebtToRevenue)
+            : "white"
+          : assetLife != null
+            ? getColorForAssetLifeRatio(assetLife)
+            : "white";
 
       return {
         name: f.properties.name,
         coordinates,
         color,
         netDebtToRevenue,
+        assetLife,
         type: f.geometry.type,
       };
     });
+
+  const greenLabel =
+    selectedMetric === "Net Debt to Revenue" ? "= 0" : ">= 60%";
+  const yellowLabel =
+    selectedMetric === "Net Debt to Revenue" ? "0 - 1.0" : ">= 50%";
+  const redLabel = selectedMetric === "Net Debt to Revenue" ? "> 1" : "< 50%";
 
   return (
     <div>
       {/* Legend */}
       <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[160px] md:ml-[520px] mt-[-20px] gap-2">
-        <div className="text-sm font-semibold">Net Debt to Revenue</div>
+        <div className="text-sm font-semibold">
+          <Dropdown
+            options={["Net Debt to Revenue", "Asset Life"]}
+            onSelectionChange={setSelectedMetric}
+          />
+        </div>
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
             />
-            <span className="text-xs">{"= 0 (Excellent)"}</span>
+            <span className="text-xs">{greenLabel} (Excellent)</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
             />
-            <span className="text-xs">{"0 - 1.0 (Okay)"}</span>
+            <span className="text-xs">{yellowLabel} (Okay)</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
             />
-            <span className="text-xs">{"> 1 (Poor)"}</span>
+            <span className="text-xs">{redLabel} (Poor)</span>
           </div>
         </div>
       </Card>
@@ -186,9 +226,12 @@ export default function LeafletMap({
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {features
-          .filter((f): f is PolygonFeature => f.netDebtToRevenue != null)
+          .filter(
+            (f): f is PolygonFeature =>
+              f.netDebtToRevenue != null || f.assetLife != null,
+          )
           .map((f, i) => (
-            <CityShape feature={f} key={f.name + i} />
+            <CityShape feature={f} key={f.name + i} metric={selectedMetric} />
           ))}
       </MapContainer>
     </div>
