@@ -149,7 +149,7 @@ export default function LeafletMap({
   return (
     <div>
       {/* Legend */}
-      <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[100px] md:ml-[520px] mt-[-20px] gap-2">
+      <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[100px] md:ml-[500px] lg:ml-[700px] mt-[-20px] gap-2">
         <div className="text-sm font-semibold">
           <Dropdown
             options={[
@@ -190,11 +190,11 @@ export default function LeafletMap({
         center={center}
         zoom={10}
         // scrollWheelZoom={false}
-        //   style={{ height: "400px", width: "100%" }}
+        // style={{ width: "100%" }}
         // zoomControl={false}
         doubleClickZoom={false}
         // dragging={false}
-        className="h-[400px] md:h-[600px] w-[300px] md:w-[700px]"
+        className="h-[400px] md:h-[600px] lg:h-[650px] w-[300px] md:w-[700px] lg:w-[900px] rounded-md mx-auto"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

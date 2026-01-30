@@ -79,7 +79,7 @@ export default function HomePage() {
             <p className="text-muted-foreground text-center mb-8">
               Click on a city to view detailed financial information.
             </p>
-            <div className="m-auto w-[300px] md:w-[700px]">
+            <div className="m-auto">
               <LazyMap geoJSONFeatures={geoJsonFeatures} cities={cities} />
             </div>
           </div>
