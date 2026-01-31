@@ -30,14 +30,14 @@ type PolygonFeature =
       coordinates: LatLngTuple[][][];
       type: "MultiPolygon";
       colorConfig: ColorConfig;
-      cityMetrics: CityMetrics[];
+      cityData: CityData;
     }
   | {
       name: string;
       coordinates: LatLngTuple[][];
       type: "Polygon";
       colorConfig: ColorConfig;
-      cityMetrics: CityMetrics[];
+      cityData: CityData;
     };
 
 function CityShape({
@@ -65,7 +65,7 @@ function CityShape({
       : feature.coordinates.flatMap((c) => c.flatMap((c2) => c2[1]));
 
   const config = feature.colorConfig;
-  const value = config.calculateValue(feature.cityMetrics);
+  const value = config.getValue(feature.cityData!);
   const color = config.colorFunction(value);
 
   return (
@@ -106,7 +106,7 @@ function CityShape({
       <Tooltip sticky>
         <b>{feature.name}</b>
         <div>
-          {metric} {Math.round(value * 100)}%
+          {metric} {config.getFormattedValue(feature.cityData)}
         </div>
       </Tooltip>
     </Polygon>
@@ -133,14 +133,14 @@ export default function LeafletMap({
               c.map((co) => co.map(([lat, lon]) => [lon, lat])),
             ) as LatLngTuple[][][]);
 
-      const city = cities.find((c) => c.info.name == f.properties.name);
+      const cityData = cities.find((c) => c.info.name == f.properties.name);
 
       return {
         name: f.properties.name,
         coordinates,
         colorConfig: getColorConfig(selectedMetric),
         type: f.geometry.type,
-        cityMetrics: city ? city.metrics : [],
+        cityData,
       };
     });
 
@@ -157,6 +157,7 @@ export default function LeafletMap({
               "Asset Life",
               "10-Year Change in Assets Life",
               "10-Year Change in Assets to Liabilities",
+              "Total Revenue Per Acre",
             ]}
             onSelectionChange={setSelectedMetric}
           />
@@ -201,7 +202,7 @@ export default function LeafletMap({
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {features
-          .filter((f): f is PolygonFeature => f.type != "Point")
+          .filter((f): f is PolygonFeature => f.type != "Point" && !!f.cityData)
           .map((f, i) => (
             <CityShape feature={f} key={f.name + i} metric={selectedMetric} />
           ))}
