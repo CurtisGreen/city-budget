@@ -25,6 +25,7 @@ import { glennHeightsInfo } from "@/data/info/glenn-heights";
 import { mckinneyInfo } from "@/data/info/mckinney";
 import { duncanvilleInfo } from "@/data/info/duncanville";
 import { allenInfo } from "@/data/info/allen";
+import { lewisvilleInfo } from "@/data/info/lewisville";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -49,6 +50,7 @@ import { glennHeightsGeoJson } from "@/data/geojson/glenn-heights-geojson";
 import { mckinneyGeojson } from "@/data/geojson/mckinney-geojson";
 import { duncanvilleGeoJSON } from "@/data/geojson/duncanville-geojson";
 import { allenGeoJson } from "@/data/geojson/allen-geojson";
+import { lewisvilleGoeJson } from "@/data/geojson/lewisville-geojson";
 
 import { join } from "node:path";
 
@@ -76,6 +78,7 @@ const basicCityInfo = [
   mckinneyInfo,
   duncanvilleInfo,
   allenInfo,
+  lewisvilleInfo,
 ];
 
 // Calculate metrics for each city
@@ -119,4 +122,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...mckinneyGeojson.features,
   ...duncanvilleGeoJSON.features,
   ...allenGeoJson.features,
+  ...lewisvilleGoeJson.features,
 ] as GeoJSONFeature[];
