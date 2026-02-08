@@ -19,7 +19,7 @@ export default function About() {
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Budget.City is intended to make municipal finances more accessible
-              for DFW cities. It's inspired by the{" "}
+              for North Texas cities. It's inspired by the{" "}
               <Link
                 href="https://www.strongtowns.org/decoder-resources"
                 className="text-blue-600 hover:underline"
@@ -61,17 +61,17 @@ export default function About() {
               if you find a problem or have any suggestions.
             </p>
             <p className="text-gray-600">
-              If you have a DFW city you want to add, fill out the{" "}
+              If you have a North Texas city you want to add, fill out the{" "}
               <Link
                 href="https://www.strongtowns.org/decoder-resources"
                 className="text-blue-600 hover:underline"
               >
                 Strong Towns Finance Decoder
               </Link>{" "}
-              and then send it to me. If you want to add a non-DFW city then
-              feel free to fork my github repo and create a new site for your
-              own region. Please make sure to credit me and link back to this
-              site and github page.
+              and then send it to me. If you want to add a city outside of North
+              Texas then feel free to fork my github repo and create a new site
+              for your own region. Please make sure to credit me and link back
+              to this site and github page.
             </p>
           </section>
         </div>
