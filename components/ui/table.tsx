@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import * as React from 'react'
+import * as React from "react";
+import { useMemo, useState } from "react";
+import { cn } from "@/lib/utils";
 
-import { cn } from '@/lib/utils'
-
-function Table({ className, ...props }: React.ComponentProps<'table'>) {
+export function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <div
       data-slot="table-container"
@@ -12,105 +12,169 @@ function Table({ className, ...props }: React.ComponentProps<'table'>) {
     >
       <table
         data-slot="table"
-        className={cn('w-full caption-bottom text-sm', className)}
+        className={cn("w-full caption-bottom text-sm", className)}
         {...props}
       />
     </div>
-  )
+  );
 }
 
-function TableHeader({ className, ...props }: React.ComponentProps<'thead'>) {
+export function TableHeader({
+  className,
+  ...props
+}: React.ComponentProps<"thead">) {
   return (
     <thead
       data-slot="table-header"
-      className={cn('[&_tr]:border-b', className)}
+      className={cn("[&_tr]:border-b", className)}
       {...props}
     />
-  )
+  );
 }
 
-function TableBody({ className, ...props }: React.ComponentProps<'tbody'>) {
+export function TableBody({
+  className,
+  ...props
+}: React.ComponentProps<"tbody">) {
   return (
     <tbody
       data-slot="table-body"
-      className={cn('[&_tr:last-child]:border-0', className)}
+      className={cn("[&_tr:last-child]:border-0", className)}
       {...props}
     />
-  )
+  );
 }
 
-function TableFooter({ className, ...props }: React.ComponentProps<'tfoot'>) {
-  return (
-    <tfoot
-      data-slot="table-footer"
-      className={cn(
-        'bg-muted/50 border-t font-medium [&>tr]:last:border-b-0',
-        className,
-      )}
-      {...props}
-    />
-  )
-}
-
-function TableRow({ className, ...props }: React.ComponentProps<'tr'>) {
+export function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       data-slot="table-row"
       className={cn(
-        'hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors',
+        "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
         className,
       )}
       {...props}
     />
-  )
+  );
 }
 
-function TableHead({ className, ...props }: React.ComponentProps<'th'>) {
+export function TableHead({ className, ...props }: React.ComponentProps<"th">) {
   return (
     <th
       data-slot="table-head"
       className={cn(
-        'text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+        "text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className,
       )}
       {...props}
     />
-  )
+  );
 }
 
-function TableCell({ className, ...props }: React.ComponentProps<'td'>) {
+export function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   return (
     <td
       data-slot="table-cell"
       className={cn(
-        'p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+        "p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className,
       )}
       {...props}
     />
-  )
+  );
 }
 
-function TableCaption({
-  className,
-  ...props
-}: React.ComponentProps<'caption'>) {
+export type ColumnDef<T> = {
+  key: string;
+  header: string;
+  getValue: (row: T) => number | string;
+  render?: (row: T) => React.ReactNode;
+  align?: "left" | "center" | "right";
+};
+
+export type SortDirection = "asc" | "desc";
+
+interface DataTableProps<T> {
+  data: T[];
+  columns: ColumnDef<T>[];
+  defaultSortKey?: string;
+}
+
+export function DataTable<T>({
+  data,
+  columns,
+  defaultSortKey,
+}: DataTableProps<T>) {
+  const [sortKey, setSortKey] = useState<string | null>(defaultSortKey ?? null);
+  const [direction, setDirection] = useState<SortDirection>("asc");
+
+  const toggleSort = (key: string) => {
+    if (sortKey === key) {
+      setDirection((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortKey(key);
+      setDirection("asc");
+    }
+  };
+
+  const activeColumn = columns.find((col) => col.key === sortKey);
+
+  const sortedData = useMemo(() => {
+    if (!activeColumn) return data;
+
+    return [...data].sort((a, b) => {
+      const aVal = activeColumn.getValue(a);
+      const bVal = activeColumn.getValue(b);
+
+      if (typeof aVal === "string") {
+        return direction === "asc"
+          ? aVal.localeCompare(bVal as string)
+          : (bVal as string).localeCompare(aVal);
+      }
+
+      return direction === "asc"
+        ? Number(aVal) - Number(bVal)
+        : Number(bVal) - Number(aVal);
+    });
+  }, [data, activeColumn, direction]);
+
   return (
-    <caption
-      data-slot="table-caption"
-      className={cn('text-muted-foreground mt-4 text-sm', className)}
-      {...props}
-    />
-  )
-}
+    <Table>
+      <TableHeader>
+        <TableRow>
+          {columns.map((col) => (
+            <TableHead
+              key={col.key}
+              className={"cursor-pointer select-none text-left"}
+              onClick={() => toggleSort(col.key)}
+            >
+              <span className="inline-flex items-center">
+                {col.header}
+                {sortKey != col.key && (
+                  <div className="ml-1 text-muted-foreground w-[14px]" />
+                )}
+                {sortKey === col.key && (
+                  <span className="ml-1 text-muted-foreground">
+                    {direction === "asc" ? "▲" : "▼"}
+                  </span>
+                )}
+              </span>
+            </TableHead>
+          ))}
+        </TableRow>
+      </TableHeader>
 
-export {
-  Table,
-  TableHeader,
-  TableBody,
-  TableFooter,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableCaption,
+      <TableBody>
+        {sortedData.map((row, rowIndex) => (
+          <TableRow key={rowIndex}>
+            {columns.map((col) => (
+              <TableCell key={col.key} className={"text-left"}>
+                {col.render ? col.render(row) : col.getValue(row)}
+              </TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  );
 }
