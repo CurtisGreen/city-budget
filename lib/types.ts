@@ -60,7 +60,7 @@ export interface CityInfo {
   revenueBySource: RevenueBySource;
   latitude?: number;
   longitude?: number;
-  area: number; // Land area
+  area: number; // Land area in square miles
   notes?: string[];
 }
 
