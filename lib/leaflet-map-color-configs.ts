@@ -1,4 +1,4 @@
-import { CityData, CityInfo, CityMetrics } from "@/lib/types";
+import { CityData } from "@/lib/types";
 
 export type ColorConfig = {
   greenLabel: string;
@@ -10,9 +10,9 @@ export type ColorConfig = {
 };
 
 const netDebtConfig: ColorConfig = {
-  greenLabel: "= 0",
-  yellowLabel: "0 - 1.0",
-  redLabel: "> 1",
+  greenLabel: "= 0%",
+  yellowLabel: "0% - 100%",
+  redLabel: "> 100%",
   colorFunction: (ratio: number) => {
     if (ratio === 0) return "oklch(0.696 0.17 162)"; // green - excellent
     if (ratio < 1.0) return "oklch(0.769 0.188 70)"; // yellow - okay
@@ -44,8 +44,28 @@ const assetLifeConfig: ColorConfig = {
     ) + "%",
 };
 
+const changeInAssetsLifeConfig: ColorConfig = {
+  greenLabel: ">= +5%",
+  yellowLabel: ">= -5%",
+  redLabel: "< -5%",
+  colorFunction: (ratio: number) => {
+    if (ratio >= 0.05) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (ratio >= -0.05) return "oklch(0.769 0.188 70)"; // yellow - okay
+    return "oklch(0.577 0.245 27)"; // red - poor
+  },
+  getValue: (cityData: CityData) =>
+    cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
+    cityData.metrics[0].netBookValueToCostOfTCA,
+  getFormattedValue: (cityData: CityData) =>
+    Math.round(
+      (cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
+        cityData.metrics[0].netBookValueToCostOfTCA) *
+        100,
+    ) + "%",
+};
+
 const changeInAssetsToLiabilitiesConfig: ColorConfig = {
-  greenLabel: ">= 30%",
+  greenLabel: ">= +20%",
   yellowLabel: ">= -20%",
   redLabel: "< -20%",
   colorFunction: (ratio: number) => {
@@ -60,26 +80,6 @@ const changeInAssetsToLiabilitiesConfig: ColorConfig = {
     Math.round(
       (cityData.metrics[cityData.metrics.length - 1].assetsToLiabilities -
         cityData.metrics[0].assetsToLiabilities) *
-        100,
-    ) + "%",
-};
-
-const changeInAssetsLifeConfig: ColorConfig = {
-  greenLabel: ">= 0%",
-  yellowLabel: ">= -5%",
-  redLabel: "< -5%",
-  colorFunction: (ratio: number) => {
-    if (ratio >= 0.0) return "oklch(0.696 0.17 162)"; // green - excellent
-    if (ratio >= -0.05) return "oklch(0.769 0.188 70)"; // yellow - okay
-    return "oklch(0.577 0.245 27)"; // red - poor
-  },
-  getValue: (cityData: CityData) =>
-    cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
-    cityData.metrics[0].netBookValueToCostOfTCA,
-  getFormattedValue: (cityData: CityData) =>
-    Math.round(
-      (cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
-        cityData.metrics[0].netBookValueToCostOfTCA) *
         100,
     ) + "%",
 };
