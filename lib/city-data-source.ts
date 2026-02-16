@@ -27,6 +27,7 @@ import { duncanvilleInfo } from "@/data/info/duncanville";
 import { allenInfo } from "@/data/info/allen";
 import { lewisvilleInfo } from "@/data/info/lewisville";
 import { mansfieldInfo } from "@/data/info/mansfield";
+import { flowerMoundInfo } from "@/data/info/flower-mound";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -53,6 +54,7 @@ import { duncanvilleGeoJSON } from "@/data/geojson/duncanville-geojson";
 import { allenGeoJson } from "@/data/geojson/allen-geojson";
 import { lewisvilleGoeJson } from "@/data/geojson/lewisville-geojson";
 import { mansfieldGeoJson } from "@/data/geojson/mansfield-geojson";
+import { flowerMoundGeoJson } from "@/data/geojson/flower-mound-geojson";
 
 import { join } from "node:path";
 
@@ -82,6 +84,7 @@ const basicCityInfo = [
   allenInfo,
   lewisvilleInfo,
   mansfieldInfo,
+  flowerMoundInfo,
 ];
 
 // Calculate metrics for each city
@@ -127,4 +130,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...allenGeoJson.features,
   ...lewisvilleGoeJson.features,
   ...mansfieldGeoJson.features,
+  ...flowerMoundGeoJson.features,
 ] as GeoJSONFeature[];
