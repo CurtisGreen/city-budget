@@ -30,6 +30,7 @@ import { mansfieldInfo } from "@/data/info/mansfield";
 import { flowerMoundInfo } from "@/data/info/flower-mound";
 import { dentonInfo } from "@/data/info/denton";
 import { northRichlandHillsInfo } from "@/data/info/north-richland-hills";
+import { wylieInfo } from "@/data/info/wylie";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -59,6 +60,7 @@ import { mansfieldGeoJson } from "@/data/geojson/mansfield-geojson";
 import { flowerMoundGeoJson } from "@/data/geojson/flower-mound-geojson";
 import { dentonGeoJson } from "@/data/geojson/denton-geojson";
 import { northRichlandHillsGeoJson } from "@/data/geojson/north-richland-hills";
+import { wylieGeoJson } from "@/data/geojson/wylie-geojson";
 
 import { join } from "node:path";
 
@@ -91,6 +93,7 @@ const basicCityInfo = [
   flowerMoundInfo,
   dentonInfo,
   northRichlandHillsInfo,
+  wylieInfo,
 ];
 
 // Calculate metrics for each city
@@ -139,4 +142,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...flowerMoundGeoJson.features,
   ...dentonGeoJson.features,
   ...northRichlandHillsGeoJson.features,
+  ...wylieGeoJson.features,
 ] as GeoJSONFeature[];
