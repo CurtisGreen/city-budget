@@ -55,11 +55,11 @@ const changeInAssetsLifeConfig: ColorConfig = {
   },
   getValue: (cityData: CityData) =>
     cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
-    cityData.metrics[0].netBookValueToCostOfTCA,
+    cityData.metrics[cityData.metrics.length - 6].netBookValueToCostOfTCA,
   getFormattedValue: (cityData: CityData) =>
     Math.round(
       (cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
-        cityData.metrics[0].netBookValueToCostOfTCA) *
+        cityData.metrics[cityData.metrics.length - 6].netBookValueToCostOfTCA) *
         100,
     ) + "%",
 };
@@ -75,11 +75,11 @@ const changeInAssetsToLiabilitiesConfig: ColorConfig = {
   },
   getValue: (cityData: CityData) =>
     cityData.metrics[cityData.metrics.length - 1].assetsToLiabilities -
-    cityData.metrics[0].assetsToLiabilities,
+    cityData.metrics[cityData.metrics.length - 6].assetsToLiabilities,
   getFormattedValue: (cityData: CityData) =>
     Math.round(
       (cityData.metrics[cityData.metrics.length - 1].assetsToLiabilities -
-        cityData.metrics[0].assetsToLiabilities) *
+        cityData.metrics[cityData.metrics.length - 6].assetsToLiabilities) *
         100,
     ) + "%",
 };
@@ -111,8 +111,7 @@ const revenuePerAcreConfig: ColorConfig = {
 export const getColorConfig = (metric: string): ColorConfig => {
   if (metric == "Net Debt to Revenue") return netDebtConfig;
   if (metric == "Asset Life") return assetLifeConfig;
-  if (metric == "10-Year Change in Assets Life")
-    return changeInAssetsLifeConfig;
+  if (metric == "5-Year Change in Assets Life") return changeInAssetsLifeConfig;
   if (metric == "Total Revenue Per Acre") return revenuePerAcreConfig;
   return changeInAssetsToLiabilitiesConfig;
 };

@@ -155,8 +155,8 @@ export default function LeafletMap({
             options={[
               "Net Debt to Revenue",
               "Asset Life",
-              "10-Year Change in Assets Life",
-              "10-Year Change in Assets to Liabilities",
+              "5-Year Change in Assets Life",
+              "5-Year Change in Assets to Liabilities",
               "Total Revenue Per Acre",
             ]}
             onSelectionChange={setSelectedMetric}
