@@ -79,6 +79,20 @@ export const planoInfo: CityInfo = {
     sales: 120262825,
     hotel: 12895296,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 242281161,
+      sales: 120262825,
+      hotel: 12895296,
+    },
+    {
+      fiscalYear: 2025,
+      property: 255314504,
+      sales: 132059636,
+      hotel: 13342764,
+    },
+  ],
   latitude: 33.050278,
   longitude: -96.698889,
   area: 71.69,

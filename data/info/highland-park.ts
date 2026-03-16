@@ -79,6 +79,20 @@ export const highlandParkInfo: CityInfo = {
     sales: 8801419,
     hotel: 0,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 18400369,
+      sales: 8801419,
+      hotel: 0,
+    },
+    {
+      fiscalYear: 2025,
+      property: 19484406,
+      sales: 9388670,
+      hotel: 0,
+    },
+  ],
   latitude: 32.830278,
   longitude: -96.801111,
   area: 2.24,

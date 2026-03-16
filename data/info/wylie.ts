@@ -79,5 +79,19 @@ export const wylieInfo: CityInfo = {
     sales: 14993518,
     hotel: 290247,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 41463584,
+      sales: 14993518,
+      hotel: 290247,
+    },
+    {
+      fiscalYear: 2025,
+      property: 44926219,
+      sales: 15394203,
+      hotel: 264791,
+    },
+  ],
   area: 22.06,
 };

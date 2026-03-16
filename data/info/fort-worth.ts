@@ -79,6 +79,20 @@ export const fortWorthInfo: CityInfo = {
     sales: 353942000,
     hotel: 59674000,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 749673000,
+      sales: 353942000,
+      hotel: 59674000,
+    },
+    {
+      fiscalYear: 2025,
+      property: 789222000,
+      sales: 368854000,
+      hotel: 67418000,
+    },
+  ],
   latitude: 32.756389,
   longitude: -97.3325,
   area: 347.28,

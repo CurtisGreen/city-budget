@@ -79,6 +79,20 @@ export const carrolltonInfo: CityInfo = {
     sales: 49712276,
     hotel: 577425,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 115162154,
+      sales: 49712276,
+      hotel: 577425,
+    },
+    {
+      fiscalYear: 2025,
+      property: 120216758,
+      sales: 52632624,
+      hotel: 534573,
+    },
+  ],
   latitude: 32.953611,
   longitude: -96.890278,
   area: 36.66,

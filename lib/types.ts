@@ -38,6 +38,13 @@ export interface RevenueBySource {
   hotel: number;
 }
 
+export interface RevenueMix {
+  fiscalYear: number;
+  property: number;
+  sales: number;
+  hotel: number;
+}
+
 export interface PropertyValues {
   fiscalYear: number;
   // Maintenance & operations tax rate
@@ -58,6 +65,7 @@ export interface CityInfo {
   populations: Population[];
   propertyValues?: PropertyValues[];
   revenueBySource: RevenueBySource;
+  revenues?: RevenueMix[];
   latitude?: number;
   longitude?: number;
   area: number; // Land area in square miles

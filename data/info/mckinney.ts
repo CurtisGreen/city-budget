@@ -79,6 +79,20 @@ export const mckinneyInfo: CityInfo = {
     sales: 51747000,
     hotel: 3105407,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 159252000,
+      sales: 51747000,
+      hotel: 3105407,
+    },
+    {
+      fiscalYear: 2025,
+      property: 170430262,
+      sales: 53517756,
+      hotel: 3339994,
+    },
+  ],
   latitude: 33.197222,
   longitude: -96.639722,
   area: 66.96,

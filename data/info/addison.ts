@@ -114,6 +114,20 @@ export const addisonInfo: CityInfo = {
     sales: 17298041,
     hotel: 5374881,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 35679220,
+      sales: 17298041,
+      hotel: 5374881,
+    },
+    {
+      fiscalYear: 2025,
+      property: 37741604,
+      sales: 17634389,
+      hotel: 5042545,
+    },
+  ],
   latitude: 32.957778,
   longitude: -96.835,
   area: 4.35,

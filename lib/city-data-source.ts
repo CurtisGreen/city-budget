@@ -101,8 +101,11 @@ const cityData: CityData[] = basicCityInfo.map((info) => {
   const financialData = readACFR(
     join(process.cwd(), "data/acfr", info.id + ".csv"),
   );
-  const metrics = financialData.map(calculateACFRMetrics);
-  return { info, financialData, metrics };
+  const filteredFinancialData = financialData.filter(
+    (entry) => entry.fiscalYear != 2025,
+  );
+  const metrics = filteredFinancialData.map(calculateACFRMetrics);
+  return { info, financialData: filteredFinancialData, metrics };
 });
 
 export function getCityData(cityId: string): CityData | undefined {

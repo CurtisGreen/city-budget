@@ -79,5 +79,19 @@ export const northRichlandHillsInfo: CityInfo = {
     sales: 27974000,
     hotel: 446000,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 39174000,
+      sales: 27974000,
+      hotel: 446000,
+    },
+    {
+      fiscalYear: 2025,
+      property: 41246855,
+      sales: 29655963,
+      hotel: 430548,
+    },
+  ],
   area: 18.43,
 };
