@@ -21,10 +21,6 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
     }).format(value);
   };
 
-  const formatPercent = (value: number) => {
-    return (value * 100).toFixed(0) + "%";
-  };
-
   return (
     <Card>
       <CardHeader className="flex gap-1">
@@ -59,10 +55,9 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
                 Net Financial Position change over 5 years
               </p>
               <p className="text-lg font-semibold">
-                {formatPercent(
-                  (latestMetrics.netFinancialPosition -
-                    fiveYearsAgoMetrics.netFinancialPosition) /
-                    Math.abs(fiveYearsAgoMetrics.netFinancialPosition)
+                {formatCurrency(
+                  latestMetrics.netFinancialPosition -
+                    fiveYearsAgoMetrics.netFinancialPosition,
                 )}
               </p>
             </div>
