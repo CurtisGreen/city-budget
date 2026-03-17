@@ -85,46 +85,39 @@ const formatValue = (
   }).format(value);
 };
 
-const formatChange = (value: number) => (value * 100).toFixed(0) + "%";
-
 const Trend = ({
   change,
   positiveDirection,
+  format,
+  maximumFractionDigits,
 }: {
   change: number;
   positiveDirection: "up" | "down";
+  format: ChartFormatType;
+  maximumFractionDigits?: number;
 }) => {
   const isUp = change >= 0;
-
-  const isPositive =
+  const isGood =
     (positiveDirection === "up" && isUp) ||
     (positiveDirection === "down" && !isUp);
-
   const Icon = isUp ? TrendingUp : TrendingDown;
+  const plusSign = isUp ? "+" : "";
 
   return (
     <div
       className={`flex items-center justify-center gap-1 ${
-        isPositive ? "text-green-600" : "text-red-600"
+        isGood ? "text-green-600" : "text-red-600"
       }`}
     >
       <Icon className="h-3 w-3" />
-      {formatChange(change)}
+      {plusSign}
+      {formatValue(change, format, maximumFractionDigits)}
     </div>
   );
 };
 
 export function CityLeaderboard({ cities }: CityLeaderboardProps) {
-  const calculateLeaders = (
-    metric: keyof CityMetrics,
-    formatType: ChartFormatType,
-  ) => {
-    const getChange = (latest: number, old: number) => {
-      if (formatType === "percent") return latest - old;
-      if (old === 0) return 0;
-      return (latest - old) / Math.abs(old);
-    };
-
+  const calculateLeaders = (metric: keyof CityMetrics) => {
     const results = cities.map((city) => {
       const latest = city.metrics[city.metrics.length - 1];
       const fiveYearsAgo = city.metrics[city.metrics.length - 6];
@@ -135,7 +128,7 @@ export function CityLeaderboard({ cities }: CityLeaderboardProps) {
       return {
         city: city.info.name,
         latestValue,
-        change: getChange(latestValue, oldValue),
+        change: latestValue - oldValue,
       };
     });
 
@@ -169,90 +162,82 @@ export function CityLeaderboard({ cities }: CityLeaderboardProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="overflow-x-auto">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="font-semibold">Metric</TableHead>
-                <TableHead className="text-center font-semibold">
-                  Best
-                </TableHead>
-                <TableHead className="text-center font-semibold">
-                  Worst
-                </TableHead>
-                <TableHead className="text-center font-semibold">
-                  Most Improved (5yr)
-                </TableHead>
-                <TableHead className="text-center font-semibold">
-                  Most Regressed (5yr)
-                </TableHead>
-              </TableRow>
-            </TableHeader>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="font-semibold">Metric</TableHead>
+              <TableHead className="text-center font-semibold">Best</TableHead>
+              <TableHead className="text-center font-semibold">Worst</TableHead>
+              <TableHead className="text-center font-semibold">
+                Most Improved (5yr)
+              </TableHead>
+              <TableHead className="text-center font-semibold">
+                Most Regressed (5yr)
+              </TableHead>
+            </TableRow>
+          </TableHeader>
 
-            <TableBody>
-              {metricConfigs.map(
-                ({ key, formatType, maximumFractionDigits }) => {
-                  const leaders = calculateLeaders(key, formatType);
+          <TableBody>
+            {metricConfigs.map(({ key, formatType, maximumFractionDigits }) => {
+              const leaders = calculateLeaders(key);
 
-                  return (
-                    <TableRow key={key}>
-                      <TableCell className="font-semibold">
-                        <div className="flex items-center gap-1">
-                          {chartConfigs[key].formula && (
-                            <Tooltip message={chartConfigs[key].formula} />
-                          )}
-                          {chartConfigs[key].title}
-                        </div>
-                      </TableCell>
+              return (
+                <TableRow key={key}>
+                  <TableCell className="font-semibold">
+                    <div className="flex items-center gap-1">
+                      {chartConfigs[key].formula && (
+                        <Tooltip message={chartConfigs[key].formula} />
+                      )}
+                      {chartConfigs[key].title}
+                    </div>
+                  </TableCell>
 
-                      <TableCell className="text-center">
-                        <div>{leaders.best.city}</div>
-                        <div className="text-muted-foreground">
-                          {formatValue(
-                            leaders.best.latestValue,
-                            formatType,
-                            maximumFractionDigits,
-                          )}
-                        </div>
-                      </TableCell>
+                  <TableCell className="text-center">
+                    <div>{leaders.best.city}</div>
+                    <div className="text-muted-foreground">
+                      {formatValue(
+                        leaders.best.latestValue,
+                        formatType,
+                        maximumFractionDigits,
+                      )}
+                    </div>
+                  </TableCell>
 
-                      <TableCell className="text-center">
-                        <div>{leaders.worst.city}</div>
-                        <div className="text-muted-foreground">
-                          {formatValue(
-                            leaders.worst.latestValue,
-                            formatType,
-                            maximumFractionDigits,
-                          )}
-                        </div>
-                      </TableCell>
+                  <TableCell className="text-center">
+                    <div>{leaders.worst.city}</div>
+                    <div className="text-muted-foreground">
+                      {formatValue(
+                        leaders.worst.latestValue,
+                        formatType,
+                        maximumFractionDigits,
+                      )}
+                    </div>
+                  </TableCell>
 
-                      <TableCell className="text-center">
-                        <div>{leaders.mostImproved.city}</div>
-                        <Trend
-                          change={leaders.mostImproved.change}
-                          positiveDirection={
-                            chartConfigs[key].positiveDirection
-                          }
-                        />
-                      </TableCell>
+                  <TableCell className="text-center">
+                    <div>{leaders.mostImproved.city}</div>
+                    <Trend
+                      change={leaders.mostImproved.change}
+                      positiveDirection={chartConfigs[key].positiveDirection}
+                      format={formatType}
+                      maximumFractionDigits={maximumFractionDigits}
+                    />
+                  </TableCell>
 
-                      <TableCell className="text-center">
-                        <div>{leaders.leastImproved.city}</div>
-                        <Trend
-                          change={leaders.leastImproved.change}
-                          positiveDirection={
-                            chartConfigs[key].positiveDirection
-                          }
-                        />
-                      </TableCell>
-                    </TableRow>
-                  );
-                },
-              )}
-            </TableBody>
-          </Table>
-        </div>
+                  <TableCell className="text-center">
+                    <div>{leaders.leastImproved.city}</div>
+                    <Trend
+                      change={leaders.leastImproved.change}
+                      positiveDirection={chartConfigs[key].positiveDirection}
+                      format={formatType}
+                      maximumFractionDigits={maximumFractionDigits}
+                    />
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
       </CardContent>
     </Card>
   );
