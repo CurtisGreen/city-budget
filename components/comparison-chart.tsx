@@ -119,7 +119,7 @@ export function ComparisonChart({
             <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
             <XAxis dataKey="year" className="text-xs" />
             <YAxis
-              tickFormatter={formatter}
+              tickFormatter={(value) => formatter(value, 0)}
               className="text-xs"
               domain={chartConfig.range}
             />

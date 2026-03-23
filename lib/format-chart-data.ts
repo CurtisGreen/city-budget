@@ -25,7 +25,9 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
       ? (-1 * netFinancialPosition) / data.totalRevenue
       : 0;
   const interestToRevenue = data.debInterest / data.totalRevenue;
-  const netBookValueToCostOfTCA = data.capitalAssets / totalCapitalAssets;
+  const netCapitalAssets =
+    data.capitalAssetsNetofDepreciation || data.capitalAssets;
+  const netBookValueToCostOfTCA = netCapitalAssets / totalCapitalAssets;
   const externalTransfersToRevenue = totalExternalTransfers / data.totalRevenue;
 
   return {
