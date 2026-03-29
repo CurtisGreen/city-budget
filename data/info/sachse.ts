@@ -100,5 +100,8 @@ export const sachseInfo: CityInfo = {
     `FY 2024 ACFR: The government's net position decreased by $11,435,251 during the current fiscal year. 
     The primary cause was the reclassification of the PID fund to a governmental fund, and the reporting 
     of the PID's special assessment debt in the governmental activities in FY24.`,
+    // `FY 2025 ACFR: Additionally, the City restated beginning net position by $21,418,833
+    // to account for the reclassification of long-term debt from a governmental fund to afiduciary fund,
+    // per the related PID agreement.`,
   ],
 };

@@ -79,8 +79,20 @@ export const arlingtonInfo: CityInfo = {
     sales: 165531000,
     hotel: 15477000,
   },
-  latitude: 32.705,
-  longitude: -97.122778,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 224172000,
+      sales: 165531000,
+      hotel: 15477000,
+    },
+    {
+      fiscalYear: 2025,
+      property: 236841000,
+      sales: 162843000,
+      hotel: 15366000,
+    },
+  ],
   area: 95.84,
   notes: [
     `FY 2018 ACFR: Liabilities and deferred inflows of resources increased from $1.1B to $1.8B for the total government, an increase of 60%.

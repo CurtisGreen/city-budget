@@ -107,8 +107,20 @@ export const dallasInfo: CityInfo = {
     sales: 439666000,
     hotel: 109446000,
   },
-  latitude: 32.779167,
-  longitude: -96.808889,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 1415798000,
+      sales: 439666000,
+      hotel: 109446000,
+    },
+    {
+      fiscalYear: 2025,
+      property: 1490106000,
+      sales: 453319000,
+      hotel: 107634000,
+    },
+  ],
   area: 339.6,
   notes: [
     `FY 2016 ACFR: Long-term liabilities increased by $2.9 billion in the governmental activities 

@@ -79,7 +79,19 @@ export const grandPrairieInfo: CityInfo = {
     sales: 98140124,
     hotel: 3934139,
   },
-  latitude: 32.715278,
-  longitude: -96.966111,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 155796752,
+      sales: 98140124,
+      hotel: 3934139,
+    },
+    {
+      fiscalYear: 2025,
+      property: 163815374,
+      sales: 99057622,
+      hotel: 4177330,
+    },
+  ],
   area: 72.57,
 };

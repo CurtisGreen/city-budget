@@ -79,5 +79,19 @@ export const dentonInfo: CityInfo = {
     sales: 57075000,
     hotel: 2965000,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 106556000,
+      sales: 57075000,
+      hotel: 2965000,
+    },
+    {
+      fiscalYear: 2025,
+      property: 119835000,
+      sales: 58972000,
+      hotel: 3320000,
+    },
+  ],
   area: 96.35,
 };

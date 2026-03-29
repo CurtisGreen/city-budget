@@ -79,6 +79,20 @@ export const grapevineInfo: CityInfo = {
     sales: 84073115,
     hotel: 23744468,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 36531261,
+      sales: 84073115,
+      hotel: 23744468,
+    },
+    {
+      fiscalYear: 2025,
+      property: 37748365,
+      sales: 87756671,
+      hotel: 23512535,
+    },
+  ],
   latitude: 32.935,
   longitude: -97.085833,
   area: 32.14,

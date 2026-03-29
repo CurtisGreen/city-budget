@@ -94,4 +94,11 @@ export const garlandInfo: CityInfo = {
     },
   ],
   area: 57.13,
+  notes: [
+    `FY 2025 ACFR: Total Expenses for Governmental Activities increased by $131,143,332 or 38.4%. This increase is mostly attributable to
+    pension liability expenses, totaling $107,521,966, associated with the re-instatement of non-retroactive 50% Cost of Living
+    Adjustment (COLA) at the City's pension plan in January 2025. This is a non-cash adjusting entry that is anticipated to
+    significantly reduce overtime as TMRS actuarial analysis takes into account a $130 million pension bond issued in August,
+    2025, to prepay the long-term liability associated with this new benefit.`
+  ]
 };
