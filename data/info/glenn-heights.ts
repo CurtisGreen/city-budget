@@ -79,11 +79,26 @@ export const glennHeightsInfo: CityInfo = {
     sales: 1274335,
     hotel: 0,
   },
-  latitude: 32.555556,
-  longitude: -96.863889,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 9363297,
+      sales: 1274335,
+      hotel: 0,
+    },
+    {
+      fiscalYear: 2025,
+      property: 10223392,
+      sales: 1283442,
+      hotel: 0,
+    },
+  ],
   area: 7.21,
   notes: [
-    `2021 ACFR: During the current year, significant additions to capital assets include the following:
+    `FY 2017 ACFR: Fiscal year 2016 is considered to be an anomaly year. 
+    The City experienced an unusually high volume of housing development. 
+    The activity was not there for fiscal year 2017.`,
+    `FY 2021 ACFR: During the current year, significant additions to capital assets include the following:
     Construction in progress including City Hall Complex, Community Center, Public Safety Building, $5,682,182`,
   ],
 };

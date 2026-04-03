@@ -79,8 +79,25 @@ export const allenInfo: CityInfo = {
     sales: 31547688,
     hotel: 2481874,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 83821874,
+      sales: 31547688,
+      hotel: 2481874,
+    },
+    {
+      fiscalYear: 2025,
+      property: 89170582,
+      sales: 32389161,
+      hotel: 2696118,
+    },
+  ],
   area: 26.4,
   notes: [
     `FY 2023 ACFR: Capital grants and contributions decreased by $9,486,145 (85%) with lower construction activities.`,
+    `FY 2025 ACFR: Capital grants and contribuƟons increased by $34,864,534 (221%) due in large part to the large
+    piece of land purchased by the EDC for an economic development agreement that was transferred
+    to the City during the fiscal year to facilitate the lease of the land to the lessor`,
   ],
 };
