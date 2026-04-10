@@ -79,5 +79,24 @@ export const lewisvilleInfo: CityInfo = {
     sales: 53324026,
     hotel: 2871093,
   },
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 89468037,
+      sales: 53324026,
+      hotel: 2871093,
+    },
+    {
+      fiscalYear: 2025,
+      property: 95138938,
+      sales: 54219344,
+      hotel: 2807960,
+    },
+  ],
   area: 37.01,
+  notes: [
+    `FY 2022 ACFR: The City's total outstanding debt increased by $169,324,000 during the current fiscal year
+    primarily due to issuance of debt to refund Castle Hills Public Improvement District bonds for capital projects. 
+    `,
+  ],
 };
