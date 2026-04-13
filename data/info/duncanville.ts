@@ -82,4 +82,7 @@ export const duncanvilleInfo: CityInfo = {
   latitude: 32.634722,
   longitude: -96.906667,
   area: 11.2,
+  notes: [
+    "Duncanville is late on their ACFR data, so metrics are only available through FY 2024",
+  ],
 };
