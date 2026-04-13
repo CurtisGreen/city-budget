@@ -23,7 +23,7 @@ export default function HomePage() {
               City Financial Data Visualized
             </h2>
             <p className="text-xl text-muted-foreground mb-8 text-pretty">
-              Compare budgets, debt levels, and spending patterns across North
+              Compare revenue, debt levels, and spending patterns across North
               Texas cities.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
