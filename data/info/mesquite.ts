@@ -79,7 +79,19 @@ export const mesquiteInfo: CityInfo = {
     sales: 61086000,
     hotel: 1990000,
   },
-  latitude: 32.758333,
-  longitude: -96.586667,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 89790000,
+      sales: 61086000,
+      hotel: 1990000,
+    },
+    {
+      fiscalYear: 2025,
+      property: 100843049,
+      sales: 65945105,
+      hotel: 1717534,
+    },
+  ],
   area: 49.103,
 };

@@ -79,7 +79,26 @@ export const universityParkInfo: CityInfo = {
     sales: 7533753,
     hotel: 0,
   },
-  latitude: 32.849444,
-  longitude: -96.791944,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 24925555,
+      sales: 7533753,
+      hotel: 0,
+    },
+    {
+      fiscalYear: 2025,
+      property: 26791661,
+      sales: 7751865,
+      hotel: 0,
+    },
+  ],
   area: 3.69,
+  notes: [
+    `2025 ACFR: Current resources decilned as the City advanced capital projects.
+    Total current and other assets decreased from $88.0 million to $71.4 million, 
+    while net capital, lease, and subscription assets increased from $170.4 million to $205.4 million.
+    This change reflects the conversion of cash and other current resources into construction in progress
+    and completed infrastructure and facility improvements.`,
+  ],
 };

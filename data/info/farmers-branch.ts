@@ -79,8 +79,20 @@ export const farmersBranchInfo: CityInfo = {
     sales: 24406225,
     hotel: 3515051,
   },
-  latitude: 32.927222,
-  longitude: -96.863889,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 50038531,
+      sales: 24406225,
+      hotel: 3515051,
+    },
+    {
+      fiscalYear: 2025,
+      property: 49600517,
+      sales: 25051912,
+      hotel: 3494683,
+    },
+  ],
   area: 11.88,
   notes: [
     `FY 2019 ACFR: The City's total combined net position as presented on the Government-wide Statement of Net Position was $178,101,250, which

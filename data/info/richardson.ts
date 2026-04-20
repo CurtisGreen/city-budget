@@ -79,7 +79,19 @@ export const richardsonInfo: CityInfo = {
     sales: 53763370,
     hotel: 5088522,
   },
-  latitude: 32.991667,
-  longitude: -96.703889,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 132912399,
+      sales: 53763370,
+      hotel: 5088522,
+    },
+    {
+      fiscalYear: 2025,
+      property: 134730000,
+      sales: 55353000,
+      hotel: 4948000,
+    },
+  ],
   area: 28.57,
 };

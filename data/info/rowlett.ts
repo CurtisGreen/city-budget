@@ -79,8 +79,20 @@ export const rowlettInfo: CityInfo = {
     sales: 9809000,
     hotel: 69515,
   },
-  latitude: 32.902778,
-  longitude: -96.544444,
+  revenues: [
+    {
+      fiscalYear: 2024,
+      property: 55175000,
+      sales: 9809000,
+      hotel: 69515,
+    },
+    {
+      fiscalYear: 2025,
+      property: 134730000,
+      sales: 55353000,
+      hotel: 25489,
+    },
+  ],
   area: 20.748,
   notes: [
     `FY 2020 ACFR: In Program Revenues, capital grants and contributions also realized an increase of $13.5 million primarily due to developer contributions 
