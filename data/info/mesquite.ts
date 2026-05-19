@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const mesquiteInfo: CityInfo = {
   id: "mesquite",
   name: "Mesquite",
-  population: 157436,
+  population: 150693,
   populations: [
     { year: 1980, value: 67053 },
     { year: 1990, value: 101484 },
     { year: 2000, value: 124523 },
     { year: 2010, value: 139824 },
     { year: 2020, value: 150108 },
-    { year: 2025, value: 157436 },
+    { year: 2025, value: 150693 },
   ],
   propertyValues: [
     {

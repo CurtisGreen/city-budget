@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const highlandParkInfo: CityInfo = {
   id: "highland-park",
   name: "Highland Park",
-  population: 8793,
+  population: 8764,
   populations: [
     { year: 1980, value: 8909 },
     { year: 1990, value: 8739 },
     { year: 2000, value: 8842 },
     { year: 2010, value: 8564 },
     { year: 2020, value: 8864 },
-    { year: 2025, value: 8793 },
+    { year: 2025, value: 8764 },
   ],
   propertyValues: [
     {

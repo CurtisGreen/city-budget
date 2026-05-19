@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const rowlettInfo: CityInfo = {
   id: "rowlett",
   name: "Rowlett",
-  population: 67519,
+  population: 67890,
   populations: [
     { year: 1980, value: 7522 },
     { year: 1990, value: 23260 },
     { year: 2000, value: 44503 },
     { year: 2010, value: 56199 },
     { year: 2020, value: 62535 },
-    { year: 2025, value: 67519 },
+    { year: 2025, value: 67890 },
   ],
   propertyValues: [
     {

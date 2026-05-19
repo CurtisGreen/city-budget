@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const celinaInfo: CityInfo = {
   id: "celina",
   name: "Celina",
-  population: 61834,
+  population: 64427,
   populations: [
     { year: 1980, value: 1520 },
     { year: 1990, value: 1737 },
     { year: 2000, value: 1861 },
     { year: 2010, value: 6028 },
     { year: 2020, value: 16739 },
-    { year: 2025, value: 61834 },
+    { year: 2025, value: 64427 },
   ],
   propertyValues: [
     {

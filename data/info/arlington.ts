@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const arlingtonInfo: CityInfo = {
   id: "arlington",
   name: "Arlington",
-  population: 413955,
+  population: 402134,
   populations: [
     { year: 1980, value: 160113 },
     { year: 1990, value: 261721 },
     { year: 2000, value: 332969 },
     { year: 2010, value: 365438 },
     { year: 2020, value: 394266 },
-    { year: 2025, value: 413955 },
+    { year: 2025, value: 402134 },
   ],
   propertyValues: [
     {

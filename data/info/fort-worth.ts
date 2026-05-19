@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const fortWorthInfo: CityInfo = {
   id: "fort-worth",
   name: "Fort Worth",
-  population: 1033932,
+  population: 1028117,
   populations: [
     { year: 1980, value: 385164 },
     { year: 1990, value: 447619 },
     { year: 2000, value: 534697 },
     { year: 2010, value: 741206 },
     { year: 2020, value: 918915 },
-    { year: 2025, value: 1033932 },
+    { year: 2025, value: 1028117 },
   ],
   propertyValues: [
     {

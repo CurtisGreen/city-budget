@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const dallasInfo: CityInfo = {
   id: "dallas",
   name: "Dallas",
-  population: 1385989,
+  population: 1329491,
   populations: [
     { year: 1980, value: 904078 },
     { year: 1990, value: 1006977 },
     { year: 2000, value: 1188580 },
     { year: 2010, value: 1197816 },
     { year: 2020, value: 1304379 },
-    { year: 2025, value: 1385989 },
+    { year: 2025, value: 1329491 },
   ],
   propertyValues: [
     {

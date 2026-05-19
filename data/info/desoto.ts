@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const desotoInfo: CityInfo = {
   id: "desoto",
   name: "DeSoto",
-  population: 58271,
+  population: 56681,
   populations: [
     { year: 1980, value: 15538 },
     { year: 1990, value: 30544 },
     { year: 2000, value: 37646 },
     { year: 2010, value: 49047 },
     { year: 2020, value: 56145 },
-    { year: 2025, value: 58271 },
+    { year: 2025, value: 56681 },
   ],
   propertyValues: [
     {

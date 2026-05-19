@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const grapevineInfo: CityInfo = {
   id: "grapevine",
   name: "Grapevine",
-  population: 52346,
+  population: 50714,
   populations: [
     { year: 1980, value: 11801 },
     { year: 1990, value: 29202 },
     { year: 2000, value: 42059 },
     { year: 2010, value: 46334 },
     { year: 2020, value: 50631 },
-    { year: 2025, value: 52346 },
+    { year: 2025, value: 50714 },
   ],
   propertyValues: [
     {

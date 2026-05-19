@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const allenInfo: CityInfo = {
   id: "allen",
   name: "Allen",
-  population: 107328,
+  population: 113447,
   populations: [
     { year: 1980, value: 8314 },
     { year: 1990, value: 18309 },
     { year: 2000, value: 43554 },
     { year: 2010, value: 84246 },
     { year: 2020, value: 104627 },
-    { year: 2025, value: 107328 },
+    { year: 2025, value: 113447 },
   ],
   propertyValues: [
     {

@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const universityParkInfo: CityInfo = {
   id: "university-park",
   name: "University Park",
-  population: 25574,
+  population: 25323,
   populations: [
     { year: 1980, value: 22254 },
     { year: 1990, value: 22259 },
     { year: 2000, value: 23324 },
     { year: 2010, value: 23068 },
     { year: 2020, value: 25278 },
-    { year: 2025, value: 25574 },
+    { year: 2025, value: 25323 },
   ],
   propertyValues: [
     {

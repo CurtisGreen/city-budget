@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const lewisvilleInfo: CityInfo = {
   id: "lewisville",
   name: "Lewisville",
-  population: 140880,
+  population: 139006,
   populations: [
     { year: 1980, value: 24273 },
     { year: 1990, value: 46521 },
     { year: 2000, value: 77737 },
     { year: 2010, value: 95290 },
     { year: 2020, value: 111822 },
-    { year: 2025, value: 140880 },
+    { year: 2025, value: 139006 },
   ],
   propertyValues: [
     {

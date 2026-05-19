@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const mansfieldInfo: CityInfo = {
   id: "mansfield",
   name: "Mansfield",
-  population: 89227,
+  population: 84444,
   populations: [
     { year: 1980, value: 8102 },
     { year: 1990, value: 15607 },
     { year: 2000, value: 28031 },
     { year: 2010, value: 56368 },
     { year: 2020, value: 72602 },
-    { year: 2025, value: 89227 },
+    { year: 2025, value: 84444 },
   ],
   propertyValues: [
     {

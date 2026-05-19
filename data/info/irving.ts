@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const irvingInfo: CityInfo = {
   id: "irving",
   name: "Irving",
-  population: 266162,
+  population: 257076,
   populations: [
     { year: 1980, value: 109943 },
     { year: 1990, value: 155037 },
     { year: 2000, value: 191615 },
     { year: 2010, value: 216290 },
     { year: 2020, value: 256684 },
-    { year: 2025, value: 266162 },
+    { year: 2025, value: 257076 },
   ],
   propertyValues: [
     {

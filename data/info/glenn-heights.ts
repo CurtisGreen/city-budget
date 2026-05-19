@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const glennHeightsInfo: CityInfo = {
   id: "glenn-heights",
   name: "Glenn Heights",
-  population: 19883,
+  population: 20327,
   populations: [
     { year: 1980, value: 1033 },
     { year: 1990, value: 4564 },
     { year: 2000, value: 7224 },
     { year: 2010, value: 11278 },
     { year: 2020, value: 15819 },
-    { year: 2025, value: 19883 },
+    { year: 2025, value: 20327 },
   ],
   propertyValues: [
     {

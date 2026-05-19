@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const cedarHillInfo: CityInfo = {
   id: "cedar-hill",
   name: "Cedar Hill",
-  population: 51784,
+  population: 49801,
   populations: [
     { year: 1980, value: 6849 },
     { year: 1990, value: 19976 },
     { year: 2000, value: 32093 },
     { year: 2010, value: 45028 },
     { year: 2020, value: 49148 },
-    { year: 2025, value: 51784 },
+    { year: 2025, value: 49801 },
   ],
   propertyValues: [
     {

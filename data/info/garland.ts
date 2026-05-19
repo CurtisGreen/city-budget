@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const garlandInfo: CityInfo = {
   id: "garland",
   name: "Garland",
-  population: 251932,
+  population: 249625,
   populations: [
     { year: 1980, value: 138857 },
     { year: 1990, value: 180650 },
     { year: 2000, value: 215768 },
     { year: 2010, value: 226876 },
     { year: 2020, value: 246018 },
-    { year: 2025, value: 251932 },
+    { year: 2025, value: 249625 },
   ],
   propertyValues: [
     {
@@ -99,6 +99,6 @@ export const garlandInfo: CityInfo = {
     pension liability expenses, totaling $107,521,966, associated with the re-instatement of non-retroactive 50% Cost of Living
     Adjustment (COLA) at the City's pension plan in January 2025. This is a non-cash adjusting entry that is anticipated to
     significantly reduce overtime as TMRS actuarial analysis takes into account a $130 million pension bond issued in August,
-    2025, to prepay the long-term liability associated with this new benefit.`
-  ]
+    2025, to prepay the long-term liability associated with this new benefit.`,
+  ],
 };

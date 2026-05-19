@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const mckinneyInfo: CityInfo = {
   id: "mckinney",
   name: "McKinney",
-  population: 226181,
+  population: 236001,
   populations: [
     { year: 1980, value: 16249 },
     { year: 1990, value: 21283 },
     { year: 2000, value: 54369 },
     { year: 2010, value: 131117 },
     { year: 2020, value: 195308 },
-    { year: 2025, value: 226181 },
+    { year: 2025, value: 236001 },
   ],
   propertyValues: [
     {

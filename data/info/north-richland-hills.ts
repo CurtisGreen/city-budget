@@ -3,14 +3,14 @@ import { CityInfo } from "@/lib/types";
 export const northRichlandHillsInfo: CityInfo = {
   id: "north-richland-hills",
   name: "North Richland Hills",
-  population: 74859,
+  population: 70843,
   populations: [
     { year: 1980, value: 30592 },
     { year: 1990, value: 45895 },
     { year: 2000, value: 55635 },
     { year: 2010, value: 63343 },
     { year: 2020, value: 69917 },
-    { year: 2025, value: 74859 },
+    { year: 2025, value: 70843 },
   ],
   propertyValues: [
     {
