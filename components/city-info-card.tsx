@@ -74,15 +74,8 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
           </div>
         </div>
         <div className="text-[11px] text-muted-foreground mt-4">
-          Population from{" "}
-          <Link
-            href="https://rdc.dfwmaps.com/pdfs/2025%20NCTCOG%20Population%20Estimates%20Publication.pdf"
-            className="underline"
-          >
-            NCTCOG 2025 estimate
-          </Link>
-          , all other stats from the city's Annual Comprehensive Financial
-          Report (ACFR) or budget
+          Population from US Census, all other stats from the city's Annual
+          Comprehensive Financial Report (ACFR) or budget
         </div>
       </CardContent>
     </Card>

@@ -94,7 +94,7 @@ export default async function CityPage({ params }: CityPageProps) {
   };
 
   const averagePopulationDensity = calculateAveragePopulationDensity(
-    allCities.map((c) => c.info)
+    allCities.map((c) => c.info),
   );
 
   const revenues = allCities.map((c) => c.info.revenueBySource);
@@ -192,7 +192,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <PopulationChart
               title="Population"
-              subtitle="From US Census and latest NCTCOG estimates"
+              subtitle="From US Census"
               cities={[{ ...cityData.info, data: cityData.info.populations }]}
             />
             <PopulationChart
