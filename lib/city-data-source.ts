@@ -34,6 +34,7 @@ import { wylieInfo } from "@/data/info/wylie";
 import { celinaInfo } from "@/data/info/celina";
 import { cedarHillInfo } from "@/data/info/cedar-hill";
 import { desotoInfo } from "@/data/info/desoto";
+import { murphyInfo } from "@/data/info/murphy";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -66,6 +67,7 @@ import { northRichlandHillsGeoJson } from "@/data/geojson/north-richland-hills";
 import { wylieGeoJson } from "@/data/geojson/wylie-geojson";
 import { celinaGeoJson } from "@/data/geojson/celina-geojson";
 import { desotoGeoJson } from "@/data/geojson/desoto-geojson";
+import { murphyGeoJson } from "@/data/geojson/murphy-geojson";
 
 import { join } from "node:path";
 import { cedarHillGeoJson } from "@/data/geojson/cedar-hill-geojson";
@@ -103,6 +105,7 @@ const basicCityInfo = [
   celinaInfo,
   cedarHillInfo,
   desotoInfo,
+  murphyInfo,
 ];
 
 // Calculate metrics for each city
@@ -155,4 +158,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...celinaGeoJson.features,
   ...cedarHillGeoJson.features,
   ...desotoGeoJson.features,
+  ...murphyGeoJson.features,
 ] as GeoJSONFeature[];
