@@ -96,4 +96,12 @@ export const coppellInfo: CityInfo = {
   latitude: 32.963056,
   longitude: -96.997222,
   area: 14.73,
+  notes: [
+    `2025 ACFR: [...] the City continues to budget expenditures as if the change to Sales Tax Rule 3.334, 
+    which moves sales tax from origination to destination and is unfavorable to the City, has been implemented. 
+    Lawsuits to prevent this change in the sales tax rule have allowed the City to continue to receive sales tax 
+    under origination structure, and attributes to the growth in the fund balance and amount available in cash and
+    investment.
+    `,
+  ],
 };
