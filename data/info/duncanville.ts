@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const duncanvilleInfo: CityInfo = {
   id: "duncanville",
   name: "Duncanville",
-  population: 38915,
   populations: [
     { year: 1980, value: 27781 },
     { year: 1990, value: 35748 },

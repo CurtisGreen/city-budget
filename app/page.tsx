@@ -107,7 +107,11 @@ export default function HomePage() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             {cities
-              .toSorted((a, b) => b.info.population - a.info.population)
+              .toSorted(
+                (a, b) =>
+                  (b.info.populations.at(-1)?.value ?? 0) -
+                  (a.info.populations.at(-1)?.value ?? 0),
+              )
               .map((city) => (
                 <CityCard key={city.info.id} city={city} />
               ))}

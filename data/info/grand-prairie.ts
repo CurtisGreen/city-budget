@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const grandPrairieInfo: CityInfo = {
   id: "grand-prairie",
   name: "Grand Prairie",
-  population: 209434,
   populations: [
     { year: 1980, value: 71462 },
     { year: 1990, value: 99616 },

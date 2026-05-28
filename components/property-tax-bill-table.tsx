@@ -19,14 +19,14 @@ const columns: ColumnDef<CityData>[] = [
   {
     key: "population",
     header: "Population",
-    getValue: (c) => c.info.population,
-    render: (c) => c.info.population.toLocaleString(),
+    getValue: (c) => c.info.populations.at(-1)?.value ?? 0,
+    render: (c) => (c.info.populations.at(-1)?.value ?? 0).toLocaleString(),
     align: "right",
   },
   {
     key: "density",
     header: "Population Density",
-    getValue: (c) => c.info.population / c.info.area,
+    getValue: (c) => (c.info.populations.at(-1)?.value ?? 0) / c.info.area,
     align: "right",
   },
   {

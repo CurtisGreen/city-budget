@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const coppellInfo: CityInfo = {
   id: "coppell",
   name: "Coppell",
-  population: 41386,
   populations: [
     { year: 1980, value: 3826 },
     { year: 1990, value: 16881 },

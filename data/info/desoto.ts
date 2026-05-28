@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const desotoInfo: CityInfo = {
   id: "desoto",
   name: "DeSoto",
-  population: 56681,
   populations: [
     { year: 1980, value: 15538 },
     { year: 1990, value: 30544 },

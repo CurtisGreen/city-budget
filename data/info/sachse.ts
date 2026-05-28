@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const sachseInfo: CityInfo = {
   id: "sachse",
   name: "Sachse",
-  population: 32834,
   populations: [
     { year: 1980, value: 1640 },
     { year: 1990, value: 5346 },

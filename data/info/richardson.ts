@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const richardsonInfo: CityInfo = {
   id: "richardson",
   name: "Richardson",
-  population: 118542,
   populations: [
     { year: 1980, value: 72496 },
     { year: 1990, value: 74840 },

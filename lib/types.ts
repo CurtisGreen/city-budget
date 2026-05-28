@@ -61,7 +61,6 @@ export interface PropertyValues {
 export interface CityInfo {
   id: string;
   name: string;
-  population: number;
   populations: Population[];
   propertyValues?: PropertyValues[];
   revenueBySource: RevenueBySource;

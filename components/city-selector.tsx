@@ -79,7 +79,7 @@ export function CitySelector({
                 const isSelected = selectedCities.includes(city.info.id);
                 const isDisabled =
                   !isSelected && selectedCities.length >= maxSelections;
-
+                const population = city.info.populations.at(-1)?.value ?? 0;
                 return (
                   <CommandItem
                     key={city.info.id}
@@ -90,12 +90,12 @@ export function CitySelector({
                     <Check
                       className={cn(
                         "mr-2 h-4 w-4",
-                        isSelected ? "opacity-100" : "opacity-0"
+                        isSelected ? "opacity-100" : "opacity-0",
                       )}
                     />
                     {city.info.name}
                     <span className="ml-auto text-xs text-muted-foreground">
-                      Pop: {formatNumber(city.info.population)}
+                      Pop: {formatNumber(population)}
                     </span>
                   </CommandItem>
                 );

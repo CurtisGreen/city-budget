@@ -64,7 +64,7 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                 <TableCell className="font-medium">Population</TableCell>
                 {cities.map((city) => (
                   <TableCell key={city.info.id} className="text-center">
-                    {city.info.population.toLocaleString()}
+                    {city.info.populations.at(-1)?.value?.toLocaleString()}
                   </TableCell>
                 ))}
               </TableRow>
@@ -72,11 +72,15 @@ export function ComparisonTable({ cities }: ComparisonTableProps) {
                 <TableCell className="font-medium">
                   Population Density
                 </TableCell>
-                {cities.map((city) => (
-                  <TableCell key={city.info.id} className="text-center">
-                    {formatNumber(city.info.population / city.info.area)}
-                  </TableCell>
-                ))}
+                {cities.map((city) => {
+                  const latestPopulation =
+                    city.info.populations.at(-1)?.value ?? 0;
+                  return (
+                    <TableCell key={city.info.id} className="text-center">
+                      {formatNumber(latestPopulation / city.info.area)}
+                    </TableCell>
+                  );
+                })}
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">Land Area</TableCell>

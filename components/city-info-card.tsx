@@ -11,6 +11,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
   const latestYear = cityData.financialData[cityData.financialData.length - 1];
   const fiveYearsAgoMetrics = cityData.metrics[cityData.metrics.length - 6];
   const latestMetrics = cityData.metrics[cityData.metrics.length - 1];
+  const latestPopulation = cityData.info.populations.at(-1)?.value;
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("en-US", {
@@ -33,7 +34,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
             <div>
               <p className="text-sm text-muted-foreground">Population</p>
               <p className="text-lg font-semibold">
-                {cityData.info.population.toLocaleString()}
+                {latestPopulation?.toLocaleString() ?? "N/A"}
               </p>
             </div>
           </div>

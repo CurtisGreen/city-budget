@@ -30,13 +30,14 @@ export function CityCard({ city }: CityCardProps) {
     return (value * 100).toFixed(decimals) + "%";
   };
 
+  const population =
+    city.info.populations.at(-1)?.value.toLocaleString() ?? "N/A";
+
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200">
       <CardHeader>
         <CardTitle>{city.info.name}</CardTitle>
-        <CardDescription>
-          Population: {city.info.population.toLocaleString()}
-        </CardDescription>
+        <CardDescription>Population: {population}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">

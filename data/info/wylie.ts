@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const wylieInfo: CityInfo = {
   id: "wylie",
   name: "Wylie",
-  population: 63842,
   populations: [
     { year: 1980, value: 3152 },
     { year: 1990, value: 8716 },

@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const dentonInfo: CityInfo = {
   id: "denton",
   name: "Denton",
-  population: 169431,
   populations: [
     { year: 1980, value: 48063 },
     { year: 1990, value: 66270 },

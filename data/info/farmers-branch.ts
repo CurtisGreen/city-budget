@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const farmersBranchInfo: CityInfo = {
   id: "farmers-branch",
   name: "Farmers Branch",
-  population: 38320,
   populations: [
     { year: 1980, value: 24863 },
     { year: 1990, value: 24250 },

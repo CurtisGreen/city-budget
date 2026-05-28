@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const planoInfo: CityInfo = {
   id: "plano",
   name: "Plano",
-  population: 293028,
   populations: [
     { year: 1980, value: 72331 },
     { year: 1990, value: 128713 },

@@ -91,7 +91,7 @@ const renderCustomizedLabel = ({
       x={x}
       y={y}
       fill="white"
-      textAnchor={x > ncx ? "start" : "end"}
+      textAnchor={percent || 0 >= 0.5 ? "middle" : x > ncx ? "start" : "end"}
       dominantBaseline="central"
     >
       {`${((percent ?? 1) * 100).toFixed(0)}%`}

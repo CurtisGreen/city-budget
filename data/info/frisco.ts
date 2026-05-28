@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const friscoInfo: CityInfo = {
   id: "frisco",
   name: "Frisco",
-  population: 236955,
   populations: [
     { year: 1980, value: 3420 },
     { year: 1990, value: 6138 },

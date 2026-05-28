@@ -3,7 +3,6 @@ import { CityInfo } from "@/lib/types";
 export const flowerMoundInfo: CityInfo = {
   id: "flower-mound",
   name: "Flower Mound",
-  population: 79540,
   populations: [
     { year: 1980, value: 4402 },
     { year: 1990, value: 15527 },
