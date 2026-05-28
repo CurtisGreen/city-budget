@@ -93,6 +93,11 @@ export const friscoInfo: CityInfo = {
       hotel: 14139867,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "Community Development Corporation", percent: 0.5 },
+  ],
   latitude: 33.141667,
   longitude: -96.821667,
   area: 68.64,

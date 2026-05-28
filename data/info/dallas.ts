@@ -121,6 +121,10 @@ export const dallasInfo: CityInfo = {
       hotel: 107634000,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 339.6,
   notes: [
     `FY 2016 ACFR: Long-term liabilities increased by $2.9 billion in the governmental activities 

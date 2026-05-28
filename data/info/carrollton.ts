@@ -93,6 +93,10 @@ export const carrolltonInfo: CityInfo = {
       hotel: 534573,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   latitude: 32.953611,
   longitude: -96.890278,
   area: 36.66,

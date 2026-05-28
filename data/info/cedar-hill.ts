@@ -93,6 +93,12 @@ export const cedarHillInfo: CityInfo = {
       hotel: 493006,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Community Development Corporation", percent: 0.5 },
+    { usage: "Economic Development Corporation", percent: 0.375 },
+    { usage: "Crime Control Prevention District", percent: 0.125 },
+  ],
   area: 35.79,
   notes: [
     `FY 2023 ACFR: The City's non-current liabilities increased by $32,499,336 or 26% 

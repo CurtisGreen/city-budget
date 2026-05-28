@@ -93,6 +93,10 @@ export const universityParkInfo: CityInfo = {
       hotel: 0,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 3.69,
   notes: [
     `2025 ACFR: Current resources decilned as the City advanced capital projects.

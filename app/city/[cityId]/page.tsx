@@ -16,6 +16,7 @@ import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
 import { PieChart } from "@/components/ui/pie-chart";
 import { RevenueChart } from "@/components/revenue-chart";
 import { ACFRDownloadButton } from "@/components/ui/acfr-download-button";
+import { SimplePieChart } from "@/components/ui/pie-chart-simple";
 
 interface CityPageProps {
   params: Promise<{
@@ -255,6 +256,26 @@ export default async function CityPage({ params }: CityPageProps) {
                 },
               ]}
               average={{ property, sales, hotel }}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            <SimplePieChart
+              title={"Sales Tax Usage (FY 2025)"}
+              data={
+                cityData.info.salesTaxUsage?.map((item) => ({
+                  name: item.usage,
+                  value: item.percent,
+                })) || []
+              }
+            />
+            <ChartExplanationCard
+              understandingTheMetric="Out of the 8.25% sales tax, 6.25% goes to Texas and the remaining 2% goes to the city. 
+                  This chart shows how the city allocates its 2%. Typically 1% goes to the general fund and the remaining 1% gets used for 
+                  specific purposes. Some of these are set by popular vote, others are set by the city council."
+              whatToLookFor="These categories show what is most prioritized by voting residents and city leadership. 
+                  Common uses are public transit, Economic Development Corporations (EDCs), Community Development Corporations (CDCs), 
+                  extra police funding, and street maintenance."
             />
           </div>
         </div>

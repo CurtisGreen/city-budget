@@ -93,5 +93,9 @@ export const richardsonInfo: CityInfo = {
       hotel: 4948000,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 28.57,
 };

@@ -93,6 +93,10 @@ export const planoInfo: CityInfo = {
       hotel: 13342764,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   latitude: 33.050278,
   longitude: -96.698889,
   area: 71.69,

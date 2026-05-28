@@ -93,6 +93,10 @@ export const farmersBranchInfo: CityInfo = {
       hotel: 3494683,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 11.88,
   notes: [
     `FY 2019 ACFR: The City's total combined net position as presented on the Government-wide Statement of Net Position was $178,101,250, which

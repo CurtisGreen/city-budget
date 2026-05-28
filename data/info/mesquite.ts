@@ -93,5 +93,10 @@ export const mesquiteInfo: CityInfo = {
       hotel: 1717534,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Property Tax Abatement", percent: 0.5 },
+    { usage: "Quality of Life Corporation", percent: 0.5 },
+  ],
   area: 49.103,
 };

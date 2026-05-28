@@ -93,5 +93,11 @@ export const murphyInfo: CityInfo = {
       hotel: 0,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Community Development Corporation", percent: 0.5 },
+    { usage: "Municipal Development Corporation", percent: 0.25 },
+    { usage: "Street and sidewalk maintenance", percent: 0.25 },
+  ],
   area: 5.7,
 };

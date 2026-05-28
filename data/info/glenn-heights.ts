@@ -93,6 +93,10 @@ export const glennHeightsInfo: CityInfo = {
       hotel: 0,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 7.21,
   notes: [
     `FY 2017 ACFR: Fiscal year 2016 is considered to be an anomaly year. 

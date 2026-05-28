@@ -79,6 +79,10 @@ export const irvingInfo: CityInfo = {
     sales: 108213000,
     hotel: 31981000,
   },
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   latitude: 32.816667,
   longitude: -96.95,
   area: 66.98,

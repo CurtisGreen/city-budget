@@ -93,6 +93,10 @@ export const rowlettInfo: CityInfo = {
       hotel: 25489,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 20.748,
   notes: [
     `FY 2020 ACFR: In Program Revenues, capital grants and contributions also realized an increase of $13.5 million primarily due to developer contributions 

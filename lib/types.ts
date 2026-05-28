@@ -66,6 +66,10 @@ export interface CityInfo {
   propertyValues?: PropertyValues[];
   revenueBySource: RevenueBySource;
   revenues?: RevenueMix[];
+  salesTaxUsage?: {
+    usage: string;
+    percent: number;
+  }[];
   latitude?: number;
   longitude?: number;
   area: number; // Land area in square miles

@@ -93,6 +93,10 @@ export const garlandInfo: CityInfo = {
       hotel: 1595434,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   area: 57.13,
   notes: [
     `FY 2025 ACFR: Total Expenses for Governmental Activities increased by $131,143,332 or 38.4%. This increase is mostly attributable to

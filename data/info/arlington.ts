@@ -93,6 +93,12 @@ export const arlingtonInfo: CityInfo = {
       hotel: 15366000,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Sports venue debt", percent: 0.5 },
+    { usage: "Street maintenance", percent: 0.25 },
+    { usage: "Economic Development Corporation", percent: 0.25 },
+  ],
   area: 95.84,
   notes: [
     `FY 2018 ACFR: Liabilities and deferred inflows of resources increased from $1.1B to $1.8B for the total government, an increase of 60%.

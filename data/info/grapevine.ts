@@ -93,6 +93,12 @@ export const grapevineInfo: CityInfo = {
       hotel: 23512535,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Crime Control Prevention District", percent: 0.5 },
+    { usage: "TEXRail", percent: 0.375 },
+    { usage: "Economic Development Corporation", percent: 0.125 },
+  ],
   latitude: 32.935,
   longitude: -97.085833,
   area: 32.14,

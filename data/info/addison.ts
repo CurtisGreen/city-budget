@@ -128,6 +128,10 @@ export const addisonInfo: CityInfo = {
       hotel: 5042545,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DART", percent: 1 },
+  ],
   latitude: 32.957778,
   longitude: -96.835,
   area: 4.35,
