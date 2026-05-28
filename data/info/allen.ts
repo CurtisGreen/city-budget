@@ -92,6 +92,11 @@ export const allenInfo: CityInfo = {
       hotel: 2696118,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "Community Development Corporation", percent: 0.5 },
+  ],
   area: 26.4,
   notes: [
     `FY 2023 ACFR: Capital grants and contributions decreased by $9,486,145 (85%) with lower construction activities.`,

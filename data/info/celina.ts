@@ -92,5 +92,10 @@ export const celinaInfo: CityInfo = {
       hotel: 0,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "Community Development Corporation", percent: 0.5 },
+  ],
   area: 47.725,
 };
