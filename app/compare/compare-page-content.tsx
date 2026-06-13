@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CitySelector } from "@/components/city-selector";
@@ -46,8 +46,18 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   const getCityData = (cityId: string) =>
     allCities.find((city) => city.info.id === cityId);
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const [selectedCityIds, setSelectedCityIds] = useState<string[]>([]);
+
+  const handleSelectionChange = (newCityIds: string[]) => {
+    setSelectedCityIds(newCityIds);
+    if (newCityIds.length > 0) {
+      router.replace(`?cities=${newCityIds.join(",")}`);
+    } else {
+      router.replace(`?`);
+    }
+  };
 
   useEffect(() => {
     const citiesParam = searchParams.get("cities");
@@ -125,7 +135,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                 a.info.id.localeCompare(b.info.id),
               )}
               selectedCities={selectedCityIds}
-              onSelectionChange={setSelectedCityIds}
+              onSelectionChange={handleSelectionChange}
               maxSelections={4}
             />
             <p className="text-sm text-muted-foreground mt-2">
