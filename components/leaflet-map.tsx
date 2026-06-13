@@ -22,7 +22,7 @@ import { Dropdown } from "./ui/dropdown";
 import { useState } from "react";
 import { ColorConfig, getColorConfig } from "@/lib/leaflet-map-color-configs";
 
-const center: LatLngExpression = [32.88, -96.79];
+const center: LatLngExpression = [32.85, -96.89];
 
 type PolygonFeature =
   | {

@@ -37,6 +37,10 @@ import { desotoInfo } from "@/data/info/desoto";
 import { murphyInfo } from "@/data/info/murphy";
 import { prosperInfo } from "@/data/info/prosper";
 import { lancasterInfo } from "@/data/info/lancaster";
+import { eulessInfo } from "@/data/info/euless";
+import { bedfordInfo } from "@/data/info/bedford";
+import { theColonyInfo } from "@/data/info/the-colony";
+import { kellerInfo } from "@/data/info/keller";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -73,6 +77,10 @@ import { desotoGeoJson } from "@/data/geojson/desoto-geojson";
 import { murphyGeoJson } from "@/data/geojson/murphy-geojson";
 import { prosperGeoJson } from "@/data/geojson/prosper-geojson";
 import { lancasterGeoJson } from "@/data/geojson/lancaster-geojson";
+import { eulessGeoJson } from "@/data/geojson/euless-geojson";
+import { bedfordGeoJson } from "@/data/geojson/bedford-geojson";
+import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
+import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 
 import { join } from "node:path";
 
@@ -112,6 +120,10 @@ const basicCityInfo = [
   murphyInfo,
   prosperInfo,
   lancasterInfo,
+  eulessInfo,
+  bedfordInfo,
+  theColonyInfo,
+  kellerInfo
 ];
 
 // Calculate metrics for each city
@@ -167,4 +179,8 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...murphyGeoJson.features,
   ...prosperGeoJson.features,
   ...lancasterGeoJson.features,
+  ...eulessGeoJson.features,
+  ...bedfordGeoJson.features,
+  ...theColonyGeoJson.features,
+  ...kellerGeoJson.features
 ] as GeoJSONFeature[];
