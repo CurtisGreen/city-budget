@@ -16,12 +16,17 @@ export const dallasInfo: CityInfo = {
       fiscalYear: 2015,
       moRate: 0.5646,
       isRate: 0.2324,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.5646,
+      isRate: 0.2324,
       // averageSFHCityTaxesPaid: 0,
       // averageSFHTaxableValue: 0,
       // averageSFHMarketValue: 0,
     },
     {
-      fiscalYear: 2016,
+      fiscalYear: 2017,
       moRate: 0.558,
       isRate: 0.2224,
       // averageSFHCityTaxesPaid: 1387,
@@ -29,7 +34,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 217597,
     },
     {
-      fiscalYear: 2017,
+      fiscalYear: 2018,
       moRate: 0.558,
       isRate: 0.2224,
       // averageSFHCityTaxesPaid: 0,
@@ -37,7 +42,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 0,
     },
     {
-      fiscalYear: 2018,
+      fiscalYear: 2019,
       moRate: 0.5667,
       isRate: 0.21,
       // averageSFHCityTaxesPaid: 0,
@@ -45,7 +50,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 0,
     },
     {
-      fiscalYear: 2019,
+      fiscalYear: 2020,
       moRate: 0.5691,
       isRate: 0.2075,
       // averageSFHCityTaxesPaid: 0,
@@ -53,7 +58,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 0,
     },
     {
-      fiscalYear: 2020,
+      fiscalYear: 2021,
       moRate: 0.5688,
       isRate: 0.2075,
       // averageSFHCityTaxesPaid: 1886.21,
@@ -61,7 +66,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 303601,
     },
     {
-      fiscalYear: 2021,
+      fiscalYear: 2022,
       moRate: 0.5658,
       isRate: 0.2075,
       // averageSFHCityTaxesPaid: 2011.01,
@@ -69,7 +74,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 323813,
     },
     {
-      fiscalYear: 2022,
+      fiscalYear: 2023,
       moRate: 0.5403,
       isRate: 0.2055,
       // averageSFHCityTaxesPaid: 1584.65,
@@ -77,7 +82,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 256150,
     },
     {
-      fiscalYear: 2023,
+      fiscalYear: 2024,
       moRate: 0.5317,
       isRate: 0.204,
       //   averageSFHCityTaxesPaid: 0,
@@ -85,7 +90,7 @@ export const dallasInfo: CityInfo = {
       //   averageSFHMarketValue: 0,
     },
     {
-      fiscalYear: 2024,
+      fiscalYear: 2025,
       moRate: 0.5109,
       isRate: 0.1938,
       // averageSFHCityTaxesPaid: 1969.97,
@@ -93,7 +98,7 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 334710,
     },
     {
-      fiscalYear: 2025,
+      fiscalYear: 2026,
       moRate: 0.5075,
       isRate: 0.1913,
       // averageSFHCityTaxesPaid: 2151.04,
