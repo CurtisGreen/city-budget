@@ -203,8 +203,8 @@ export default function LeafletMap({
         />
         {features
           .filter((f): f is PolygonFeature => f.type != "Point" && !!f.cityData)
-          .map((f, i) => (
-            <CityShape feature={f} key={f.name + i} metric={selectedMetric} />
+          .map((f) => (
+            <CityShape feature={f} key={f.name} metric={selectedMetric} />
           ))}
       </MapContainer>
     </div>
