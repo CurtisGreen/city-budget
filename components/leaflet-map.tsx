@@ -15,7 +15,7 @@ import {
   GeoJSONMultiPolygon,
   GeoJSONPolygon,
 } from "@/lib/overpass-types";
-import { CityData, CityMetrics } from "@/lib/types";
+import { CityData } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { Card } from "./ui/card";
 import { Dropdown } from "./ui/dropdown";
@@ -158,6 +158,8 @@ export default function LeafletMap({
               "5-Year Change in Assets Life",
               "5-Year Change in Assets to Liabilities",
               "Total Revenue Per Acre",
+              "5-Year Change in Population",
+              "5-Year Change in Population %",
             ]}
             onSelectionChange={setSelectedMetric}
           />

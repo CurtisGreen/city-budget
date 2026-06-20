@@ -56,12 +56,14 @@ const changeInAssetsLifeConfig: ColorConfig = {
   getValue: (cityData: CityData) =>
     cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
     cityData.metrics[cityData.metrics.length - 6].netBookValueToCostOfTCA,
-  getFormattedValue: (cityData: CityData) =>
-    Math.round(
-      (cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA -
-        cityData.metrics[cityData.metrics.length - 6].netBookValueToCostOfTCA) *
-        100,
-    ) + "%",
+  getFormattedValue: (cityData: CityData) => {
+    const metrics = cityData.metrics;
+    const current = metrics[metrics.length - 1].netBookValueToCostOfTCA;
+    const fiveYearsAgo = metrics[metrics.length - 6].netBookValueToCostOfTCA;
+    const value = ((current - fiveYearsAgo) / fiveYearsAgo) * 100;
+    if (value > -1 && value < 1) return value.toFixed(1) + "%";
+    return Math.round(value) + "%";
+  },
 };
 
 const changeInAssetsToLiabilitiesConfig: ColorConfig = {
@@ -108,10 +110,63 @@ const revenuePerAcreConfig: ColorConfig = {
     ),
 };
 
+const changeInPopulation: ColorConfig = {
+  greenLabel: ">= 5k",
+  yellowLabel: ">= 0",
+  redLabel: "< 0",
+  colorFunction: (value: number) => {
+    if (value >= 5000) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (value >= 0) return "oklch(0.769 0.188 70)"; // yellow - okay
+    return "oklch(0.577 0.245 27)"; // red - poor
+  },
+  getValue: (cityData: CityData) => {
+    const populations = cityData.info.populations;
+    const current = populations[populations.length - 1].value;
+    const fiveYearsAgo = populations[populations.length - 2].value;
+    return current - fiveYearsAgo;
+  },
+  getFormattedValue: (cityData: CityData) => {
+    const populations = cityData.info.populations;
+    const current = populations[populations.length - 1].value;
+    const fiveYearsAgo = populations[populations.length - 2].value;
+    return new Intl.NumberFormat("en-US", {
+      notation: "compact",
+    }).format(current - fiveYearsAgo);
+  },
+};
+
+const changeInPopulationPercent: ColorConfig = {
+  greenLabel: ">= +5%",
+  yellowLabel: ">= 0%",
+  redLabel: "< 0%",
+  colorFunction: (ratio: number) => {
+    if (ratio >= 0.05) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (ratio >= 0) return "oklch(0.769 0.188 70)"; // yellow - okay
+    return "oklch(0.577 0.245 27)"; // red - poor
+  },
+  getValue: (cityData: CityData) => {
+    const populations = cityData.info.populations;
+    const current = populations[populations.length - 1].value;
+    const fiveYearsAgo = populations[populations.length - 2].value;
+    return (current - fiveYearsAgo) / fiveYearsAgo;
+  },
+  getFormattedValue: (cityData: CityData) => {
+    const populations = cityData.info.populations;
+    const current = populations[populations.length - 1].value;
+    const fiveYearsAgo = populations[populations.length - 2].value;
+    const value = ((current - fiveYearsAgo) / fiveYearsAgo) * 100;
+    if (value > -1 && value < 1) return value.toFixed(1) + "%";
+    return Math.round(value) + "%";
+  },
+};
+
 export const getColorConfig = (metric: string): ColorConfig => {
   if (metric == "Net Debt to Revenue") return netDebtConfig;
   if (metric == "Asset Life") return assetLifeConfig;
   if (metric == "5-Year Change in Assets Life") return changeInAssetsLifeConfig;
   if (metric == "Total Revenue Per Acre") return revenuePerAcreConfig;
+  if (metric == "5-Year Change in Population") return changeInPopulation;
+  if (metric == "5-Year Change in Population %")
+    return changeInPopulationPercent;
   return changeInAssetsToLiabilitiesConfig;
 };
