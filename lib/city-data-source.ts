@@ -41,6 +41,7 @@ import { eulessInfo } from "@/data/info/euless";
 import { bedfordInfo } from "@/data/info/bedford";
 import { theColonyInfo } from "@/data/info/the-colony";
 import { kellerInfo } from "@/data/info/keller";
+import { hurstInfo } from "@/data/info/hurst";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -81,6 +82,7 @@ import { eulessGeoJson } from "@/data/geojson/euless-geojson";
 import { bedfordGeoJson } from "@/data/geojson/bedford-geojson";
 import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
+import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
 
 import { join } from "node:path";
 
@@ -123,7 +125,8 @@ const basicCityInfo = [
   eulessInfo,
   bedfordInfo,
   theColonyInfo,
-  kellerInfo
+  kellerInfo,
+  hurstInfo,
 ];
 
 // Calculate metrics for each city
@@ -182,5 +185,6 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...eulessGeoJson.features,
   ...bedfordGeoJson.features,
   ...theColonyGeoJson.features,
-  ...kellerGeoJson.features
+  ...kellerGeoJson.features,
+  ...hurstGeoJson.features,
 ] as GeoJSONFeature[];

@@ -44,7 +44,7 @@ const assetLifeConfig: ColorConfig = {
     ) + "%",
 };
 
-const changeInAssetsLifeConfig: ColorConfig = {
+const changeInAssetLifeConfig: ColorConfig = {
   greenLabel: ">= +5%",
   yellowLabel: ">= -5%",
   redLabel: "< -5%",
@@ -60,7 +60,7 @@ const changeInAssetsLifeConfig: ColorConfig = {
     const metrics = cityData.metrics;
     const current = metrics[metrics.length - 1].netBookValueToCostOfTCA;
     const fiveYearsAgo = metrics[metrics.length - 6].netBookValueToCostOfTCA;
-    const value = ((current - fiveYearsAgo) / fiveYearsAgo) * 100;
+    const value = (current - fiveYearsAgo) * 100;
     if (value > -1 && value < 1) return value.toFixed(1) + "%";
     return Math.round(value) + "%";
   },
@@ -163,7 +163,7 @@ const changeInPopulationPercent: ColorConfig = {
 export const getColorConfig = (metric: string): ColorConfig => {
   if (metric == "Net Debt to Revenue") return netDebtConfig;
   if (metric == "Asset Life") return assetLifeConfig;
-  if (metric == "5-Year Change in Assets Life") return changeInAssetsLifeConfig;
+  if (metric == "5-Year Change in Asset Life") return changeInAssetLifeConfig;
   if (metric == "Total Revenue Per Acre") return revenuePerAcreConfig;
   if (metric == "5-Year Change in Population") return changeInPopulation;
   if (metric == "5-Year Change in Population %")

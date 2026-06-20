@@ -155,7 +155,7 @@ export default function LeafletMap({
             options={[
               "Net Debt to Revenue",
               "Asset Life",
-              "5-Year Change in Assets Life",
+              "5-Year Change in Asset Life",
               "5-Year Change in Assets to Liabilities",
               "Total Revenue Per Acre",
               "5-Year Change in Population",
