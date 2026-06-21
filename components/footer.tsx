@@ -33,6 +33,13 @@ export const Footer = () => {
           >
             Feedback
           </Link>
+          <Link
+            href="https://github.com/CurtisGreen/city-budget"
+            className="text-sm text-gray-500 hover:text-gray-600"
+            prefetch={false}
+          >
+            Github
+          </Link>
         </div>
         <p className="text-xs text-gray-400 dark:text-gray-500">
           © 2025 Budget.City - Making municipal finances easy and accessible
