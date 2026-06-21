@@ -12,9 +12,10 @@ Setup the sheet:
 1. From the 2026 budget: Get the FY 2026 property tax rates. You'll likely need to subtract the total rate - debt service rate to get the maintenance (M&O) rate
 1. From wikipedia get: 1980, 1990, 2000, 2010, and 2020 populations
 1. From wikipedia get: Land area in square miles
-2. From US Census Quickfacts: Get 2025 population
+1. From US Census Quickfacts: Get 2025 population
 1. Transpose data into "Formatted Data" tab so it can be put into a .csv
 1. Get the city boundaries from overpass and export -> copy it into the geojson format
+1. Using the ACFR and city website, find out how the city uses the 1% local sales tax. Ex: transit, economic development corporation, etc.
 
 # What to look for in the ACFR
 
@@ -34,3 +35,13 @@ Setup the sheet:
 - Search "Not being depreciated" or "depreciable" to find the government & business-type capital assets section
 
 <img width="1147" height="1034" alt="image" src="https://github.com/user-attachments/assets/ee89413b-1ab2-4541-a25d-d2355f4d2444" />
+
+# Geo JSON
+- Go to https://overpass-turbo.eu/
+- Paste the following, replacing Hurst with the city name you want
+- Then run it -> export -> geojson copy -> paste into new .ts file
+```
+[out:json];
+wr["name"="Hurst"]["boundary"="administrative"]["admin_level"="8"];
+out geom qt;
+```
