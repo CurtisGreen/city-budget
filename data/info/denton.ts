@@ -92,5 +92,10 @@ export const dentonInfo: CityInfo = {
       hotel: 3320000,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: 'DCTA', percent: 0.5 },
+    { usage: 'Property Tax Abatement', percent: 0.5 }
+  ],
   area: 96.35,
 };

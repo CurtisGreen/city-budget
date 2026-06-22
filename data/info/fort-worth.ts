@@ -92,6 +92,11 @@ export const fortWorthInfo: CityInfo = {
       hotel: 67418000,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: 'Trinity Metro', percent: 0.5 },
+    { usage: 'Crime Control and Prevention District', percent: 0.5 }
+  ],
   latitude: 32.756389,
   longitude: -97.3325,
   area: 347.28,
