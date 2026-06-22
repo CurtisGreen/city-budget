@@ -103,8 +103,11 @@ export const friscoInfo: CityInfo = {
   notes: [
     `FY 2016 ACFR: In June 2016, the City issued General Obligation Refunding and Improvement Bonds, Series 2016, 
     in the amount of $120,615,000 with a premium of $21,165,179.`,
-    `FY 2024 ACFR: Capital contributions decreased $159 million during the year, 
-    primarily due to the capital asset contributions under the master development agreement 
+    `FY 2024 ACFR: Capital contributions decreased $159 million during the year,
+    primarily due to the capital asset contributions under the master development agreement
     between the City and Omni PGA Frisco in the previous year.`,
+    `FY 2025 ACFR: Net investment in capital assets increased by $157,993,808 due to increases in capital
+    investment (or projects completed during the year) and net of changes in debt. [...] The City of Frisco's
+    total debt increased by $228,174,804 or 20% during the fiscal year.`,
   ],
 };
