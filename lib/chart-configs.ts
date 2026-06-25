@@ -94,4 +94,18 @@ export const chartConfigs: Record<string, ChartConfig> = {
     formula:
       "(Operating grants and contributions + Capital grants and contributions) / Total revenue",
   },
+  yearsOfSurplusRevenue: {
+    title: "Years of Surplus Revenue",
+    description:
+      "Years of total revenue remaining after paying off debt and infrastructure costs",
+    whatItMeans:
+      "This shows how well the city is balancing its revenue, debt, and infrastructure maintenance over time.",
+    whatToLookFor:
+      "A rising trend or positive value shows the city can pay off its debt and maintain its infrastructure. A negative value or declining trend indicates potential financial difficulties.",
+    positiveDirection: "up",
+    upwardDescription: "More Sustainable",
+    downwardDescription: "Less Sustainable",
+    formula:
+      "(((Asset life - Average DFW asset life) * Total capital assets) + Net financial position) / Total revenue",
+  },
 };

@@ -194,5 +194,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...kellerGeoJson.features,
   ...hurstGeoJson.features,
   ...haltomCityGeoJson.features,
-  ...littleElmGeoJson.features
+  ...littleElmGeoJson.features,
 ] as GeoJSONFeature[];

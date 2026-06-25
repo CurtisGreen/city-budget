@@ -30,6 +30,12 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const netBookValueToCostOfTCA = netCapitalAssets / totalCapitalAssets;
   const externalTransfersToRevenue = totalExternalTransfers / data.totalRevenue;
 
+  const averageAssetLife = 0.62; // Based on average of 40 DFW cities over 11 years
+  const surplusAssetLife =
+    (netBookValueToCostOfTCA - averageAssetLife) * totalCapitalAssets;
+  const totalSurplus = netFinancialPosition + surplusAssetLife;
+  const yearsOfSurplusRevenue = totalSurplus / data.totalRevenue;
+
   return {
     fiscalYear: data.fiscalYear,
     netFinancialPosition,
@@ -39,6 +45,7 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
     interestToRevenue,
     netBookValueToCostOfTCA,
     externalTransfersToRevenue,
+    yearsOfSurplusRevenue,
   };
 }
 
@@ -129,3 +136,101 @@ export function calculateAveragePopulationDensity(
 function sum(numbers: number[]): number {
   return numbers.reduce((a, b) => a + b, 0);
 }
+
+// function calculateFinancialRanking(
+//   allCitiesData: CityData[],
+// ): { cityData: CityData; rank: number; percentile: number }[] {
+//   // Rank each category
+//   const byFinancialAssetsToLiabilities = allCitiesData.toSorted(
+//     (a, b) =>
+//       (b.metrics.at(-1)?.financialAssetsToLiabilities || 0) -
+//       (a.metrics.at(-1)?.financialAssetsToLiabilities || 0),
+//   );
+//   const byAssetsToLiabilities = allCitiesData.toSorted(
+//     (a, b) =>
+//       (b.metrics.at(-1)?.assetsToLiabilities || 0) -
+//       (a.metrics.at(-1)?.assetsToLiabilities || 0),
+//   );
+//   const byNetDebtToRevenue = allCitiesData.toSorted((a, b) => {
+//     const netDebtToRevenueA = a.metrics.at(-1)?.netDebtToRevenue || 0;
+//     const netDebtToRevenueB = b.metrics.at(-1)?.netDebtToRevenue || 0;
+//     const netFinancialPositionA = a.metrics.at(-1)?.netFinancialPosition || 0;
+//     const netFinancialPositionB = b.metrics.at(-1)?.netFinancialPosition || 0;
+//     return (
+//       netDebtToRevenueA - netDebtToRevenueB ||
+//       netFinancialPositionB - netFinancialPositionA
+//     );
+//   });
+//   const byInterestToRevenue = allCitiesData.toSorted(
+//     (a, b) =>
+//       (a.metrics.at(-1)?.interestToRevenue || 0) -
+//       (b.metrics.at(-1)?.interestToRevenue || 0),
+//   );
+
+//   // Include 2 change over time metrics
+//   const byAssetLife = allCitiesData.toSorted(
+//     (a, b) =>
+//       (b.metrics.at(-1)?.netBookValueToCostOfTCA || 0) -
+//       (a.metrics.at(-1)?.netBookValueToCostOfTCA || 0),
+//   );
+//   const byExternalTransfersToRevenue = allCitiesData.toSorted(
+//     (a, b) =>
+//       (a.metrics.at(-1)?.externalTransfersToRevenue || 0) -
+//       (b.metrics.at(-1)?.externalTransfersToRevenue || 0),
+//   );
+
+//   const byChangeInFinancialAssetsToLiabilities = allCitiesData.toSorted(
+//     (a, b) => {
+//       const aStartMetric = a.metrics.at(-1)?.financialAssetsToLiabilities || 0;
+//       const aEndMetric = a.metrics.at(-6)?.financialAssetsToLiabilities || 0;
+//       const bStartMetric = b.metrics.at(-1)?.financialAssetsToLiabilities || 0;
+//       const bEndMetric = b.metrics.at(-6)?.financialAssetsToLiabilities || 0;
+//       return bEndMetric - bStartMetric - (aEndMetric - aStartMetric);
+//     },
+//   );
+
+//   const byChangeInAssetLife = allCitiesData.toSorted((a, b) => {
+//     const aStartMetric = a.metrics.at(-1)?.netBookValueToCostOfTCA || 0;
+//     const aEndMetric = a.metrics.at(-6)?.netBookValueToCostOfTCA || 0;
+//     const bStartMetric = b.metrics.at(-1)?.netBookValueToCostOfTCA || 0;
+//     const bEndMetric = b.metrics.at(-6)?.netBookValueToCostOfTCA || 0;
+//     return bEndMetric - bStartMetric - (aEndMetric - aStartMetric);
+//   });
+
+//   const citiesWithScores: [CityData, number][] = allCitiesData.map(
+//     (cityData) => {
+//       const fatl = byFinancialAssetsToLiabilities.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const atl = byAssetsToLiabilities.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const ndtr = byNetDebtToRevenue.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const itr = byInterestToRevenue.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const alt = byAssetLife.findIndex((c) => c.info.id === cityData.info.id);
+//       const ettr = byExternalTransfersToRevenue.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const cifatl = byChangeInFinancialAssetsToLiabilities.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const cial = byChangeInAssetLife.findIndex(
+//         (c) => c.info.id === cityData.info.id,
+//       );
+//       const totalScore = sum([fatl, atl, ndtr, itr, alt, ettr, cifatl, cial]);
+//       return [cityData, totalScore];
+//     },
+//   );
+//   ``;
+//   return citiesWithScores
+//     .toSorted(([_, a], [__, b]) => a - b)
+//     .map(([cityData], i) => ({
+//       cityData,
+//       rank: i + 1,
+//       percentile: (i / (citiesWithScores.length - 1)) * 100,
+//     }));
+// }

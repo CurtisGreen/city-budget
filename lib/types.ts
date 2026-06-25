@@ -25,6 +25,7 @@ export interface CityMetrics {
   interestToRevenue: number;
   netBookValueToCostOfTCA: number;
   externalTransfersToRevenue: number;
+  yearsOfSurplusRevenue: number;
 }
 
 export interface Population {

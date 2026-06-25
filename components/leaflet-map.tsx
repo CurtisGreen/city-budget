@@ -120,7 +120,10 @@ export default function LeafletMap({
   geoJSONFeatures: GeoJSONFeature[];
   cities: CityData[];
 }) {
-  const [selectedMetric, setSelectedMetric] = useState("Net Debt to Revenue");
+  const [selectedMetric, setSelectedMetric] = useState(
+    "Years of Surplus Revenue",
+  );
+  const colorConfig = getColorConfig(selectedMetric);
   const features = geoJSONFeatures
     .filter((f) => ["Polygon", "MultiPolygon"].includes(f.geometry.type))
     .map((f) => {
@@ -138,13 +141,11 @@ export default function LeafletMap({
       return {
         name: f.properties.name,
         coordinates,
-        colorConfig: getColorConfig(selectedMetric),
+        colorConfig,
         type: f.geometry.type,
         cityData,
       };
     });
-
-  const { greenLabel, yellowLabel, redLabel } = getColorConfig(selectedMetric);
 
   return (
     <div>
@@ -153,6 +154,7 @@ export default function LeafletMap({
         <div className="text-sm font-semibold">
           <Dropdown
             options={[
+              "Years of Surplus Revenue",
               "Net Debt to Revenue",
               "Asset Life",
               "5-Year Change in Asset Life",
@@ -170,21 +172,23 @@ export default function LeafletMap({
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
             />
-            <span className="text-xs">{greenLabel} (Excellent)</span>
+            <span className="text-xs">
+              {colorConfig.greenLabel} (Excellent)
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
             />
-            <span className="text-xs">{yellowLabel} (Okay)</span>
+            <span className="text-xs">{colorConfig.yellowLabel} (Okay)</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
             />
-            <span className="text-xs">{redLabel} (Poor)</span>
+            <span className="text-xs">{colorConfig.redLabel} (Poor)</span>
           </div>
         </div>
       </Card>

@@ -9,6 +9,29 @@ export type ColorConfig = {
   getFormattedValue: (cityData: CityData) => string;
 };
 
+const yearsOfSurplusRevenueConfig: ColorConfig = {
+  greenLabel: ">= 0",
+  yellowLabel: "> -0.5",
+  redLabel: "< -0.5",
+  colorFunction: (value: number) => {
+    if (value >= 0) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (value >= -0.5) return "oklch(0.769 0.188 70)"; // yellow - okay
+    return "oklch(0.577 0.245 27)"; // red - poor
+  },
+  getValue: (cityData: CityData) => {
+    return cityData.metrics.at(-1)?.yearsOfSurplusRevenue || 0;
+  },
+  getFormattedValue: (cityData: CityData) => {
+    const yearsOfSurplusRevenue =
+      cityData.metrics.at(-1)?.yearsOfSurplusRevenue || 0;
+    const formattedValue = new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(yearsOfSurplusRevenue);
+    return formattedValue === "-0" ? "0" : formattedValue;
+  },
+};
+
 const netDebtConfig: ColorConfig = {
   greenLabel: "= 0%",
   yellowLabel: "0% - 100%",
@@ -161,6 +184,7 @@ const changeInPopulationPercent: ColorConfig = {
 };
 
 export const getColorConfig = (metric: string): ColorConfig => {
+  if (metric == "Years of Surplus Revenue") return yearsOfSurplusRevenueConfig;
   if (metric == "Net Debt to Revenue") return netDebtConfig;
   if (metric == "Asset Life") return assetLifeConfig;
   if (metric == "5-Year Change in Asset Life") return changeInAssetLifeConfig;

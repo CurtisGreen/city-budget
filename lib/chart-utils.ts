@@ -18,11 +18,12 @@ const formatCurrency = (value: number, maximumFractionDigits: number = 1) => {
 };
 
 const formatNumber = (value: number, maximumFractionDigits: number = 1) => {
-  return new Intl.NumberFormat("en-US", {
+  const formattedValue = new Intl.NumberFormat("en-US", {
     style: "decimal",
     notation: "compact",
     maximumFractionDigits,
   }).format(value);
+  return formattedValue === "-0" ? "0" : formattedValue;
 };
 
 export const chartFormatters: Record<

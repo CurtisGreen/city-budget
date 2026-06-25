@@ -59,7 +59,7 @@ export default function HomePage() {
               <div className="text-muted-foreground">Cities Tracked</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">7</div>
+              <div className="text-3xl font-bold text-primary mb-2">8</div>
               <div className="text-muted-foreground">Financial Metrics</div>
             </div>
             <div className="text-center">

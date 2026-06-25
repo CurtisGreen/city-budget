@@ -38,6 +38,11 @@ const metricConfigs: {
   maximumFractionDigits?: number;
 }[] = [
   {
+    key: "yearsOfSurplusRevenue",
+    formatType: "number",
+    showAverage: true,
+  },
+  {
     key: "netFinancialPosition",
     formatType: "currency",
     showAverage: false,
