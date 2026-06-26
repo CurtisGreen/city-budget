@@ -106,6 +106,6 @@ export const chartConfigs: Record<string, ChartConfig> = {
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
     formula:
-      "(((Asset life - Average DFW asset life) * Total capital assets) + Net financial position) / Total revenue",
+      "(((Asset life - Average DFW asset life) * Gross capital assets) + Net financial position) / Total revenue",
   },
 };

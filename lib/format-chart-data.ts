@@ -10,7 +10,7 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const totalLiabilities = data.liabilities + data.deferredInflows;
   const totalExternalTransfers =
     data.operatingGrantsAndContributions + data.capitalGrantsAndContributions;
-  const totalCapitalAssets =
+  const grossCapitalAssets =
     data.governmentCapitalAssetsBeingDepreciated +
     data.governmentCapitalAssetsNotBeingDepreciated +
     data.businessCapitalAssetsBeingDepreciated +
@@ -27,12 +27,12 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const interestToRevenue = data.debInterest / data.totalRevenue;
   const netCapitalAssets =
     data.capitalAssetsNetofDepreciation || data.capitalAssets;
-  const netBookValueToCostOfTCA = netCapitalAssets / totalCapitalAssets;
+  const netBookValueToCostOfTCA = netCapitalAssets / grossCapitalAssets;
   const externalTransfersToRevenue = totalExternalTransfers / data.totalRevenue;
 
   const averageAssetLife = 0.62; // Based on average of 40 DFW cities over 11 years
   const surplusAssetLife =
-    (netBookValueToCostOfTCA - averageAssetLife) * totalCapitalAssets;
+    (netBookValueToCostOfTCA - averageAssetLife) * grossCapitalAssets;
   const totalSurplus = netFinancialPosition + surplusAssetLife;
   const yearsOfSurplusRevenue = totalSurplus / data.totalRevenue;
 

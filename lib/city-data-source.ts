@@ -44,6 +44,7 @@ import { kellerInfo } from "@/data/info/keller";
 import { hurstInfo } from "@/data/info/hurst";
 import { haltomCityInfo } from "@/data/info/haltom-city";
 import { littleElmInfo } from "@/data/info/little-elm";
+import { southlakeInfo } from "@/data/info/southlake";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -87,6 +88,7 @@ import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
 import { haltomCityGeoJson } from "@/data/geojson/haltom-city-geojson";
 import { littleElmGeoJson } from "@/data/geojson/little-elm-geojson";
+import { southlakeGeoJson } from "@/data/geojson/southlake-geojson";
 
 import { join } from "node:path";
 
@@ -133,6 +135,7 @@ const basicCityInfo = [
   hurstInfo,
   haltomCityInfo,
   littleElmInfo,
+  southlakeInfo,
 ];
 
 // Calculate metrics for each city
@@ -195,4 +198,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...hurstGeoJson.features,
   ...haltomCityGeoJson.features,
   ...littleElmGeoJson.features,
+  ...southlakeGeoJson.features,
 ] as GeoJSONFeature[];
