@@ -92,6 +92,13 @@ export const lewisvilleInfo: CityInfo = {
       hotel: 2807960,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "DCTA", percent: 0.5 },
+    { usage: "Parks and Library Development Corporation", percent: 0.25 },
+    { usage: "Crime Control and Prevention District", percent: 0.125 },
+    { usage: "Fire Control and Emergency Medical District", percent: 0.125 },
+  ],
   area: 37.01,
   notes: [
     `FY 2022 ACFR: The City's total outstanding debt increased by $169,324,000 during the current fiscal year
