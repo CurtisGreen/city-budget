@@ -87,15 +87,15 @@ export const lancasterInfo: CityInfo = {
     },
     {
       fiscalYear: 2025,
-      property: 0,
-      sales: 0,
-      hotel: 0,
+      property: 39259277,
+      sales: 13901534,
+      hotel: 216292,
     },
   ],
   salesTaxUsage: [
-    { usage: "General Fund", percent: 1 },
-    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "General Fund", percent: 1.25 },
     { usage: "Recreational Development Corporation", percent: 0.5 },
+    { usage: "Economic Development Corporation", percent: 0.25 },
   ],
   area: 33.06,
 };

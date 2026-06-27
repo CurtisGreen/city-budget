@@ -59,7 +59,7 @@ export function SimplePieChart({
             label={renderCustomizedLabel}
             labelLine={false}
           />
-          <Legend />
+          <Legend itemSorter="dataKey" />
           <Tooltip />
         </RechartsPieChart>
       </CardContent>
@@ -76,6 +76,7 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
+  value,
 }: PieLabelRenderProps) => {
   if (cx == null || cy == null || innerRadius == null || outerRadius == null) {
     return null;
@@ -91,10 +92,10 @@ const renderCustomizedLabel = ({
       x={x}
       y={y}
       fill="white"
-      textAnchor={percent || 0 >= 0.5 ? "middle" : x > ncx ? "start" : "end"}
+      textAnchor={value || 0 >= 0.5 ? "middle" : x > ncx ? "start" : "end"}
       dominantBaseline="central"
     >
-      {`${((percent ?? 1) * 100).toFixed(0)}%`}
+      {`${value}%`}
     </text>
   );
 };

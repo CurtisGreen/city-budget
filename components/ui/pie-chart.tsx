@@ -150,7 +150,7 @@ export function PieChart({
             isAnimationActive
             className="focus:outline-none"
           />
-          <Legend />
+          <Legend itemSorter="dataKey" />
           <Tooltip content={() => null} defaultIndex={0} />
         </RechartsPieChart>
       </CardContent>
