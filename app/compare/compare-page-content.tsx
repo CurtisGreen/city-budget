@@ -23,6 +23,11 @@ const metricConfigs: {
   maximumFractionDigits?: number;
 }[] = [
   {
+    key: "yearsOfSurplusRevenue",
+    formatType: "number",
+    maximumFractionDigits: 1,
+  },
+  {
     key: "financialAssetsToLiabilities",
     formatType: "percent",
     maximumFractionDigits: 0,
