@@ -92,5 +92,12 @@ export const grandPrairieInfo: CityInfo = {
       hotel: 4177330,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "EPIC Center", percent: 0.25 },
+    { usage: "Street Maintenance", percent: 0.25 },
+    { usage: "Park Venue", percent: 0.25 },
+    { usage: "Crime Control and Prevention District", percent: 0.25 },
+  ],
   area: 72.57,
 };

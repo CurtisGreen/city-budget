@@ -96,7 +96,7 @@ export const eulessInfo: CityInfo = {
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },
     { usage: "Crime Control and Prevention District", percent: 0.25 },
-    { usage: "Property Tax Reduction", percent: 0.25 },
+    { usage: "Property Tax Abatement", percent: 0.25 },
   ],
   area: 16.12,
 };

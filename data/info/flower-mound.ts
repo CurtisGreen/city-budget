@@ -92,5 +92,12 @@ export const flowerMoundInfo: CityInfo = {
       hotel: 796281,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Community Development Corporation", percent: 0.25 },
+    { usage: "Street Maintenance", percent: 0.25 },
+    { usage: "Crime Control and Prevention District", percent: 0.25 },
+    { usage: "Fire Control and Emergency Medical District", percent: 0.25 },
+  ],
   area: 41.96,
 };
