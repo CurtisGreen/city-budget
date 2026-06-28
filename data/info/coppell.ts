@@ -92,6 +92,12 @@ export const coppellInfo: CityInfo = {
       hotel: 1302889,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Recreation Development Corporation", percent: 0.5 },
+    { usage: "Infrastructure Maintenance", percent: 0.25 },
+    { usage: "Crime Control and Prevention District", percent: 0.25 },
+  ],
   latitude: 32.963056,
   longitude: -96.997222,
   area: 14.73,

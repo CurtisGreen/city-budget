@@ -92,5 +92,11 @@ export const desotoInfo: CityInfo = {
       hotel: 1424966,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Property Tax Abatement", percent: 0.5 },
+    { usage: "Economic Development Corporation", percent: 0.375 },
+    { usage: "Park Development Corporation", percent: 0.125 },
+  ],
   area: 21.63,
 };
