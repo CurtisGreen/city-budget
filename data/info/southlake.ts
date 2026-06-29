@@ -9,7 +9,7 @@ export const southlakeInfo: CityInfo = {
     { year: 2000, value: 21519 },
     { year: 2010, value: 26575 },
     { year: 2020, value: 31265 },
-    { year: 2025, value: 31137 },
+    { year: 2025, value: 31175 },
   ],
   propertyValues: [
     {

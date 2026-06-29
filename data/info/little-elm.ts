@@ -9,7 +9,7 @@ export const littleElmInfo: CityInfo = {
     { year: 2000, value: 3646 },
     { year: 2010, value: 25898 },
     { year: 2020, value: 46453 },
-    { year: 2025, value: 58496 },
+    { year: 2025, value: 62727 },
   ],
   propertyValues: [
     {
