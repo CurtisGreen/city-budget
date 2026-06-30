@@ -14,6 +14,7 @@ const CITY_COLORS = [
   "var(--chart-2)",
   "var(--chart-5)",
   "var(--chart-4)",
+  "var(--chart-3)",
 ];
 
 export function SimplePieChart({
