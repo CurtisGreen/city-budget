@@ -44,6 +44,7 @@ import { theColonyInfo } from "@/data/info/the-colony";
 import { kellerInfo } from "@/data/info/keller";
 import { hurstInfo } from "@/data/info/hurst";
 import { haltomCityInfo } from "@/data/info/haltom-city";
+import { highlandVillageInfo } from "@/data/info/highland-village";
 import { littleElmInfo } from "@/data/info/little-elm";
 import { southlakeInfo } from "@/data/info/southlake";
 import { balchSpringsInfo } from "@/data/info/balch-springs";
@@ -90,6 +91,7 @@ import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
 import { haltomCityGeoJson } from "@/data/geojson/haltom-city-geojson";
+import { highlandVillageGeoJson } from "@/data/geojson/highland-village-geojson";
 import { littleElmGeoJson } from "@/data/geojson/little-elm-geojson";
 import { southlakeGeoJson } from "@/data/geojson/southlake-geojson";
 import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
@@ -139,6 +141,7 @@ const basicCityInfo = [
   kellerInfo,
   hurstInfo,
   haltomCityInfo,
+  highlandVillageInfo,
   littleElmInfo,
   southlakeInfo,
   balchSpringsInfo,
@@ -204,6 +207,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...kellerGeoJson.features,
   ...hurstGeoJson.features,
   ...haltomCityGeoJson.features,
+  ...highlandVillageGeoJson.features,
   ...littleElmGeoJson.features,
   ...southlakeGeoJson.features,
   ...balchSpringsGeoJson.features,
