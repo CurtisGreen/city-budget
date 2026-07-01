@@ -10,6 +10,16 @@ import { CityLeaderboard } from "@/components/city-leaderboard";
 
 export default function HomePage() {
   const cities = getAllCities();
+  const totalAssets = cities.reduce((sum, city) => {
+    const latestFinancialData = city.financialData.at(-1);
+    return sum + (latestFinancialData?.capitalAssets ?? 0);
+  }, 0);
+  const formattedTotalAssets = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(totalAssets);
 
   return (
     <div className="min-h-screen">
@@ -59,8 +69,10 @@ export default function HomePage() {
               <div className="text-muted-foreground">Cities Tracked</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">8</div>
-              <div className="text-muted-foreground">Financial Metrics</div>
+              <div className="text-3xl font-bold text-primary mb-2">
+                {formattedTotalAssets}
+              </div>
+              <div className="text-muted-foreground">Capital Assets</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">
