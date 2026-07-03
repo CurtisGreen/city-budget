@@ -92,6 +92,11 @@ export const mckinneyInfo: CityInfo = {
       hotel: 3339994,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "Community Development Corporation", percent: 0.5 },
+  ],
   latitude: 33.197222,
   longitude: -96.639722,
   area: 66.96,

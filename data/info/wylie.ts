@@ -92,5 +92,10 @@ export const wylieInfo: CityInfo = {
       hotel: 264791,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "Parks and Recreation Facilities Development Corporation", percent: 0.5 },
+  ],
   area: 22.06,
 };

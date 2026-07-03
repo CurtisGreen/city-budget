@@ -98,4 +98,12 @@ export const bedfordInfo: CityInfo = {
     { usage: "Property Tax Reduction", percent: 0.25 },
   ],
   area: 10.03,
+  notes: [
+    `FY 2021 ACFR: The net position of the City's governmental activities decreased by $10,736,853
+    or 27.08%, from $39,646,917 last fiscal year, to $28,910,064 as of September 30, 2021, primarily
+    due to an increase in Public Safety expenditures.`,
+    `FY 2018 ACFR: the City issued a refunding of $63,920,000 in 2018 General Obligation Bonds and
+    issued new debt of $20,000,000 in 2017 Certificates of Obligation Bonds. The total debt
+    obligations increased by 51% from $66,390,811 to $141,792,004.`,
+  ],
 };

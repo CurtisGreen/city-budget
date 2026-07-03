@@ -92,5 +92,16 @@ export const mansfieldInfo: CityInfo = {
       hotel: 1147738,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Park Facilities Development Corporation", percent: 0.5 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+  ],
   area: 36.62,
+  notes: [
+    `FY 2025 ACFR: The City and MEDC's total debt obligations (excluding premiums and discounts)
+    increased by $207.8 million (61.3%) during the current fiscal year. [...] Combination Tax and
+    Revenue Certificates of Obligation, Series 2025 was issued in the amount of $139.6 million for
+    the purpose of [...] public infrastructure, parks and fire facilities [...]`,
+  ],
 };

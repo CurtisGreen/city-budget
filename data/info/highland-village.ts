@@ -100,4 +100,10 @@ export const highlandVillageInfo: CityInfo = {
   latitude: 33.0897,
   longitude: -97.06139,
   area: 5.53,
+  notes: [
+    `FY 2022 ACFR: The City of Highland Village's total debt increased by $9,115,000 during the
+    current fiscal year. This is attributed to new debt issuance of $14,240,000 partially offset
+    by net refunded debt of $2,090,000, as well as debt payments of $3,035,000. Interest on
+    long-term debt increased $482,604, as the City issued debt in FY 2022.`,
+  ],
 };

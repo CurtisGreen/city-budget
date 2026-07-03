@@ -100,4 +100,12 @@ export const fortWorthInfo: CityInfo = {
   latitude: 32.756389,
   longitude: -97.3325,
   area: 347.28,
+  notes: [
+    `FY 2020 ACFR: The governmental activities' unrestricted net deficit balance decreased by
+    $1,060,352,000, mostly due to a decrease in Net Pension Liability. Governmental activities
+    expenses decreased by $1,126,367,000 when compared to FY2019. This decrease was primarily
+    in Public Safety of $838,757,000. The negative expense balance reported in Public Safety
+    resulted from its proportionate share of the decrease in Net Pension Liability and an
+    increase in deferred outflows of resources related to pension.`,
+  ],
 };

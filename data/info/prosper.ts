@@ -99,4 +99,10 @@ export const prosperInfo: CityInfo = {
     { usage: "Fire and Emergency Medical Services District", percent: 0.25 },
   ],
   area: 25.23,
+  notes: [
+    `FY 2018 ACFR: Major capital asset events during the current fiscal year included the following:
+    Capital asset acquisitions in governmental activities totaled $30,490[,000]. The majority of this
+    activity was funded from bond proceeds and was for streets, parks, and related infrastructure.
+    [...] Prior period adjustments in both activities for donated assets of $95.7 million from developers.`,
+  ],
 };

@@ -104,7 +104,14 @@ export const grapevineInfo: CityInfo = {
   notes: [
     `FY 2024 ACFR: Two-thirds of the airport [DFW International Airport] properties are located within Grapevine city limits, 
     and Grapevine participates in a legislatively mandated revenue share agreement with the cities of Fort Worth and Dallas.`,
-    `FY 2024 ACFR: Three eighths (3/8th) of one cent of the local sales tax is used to fund the 4B Transit Fund [for TEXRail through Trinity Metro]. 
+    `FY 2024 ACFR: Three eighths (3/8th) of one cent of the local sales tax is used to fund the 4B Transit Fund [for TEXRail through Trinity Metro].
     One eighth (1/8th) of one cent of the local sales tax is used to fund the 4B Economic Development Fund.`,
+    `FY 2018 ACFR: Unrestricted net position is a deficit for the governmental activities and in total
+    for the City. This is due in part to the recognition of the net pension liability under the
+    requirements of GASB Statement No. 68, the recognition of the net OPEB liability under GASB
+    Statement No. 75 [...] net position for the governmental activities in total was decreased by a
+    prior period adjustment to beginning net position of $29,811,384, primarily due to the first year
+    implementation of GASB Statement No. 75, Accounting and Financial Reporting for Postemployment
+    Benefits Other Than Pensions.`,
   ],
 };

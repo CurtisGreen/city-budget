@@ -92,6 +92,12 @@ export const sachseInfo: CityInfo = {
       hotel: 7956,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
+    { usage: "Street Maintenance Sales and Use Tax", percent: 0.25 },
+    { usage: "Municipal Development District", percent: 0.25 },
+  ],
   latitude: 32.976389,
   longitude: -96.586111,
   area: 9.77,

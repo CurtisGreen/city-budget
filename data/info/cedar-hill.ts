@@ -100,8 +100,13 @@ export const cedarHillInfo: CityInfo = {
   ],
   area: 35.79,
   notes: [
-    `FY 2023 ACFR: The City's non-current liabilities increased by $32,499,336 or 26% 
-    which is attributed to the increase in the issuance of certificates of obligations 
+    `FY 2023 ACFR: The City's non-current liabilities increased by $32,499,336 or 26%
+    which is attributed to the increase in the issuance of certificates of obligations
     and a significant increase in the Net Pension Liability.`,
+    `FY 2017 ACFR: The City's total long-term liabilities of $99,809,596 decreased by $90,981,405
+    or 48% during the fiscal year. The City did not issue any new bonded debt during the fiscal
+    year 2017. Total bonded debt decreased by $7,595,000 and the Joe Pool Contract liability of
+    $82,683,592 was 100% eliminated. On December 16, 2016, the City wired funds to TRA in the
+    amount $40,543,911 in full satisfaction of its contractual obligation relating to Joe Pool Lake.`,
   ],
 };

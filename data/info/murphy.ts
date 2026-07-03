@@ -99,4 +99,11 @@ export const murphyInfo: CityInfo = {
     { usage: "Street and sidewalk maintenance", percent: 0.25 },
   ],
   area: 5.7,
+  notes: [
+    `FY 2018 ACFR: the governmental funds of the City of Murphy reported a combined fund balance of
+    $20,885,750, a 187% increase from last year primarily due to proceeds from the issuance of bonds
+    and tax notes to fund new capital projects.`,
+    `FY 2022 ACFR: expenses decreased by $758,956 which was mainly the result of decreased interest
+    expense. [...] due to the issuance of refunding bonds in FY21, resulting in a savings of $1.9 million.`,
+  ],
 };

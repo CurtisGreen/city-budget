@@ -98,4 +98,9 @@ export const theColonyInfo: CityInfo = {
     { usage: "Community Development Corporation", percent: 0.5 },
   ],
   area: 14.01,
+  notes: [
+    `FY 2025 ACFR: The capital projects fund had an increase in fund balance of $51.16 million due
+    primarily to the receipt of debt proceeds. [...] At the end of the current fiscal year, the City
+    had total bonded debt outstanding of $174,825,000.`,
+  ],
 };

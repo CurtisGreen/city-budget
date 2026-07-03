@@ -92,5 +92,10 @@ export const northRichlandHillsInfo: CityInfo = {
       hotel: 430548,
     },
   ],
+  salesTaxUsage: [
+    { usage: "General Fund", percent: 1 },
+    { usage: "Parks and Recreation Facilities Development Corporation", percent: 0.5 },
+    { usage: "Crime Control and Prevention District", percent: 0.5 },
+  ],
   area: 18.43,
 };
