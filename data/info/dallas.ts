@@ -131,7 +131,12 @@ export const dallasInfo: CityInfo = {
   ],
   area: 339.6,
   notes: [
-    `FY 2016 ACFR: Long-term liabilities increased by $2.9 billion in the governmental activities 
+    `FY 2016 ACFR: Long-term liabilities increased by $2.9 billion in the governmental activities
     due to a net increase in the net pension liability of $2.9 billion.`,
+    `FY 2018 ACFR: Long-term liabilities decreased by $3.5 billion in the governmental activities
+    due to a net decrease in the net pension liability of $4.1 billion, offset by an increase in
+    bonds payable of $194.0 million. [...] This was mostly due to negative pension expenses of
+    $1.2 billion resulting from changes made to the benefits and contributions of the Dallas Police
+    and Fire Pension System mandated by House Bill 3158 that became effective September 1, 2017.`,
   ],
 };
