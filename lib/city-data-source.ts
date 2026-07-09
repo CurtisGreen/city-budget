@@ -43,6 +43,7 @@ import { bedfordInfo } from "@/data/info/bedford";
 import { theColonyInfo } from "@/data/info/the-colony";
 import { kellerInfo } from "@/data/info/keller";
 import { hurstInfo } from "@/data/info/hurst";
+import { roanokeInfo } from "@/data/info/roanoke";
 import { haltomCityInfo } from "@/data/info/haltom-city";
 import { highlandVillageInfo } from "@/data/info/highland-village";
 import { westlakeInfo } from "@/data/info/westlake";
@@ -91,6 +92,7 @@ import { bedfordGeoJson } from "@/data/geojson/bedford-geojson";
 import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
+import { roanokeGeoJson } from "@/data/geojson/roanoke-geojson";
 import { haltomCityGeoJson } from "@/data/geojson/haltom-city-geojson";
 import { highlandVillageGeoJson } from "@/data/geojson/highland-village-geojson";
 import { westlakeGeoJson } from "@/data/geojson/westlake-geojson";
@@ -142,6 +144,7 @@ const basicCityInfo = [
   theColonyInfo,
   kellerInfo,
   hurstInfo,
+  roanokeInfo,
   haltomCityInfo,
   highlandVillageInfo,
   westlakeInfo,
@@ -209,6 +212,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...theColonyGeoJson.features,
   ...kellerGeoJson.features,
   ...hurstGeoJson.features,
+  ...roanokeGeoJson.features,
   ...haltomCityGeoJson.features,
   ...highlandVillageGeoJson.features,
   ...westlakeGeoJson.features,
