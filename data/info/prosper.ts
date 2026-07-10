@@ -83,7 +83,7 @@ export const prosperInfo: CityInfo = {
       fiscalYear: 2024,
       property: 45951000,
       sales: 19540000,
-      hotel: 2481874,
+      hotel: 0,
     },
     {
       fiscalYear: 2025,
