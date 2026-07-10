@@ -75,7 +75,7 @@ export const celinaInfo: CityInfo = {
   ],
   revenueBySource: {
     property: 36490482,
-    sales: 5839562,
+    sales: 4925187,
     hotel: 0,
   },
   revenues: [
@@ -98,4 +98,11 @@ export const celinaInfo: CityInfo = {
     { usage: "Community Development Corporation", percent: 0.5 },
   ],
   area: 47.725,
+  notes: [
+    `FY 2023 ACFR: The City's total amount of outstanding bonded debt is $355.13 million,
+      an increase of $82.18 million due to the issuance of $91 million revenue certificates
+      of obligation in 2023 partially offset by scheduled debt payments.`,
+    `Data correction for FY2025: $164.2M of restricted cash misclassified as Capital Assets.
+      This site shows it correctly classified as Current & Other Assets to match the audited Statement of Net Position.`,
+  ],
 };
