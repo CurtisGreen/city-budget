@@ -103,6 +103,6 @@ export const celinaInfo: CityInfo = {
       an increase of $82.18 million due to the issuance of $91 million revenue certificates
       of obligation in 2023 partially offset by scheduled debt payments.`,
     `Data correction for FY2025: $164.2M of restricted cash misclassified as Capital Assets.
-      This site shows it correctly classified as Current & Other Assets to match the audited Statement of Net Position.`,
+      I classified it as Current & Other Assets to match all other yearly reports.`,
   ],
 };
