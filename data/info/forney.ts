@@ -102,6 +102,7 @@ export const forneyInfo: CityInfo = {
   longitude: -96.45583,
   area: 15.8,
   notes: [
-    `ACFR 2024: "the City received $25,455,316 of infrastructure donated by developers [...] the City received $18,989,006 in developer contributions in 2024" — developer-donated infrastructure (also $16,863,752 governmental in FY2023) drove the FY2022–2024 surge in external capital contributions and, as newly built low-depreciation assets entered the books, lifted asset life.`,
+    `ACFR 2024: "the City received $25,455,316 of infrastructure donated by developers. [...] 
+    Additionally, the City received $18,989,006 in developer contributions in 2024"`,
   ],
 };
