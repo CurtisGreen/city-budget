@@ -78,20 +78,6 @@ export const rowlettInfo: CityInfo = {
     sales: 9809000,
     hotel: 69515,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 55175000,
-      sales: 9809000,
-      hotel: 69515,
-    },
-    {
-      fiscalYear: 2025,
-      property: 134730000,
-      sales: 55353000,
-      hotel: 25489,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

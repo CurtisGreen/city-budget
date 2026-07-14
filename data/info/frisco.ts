@@ -78,20 +78,6 @@ export const friscoInfo: CityInfo = {
     sales: 69858143,
     hotel: 12959430,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 203270427,
-      sales: 69858143,
-      hotel: 12959430,
-    },
-    {
-      fiscalYear: 2025,
-      property: 219764171,
-      sales: 71287695,
-      hotel: 14139867,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

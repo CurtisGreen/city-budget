@@ -78,20 +78,6 @@ export const celinaInfo: CityInfo = {
     sales: 4925187,
     hotel: 0,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 36490482,
-      sales: 4925187,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 47329947,
-      sales: 5839562,
-      hotel: 0,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

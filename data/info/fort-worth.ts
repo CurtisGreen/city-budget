@@ -78,20 +78,6 @@ export const fortWorthInfo: CityInfo = {
     sales: 353942000,
     hotel: 59674000,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 749673000,
-      sales: 353942000,
-      hotel: 59674000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 789222000,
-      sales: 368854000,
-      hotel: 67418000,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Trinity Metro", percent: 0.5 },

@@ -78,20 +78,6 @@ export const desotoInfo: CityInfo = {
     sales: 11665423,
     hotel: 1346468,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 48642710,
-      sales: 11665423,
-      hotel: 1346468,
-    },
-    {
-      fiscalYear: 2025,
-      property: 51451919,
-      sales: 11723283,
-      hotel: 1424966,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Abatement", percent: 0.5 },

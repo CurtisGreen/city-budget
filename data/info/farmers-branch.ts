@@ -78,20 +78,6 @@ export const farmersBranchInfo: CityInfo = {
     sales: 24406225,
     hotel: 3515051,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 50038531,
-      sales: 24406225,
-      hotel: 3515051,
-    },
-    {
-      fiscalYear: 2025,
-      property: 49600517,
-      sales: 25051912,
-      hotel: 3494683,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

@@ -78,20 +78,6 @@ export const allenInfo: CityInfo = {
     sales: 31547688,
     hotel: 2481874,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 83821874,
-      sales: 31547688,
-      hotel: 2481874,
-    },
-    {
-      fiscalYear: 2025,
-      property: 89170582,
-      sales: 32389161,
-      hotel: 2696118,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

@@ -78,20 +78,6 @@ export const forneyInfo: CityInfo = {
     sales: 12356036,
     hotel: 179341,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 19210348,
-      sales: 12356036,
-      hotel: 179341,
-    },
-    {
-      fiscalYear: 2025,
-      property: 24464190,
-      sales: 12715492,
-      hotel: 250765,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Reduction", percent: 0.5 },

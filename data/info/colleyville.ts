@@ -78,20 +78,6 @@ export const colleyvilleInfo: CityInfo = {
     sales: 10654186,
     hotel: 219059,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 17904226,
-      sales: 10654186,
-      hotel: 219059,
-    },
-    {
-      fiscalYear: 2025,
-      property: 18967177,
-      sales: 11111344,
-      hotel: 203402,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

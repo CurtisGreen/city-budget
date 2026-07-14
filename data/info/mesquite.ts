@@ -78,20 +78,6 @@ export const mesquiteInfo: CityInfo = {
     sales: 61086000,
     hotel: 1990000,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 89790000,
-      sales: 61086000,
-      hotel: 1990000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 100843049,
-      sales: 65945105,
-      hotel: 1717534,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Abatement", percent: 0.5 },

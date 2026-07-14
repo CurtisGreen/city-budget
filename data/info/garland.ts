@@ -78,20 +78,6 @@ export const garlandInfo: CityInfo = {
     sales: 46641936,
     hotel: 1764356,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 163692333,
-      sales: 46641936,
-      hotel: 1764356,
-    },
-    {
-      fiscalYear: 2025,
-      property: 182673314,
-      sales: 54910882,
-      hotel: 1595434,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

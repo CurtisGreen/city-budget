@@ -78,20 +78,6 @@ export const littleElmInfo: CityInfo = {
     sales: 10483808,
     hotel: 190432,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 42342937,
-      sales: 10483808,
-      hotel: 190432,
-    },
-    {
-      fiscalYear: 2025,
-      property: 43233523,
-      sales: 10630908,
-      hotel: 200915,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

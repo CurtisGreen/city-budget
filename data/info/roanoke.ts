@@ -78,20 +78,6 @@ export const roanokeInfo: CityInfo = {
     sales: 19250692,
     hotel: 177365,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 11804174,
-      sales: 19250692,
-      hotel: 177365,
-    },
-    {
-      fiscalYear: 2025,
-      property: 11877593,
-      sales: 22247339,
-      hotel: 124812,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     {

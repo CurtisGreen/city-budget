@@ -78,20 +78,6 @@ export const prosperInfo: CityInfo = {
     sales: 19540000,
     hotel: 0,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 45951000,
-      sales: 19540000,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 52663000,
-      sales: 20522000,
-      hotel: 0,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

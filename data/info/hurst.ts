@@ -78,20 +78,6 @@ export const hurstInfo: CityInfo = {
     sales: 24289712,
     hotel: 858190,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 23090993,
-      sales: 24289712,
-      hotel: 858190,
-    },
-    {
-      fiscalYear: 2025,
-      property: 23832089,
-      sales: 24881102,
-      hotel: 722876,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Services Development Corporation", percent: 0.5 },

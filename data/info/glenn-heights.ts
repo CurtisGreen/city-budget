@@ -78,20 +78,6 @@ export const glennHeightsInfo: CityInfo = {
     sales: 1274335,
     hotel: 0,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 9363297,
-      sales: 1274335,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 10223392,
-      sales: 1283442,
-      hotel: 0,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

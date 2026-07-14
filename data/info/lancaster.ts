@@ -78,20 +78,6 @@ export const lancasterInfo: CityInfo = {
     sales: 14491661,
     hotel: 370823,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 34020989,
-      sales: 14491661,
-      hotel: 370823,
-    },
-    {
-      fiscalYear: 2025,
-      property: 39259277,
-      sales: 13901534,
-      hotel: 216292,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.25 },
     { usage: "Recreational Development Corporation", percent: 0.5 },

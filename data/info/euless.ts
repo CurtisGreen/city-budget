@@ -78,20 +78,6 @@ export const eulessInfo: CityInfo = {
     sales: 29310000,
     hotel: 1656000,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 30133000,
-      sales: 29310000,
-      hotel: 1656000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 31877000,
-      sales: 32032000,
-      hotel: 1698000,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

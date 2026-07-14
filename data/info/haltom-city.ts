@@ -78,20 +78,6 @@ export const haltomCityInfo: CityInfo = {
     sales: 18351400,
     hotel: 124918,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 22136941,
-      sales: 18351400,
-      hotel: 124918,
-    },
-    {
-      fiscalYear: 2025,
-      property: 23949755,
-      sales: 19238917,
-      hotel: 238751,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.375 },
     { usage: "Street Maintenance", percent: 0.375 },

@@ -78,20 +78,6 @@ export const murphyInfo: CityInfo = {
     sales: 3624540,
     hotel: 0,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 13893953,
-      sales: 3624540,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 13503519,
-      sales: 3769402,
-      hotel: 0,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

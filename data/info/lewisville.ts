@@ -78,20 +78,6 @@ export const lewisvilleInfo: CityInfo = {
     sales: 53324026,
     hotel: 2871093,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 89468037,
-      sales: 53324026,
-      hotel: 2871093,
-    },
-    {
-      fiscalYear: 2025,
-      property: 95138938,
-      sales: 54219344,
-      hotel: 2807960,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DCTA", percent: 0.5 },

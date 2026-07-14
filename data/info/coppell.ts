@@ -78,20 +78,6 @@ export const coppellInfo: CityInfo = {
     sales: 50129985,
     hotel: 1077103,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 50622199,
-      sales: 50129985,
-      hotel: 1077103,
-    },
-    {
-      fiscalYear: 2025,
-      property: 53042745,
-      sales: 47572408,
-      hotel: 1302889,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Recreation Development Corporation", percent: 0.5 },

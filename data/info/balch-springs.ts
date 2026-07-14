@@ -78,20 +78,6 @@ export const balchSpringsInfo: CityInfo = {
     sales: 8891822,
     hotel: 277495,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 14651191,
-      sales: 8891822,
-      hotel: 277495,
-    },
-    {
-      fiscalYear: 2025,
-      property: 16365975,
-      sales: 8728310,
-      hotel: 255084,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Rebate", percent: 0.25 },

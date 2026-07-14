@@ -78,20 +78,6 @@ export const kellerInfo: CityInfo = {
     sales: 18881959,
     hotel: 233794,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 23747476,
-      sales: 18881959,
-      hotel: 233794,
-    },
-    {
-      fiscalYear: 2025,
-      property: 23766426,
-      sales: 19303861,
-      hotel: 227734,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Park Development Corporation", percent: 0.5 },

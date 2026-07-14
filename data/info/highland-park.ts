@@ -78,20 +78,6 @@ export const highlandParkInfo: CityInfo = {
     sales: 8801419,
     hotel: 0,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 18400369,
-      sales: 8801419,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 19484406,
-      sales: 9388670,
-      hotel: 0,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART (until 2029)", percent: 1 },

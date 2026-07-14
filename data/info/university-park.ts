@@ -78,20 +78,6 @@ export const universityParkInfo: CityInfo = {
     sales: 7533753,
     hotel: 0,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 24925555,
-      sales: 7533753,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 26791661,
-      sales: 7751865,
-      hotel: 0,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

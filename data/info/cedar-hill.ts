@@ -78,20 +78,6 @@ export const cedarHillInfo: CityInfo = {
     sales: 12808093,
     hotel: 459215,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 40413522,
-      sales: 12808093,
-      hotel: 459215,
-    },
-    {
-      fiscalYear: 2025,
-      property: 44172965,
-      sales: 12978718,
-      hotel: 493006,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

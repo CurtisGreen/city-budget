@@ -78,20 +78,6 @@ export const mansfieldInfo: CityInfo = {
     sales: 31497759,
     hotel: 1150419,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 80163826,
-      sales: 31497759,
-      hotel: 1150419,
-    },
-    {
-      fiscalYear: 2025,
-      property: 85810225,
-      sales: 29769057,
-      hotel: 1147738,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Park Facilities Development Corporation", percent: 0.5 },

@@ -78,20 +78,6 @@ export const flowerMoundInfo: CityInfo = {
     sales: 37844425,
     hotel: 734306,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 63095966,
-      sales: 37844425,
-      hotel: 734306,
-    },
-    {
-      fiscalYear: 2025,
-      property: 65358260,
-      sales: 38241424,
-      hotel: 796281,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.25 },

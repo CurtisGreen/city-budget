@@ -78,20 +78,6 @@ export const westlakeInfo: CityInfo = {
     sales: 11985325,
     hotel: 748500,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 4008157,
-      sales: 11985325,
-      hotel: 748500,
-    },
-    {
-      fiscalYear: 2025,
-      property: 4357604,
-      sales: 16048173,
-      hotel: 549850,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

@@ -78,20 +78,6 @@ export const arlingtonInfo: CityInfo = {
     sales: 165531000,
     hotel: 15477000,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 224172000,
-      sales: 165531000,
-      hotel: 15477000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 236841000,
-      sales: 162843000,
-      hotel: 15366000,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Sports venue debt", percent: 0.5 },

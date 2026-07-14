@@ -78,20 +78,6 @@ export const southlakeInfo: CityInfo = {
     sales: 44830166,
     hotel: 2403888,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 43315203,
-      sales: 44830166,
-      hotel: 2403888,
-    },
-    {
-      fiscalYear: 2025,
-      property: 44757795,
-      sales: 45818639,
-      hotel: 2528060,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Parks Development Corporation", percent: 0.5 },

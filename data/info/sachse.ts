@@ -78,20 +78,6 @@ export const sachseInfo: CityInfo = {
     sales: 3866139,
     hotel: 15924,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 28198987,
-      sales: 3866139,
-      hotel: 15924,
-    },
-    {
-      fiscalYear: 2025,
-      property: 29109122,
-      sales: 3883342,
-      hotel: 7956,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

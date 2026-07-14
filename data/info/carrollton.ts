@@ -78,20 +78,6 @@ export const carrolltonInfo: CityInfo = {
     sales: 49712276,
     hotel: 577425,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 115162154,
-      sales: 49712276,
-      hotel: 577425,
-    },
-    {
-      fiscalYear: 2025,
-      property: 120216758,
-      sales: 52632624,
-      hotel: 534573,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

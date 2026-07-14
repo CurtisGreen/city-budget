@@ -111,20 +111,6 @@ export const dallasInfo: CityInfo = {
     sales: 439666000,
     hotel: 109446000,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 1415798000,
-      sales: 439666000,
-      hotel: 109446000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 1490106000,
-      sales: 453319000,
-      hotel: 107634000,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

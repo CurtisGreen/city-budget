@@ -78,20 +78,6 @@ export const bedfordInfo: CityInfo = {
     sales: 16511500,
     hotel: 1435955,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 27798175,
-      sales: 16511500,
-      hotel: 1435955,
-    },
-    {
-      fiscalYear: 2025,
-      property: 29436036,
-      sales: 16612082,
-      hotel: 1231302,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Street Improvement Economic Development Corporation", percent: 0.5 },

@@ -1,5 +1,5 @@
 import type { CityData } from "./types";
-import { readACFR } from "./acfr-csv-processor";
+import { acfrData } from "@/data/acfr-json";
 import { calculateACFRMetrics } from "./format-chart-data";
 import { dallasInfo } from "@/data/info/dallas";
 import { arlingtonInfo } from "@/data/info/arlington";
@@ -104,8 +104,6 @@ import { littleElmGeoJson } from "@/data/geojson/little-elm-geojson";
 import { southlakeGeoJson } from "@/data/geojson/southlake-geojson";
 import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 
-import { join } from "node:path";
-
 const basicCityInfo = [
   dallasInfo,
   planoInfo,
@@ -161,11 +159,11 @@ const basicCityInfo = [
 
 // Calculate metrics for each city
 const cityData: CityData[] = basicCityInfo.map((info) => {
-  const financialData = readACFR(
-    join(process.cwd(), "data/acfr", info.id + ".csv"),
-  );
+  const acfr = acfrData[info.id] ?? { financialData: [], revenues: [] };
+  const financialData = acfr.financialData;
   const metrics = financialData.map(calculateACFRMetrics);
-  return { info, financialData, metrics };
+  // revenues was moved out of the info files into data/acfr-json.
+  return { info: { ...info, revenues: acfr.revenues }, financialData, metrics };
 });
 
 export function getCityData(cityId: string): CityData | undefined {

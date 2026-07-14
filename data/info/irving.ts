@@ -78,10 +78,6 @@ export const irvingInfo: CityInfo = {
     sales: 108213000,
     hotel: 31981000,
   },
-  revenues: [
-    { fiscalYear: 2024, property: 223022000, sales: 108213000, hotel: 31981000 },
-    { fiscalYear: 2025, property: 240903000, sales: 118742000, hotel: 35072000 },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

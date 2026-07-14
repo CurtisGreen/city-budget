@@ -78,20 +78,6 @@ export const rockwallInfo: CityInfo = {
     sales: 27410743,
     hotel: 1996313,
   },
-  revenues: [
-    {
-      fiscalYear: 2024,
-      property: 24590290,
-      sales: 27410743,
-      hotel: 1996313,
-    },
-    {
-      fiscalYear: 2025,
-      property: 24600186,
-      sales: 29132659,
-      hotel: 1925627,
-    },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },

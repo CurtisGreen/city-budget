@@ -78,10 +78,6 @@ export const duncanvilleInfo: CityInfo = {
     sales: 10101931,
     hotel: 1220834,
   },
-  revenues: [
-    { fiscalYear: 2024, property: 22377809, sales: 10101931, hotel: 1220834 },
-    { fiscalYear: 2025, property: 24244267, sales: 10481239, hotel: 1077731 },
-  ],
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property tax abatement", percent: 0.5 },
