@@ -23,32 +23,49 @@ export function parseCSV(csvContent: string): Record<string, number>[] {
 
     headers.forEach((header, index) => {
       const value = values[index];
-      row[header] = Number(value);
+      // Empty cell -> NaN so optionalNumber() can tell it from a real 0.
+      row[header] = value === undefined || value === "" ? NaN : Number(value);
     });
 
     return row;
   });
 }
 
+// Required columns: blank (NaN) -> 0, preserving the original Number("") behavior.
+const num = (value: number): number => (Number.isNaN(value) ? 0 : value);
+
+// Optional columns: absent or blank -> undefined so metrics can skip them.
+const optionalNumber = (value: number | undefined): number | undefined =>
+  value === undefined || Number.isNaN(value) ? undefined : value;
+
 const formatData = (row: Record<string, number>): CityFinancialData => ({
-  fiscalYear: row["Fiscal Year"],
-  currentAndOtherAssets: row["Current and Other Assets"],
-  capitalAssets: row["Capital Assets"],
-  deferredOutflows: row["Deferred outflows"],
-  liabilities: row["Total Liabilities"],
-  deferredInflows: row["Deferred inflows"],
-  totalRevenue: row["Total revenues"],
-  operatingGrantsAndContributions: row["Operating Grants & Contributions"],
-  capitalGrantsAndContributions: row["Capital Grants & Contributions"],
-  debInterest: row["Debt service / interest"],
-  capitalAssetsNetofDepreciation:
+  fiscalYear: num(row["Fiscal Year"]),
+  currentAndOtherAssets: num(row["Current and Other Assets"]),
+  capitalAssets: num(row["Capital Assets"]),
+  deferredOutflows: num(row["Deferred outflows"]),
+  liabilities: num(row["Total Liabilities"]),
+  deferredInflows: num(row["Deferred inflows"]),
+  totalRevenue: num(row["Total revenues"]),
+  operatingGrantsAndContributions: num(row["Operating Grants & Contributions"]),
+  capitalGrantsAndContributions: num(row["Capital Grants & Contributions"]),
+  debInterest: num(row["Debt service / interest"]),
+  governmentalExpenses: optionalNumber(row["Governmental expenses"]),
+  governmentalCapitalGrants: optionalNumber(row["Governmental capital grants"]),
+  governmentalRevenues: optionalNumber(row["Governmental revenues"]),
+  businessTypeExpenses: optionalNumber(row["Business-type expenses"]),
+  capitalAssetsNetofDepreciation: optionalNumber(
     row["Capital assets (net of depreciation/amortization)"],
-  governmentCapitalAssetsNotBeingDepreciated:
+  ),
+  governmentCapitalAssetsNotBeingDepreciated: num(
     row["Government capital assets not being depreciated"],
-  governmentCapitalAssetsBeingDepreciated:
+  ),
+  governmentCapitalAssetsBeingDepreciated: num(
     row["Government capital assets being depreciated"],
-  businessCapitalAssetsNotBeingDepreciated:
+  ),
+  businessCapitalAssetsNotBeingDepreciated: num(
     row["Business capital assets not being depreciated"],
-  businessCapitalAssetsBeingDepreciated:
+  ),
+  businessCapitalAssetsBeingDepreciated: num(
     row["Business capital assets being depreciated"],
+  ),
 });

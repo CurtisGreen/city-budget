@@ -7,10 +7,12 @@ export const ChartExplanationCard = ({
   understandingTheMetric,
   whatToLookFor,
   formula,
+  source,
 }: {
   understandingTheMetric: string;
   whatToLookFor: string;
   formula?: string;
+  source?: { label: string; url: string };
 }) => (
   <Card className="bg-muted/30">
     <CardHeader>
@@ -30,6 +32,19 @@ export const ChartExplanationCard = ({
         <h4 className="font-semibold text-sm mb-1">What to Look For</h4>
         <p className="text-sm text-muted-foreground">{whatToLookFor}</p>
       </div>
+      {source && (
+        <div>
+          <h4 className="font-semibold text-sm mb-1">Source</h4>
+          <a
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-primary underline underline-offset-2"
+          >
+            {source.label}
+          </a>
+        </div>
+      )}
     </CardContent>
   </Card>
 );

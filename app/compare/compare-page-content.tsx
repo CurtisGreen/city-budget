@@ -45,6 +45,9 @@ const metricConfigs: {
   { key: "interestToRevenue", formatType: "percent" },
   { key: "netBookValueToCostOfTCA", formatType: "percent" },
   { key: "externalTransfersToRevenue", formatType: "percent" },
+  // Not rendered yet (see types.ts).
+  // { key: "structuralOperatingRatio", formatType: "percent" },
+  // { key: "utilitySelfSupport", formatType: "percent" },
 ];
 
 export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
@@ -191,6 +194,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                     }
                     whatToLookFor={chartConfigs[metricConfig.key].whatToLookFor}
                     formula={chartConfigs[metricConfig.key].formula}
+                    source={chartConfigs[metricConfig.key].source}
                   />
                 </div>
               ))}

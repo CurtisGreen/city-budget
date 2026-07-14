@@ -62,6 +62,15 @@ const metricConfigs: MetricConfig[] = [
     formatType: "number",
     maximumFractionDigits: 1,
   },
+  // Not rendered yet (see types.ts).
+  // {
+  //   key: "structuralOperatingRatio",
+  //   formatType: "percent",
+  // },
+  // {
+  //   key: "utilitySelfSupport",
+  //   formatType: "percent",
+  // },
 ];
 
 interface CityLeaderboardProps {

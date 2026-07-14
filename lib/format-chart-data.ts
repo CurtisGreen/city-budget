@@ -36,6 +36,27 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const totalSurplus = netFinancialPosition + surplusAssetLife;
   const yearsOfSurplusRevenue = totalSurplus / data.totalRevenue;
 
+  // --- Structural operating ratio + utility self-support (not rendered yet) ---
+  // GFOA structural balance: governmental, recurring revenue (strips one-time capital
+  // contributions). NaN where the optional gov columns are absent. Source:
+  // https://www.gfoa.org/materials/achieving-a-structurally-balanced-budget
+  //
+  // const govRecurringRevenue =
+  //   (data.governmentalRevenues ?? NaN) - (data.governmentalCapitalGrants ?? 0);
+  // // < 1.0 = recurring revenue covers expenses; > 1.0 = structural deficit.
+  // const structuralOperatingRatio =
+  //   (data.governmentalExpenses ?? NaN) / govRecurringRevenue;
+  //
+  // // Utility tested separately (never blended into the governmental ratio).
+  // // Business-type capital grants are derived: TPG capital grants - governmental.
+  // const businessCapitalGrants =
+  //   data.capitalGrantsAndContributions - (data.governmentalCapitalGrants ?? 0);
+  // const businessRecurringRevenue =
+  //   data.totalRevenue - (data.governmentalRevenues ?? NaN) - businessCapitalGrants;
+  // // >= 1.0 = utility covers its own recurring costs from rates.
+  // const utilitySelfSupport =
+  //   businessRecurringRevenue / (data.businessTypeExpenses ?? NaN);
+
   return {
     fiscalYear: data.fiscalYear,
     netFinancialPosition,
@@ -46,6 +67,8 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
     netBookValueToCostOfTCA,
     externalTransfersToRevenue,
     yearsOfSurplusRevenue,
+    // structuralOperatingRatio,
+    // utilitySelfSupport,
   };
 }
 

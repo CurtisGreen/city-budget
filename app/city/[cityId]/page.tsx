@@ -80,6 +80,17 @@ const metricConfigs: {
     formatType: "percent",
     showAverage: true,
   },
+  // Not rendered yet (see types.ts).
+  // {
+  //   key: "structuralOperatingRatio",
+  //   formatType: "percent",
+  //   showAverage: false,
+  // },
+  // {
+  //   key: "utilitySelfSupport",
+  //   formatType: "percent",
+  //   showAverage: false,
+  // },
 ];
 
 export default async function CityPage({ params }: CityPageProps) {
@@ -184,6 +195,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   understandingTheMetric={chartConfigs[config.key].whatItMeans}
                   whatToLookFor={chartConfigs[config.key].whatToLookFor}
                   formula={chartConfigs[config.key].formula}
+                  source={chartConfigs[config.key].source}
                 />
               </div>
             ))}

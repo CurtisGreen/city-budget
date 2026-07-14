@@ -9,6 +9,14 @@ export interface CityFinancialData {
   operatingGrantsAndContributions: number;
   capitalGrantsAndContributions: number;
   debInterest: number;
+  // Optional Statement of Activities figures, governmental vs business-type.
+  // Forney FY2023+ only; report order after debInterest.
+  governmentalExpenses?: number;
+  // Governmental capital grants (one-time); subset of TPG capitalGrantsAndContributions.
+  governmentalCapitalGrants?: number;
+  // Governmental revenues, all-in (program + general, excludes transfers).
+  governmentalRevenues?: number;
+  businessTypeExpenses?: number;
   capitalAssetsNetofDepreciation?: number;
   governmentCapitalAssetsNotBeingDepreciated: number;
   governmentCapitalAssetsBeingDepreciated: number;
@@ -26,6 +34,9 @@ export interface CityMetrics {
   netBookValueToCostOfTCA: number;
   externalTransfersToRevenue: number;
   yearsOfSurplusRevenue: number;
+  // Not rendered yet (see lib/format-chart-data.ts).
+  // structuralOperatingRatio: number;
+  // utilitySelfSupport: number;
 }
 
 export interface Population {
@@ -93,6 +104,8 @@ export interface ChartConfig {
   downwardDescription: string;
   range?: [number | string, number | string];
   formula: string;
+  // Optional source citation for the explanation card.
+  source?: { label: string; url: string };
 }
 
 export type ChartFormatType = "percent" | "currency" | "number";

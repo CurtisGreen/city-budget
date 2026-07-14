@@ -108,4 +108,42 @@ export const chartConfigs: Record<string, ChartConfig> = {
     formula:
       "(((Asset life - Average DFW asset life) * Gross capital assets) + Net financial position) / Total revenue",
   },
+  // Not rendered yet (see types.ts).
+  // structuralOperatingRatio: {
+  //   title: "Structural Operating Ratio",
+  //   description:
+  //     "Governmental expenses divided by recurring governmental revenue (excludes one-time capital contributions).",
+  //   whatItMeans:
+  //     "This shows whether the city can cover its operating costs from recurring revenue alone. A ratio below 100% means recurring taxes and fees fully fund operations; above 100% means the city depends on one-time money like developer contributions to break even.",
+  //   whatToLookFor:
+  //     "A rising trend toward or above 100% means the city is leaning on one-time funding to operate — a risk once growth slows. A falling trend shows strengthening self-sufficiency.",
+  //   positiveDirection: "down",
+  //   upwardDescription: "Less Sustainable",
+  //   downwardDescription: "More Sustainable",
+  //   range: [0.8, 1.2],
+  //   formula:
+  //     "Governmental expenses / (Governmental revenues - Governmental capital grants)",
+  //   source: {
+  //     label: "GFOA — Achieving a Structurally Balanced Budget",
+  //     url: "https://www.gfoa.org/materials/achieving-a-structurally-balanced-budget",
+  //   },
+  // },
+  // utilitySelfSupport: {
+  //   title: "Utility Self-Support",
+  //   description:
+  //     "Business-type recurring revenue divided by business-type expenses.",
+  //   whatItMeans:
+  //     "This shows whether the utility (water/sewer) covers its own recurring costs from rates. Below 100% means the general fund is subsidizing it.",
+  //   whatToLookFor:
+  //     "A value at or above 100% means the utility is self-supporting. A falling trend below 100% signals a hidden drain on general operations.",
+  //   positiveDirection: "up",
+  //   upwardDescription: "More Sustainable",
+  //   downwardDescription: "Less Sustainable",
+  //   formula:
+  //     "(Total revenues - Governmental revenues - (Capital grants - Governmental capital grants)) / Business-type expenses",
+  //   source: {
+  //     label: "GFOA — Achieving a Structurally Balanced Budget",
+  //     url: "https://www.gfoa.org/materials/achieving-a-structurally-balanced-budget",
+  //   },
+  // },
 };
