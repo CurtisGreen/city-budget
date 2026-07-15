@@ -160,20 +160,36 @@ export const universityParkAcfr: CityFinancialData[] = [
     "governmentCapitalAssetsBeingDepreciated": 129166386,
     "businessCapitalAssetsNotBeingDepreciated": 16545799,
     "businessCapitalAssetsBeingDepreciated": 120100935
+  },
+  {
+    "fiscalYear": 2025,
+    "currentAndOtherAssets": 71359706,
+    "capitalAssets": 205399983,
+    "deferredOutflows": 5365267,
+    "liabilities": 53459871,
+    "deferredInflows": 5388000,
+    "totalRevenue": 85059618,
+    "operatingGrantsAndContributions": 0,
+    "capitalGrantsAndContributions": 10095584,
+    "debInterest": 54562,
+    "governmentCapitalAssetsNotBeingDepreciated": 41780771,
+    "governmentCapitalAssetsBeingDepreciated": 140036569,
+    "businessCapitalAssetsNotBeingDepreciated": 13644435,
+    "businessCapitalAssetsBeingDepreciated": 135230758
   }
 ];
 
 export const universityParkRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 24925555,
-      sales: 7533753,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 26791661,
-      sales: 7751865,
-      hotel: 0,
-    },
-  ];
+  {
+    fiscalYear: 2024,
+    property: 24925555,
+    sales: 7533753,
+    hotel: 0,
+  },
+  {
+    fiscalYear: 2025,
+    property: 26791661,
+    sales: 7751865,
+    hotel: 0,
+  },
+];
