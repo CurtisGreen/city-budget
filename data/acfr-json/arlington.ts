@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const arlingtonAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const arlingtonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 224172000,
+    "salesTaxRevenue": 165531000,
+    "hotelTaxRevenue": 15477000,
     "currentAndOtherAssets": 1138000000,
     "capitalAssets": 4192000000,
     "deferredOutflows": 102000000,
@@ -173,6 +176,9 @@ export const arlingtonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 236841000,
+    "salesTaxRevenue": 162843000,
+    "hotelTaxRevenue": 15366000,
     "currentAndOtherAssets": 1112000000,
     "capitalAssets": 4268000000,
     "deferredOutflows": 55000000,
@@ -189,18 +195,3 @@ export const arlingtonAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 1496875000
   }
 ];
-
-export const arlingtonRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 224172000,
-      sales: 165531000,
-      hotel: 15477000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 236841000,
-      sales: 162843000,
-      hotel: 15366000,
-    },
-  ];

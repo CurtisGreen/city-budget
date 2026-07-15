@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const bedfordAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const bedfordAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 27798175,
+    "salesTaxRevenue": 16511500,
+    "hotelTaxRevenue": 1435955,
     "currentAndOtherAssets": 137179000,
     "capitalAssets": 197175000,
     "deferredOutflows": 5186000,
@@ -163,6 +166,9 @@ export const bedfordAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 29436036,
+    "salesTaxRevenue": 16612082,
+    "hotelTaxRevenue": 1231302,
     "currentAndOtherAssets": 134851000,
     "capitalAssets": 196915000,
     "deferredOutflows": 4336000,
@@ -178,18 +184,3 @@ export const bedfordAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 120829707
   }
 ];
-
-export const bedfordRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 27798175,
-      sales: 16511500,
-      hotel: 1435955,
-    },
-    {
-      fiscalYear: 2025,
-      property: 29436036,
-      sales: 16612082,
-      hotel: 1231302,
-    },
-  ];

@@ -159,11 +159,9 @@ const basicCityInfo = [
 
 // Calculate metrics for each city
 const cityData: CityData[] = basicCityInfo.map((info) => {
-  const acfr = acfrData[info.id] ?? { financialData: [], revenues: [] };
-  const financialData = acfr.financialData;
+  const financialData = acfrData[info.id] ?? [];
   const metrics = financialData.map(calculateACFRMetrics);
-  // revenues was moved out of the info files into data/acfr-json.
-  return { info: { ...info, revenues: acfr.revenues }, financialData, metrics };
+  return { info, financialData, metrics };
 });
 
 export function getCityData(cityId: string): CityData | undefined {

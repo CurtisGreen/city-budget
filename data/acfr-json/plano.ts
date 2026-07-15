@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const planoAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const planoAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 242281161,
+    "salesTaxRevenue": 120262825,
+    "hotelTaxRevenue": 12895296,
     "currentAndOtherAssets": 761970000,
     "capitalAssets": 2093820000,
     "deferredOutflows": 147830000,
@@ -173,6 +176,9 @@ export const planoAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 255314504,
+    "salesTaxRevenue": 132059636,
+    "hotelTaxRevenue": 13342764,
     "currentAndOtherAssets": 801184000,
     "capitalAssets": 2235788000,
     "deferredOutflows": 92961000,
@@ -189,18 +195,3 @@ export const planoAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 936307000
   }
 ];
-
-export const planoRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 242281161,
-      sales: 120262825,
-      hotel: 12895296,
-    },
-    {
-      fiscalYear: 2025,
-      property: 255314504,
-      sales: 132059636,
-      hotel: 13342764,
-    },
-  ];

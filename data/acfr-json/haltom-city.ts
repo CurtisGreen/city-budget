@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const haltomCityAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const haltomCityAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 22136941,
+    "salesTaxRevenue": 18351400,
+    "hotelTaxRevenue": 124918,
     "currentAndOtherAssets": 177072177,
     "capitalAssets": 187734050,
     "deferredOutflows": 11445850,
@@ -163,6 +166,9 @@ export const haltomCityAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 23949755,
+    "salesTaxRevenue": 19238917,
+    "hotelTaxRevenue": 238751,
     "currentAndOtherAssets": 181191264,
     "capitalAssets": 201044250,
     "deferredOutflows": 8092493,
@@ -178,18 +184,3 @@ export const haltomCityAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 99369976
   }
 ];
-
-export const haltomCityRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 22136941,
-      sales: 18351400,
-      hotel: 124918,
-    },
-    {
-      fiscalYear: 2025,
-      property: 23949755,
-      sales: 19238917,
-      hotel: 238751,
-    },
-  ];

@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const southlakeAcfr: CityFinancialData[] = [
   {
@@ -99,6 +99,9 @@ export const southlakeAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 43315203,
+    "salesTaxRevenue": 44830166,
+    "hotelTaxRevenue": 2403888,
     "currentAndOtherAssets": 333028451,
     "capitalAssets": 628741824,
     "deferredOutflows": 9298744,
@@ -115,6 +118,9 @@ export const southlakeAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 44757795,
+    "salesTaxRevenue": 45818639,
+    "hotelTaxRevenue": 2528060,
     "currentAndOtherAssets": 382096448,
     "capitalAssets": 635450220,
     "deferredOutflows": 7001245,
@@ -130,18 +136,3 @@ export const southlakeAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 176967962
   }
 ];
-
-export const southlakeRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 43315203,
-      sales: 44830166,
-      hotel: 2403888,
-    },
-    {
-      fiscalYear: 2025,
-      property: 44757795,
-      sales: 45818639,
-      hotel: 2528060,
-    },
-  ];

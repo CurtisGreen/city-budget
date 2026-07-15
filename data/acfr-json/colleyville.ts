@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const colleyvilleAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const colleyvilleAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 17904226,
+    "salesTaxRevenue": 10654186,
+    "hotelTaxRevenue": 219059,
     "currentAndOtherAssets": 100909044,
     "capitalAssets": 175113752,
     "deferredOutflows": 3844644,
@@ -163,6 +166,9 @@ export const colleyvilleAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 18967177,
+    "salesTaxRevenue": 11111344,
+    "hotelTaxRevenue": 203402,
     "currentAndOtherAssets": 100472378,
     "capitalAssets": 180818724,
     "deferredOutflows": 2717791,
@@ -178,18 +184,3 @@ export const colleyvilleAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 102375064
   }
 ];
-
-export const colleyvilleRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 17904226,
-      sales: 10654186,
-      hotel: 219059,
-    },
-    {
-      fiscalYear: 2025,
-      property: 18967177,
-      sales: 11111344,
-      hotel: 203402,
-    },
-  ];

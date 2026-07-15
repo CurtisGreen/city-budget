@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const grandPrairieAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const grandPrairieAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 155796752,
+    "salesTaxRevenue": 98140124,
+    "hotelTaxRevenue": 3934139,
     "currentAndOtherAssets": 619331220,
     "capitalAssets": 1140967657,
     "deferredOutflows": 53487757,
@@ -163,6 +166,9 @@ export const grandPrairieAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 163815374,
+    "salesTaxRevenue": 99057622,
+    "hotelTaxRevenue": 4177330,
     "currentAndOtherAssets": 707019444,
     "capitalAssets": 1212742039,
     "deferredOutflows": 54248747,
@@ -178,18 +184,3 @@ export const grandPrairieAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 587355335
   }
 ];
-
-export const grandPrairieRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 155796752,
-      sales: 98140124,
-      hotel: 3934139,
-    },
-    {
-      fiscalYear: 2025,
-      property: 163815374,
-      sales: 99057622,
-      hotel: 4177330,
-    },
-  ];

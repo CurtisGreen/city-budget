@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const forneyAcfr: CityFinancialData[] = [
   {
@@ -151,6 +151,9 @@ export const forneyAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 19210348,
+    "salesTaxRevenue": 12356036,
+    "hotelTaxRevenue": 179341,
     "currentAndOtherAssets": 92658124,
     "capitalAssets": 238232449,
     "deferredOutflows": 4347695,
@@ -171,6 +174,9 @@ export const forneyAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 24464190,
+    "salesTaxRevenue": 12715492,
+    "hotelTaxRevenue": 250765,
     "currentAndOtherAssets": 96672397,
     "capitalAssets": 249695828,
     "deferredOutflows": 3911439,
@@ -190,18 +196,3 @@ export const forneyAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 102020395
   }
 ];
-
-export const forneyRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 19210348,
-      sales: 12356036,
-      hotel: 179341,
-    },
-    {
-      fiscalYear: 2025,
-      property: 24464190,
-      sales: 12715492,
-      hotel: 250765,
-    },
-  ];

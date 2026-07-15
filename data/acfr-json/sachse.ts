@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const sachseAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const sachseAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 28198987,
+    "salesTaxRevenue": 3866139,
+    "hotelTaxRevenue": 15924,
     "currentAndOtherAssets": 117886506,
     "capitalAssets": 170534159,
     "deferredOutflows": 5250488,
@@ -163,6 +166,9 @@ export const sachseAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 29109122,
+    "salesTaxRevenue": 3883342,
+    "hotelTaxRevenue": 7956,
     "currentAndOtherAssets": 116886278,
     "capitalAssets": 175233035,
     "deferredOutflows": 4314748,
@@ -178,18 +184,3 @@ export const sachseAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 90947146
   }
 ];
-
-export const sachseRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 28198987,
-      sales: 3866139,
-      hotel: 15924,
-    },
-    {
-      fiscalYear: 2025,
-      property: 29109122,
-      sales: 3883342,
-      hotel: 7956,
-    },
-  ];

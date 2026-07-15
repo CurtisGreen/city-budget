@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const hurstAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const hurstAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 23090993,
+    "salesTaxRevenue": 24289712,
+    "hotelTaxRevenue": 858190,
     "currentAndOtherAssets": 131777546,
     "capitalAssets": 211546427,
     "deferredOutflows": 16241583,
@@ -163,6 +166,9 @@ export const hurstAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 23832089,
+    "salesTaxRevenue": 24881102,
+    "hotelTaxRevenue": 722876,
     "currentAndOtherAssets": 126104358,
     "capitalAssets": 223293489,
     "deferredOutflows": 11769122,
@@ -178,18 +184,3 @@ export const hurstAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 103709149
   }
 ];
-
-export const hurstRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 23090993,
-      sales: 24289712,
-      hotel: 858190,
-    },
-    {
-      fiscalYear: 2025,
-      property: 23832089,
-      sales: 24881102,
-      hotel: 722876,
-    },
-  ];

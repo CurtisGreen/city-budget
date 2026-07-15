@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const irvingAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const irvingAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 223022000,
+    "salesTaxRevenue": 108213000,
+    "hotelTaxRevenue": 31981000,
     "currentAndOtherAssets": 1057642000,
     "capitalAssets": 1818283000,
     "deferredOutflows": 98998000,
@@ -173,6 +176,9 @@ export const irvingAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 240903000,
+    "salesTaxRevenue": 118742000,
+    "hotelTaxRevenue": 35072000,
     "currentAndOtherAssets": 1065678000,
     "capitalAssets": 1961161000,
     "deferredOutflows": 67960000,
@@ -189,8 +195,3 @@ export const irvingAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 1063525000
   }
 ];
-
-export const irvingRevenues: RevenueMix[] = [
-    { fiscalYear: 2024, property: 223022000, sales: 108213000, hotel: 31981000 },
-    { fiscalYear: 2025, property: 240903000, sales: 118742000, hotel: 35072000 },
-  ];

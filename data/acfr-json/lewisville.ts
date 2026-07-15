@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const lewisvilleAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const lewisvilleAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 89468037,
+    "salesTaxRevenue": 53324026,
+    "hotelTaxRevenue": 2871093,
     "currentAndOtherAssets": 509026808,
     "capitalAssets": 1085103401,
     "deferredOutflows": 30368590,
@@ -163,6 +166,9 @@ export const lewisvilleAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 95138938,
+    "salesTaxRevenue": 54219344,
+    "hotelTaxRevenue": 2807960,
     "currentAndOtherAssets": 491333301,
     "capitalAssets": 1191462253,
     "deferredOutflows": 21320194,
@@ -178,18 +184,3 @@ export const lewisvilleAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 488078116
   }
 ];
-
-export const lewisvilleRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 89468037,
-      sales: 53324026,
-      hotel: 2871093,
-    },
-    {
-      fiscalYear: 2025,
-      property: 95138938,
-      sales: 54219344,
-      hotel: 2807960,
-    },
-  ];

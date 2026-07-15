@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const grapevineAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const grapevineAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 36531261,
+    "salesTaxRevenue": 84073115,
+    "hotelTaxRevenue": 23744468,
     "currentAndOtherAssets": 253252533,
     "capitalAssets": 598180287,
     "deferredOutflows": 35869268,
@@ -173,6 +176,9 @@ export const grapevineAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 37748365,
+    "salesTaxRevenue": 87756671,
+    "hotelTaxRevenue": 23512535,
     "currentAndOtherAssets": 237786188,
     "capitalAssets": 620174921,
     "deferredOutflows": 38538321,
@@ -189,18 +195,3 @@ export const grapevineAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 186829975
   }
 ];
-
-export const grapevineRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 36531261,
-      sales: 84073115,
-      hotel: 23744468,
-    },
-    {
-      fiscalYear: 2025,
-      property: 37748365,
-      sales: 87756671,
-      hotel: 23512535,
-    },
-  ];

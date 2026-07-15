@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const mesquiteAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const mesquiteAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 89790000,
+    "salesTaxRevenue": 61086000,
+    "hotelTaxRevenue": 1990000,
     "currentAndOtherAssets": 459770391,
     "capitalAssets": 915338022,
     "deferredOutflows": 46954531,
@@ -163,6 +166,9 @@ export const mesquiteAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 100843049,
+    "salesTaxRevenue": 65945105,
+    "hotelTaxRevenue": 1717534,
     "currentAndOtherAssets": 471363558,
     "capitalAssets": 1004328188,
     "deferredOutflows": 32574467,
@@ -178,18 +184,3 @@ export const mesquiteAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 588940700
   }
 ];
-
-export const mesquiteRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 89790000,
-      sales: 61086000,
-      hotel: 1990000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 100843049,
-      sales: 65945105,
-      hotel: 1717534,
-    },
-  ];

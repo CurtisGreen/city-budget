@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const allenAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const allenAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 83821874,
+    "salesTaxRevenue": 31547688,
+    "hotelTaxRevenue": 2481874,
     "currentAndOtherAssets": 351308925,
     "capitalAssets": 660737007,
     "deferredOutflows": 23476570,
@@ -163,6 +166,9 @@ export const allenAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 89170582,
+    "salesTaxRevenue": 32389161,
+    "hotelTaxRevenue": 2696118,
     "currentAndOtherAssets": 360677216,
     "capitalAssets": 731330964,
     "deferredOutflows": 19047340,
@@ -178,18 +184,3 @@ export const allenAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 259667743
   }
 ];
-
-export const allenRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 83821874,
-      sales: 31547688,
-      hotel: 2481874,
-    },
-    {
-      fiscalYear: 2025,
-      property: 89170582,
-      sales: 32389161,
-      hotel: 2696118,
-    },
-  ];

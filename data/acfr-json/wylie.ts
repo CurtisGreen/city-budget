@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const wylieAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const wylieAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 41463584,
+    "salesTaxRevenue": 14993518,
+    "hotelTaxRevenue": 290247,
     "currentAndOtherAssets": 151342357,
     "capitalAssets": 308812838,
     "deferredOutflows": 8698520,
@@ -163,6 +166,9 @@ export const wylieAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 44926219,
+    "salesTaxRevenue": 15394203,
+    "hotelTaxRevenue": 264791,
     "currentAndOtherAssets": 141630346,
     "capitalAssets": 317435032,
     "deferredOutflows": 9354127,
@@ -178,18 +184,3 @@ export const wylieAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 122885238
   }
 ];
-
-export const wylieRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 41463584,
-      sales: 14993518,
-      hotel: 290247,
-    },
-    {
-      fiscalYear: 2025,
-      property: 44926219,
-      sales: 15394203,
-      hotel: 264791,
-    },
-  ];

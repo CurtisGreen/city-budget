@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const coppellAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const coppellAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 50622199,
+    "salesTaxRevenue": 50129985,
+    "hotelTaxRevenue": 1077103,
     "currentAndOtherAssets": 453000000,
     "capitalAssets": 366800000,
     "deferredOutflows": 13700000,
@@ -173,6 +176,9 @@ export const coppellAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 53042745,
+    "salesTaxRevenue": 47572408,
+    "hotelTaxRevenue": 1302889,
     "currentAndOtherAssets": 469300000,
     "capitalAssets": 377000000,
     "deferredOutflows": 9900000,
@@ -189,18 +195,3 @@ export const coppellAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 120341215
   }
 ];
-
-export const coppellRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 50622199,
-      sales: 50129985,
-      hotel: 1077103,
-    },
-    {
-      fiscalYear: 2025,
-      property: 53042745,
-      sales: 47572408,
-      hotel: 1302889,
-    },
-  ];

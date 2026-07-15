@@ -1,109 +1,104 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
-import { addisonAcfr, addisonRevenues } from "./addison";
-import { allenAcfr, allenRevenues } from "./allen";
-import { arlingtonAcfr, arlingtonRevenues } from "./arlington";
-import { balchSpringsAcfr, balchSpringsRevenues } from "./balch-springs";
-import { bedfordAcfr, bedfordRevenues } from "./bedford";
-import { carrolltonAcfr, carrolltonRevenues } from "./carrollton";
-import { cedarHillAcfr, cedarHillRevenues } from "./cedar-hill";
-import { celinaAcfr, celinaRevenues } from "./celina";
-import { colleyvilleAcfr, colleyvilleRevenues } from "./colleyville";
-import { coppellAcfr, coppellRevenues } from "./coppell";
-import { dallasAcfr, dallasRevenues } from "./dallas";
-import { dentonAcfr, dentonRevenues } from "./denton";
-import { desotoAcfr, desotoRevenues } from "./desoto";
-import { duncanvilleAcfr, duncanvilleRevenues } from "./duncanville";
-import { eulessAcfr, eulessRevenues } from "./euless";
-import { farmersBranchAcfr, farmersBranchRevenues } from "./farmers-branch";
-import { flowerMoundAcfr, flowerMoundRevenues } from "./flower-mound";
-import { forneyAcfr, forneyRevenues } from "./forney";
-import { fortWorthAcfr, fortWorthRevenues } from "./fort-worth";
-import { friscoAcfr, friscoRevenues } from "./frisco";
-import { garlandAcfr, garlandRevenues } from "./garland";
-import { glennHeightsAcfr, glennHeightsRevenues } from "./glenn-heights";
-import { grandPrairieAcfr, grandPrairieRevenues } from "./grand-prairie";
-import { grapevineAcfr, grapevineRevenues } from "./grapevine";
-import { haltomCityAcfr, haltomCityRevenues } from "./haltom-city";
-import { highlandParkAcfr, highlandParkRevenues } from "./highland-park";
-import { highlandVillageAcfr, highlandVillageRevenues } from "./highland-village";
-import { hurstAcfr, hurstRevenues } from "./hurst";
-import { irvingAcfr, irvingRevenues } from "./irving";
-import { kellerAcfr, kellerRevenues } from "./keller";
-import { lancasterAcfr, lancasterRevenues } from "./lancaster";
-import { lewisvilleAcfr, lewisvilleRevenues } from "./lewisville";
-import { littleElmAcfr, littleElmRevenues } from "./little-elm";
-import { mansfieldAcfr, mansfieldRevenues } from "./mansfield";
-import { mckinneyAcfr, mckinneyRevenues } from "./mckinney";
-import { mesquiteAcfr, mesquiteRevenues } from "./mesquite";
-import { murphyAcfr, murphyRevenues } from "./murphy";
-import { northRichlandHillsAcfr, northRichlandHillsRevenues } from "./north-richland-hills";
-import { planoAcfr, planoRevenues } from "./plano";
-import { prosperAcfr, prosperRevenues } from "./prosper";
-import { richardsonAcfr, richardsonRevenues } from "./richardson";
-import { roanokeAcfr, roanokeRevenues } from "./roanoke";
-import { rockwallAcfr, rockwallRevenues } from "./rockwall";
-import { rowlettAcfr, rowlettRevenues } from "./rowlett";
-import { sachseAcfr, sachseRevenues } from "./sachse";
-import { southlakeAcfr, southlakeRevenues } from "./southlake";
-import { theColonyAcfr, theColonyRevenues } from "./the-colony";
-import { universityParkAcfr, universityParkRevenues } from "./university-park";
-import { westlakeAcfr, westlakeRevenues } from "./westlake";
-import { wylieAcfr, wylieRevenues } from "./wylie";
+import type { CityFinancialData } from "@/lib/types";
+import { addisonAcfr } from "./addison";
+import { allenAcfr } from "./allen";
+import { arlingtonAcfr } from "./arlington";
+import { balchSpringsAcfr } from "./balch-springs";
+import { bedfordAcfr } from "./bedford";
+import { carrolltonAcfr } from "./carrollton";
+import { cedarHillAcfr } from "./cedar-hill";
+import { celinaAcfr } from "./celina";
+import { colleyvilleAcfr } from "./colleyville";
+import { coppellAcfr } from "./coppell";
+import { dallasAcfr } from "./dallas";
+import { dentonAcfr } from "./denton";
+import { desotoAcfr } from "./desoto";
+import { duncanvilleAcfr } from "./duncanville";
+import { eulessAcfr } from "./euless";
+import { farmersBranchAcfr } from "./farmers-branch";
+import { flowerMoundAcfr } from "./flower-mound";
+import { forneyAcfr } from "./forney";
+import { fortWorthAcfr } from "./fort-worth";
+import { friscoAcfr } from "./frisco";
+import { garlandAcfr } from "./garland";
+import { glennHeightsAcfr } from "./glenn-heights";
+import { grandPrairieAcfr } from "./grand-prairie";
+import { grapevineAcfr } from "./grapevine";
+import { haltomCityAcfr } from "./haltom-city";
+import { highlandParkAcfr } from "./highland-park";
+import { highlandVillageAcfr } from "./highland-village";
+import { hurstAcfr } from "./hurst";
+import { irvingAcfr } from "./irving";
+import { kellerAcfr } from "./keller";
+import { lancasterAcfr } from "./lancaster";
+import { lewisvilleAcfr } from "./lewisville";
+import { littleElmAcfr } from "./little-elm";
+import { mansfieldAcfr } from "./mansfield";
+import { mckinneyAcfr } from "./mckinney";
+import { mesquiteAcfr } from "./mesquite";
+import { murphyAcfr } from "./murphy";
+import { northRichlandHillsAcfr } from "./north-richland-hills";
+import { planoAcfr } from "./plano";
+import { prosperAcfr } from "./prosper";
+import { richardsonAcfr } from "./richardson";
+import { roanokeAcfr } from "./roanoke";
+import { rockwallAcfr } from "./rockwall";
+import { rowlettAcfr } from "./rowlett";
+import { sachseAcfr } from "./sachse";
+import { southlakeAcfr } from "./southlake";
+import { theColonyAcfr } from "./the-colony";
+import { universityParkAcfr } from "./university-park";
+import { westlakeAcfr } from "./westlake";
+import { wylieAcfr } from "./wylie";
 
-export type AcfrEntry = {
-  financialData: CityFinancialData[];
-  revenues: RevenueMix[];
-};
-
-export const acfrData: Record<string, AcfrEntry> = {
-  "addison": { financialData: addisonAcfr, revenues: addisonRevenues },
-  "allen": { financialData: allenAcfr, revenues: allenRevenues },
-  "arlington": { financialData: arlingtonAcfr, revenues: arlingtonRevenues },
-  "balch-springs": { financialData: balchSpringsAcfr, revenues: balchSpringsRevenues },
-  "bedford": { financialData: bedfordAcfr, revenues: bedfordRevenues },
-  "carrollton": { financialData: carrolltonAcfr, revenues: carrolltonRevenues },
-  "cedar-hill": { financialData: cedarHillAcfr, revenues: cedarHillRevenues },
-  "celina": { financialData: celinaAcfr, revenues: celinaRevenues },
-  "colleyville": { financialData: colleyvilleAcfr, revenues: colleyvilleRevenues },
-  "coppell": { financialData: coppellAcfr, revenues: coppellRevenues },
-  "dallas": { financialData: dallasAcfr, revenues: dallasRevenues },
-  "denton": { financialData: dentonAcfr, revenues: dentonRevenues },
-  "desoto": { financialData: desotoAcfr, revenues: desotoRevenues },
-  "duncanville": { financialData: duncanvilleAcfr, revenues: duncanvilleRevenues },
-  "euless": { financialData: eulessAcfr, revenues: eulessRevenues },
-  "farmers-branch": { financialData: farmersBranchAcfr, revenues: farmersBranchRevenues },
-  "flower-mound": { financialData: flowerMoundAcfr, revenues: flowerMoundRevenues },
-  "forney": { financialData: forneyAcfr, revenues: forneyRevenues },
-  "fort-worth": { financialData: fortWorthAcfr, revenues: fortWorthRevenues },
-  "frisco": { financialData: friscoAcfr, revenues: friscoRevenues },
-  "garland": { financialData: garlandAcfr, revenues: garlandRevenues },
-  "glenn-heights": { financialData: glennHeightsAcfr, revenues: glennHeightsRevenues },
-  "grand-prairie": { financialData: grandPrairieAcfr, revenues: grandPrairieRevenues },
-  "grapevine": { financialData: grapevineAcfr, revenues: grapevineRevenues },
-  "haltom-city": { financialData: haltomCityAcfr, revenues: haltomCityRevenues },
-  "highland-park": { financialData: highlandParkAcfr, revenues: highlandParkRevenues },
-  "highland-village": { financialData: highlandVillageAcfr, revenues: highlandVillageRevenues },
-  "hurst": { financialData: hurstAcfr, revenues: hurstRevenues },
-  "irving": { financialData: irvingAcfr, revenues: irvingRevenues },
-  "keller": { financialData: kellerAcfr, revenues: kellerRevenues },
-  "lancaster": { financialData: lancasterAcfr, revenues: lancasterRevenues },
-  "lewisville": { financialData: lewisvilleAcfr, revenues: lewisvilleRevenues },
-  "little-elm": { financialData: littleElmAcfr, revenues: littleElmRevenues },
-  "mansfield": { financialData: mansfieldAcfr, revenues: mansfieldRevenues },
-  "mckinney": { financialData: mckinneyAcfr, revenues: mckinneyRevenues },
-  "mesquite": { financialData: mesquiteAcfr, revenues: mesquiteRevenues },
-  "murphy": { financialData: murphyAcfr, revenues: murphyRevenues },
-  "north-richland-hills": { financialData: northRichlandHillsAcfr, revenues: northRichlandHillsRevenues },
-  "plano": { financialData: planoAcfr, revenues: planoRevenues },
-  "prosper": { financialData: prosperAcfr, revenues: prosperRevenues },
-  "richardson": { financialData: richardsonAcfr, revenues: richardsonRevenues },
-  "roanoke": { financialData: roanokeAcfr, revenues: roanokeRevenues },
-  "rockwall": { financialData: rockwallAcfr, revenues: rockwallRevenues },
-  "rowlett": { financialData: rowlettAcfr, revenues: rowlettRevenues },
-  "sachse": { financialData: sachseAcfr, revenues: sachseRevenues },
-  "southlake": { financialData: southlakeAcfr, revenues: southlakeRevenues },
-  "the-colony": { financialData: theColonyAcfr, revenues: theColonyRevenues },
-  "university-park": { financialData: universityParkAcfr, revenues: universityParkRevenues },
-  "westlake": { financialData: westlakeAcfr, revenues: westlakeRevenues },
-  "wylie": { financialData: wylieAcfr, revenues: wylieRevenues },
+export const acfrData: Record<string, CityFinancialData[]> = {
+  "addison": addisonAcfr,
+  "allen": allenAcfr,
+  "arlington": arlingtonAcfr,
+  "balch-springs": balchSpringsAcfr,
+  "bedford": bedfordAcfr,
+  "carrollton": carrolltonAcfr,
+  "cedar-hill": cedarHillAcfr,
+  "celina": celinaAcfr,
+  "colleyville": colleyvilleAcfr,
+  "coppell": coppellAcfr,
+  "dallas": dallasAcfr,
+  "denton": dentonAcfr,
+  "desoto": desotoAcfr,
+  "duncanville": duncanvilleAcfr,
+  "euless": eulessAcfr,
+  "farmers-branch": farmersBranchAcfr,
+  "flower-mound": flowerMoundAcfr,
+  "forney": forneyAcfr,
+  "fort-worth": fortWorthAcfr,
+  "frisco": friscoAcfr,
+  "garland": garlandAcfr,
+  "glenn-heights": glennHeightsAcfr,
+  "grand-prairie": grandPrairieAcfr,
+  "grapevine": grapevineAcfr,
+  "haltom-city": haltomCityAcfr,
+  "highland-park": highlandParkAcfr,
+  "highland-village": highlandVillageAcfr,
+  "hurst": hurstAcfr,
+  "irving": irvingAcfr,
+  "keller": kellerAcfr,
+  "lancaster": lancasterAcfr,
+  "lewisville": lewisvilleAcfr,
+  "little-elm": littleElmAcfr,
+  "mansfield": mansfieldAcfr,
+  "mckinney": mckinneyAcfr,
+  "mesquite": mesquiteAcfr,
+  "murphy": murphyAcfr,
+  "north-richland-hills": northRichlandHillsAcfr,
+  "plano": planoAcfr,
+  "prosper": prosperAcfr,
+  "richardson": richardsonAcfr,
+  "roanoke": roanokeAcfr,
+  "rockwall": rockwallAcfr,
+  "rowlett": rowlettAcfr,
+  "sachse": sachseAcfr,
+  "southlake": southlakeAcfr,
+  "the-colony": theColonyAcfr,
+  "university-park": universityParkAcfr,
+  "westlake": westlakeAcfr,
+  "wylie": wylieAcfr,
 };

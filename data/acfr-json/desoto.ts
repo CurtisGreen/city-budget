@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const desotoAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const desotoAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 48642710,
+    "salesTaxRevenue": 11665423,
+    "hotelTaxRevenue": 1346468,
     "currentAndOtherAssets": 208638650,
     "capitalAssets": 220512301,
     "deferredOutflows": 9500446,
@@ -173,6 +176,9 @@ export const desotoAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 51451919,
+    "salesTaxRevenue": 11723283,
+    "hotelTaxRevenue": 1424966,
     "currentAndOtherAssets": 241096617,
     "capitalAssets": 258264438,
     "deferredOutflows": 5905610,
@@ -189,18 +195,3 @@ export const desotoAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 138143837
   }
 ];
-
-export const desotoRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 48642710,
-      sales: 11665423,
-      hotel: 1346468,
-    },
-    {
-      fiscalYear: 2025,
-      property: 51451919,
-      sales: 11723283,
-      hotel: 1424966,
-    },
-  ];

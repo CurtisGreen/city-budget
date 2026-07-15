@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const westlakeAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const westlakeAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 4008157,
+    "salesTaxRevenue": 11985325,
+    "hotelTaxRevenue": 748500,
     "currentAndOtherAssets": 76040739,
     "capitalAssets": 89640344,
     "deferredOutflows": 4692654,
@@ -163,6 +166,9 @@ export const westlakeAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 4357604,
+    "salesTaxRevenue": 16048173,
+    "hotelTaxRevenue": 549850,
     "currentAndOtherAssets": 95676274,
     "capitalAssets": 90300229,
     "deferredOutflows": 3240800,
@@ -178,18 +184,3 @@ export const westlakeAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 20623818
   }
 ];
-
-export const westlakeRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 4008157,
-      sales: 11985325,
-      hotel: 748500,
-    },
-    {
-      fiscalYear: 2025,
-      property: 4357604,
-      sales: 16048173,
-      hotel: 549850,
-    },
-  ];

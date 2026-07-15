@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const duncanvilleAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const duncanvilleAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 22377809,
+    "salesTaxRevenue": 10101931,
+    "hotelTaxRevenue": 1220834,
     "currentAndOtherAssets": 79606433,
     "capitalAssets": 126685692,
     "deferredOutflows": 6048455,
@@ -163,6 +166,9 @@ export const duncanvilleAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 24244267,
+    "salesTaxRevenue": 10481239,
+    "hotelTaxRevenue": 1077731,
     "currentAndOtherAssets": 81589429,
     "capitalAssets": 127256286,
     "deferredOutflows": 4204996,
@@ -178,8 +184,3 @@ export const duncanvilleAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 96806826
   }
 ];
-
-export const duncanvilleRevenues: RevenueMix[] = [
-    { fiscalYear: 2024, property: 22377809, sales: 10101931, hotel: 1220834 },
-    { fiscalYear: 2025, property: 24244267, sales: 10481239, hotel: 1077731 },
-  ];

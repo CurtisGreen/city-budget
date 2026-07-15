@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const garlandAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const garlandAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 163692333,
+    "salesTaxRevenue": 46641936,
+    "hotelTaxRevenue": 1764356,
     "currentAndOtherAssets": 1309666662,
     "capitalAssets": 2336280693,
     "deferredOutflows": 85024799,
@@ -173,6 +176,9 @@ export const garlandAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 182673314,
+    "salesTaxRevenue": 54910882,
+    "hotelTaxRevenue": 1595434,
     "currentAndOtherAssets": 1376182134,
     "capitalAssets": 2548250584,
     "deferredOutflows": 171912180,
@@ -189,18 +195,3 @@ export const garlandAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 2244678231
   }
 ];
-
-export const garlandRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 163692333,
-      sales: 46641936,
-      hotel: 1764356,
-    },
-    {
-      fiscalYear: 2025,
-      property: 182673314,
-      sales: 54910882,
-      hotel: 1595434,
-    },
-  ];

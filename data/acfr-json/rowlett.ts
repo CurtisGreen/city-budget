@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const rowlettAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const rowlettAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 55175000,
+    "salesTaxRevenue": 9809000,
+    "hotelTaxRevenue": 69515,
     "currentAndOtherAssets": 239496000,
     "capitalAssets": 293110000,
     "deferredOutflows": 10720000,
@@ -173,6 +176,9 @@ export const rowlettAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 134730000,
+    "salesTaxRevenue": 55353000,
+    "hotelTaxRevenue": 25489,
     "currentAndOtherAssets": 347873000,
     "capitalAssets": 328561000,
     "deferredOutflows": 7645000,
@@ -189,18 +195,3 @@ export const rowlettAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 260370000
   }
 ];
-
-export const rowlettRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 55175000,
-      sales: 9809000,
-      hotel: 69515,
-    },
-    {
-      fiscalYear: 2025,
-      property: 134730000,
-      sales: 55353000,
-      hotel: 25489,
-    },
-  ];

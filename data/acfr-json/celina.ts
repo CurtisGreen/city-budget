@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const celinaAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const celinaAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 36490482,
+    "salesTaxRevenue": 4925187,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 426232292,
     "capitalAssets": 900780604,
     "deferredOutflows": 3533801,
@@ -173,6 +176,9 @@ export const celinaAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 47329947,
+    "salesTaxRevenue": 5839562,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 556470971,
     "capitalAssets": 1155676528,
     "deferredOutflows": 3999712,
@@ -189,18 +195,3 @@ export const celinaAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 560711022
   }
 ];
-
-export const celinaRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 36490482,
-      sales: 4925187,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 47329947,
-      sales: 5839562,
-      hotel: 0,
-    },
-  ];

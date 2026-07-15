@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const cedarHillAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const cedarHillAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 40413522,
+    "salesTaxRevenue": 12808093,
+    "hotelTaxRevenue": 459215,
     "currentAndOtherAssets": 152931354,
     "capitalAssets": 278123061,
     "deferredOutflows": 10649824,
@@ -163,6 +166,9 @@ export const cedarHillAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 44172965,
+    "salesTaxRevenue": 12978718,
+    "hotelTaxRevenue": 493006,
     "currentAndOtherAssets": 177974276,
     "capitalAssets": 279392846,
     "deferredOutflows": 6255148,
@@ -178,18 +184,3 @@ export const cedarHillAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 99876237
   }
 ];
-
-export const cedarHillRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 40413522,
-      sales: 12808093,
-      hotel: 459215,
-    },
-    {
-      fiscalYear: 2025,
-      property: 44172965,
-      sales: 12978718,
-      hotel: 493006,
-    },
-  ];

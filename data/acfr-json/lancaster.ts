@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const lancasterAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const lancasterAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 34020989,
+    "salesTaxRevenue": 14491661,
+    "hotelTaxRevenue": 370823,
     "currentAndOtherAssets": 186915407,
     "capitalAssets": 159056721,
     "deferredOutflows": 7670647,
@@ -163,6 +166,9 @@ export const lancasterAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 39259277,
+    "salesTaxRevenue": 13901534,
+    "hotelTaxRevenue": 216292,
     "currentAndOtherAssets": 222377398,
     "capitalAssets": 168730046,
     "deferredOutflows": 6568123,
@@ -178,18 +184,3 @@ export const lancasterAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 98178689
   }
 ];
-
-export const lancasterRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 34020989,
-      sales: 14491661,
-      hotel: 370823,
-    },
-    {
-      fiscalYear: 2025,
-      property: 39259277,
-      sales: 13901534,
-      hotel: 216292,
-    },
-  ];

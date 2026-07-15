@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const fortWorthAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 749673000,
+    "salesTaxRevenue": 353942000,
+    "hotelTaxRevenue": 59674000,
     "currentAndOtherAssets": 3944110000,
     "capitalAssets": 8335799000,
     "deferredOutflows": 405081000,
@@ -163,6 +166,9 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 789222000,
+    "salesTaxRevenue": 368854000,
+    "hotelTaxRevenue": 67418000,
     "currentAndOtherAssets": 4254381000,
     "capitalAssets": 9200479000,
     "deferredOutflows": 254581000,
@@ -178,18 +184,3 @@ export const fortWorthAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 5883651000
   }
 ];
-
-export const fortWorthRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 749673000,
-      sales: 353942000,
-      hotel: 59674000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 789222000,
-      sales: 368854000,
-      hotel: 67418000,
-    },
-  ];

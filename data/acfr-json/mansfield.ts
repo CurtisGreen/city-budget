@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const mansfieldAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const mansfieldAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 80163826,
+    "salesTaxRevenue": 31497759,
+    "hotelTaxRevenue": 1150419,
     "currentAndOtherAssets": 320541222,
     "capitalAssets": 897143380,
     "deferredOutflows": 27347347,
@@ -163,6 +166,9 @@ export const mansfieldAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 85810225,
+    "salesTaxRevenue": 29769057,
+    "hotelTaxRevenue": 1147738,
     "currentAndOtherAssets": 398688788,
     "capitalAssets": 995491811,
     "deferredOutflows": 21380778,
@@ -178,18 +184,3 @@ export const mansfieldAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 360145170
   }
 ];
-
-export const mansfieldRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 80163826,
-      sales: 31497759,
-      hotel: 1150419,
-    },
-    {
-      fiscalYear: 2025,
-      property: 85810225,
-      sales: 29769057,
-      hotel: 1147738,
-    },
-  ];

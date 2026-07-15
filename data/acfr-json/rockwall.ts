@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const rockwallAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const rockwallAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 24590290,
+    "salesTaxRevenue": 27410743,
+    "hotelTaxRevenue": 1996313,
     "currentAndOtherAssets": 100022336,
     "capitalAssets": 380548802,
     "deferredOutflows": 11266039,
@@ -163,6 +166,9 @@ export const rockwallAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 24600186,
+    "salesTaxRevenue": 29132659,
+    "hotelTaxRevenue": 1925627,
     "currentAndOtherAssets": 87214546,
     "capitalAssets": 408698118,
     "deferredOutflows": 9407762,
@@ -178,18 +184,3 @@ export const rockwallAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 235682991
   }
 ];
-
-export const rockwallRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 24590290,
-      sales: 27410743,
-      hotel: 1996313,
-    },
-    {
-      fiscalYear: 2025,
-      property: 24600186,
-      sales: 29132659,
-      hotel: 1925627,
-    },
-  ];

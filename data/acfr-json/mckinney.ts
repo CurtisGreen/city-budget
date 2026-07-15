@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const mckinneyAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const mckinneyAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 159252000,
+    "salesTaxRevenue": 51747000,
+    "hotelTaxRevenue": 3105407,
     "currentAndOtherAssets": 1103784000,
     "capitalAssets": 1834990000,
     "deferredOutflows": 40168000,
@@ -163,6 +166,9 @@ export const mckinneyAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 170430262,
+    "salesTaxRevenue": 53517756,
+    "hotelTaxRevenue": 3339994,
     "currentAndOtherAssets": 1157135000,
     "capitalAssets": 2049197000,
     "deferredOutflows": 32079000,
@@ -178,18 +184,3 @@ export const mckinneyAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 1031391695
   }
 ];
-
-export const mckinneyRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 159252000,
-      sales: 51747000,
-      hotel: 3105407,
-    },
-    {
-      fiscalYear: 2025,
-      property: 170430262,
-      sales: 53517756,
-      hotel: 3339994,
-    },
-  ];

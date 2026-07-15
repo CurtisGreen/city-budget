@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const kellerAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const kellerAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 23747476,
+    "salesTaxRevenue": 18881959,
+    "hotelTaxRevenue": 233794,
     "currentAndOtherAssets": 204526438,
     "capitalAssets": 257222966,
     "deferredOutflows": 7615491,
@@ -163,6 +166,9 @@ export const kellerAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 23766426,
+    "salesTaxRevenue": 19303861,
+    "hotelTaxRevenue": 227734,
     "currentAndOtherAssets": 187734625,
     "capitalAssets": 288663517,
     "deferredOutflows": 5024561,
@@ -178,18 +184,3 @@ export const kellerAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 217839408
   }
 ];
-
-export const kellerRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 23747476,
-      sales: 18881959,
-      hotel: 233794,
-    },
-    {
-      fiscalYear: 2025,
-      property: 23766426,
-      sales: 19303861,
-      hotel: 227734,
-    },
-  ];

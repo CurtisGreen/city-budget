@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const highlandParkAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const highlandParkAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 18400369,
+    "salesTaxRevenue": 8801419,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 73485678,
     "capitalAssets": 110203772,
     "deferredOutflows": 5147389,
@@ -173,6 +176,9 @@ export const highlandParkAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 19484406,
+    "salesTaxRevenue": 9388670,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 80603927,
     "capitalAssets": 115751090,
     "deferredOutflows": 2468251,
@@ -189,18 +195,3 @@ export const highlandParkAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 57468694
   }
 ];
-
-export const highlandParkRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 18400369,
-      sales: 8801419,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 19484406,
-      sales: 9388670,
-      hotel: 0,
-    },
-  ];

@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const friscoAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const friscoAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 203270427,
+    "salesTaxRevenue": 69858143,
+    "hotelTaxRevenue": 12959430,
     "currentAndOtherAssets": 1224477567,
     "capitalAssets": 2870964085,
     "deferredOutflows": 39474391,
@@ -173,6 +176,9 @@ export const friscoAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 219764171,
+    "salesTaxRevenue": 71287695,
+    "hotelTaxRevenue": 14139867,
     "currentAndOtherAssets": 1390201623,
     "capitalAssets": 3177011668,
     "deferredOutflows": 35920349,
@@ -189,18 +195,3 @@ export const friscoAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 863952225
   }
 ];
-
-export const friscoRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 203270427,
-      sales: 69858143,
-      hotel: 12959430,
-    },
-    {
-      fiscalYear: 2025,
-      property: 219764171,
-      sales: 71287695,
-      hotel: 14139867,
-    },
-  ];

@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const glennHeightsAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const glennHeightsAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 9363297,
+    "salesTaxRevenue": 1274335,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 38123450,
     "capitalAssets": 46397410,
     "deferredOutflows": 588701,
@@ -163,6 +166,9 @@ export const glennHeightsAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 10223392,
+    "salesTaxRevenue": 1283442,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 38502793,
     "capitalAssets": 48088771,
     "deferredOutflows": 252510,
@@ -178,18 +184,3 @@ export const glennHeightsAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 23745648
   }
 ];
-
-export const glennHeightsRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 9363297,
-      sales: 1274335,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 10223392,
-      sales: 1283442,
-      hotel: 0,
-    },
-  ];

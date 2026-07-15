@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const murphyAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const murphyAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 13893953,
+    "salesTaxRevenue": 3624540,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 37973345,
     "capitalAssets": 127688124,
     "deferredOutflows": 3155264,
@@ -173,6 +176,9 @@ export const murphyAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 13503519,
+    "salesTaxRevenue": 3769402,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 58930328,
     "capitalAssets": 129585797,
     "deferredOutflows": 1799480,
@@ -189,18 +195,3 @@ export const murphyAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 60436898
   }
 ];
-
-export const murphyRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 13893953,
-      sales: 3624540,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 13503519,
-      sales: 3769402,
-      hotel: 0,
-    },
-  ];

@@ -9,6 +9,10 @@ export interface CityFinancialData {
   operatingGrantsAndContributions: number;
   capitalGrantsAndContributions: number;
   debInterest: number;
+  // Tax revenue by source (Statement of Activities general revenues); recent years only.
+  propertyTaxRevenue?: number;
+  salesTaxRevenue?: number;
+  hotelTaxRevenue?: number;
   // Optional Statement of Activities figures, governmental vs business-type.
   // Forney FY2023+ only; report order after debInterest.
   governmentalExpenses?: number;
@@ -50,13 +54,6 @@ export interface RevenueBySource {
   hotel: number;
 }
 
-export interface RevenueMix {
-  fiscalYear: number;
-  property: number;
-  sales: number;
-  hotel: number;
-}
-
 export interface PropertyValues {
   fiscalYear: number;
   // Maintenance & operations tax rate
@@ -76,7 +73,6 @@ export interface CityInfo {
   populations: Population[];
   propertyValues?: PropertyValues[];
   revenueBySource: RevenueBySource;
-  revenues?: RevenueMix[];
   salesTaxUsage?: {
     usage: string;
     percent: number;

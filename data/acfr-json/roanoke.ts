@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const roanokeAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const roanokeAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 11804174,
+    "salesTaxRevenue": 19250692,
+    "hotelTaxRevenue": 177365,
     "currentAndOtherAssets": 74635432,
     "capitalAssets": 105724833,
     "deferredOutflows": 5479296,
@@ -163,6 +166,9 @@ export const roanokeAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 11877593,
+    "salesTaxRevenue": 22247339,
+    "hotelTaxRevenue": 124812,
     "currentAndOtherAssets": 70689991,
     "capitalAssets": 129392202,
     "deferredOutflows": 5152678,
@@ -178,18 +184,3 @@ export const roanokeAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 33203021
   }
 ];
-
-export const roanokeRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 11804174,
-      sales: 19250692,
-      hotel: 177365,
-    },
-    {
-      fiscalYear: 2025,
-      property: 11877593,
-      sales: 22247339,
-      hotel: 124812,
-    },
-  ];

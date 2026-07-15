@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const farmersBranchAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const farmersBranchAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 50038531,
+    "salesTaxRevenue": 24406225,
+    "hotelTaxRevenue": 3515051,
     "currentAndOtherAssets": 164722231,
     "capitalAssets": 299019500,
     "deferredOutflows": 20312644,
@@ -173,6 +176,9 @@ export const farmersBranchAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 49600517,
+    "salesTaxRevenue": 25051912,
+    "hotelTaxRevenue": 3494683,
     "currentAndOtherAssets": 166487646,
     "capitalAssets": 334258794,
     "deferredOutflows": 12886454,
@@ -189,18 +195,3 @@ export const farmersBranchAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 155963635
   }
 ];
-
-export const farmersBranchRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 50038531,
-      sales: 24406225,
-      hotel: 3515051,
-    },
-    {
-      fiscalYear: 2025,
-      property: 49600517,
-      sales: 25051912,
-      hotel: 3494683,
-    },
-  ];

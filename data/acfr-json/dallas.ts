@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const dallasAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 1415798000,
+    "salesTaxRevenue": 439666000,
+    "hotelTaxRevenue": 109446000,
     "currentAndOtherAssets": 5766480000,
     "capitalAssets": 13586063000,
     "deferredOutflows": 1561561000,
@@ -173,6 +176,9 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 1490106000,
+    "salesTaxRevenue": 453319000,
+    "hotelTaxRevenue": 107634000,
     "currentAndOtherAssets": 6229294000,
     "capitalAssets": 14455808000,
     "deferredOutflows": 1089738000,
@@ -189,18 +195,3 @@ export const dallasAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 10755971000
   }
 ];
-
-export const dallasRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 1415798000,
-      sales: 439666000,
-      hotel: 109446000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 1490106000,
-      sales: 453319000,
-      hotel: 107634000,
-    },
-  ];

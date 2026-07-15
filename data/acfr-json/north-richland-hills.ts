@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const northRichlandHillsAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const northRichlandHillsAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 39174000,
+    "salesTaxRevenue": 27974000,
+    "hotelTaxRevenue": 446000,
     "currentAndOtherAssets": 230770000,
     "capitalAssets": 439886000,
     "deferredOutflows": 22026000,
@@ -163,6 +166,9 @@ export const northRichlandHillsAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 41246855,
+    "salesTaxRevenue": 29655963,
+    "hotelTaxRevenue": 430548,
     "currentAndOtherAssets": 221093000,
     "capitalAssets": 451631000,
     "deferredOutflows": 13843000,
@@ -178,18 +184,3 @@ export const northRichlandHillsAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 198940411
   }
 ];
-
-export const northRichlandHillsRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 39174000,
-      sales: 27974000,
-      hotel: 446000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 41246855,
-      sales: 29655963,
-      hotel: 430548,
-    },
-  ];

@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const prosperAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const prosperAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 45951000,
+    "salesTaxRevenue": 19540000,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 233971000,
     "capitalAssets": 777194000,
     "deferredOutflows": 6118000,
@@ -163,6 +166,9 @@ export const prosperAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 52663000,
+    "salesTaxRevenue": 20522000,
+    "hotelTaxRevenue": 0,
     "currentAndOtherAssets": 221394000,
     "capitalAssets": 903078000,
     "deferredOutflows": 5223000,
@@ -178,18 +184,3 @@ export const prosperAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 337222595
   }
 ];
-
-export const prosperRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 45951000,
-      sales: 19540000,
-      hotel: 0,
-    },
-    {
-      fiscalYear: 2025,
-      property: 52663000,
-      sales: 20522000,
-      hotel: 0,
-    },
-  ];

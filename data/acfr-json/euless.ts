@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const eulessAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const eulessAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 30133000,
+    "salesTaxRevenue": 29310000,
+    "hotelTaxRevenue": 1656000,
     "currentAndOtherAssets": 223599000,
     "capitalAssets": 285500000,
     "deferredOutflows": 14712000,
@@ -163,6 +166,9 @@ export const eulessAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 31877000,
+    "salesTaxRevenue": 32032000,
+    "hotelTaxRevenue": 1698000,
     "currentAndOtherAssets": 215163000,
     "capitalAssets": 321530000,
     "deferredOutflows": 10128000,
@@ -178,18 +184,3 @@ export const eulessAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 190074101
   }
 ];
-
-export const eulessRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 30133000,
-      sales: 29310000,
-      hotel: 1656000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 31877000,
-      sales: 32032000,
-      hotel: 1698000,
-    },
-  ];

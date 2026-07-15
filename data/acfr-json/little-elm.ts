@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const littleElmAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const littleElmAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 42342937,
+    "salesTaxRevenue": 10483808,
+    "hotelTaxRevenue": 190432,
     "currentAndOtherAssets": 199800810,
     "capitalAssets": 425697176,
     "deferredOutflows": 5556152,
@@ -163,6 +166,9 @@ export const littleElmAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 43233523,
+    "salesTaxRevenue": 10630908,
+    "hotelTaxRevenue": 200915,
     "currentAndOtherAssets": 194812952,
     "capitalAssets": 441541453,
     "deferredOutflows": 4628626,
@@ -178,18 +184,3 @@ export const littleElmAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 126394631
   }
 ];
-
-export const littleElmRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 42342937,
-      sales: 10483808,
-      hotel: 190432,
-    },
-    {
-      fiscalYear: 2025,
-      property: 43233523,
-      sales: 10630908,
-      hotel: 200915,
-    },
-  ];

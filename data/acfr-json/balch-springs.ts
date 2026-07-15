@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const balchSpringsAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const balchSpringsAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 14651191,
+    "salesTaxRevenue": 8891822,
+    "hotelTaxRevenue": 277495,
     "currentAndOtherAssets": 49159614,
     "capitalAssets": 63115011,
     "deferredOutflows": 3930475,
@@ -163,6 +166,9 @@ export const balchSpringsAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 16365975,
+    "salesTaxRevenue": 8728310,
+    "hotelTaxRevenue": 255084,
     "currentAndOtherAssets": 67780619,
     "capitalAssets": 68256161,
     "deferredOutflows": 2888858,
@@ -178,18 +184,3 @@ export const balchSpringsAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 49432992
   }
 ];
-
-export const balchSpringsRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 14651191,
-      sales: 8891822,
-      hotel: 277495,
-    },
-    {
-      fiscalYear: 2025,
-      property: 16365975,
-      sales: 8728310,
-      hotel: 255084,
-    },
-  ];

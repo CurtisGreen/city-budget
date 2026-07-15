@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const richardsonAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const richardsonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 132912399,
+    "salesTaxRevenue": 53763370,
+    "hotelTaxRevenue": 5088522,
     "currentAndOtherAssets": 506892000,
     "capitalAssets": 762905000,
     "deferredOutflows": 38985000,
@@ -173,6 +176,9 @@ export const richardsonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 134730000,
+    "salesTaxRevenue": 55353000,
+    "hotelTaxRevenue": 4948000,
     "currentAndOtherAssets": 497619000,
     "capitalAssets": 866591000,
     "deferredOutflows": 22256000,
@@ -189,18 +195,3 @@ export const richardsonAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 306519000
   }
 ];
-
-export const richardsonRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 132912399,
-      sales: 53763370,
-      hotel: 5088522,
-    },
-    {
-      fiscalYear: 2025,
-      property: 134730000,
-      sales: 55353000,
-      hotel: 4948000,
-    },
-  ];

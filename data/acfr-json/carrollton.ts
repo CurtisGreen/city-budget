@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const carrolltonAcfr: CityFinancialData[] = [
   {
@@ -156,6 +156,9 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 115162154,
+    "salesTaxRevenue": 49712276,
+    "hotelTaxRevenue": 577425,
     "currentAndOtherAssets": 478508000,
     "capitalAssets": 694486000,
     "deferredOutflows": 27160000,
@@ -173,6 +176,9 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 120216758,
+    "salesTaxRevenue": 52632624,
+    "hotelTaxRevenue": 534573,
     "currentAndOtherAssets": 475009000,
     "capitalAssets": 764144000,
     "deferredOutflows": 14509000,
@@ -189,18 +195,3 @@ export const carrolltonAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 352230884
   }
 ];
-
-export const carrolltonRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 115162154,
-      sales: 49712276,
-      hotel: 577425,
-    },
-    {
-      fiscalYear: 2025,
-      property: 120216758,
-      sales: 52632624,
-      hotel: 534573,
-    },
-  ];

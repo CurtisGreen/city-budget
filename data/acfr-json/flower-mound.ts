@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const flowerMoundAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const flowerMoundAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 63095966,
+    "salesTaxRevenue": 37844425,
+    "hotelTaxRevenue": 734306,
     "currentAndOtherAssets": 262178282,
     "capitalAssets": 624017078,
     "deferredOutflows": 13368541,
@@ -163,6 +166,9 @@ export const flowerMoundAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 65358260,
+    "salesTaxRevenue": 38241424,
+    "hotelTaxRevenue": 796281,
     "currentAndOtherAssets": 277399203,
     "capitalAssets": 649458096,
     "deferredOutflows": 11841750,
@@ -178,18 +184,3 @@ export const flowerMoundAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 370710070
   }
 ];
-
-export const flowerMoundRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 63095966,
-      sales: 37844425,
-      hotel: 734306,
-    },
-    {
-      fiscalYear: 2025,
-      property: 65358260,
-      sales: 38241424,
-      hotel: 796281,
-    },
-  ];

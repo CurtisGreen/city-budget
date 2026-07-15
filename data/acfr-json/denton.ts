@@ -1,4 +1,4 @@
-import type { CityFinancialData, RevenueMix } from "@/lib/types";
+import type { CityFinancialData } from "@/lib/types";
 
 export const dentonAcfr: CityFinancialData[] = [
   {
@@ -147,6 +147,9 @@ export const dentonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2024,
+    "propertyTaxRevenue": 106556000,
+    "salesTaxRevenue": 57075000,
+    "hotelTaxRevenue": 2965000,
     "currentAndOtherAssets": 1248663000,
     "capitalAssets": 2502778000,
     "deferredOutflows": 67238000,
@@ -163,6 +166,9 @@ export const dentonAcfr: CityFinancialData[] = [
   },
   {
     "fiscalYear": 2025,
+    "propertyTaxRevenue": 119835000,
+    "salesTaxRevenue": 58972000,
+    "hotelTaxRevenue": 3320000,
     "currentAndOtherAssets": 1376296000,
     "capitalAssets": 2765042000,
     "deferredOutflows": 3960000,
@@ -178,18 +184,3 @@ export const dentonAcfr: CityFinancialData[] = [
     "businessCapitalAssetsBeingDepreciated": 2065595082
   }
 ];
-
-export const dentonRevenues: RevenueMix[] = [
-    {
-      fiscalYear: 2024,
-      property: 106556000,
-      sales: 57075000,
-      hotel: 2965000,
-    },
-    {
-      fiscalYear: 2025,
-      property: 119835000,
-      sales: 58972000,
-      hotel: 3320000,
-    },
-  ];
