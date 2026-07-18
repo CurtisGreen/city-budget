@@ -121,7 +121,7 @@ export default function LeafletMap({
   cities: CityData[];
 }) {
   const [selectedMetric, setSelectedMetric] = useState(
-    "Years of Surplus Revenue",
+    "Years of Financial Cushion",
   );
   const colorConfig = getColorConfig(selectedMetric);
   const features = geoJSONFeatures
@@ -154,7 +154,7 @@ export default function LeafletMap({
         <div className="text-sm font-semibold">
           <Dropdown
             options={[
-              "Years of Surplus Revenue",
+              "Years of Financial Cushion",
               "Net Debt to Revenue",
               "Asset Life",
               "5-Year Change in Asset Life",

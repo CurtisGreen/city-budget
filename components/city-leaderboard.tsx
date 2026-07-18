@@ -58,7 +58,7 @@ const metricConfigs: MetricConfig[] = [
     formatType: "percent",
   },
   {
-    key: "yearsOfSurplusRevenue",
+    key: "yearsOfFinancialCushion",
     formatType: "number",
     maximumFractionDigits: 1,
   },

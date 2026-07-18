@@ -94,14 +94,14 @@ export const chartConfigs: Record<string, ChartConfig> = {
     formula:
       "(Operating grants and contributions + Capital grants and contributions) / Total revenue",
   },
-  yearsOfSurplusRevenue: {
-    title: "Years of Surplus Revenue",
+  yearsOfFinancialCushion: {
+    title: "Years of Financial Cushion",
     description:
-      "Years of total revenue remaining after paying off debt and infrastructure costs",
+      "Years of revenue the city could run on after covering all debt and factoring in how much reinvestment runway its infrastructure has left.",
     whatItMeans:
-      "This shows how well the city is balancing its revenue, debt, and infrastructure maintenance over time.",
+      "This shows how well the city is balancing its revenue, debt, and infrastructure maintenance over time. Higher means a bigger cushion.",
     whatToLookFor:
-      "A rising trend or positive value shows the city can pay off its debt and maintain its infrastructure. A negative value or declining trend indicates potential financial difficulties.",
+      "A rising trend or positive value shows a growing buffer. A negative or falling value signals thinning reserves or aging infrastructure.",
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
@@ -112,9 +112,9 @@ export const chartConfigs: Record<string, ChartConfig> = {
   // structuralOperatingRatio: {
   //   title: "Structural Operating Ratio",
   //   description:
-  //     "Governmental expenses divided by recurring governmental revenue (excludes one-time capital contributions).",
+  //     "Governmental expenses divided by recurring own-source revenue (excludes all grants — capital and operating).",
   //   whatItMeans:
-  //     "This shows whether the city can cover its operating costs from recurring revenue alone. A ratio below 100% means recurring taxes and fees fully fund operations; above 100% means the city depends on one-time money like developer contributions to break even.",
+  //     "This shows whether the city can cover its operating costs from recurring own-source revenue alone (taxes and charges for services). A ratio below 100% means recurring taxes and fees fully fund operations; above 100% means the city depends on grants and one-time money like developer contributions to break even.",
   //   whatToLookFor:
   //     "A rising trend toward or above 100% means the city is leaning on one-time funding to operate — a risk once growth slows. A falling trend shows strengthening self-sufficiency.",
   //   positiveDirection: "down",
@@ -122,7 +122,7 @@ export const chartConfigs: Record<string, ChartConfig> = {
   //   downwardDescription: "More Sustainable",
   //   range: [0.8, 1.2],
   //   formula:
-  //     "Governmental expenses / (Governmental revenues - Governmental capital grants)",
+  //     "Governmental expenses / (Governmental revenues - Governmental capital grants - Governmental operating grants)",
   //   source: {
   //     label: "GFOA — Achieving a Structurally Balanced Budget",
   //     url: "https://www.gfoa.org/materials/achieving-a-structurally-balanced-budget",

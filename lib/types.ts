@@ -18,6 +18,8 @@ export interface CityFinancialData {
   governmentalExpenses?: number;
   // Governmental capital grants (one-time); subset of TPG capitalGrantsAndContributions.
   governmentalCapitalGrants?: number;
+  // Governmental operating grants; subset of TPG operatingGrantsAndContributions.
+  governmentalOperatingGrants?: number;
   // Governmental revenues, all-in (program + general, excludes transfers).
   governmentalRevenues?: number;
   businessTypeExpenses?: number;
@@ -37,7 +39,7 @@ export interface CityMetrics {
   interestToRevenue: number;
   netBookValueToCostOfTCA: number;
   externalTransfersToRevenue: number;
-  yearsOfSurplusRevenue: number;
+  yearsOfFinancialCushion: number;
   // Not rendered yet (see lib/format-chart-data.ts).
   // structuralOperatingRatio: number;
   // utilitySelfSupport: number;

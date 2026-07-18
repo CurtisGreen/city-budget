@@ -30,30 +30,24 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const netBookValueToCostOfTCA = netCapitalAssets / grossCapitalAssets;
   const externalTransfersToRevenue = totalExternalTransfers / data.totalRevenue;
 
-  const averageAssetLife = 0.62; // Based on average of 40 DFW cities over 11 years
+  const averageAssetLife = 0.62; // Asset life of all cities in the data set if they were 1 large city, FY 2015 - FY 2025
   const surplusAssetLife =
     (netBookValueToCostOfTCA - averageAssetLife) * grossCapitalAssets;
   const totalSurplus = netFinancialPosition + surplusAssetLife;
-  const yearsOfSurplusRevenue = totalSurplus / data.totalRevenue;
+  const yearsOfFinancialCushion = totalSurplus / data.totalRevenue;
 
-  // --- Structural operating ratio + utility self-support (not rendered yet) ---
-  // GFOA structural balance: governmental, recurring revenue (strips one-time capital
-  // contributions). NaN where the optional gov columns are absent. Source:
-  // https://www.gfoa.org/materials/achieving-a-structurally-balanced-budget
-  //
+  // Not rendered yet.
   // const govRecurringRevenue =
-  //   (data.governmentalRevenues ?? NaN) - (data.governmentalCapitalGrants ?? 0);
-  // // < 1.0 = recurring revenue covers expenses; > 1.0 = structural deficit.
+  //   (data.governmentalRevenues ?? NaN) -
+  //   (data.governmentalCapitalGrants ?? 0) -
+  //   (data.governmentalOperatingGrants ?? 0);
   // const structuralOperatingRatio =
   //   (data.governmentalExpenses ?? NaN) / govRecurringRevenue;
   //
-  // // Utility tested separately (never blended into the governmental ratio).
-  // // Business-type capital grants are derived: TPG capital grants - governmental.
   // const businessCapitalGrants =
   //   data.capitalGrantsAndContributions - (data.governmentalCapitalGrants ?? 0);
   // const businessRecurringRevenue =
   //   data.totalRevenue - (data.governmentalRevenues ?? NaN) - businessCapitalGrants;
-  // // >= 1.0 = utility covers its own recurring costs from rates.
   // const utilitySelfSupport =
   //   businessRecurringRevenue / (data.businessTypeExpenses ?? NaN);
 
@@ -66,7 +60,7 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
     interestToRevenue,
     netBookValueToCostOfTCA,
     externalTransfersToRevenue,
-    yearsOfSurplusRevenue,
+    yearsOfFinancialCushion,
     // structuralOperatingRatio,
     // utilitySelfSupport,
   };

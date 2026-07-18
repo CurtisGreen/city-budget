@@ -9,7 +9,7 @@ export type ColorConfig = {
   getFormattedValue: (cityData: CityData) => string;
 };
 
-const yearsOfSurplusRevenueConfig: ColorConfig = {
+const yearsOfFinancialCushionConfig: ColorConfig = {
   greenLabel: ">= 0",
   yellowLabel: "> -0.5",
   redLabel: "< -0.5",
@@ -19,15 +19,15 @@ const yearsOfSurplusRevenueConfig: ColorConfig = {
     return "oklch(0.577 0.245 27)"; // red - poor
   },
   getValue: (cityData: CityData) => {
-    return cityData.metrics.at(-1)?.yearsOfSurplusRevenue || 0;
+    return cityData.metrics.at(-1)?.yearsOfFinancialCushion || 0;
   },
   getFormattedValue: (cityData: CityData) => {
-    const yearsOfSurplusRevenue =
-      cityData.metrics.at(-1)?.yearsOfSurplusRevenue || 0;
+    const yearsOfFinancialCushion =
+      cityData.metrics.at(-1)?.yearsOfFinancialCushion || 0;
     const formattedValue = new Intl.NumberFormat("en-US", {
       notation: "compact",
       maximumFractionDigits: 1,
-    }).format(yearsOfSurplusRevenue);
+    }).format(yearsOfFinancialCushion);
     return formattedValue === "-0" ? "0" : formattedValue;
   },
 };
@@ -221,7 +221,7 @@ const changeInPopulationPercent: ColorConfig = {
 };
 
 export const getColorConfig = (metric: string): ColorConfig => {
-  if (metric == "Years of Surplus Revenue") return yearsOfSurplusRevenueConfig;
+  if (metric == "Years of Financial Cushion") return yearsOfFinancialCushionConfig;
   // Not rendered yet (see above).
   // if (metric == "Structural Operating Ratio")
   //   return structuralOperatingRatioConfig;
