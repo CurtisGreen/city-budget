@@ -84,7 +84,7 @@ export const universityParkInfo: CityInfo = {
   ],
   area: 3.69,
   notes: [
-    `2025 ACFR: Current resources decilned as the City advanced capital projects.
+    `2025 ACFR: Current resources declined as the City advanced capital projects.
     Total current and other assets decreased from $88.0 million to $71.4 million, 
     while net capital, lease, and subscription assets increased from $170.4 million to $205.4 million.
     This change reflects the conversion of cash and other current resources into construction in progress
