@@ -8,13 +8,13 @@ export interface CityFinancialData {
   totalRevenue: number;
   operatingGrantsAndContributions: number;
   capitalGrantsAndContributions: number;
-  debInterest: number;
+  debtInterest: number;
   // Tax revenue by source (Statement of Activities general revenues); recent years only.
   propertyTaxRevenue?: number;
   salesTaxRevenue?: number;
   hotelTaxRevenue?: number;
   // Optional Statement of Activities figures, governmental vs business-type.
-  // Forney FY2023+ only; report order after debInterest.
+  // Forney FY2023+ only; report order after debtInterest.
   governmentalExpenses?: number;
   // Governmental capital grants (one-time); subset of TPG capitalGrantsAndContributions.
   governmentalCapitalGrants?: number;

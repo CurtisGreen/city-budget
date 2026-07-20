@@ -48,7 +48,7 @@ const formatData = (row: Record<string, number>): CityFinancialData => ({
   totalRevenue: num(row["Total revenues"]),
   operatingGrantsAndContributions: num(row["Operating Grants & Contributions"]),
   capitalGrantsAndContributions: num(row["Capital Grants & Contributions"]),
-  debInterest: num(row["Debt service / interest"]),
+  debtInterest: num(row["Debt service / interest"]),
   governmentalExpenses: optionalNumber(row["Governmental expenses"]),
   governmentalCapitalGrants: optionalNumber(row["Governmental capital grants"]),
   governmentalRevenues: optionalNumber(row["Governmental revenues"]),
