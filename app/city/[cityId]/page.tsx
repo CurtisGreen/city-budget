@@ -12,11 +12,17 @@ import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
 import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
-import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
+import {
+  calculateAveragePopulationDensity,
+  toFullAccrualExpenseChart,
+  toModifiedAccrualExpenditureChart,
+} from "@/lib/format-chart-data";
 import { PieChart } from "@/components/ui/pie-chart";
 import { RevenueChart } from "@/components/revenue-chart";
 import { ACFRDownloadButton } from "@/components/ui/acfr-download-button";
 import { SimplePieChart } from "@/components/ui/pie-chart-simple";
+import { ExpenseBreakdownChart } from "@/components/expense-breakdown-chart";
+import { expenseCategoryGroups } from "@/lib/expense-category-groups";
 
 interface CityPageProps {
   params: Promise<{
@@ -118,6 +124,21 @@ export default async function CityPage({ params }: CityPageProps) {
   const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
   const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
   const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
+
+  const fullAccrualExpenses = toFullAccrualExpenseChart(
+    cityData.financialData,
+    cityId,
+  );
+  const modifiedAccrualExpenditures = toModifiedAccrualExpenditureChart(
+    cityData.financialData,
+    cityId,
+  );
+  const noteEntry = Object.entries(
+    expenseCategoryGroups[cityId]?.notes ?? {},
+  )[0];
+  const expenseNote = noteEntry
+    ? { label: noteEntry[0], detail: noteEntry[1] }
+    : undefined;
 
   return (
     <div className="min-h-screen">
@@ -295,6 +316,26 @@ export default async function CityPage({ params }: CityPageProps) {
                   extra police funding, and street maintenance."
             />
           </div>
+
+          {(fullAccrualExpenses.data.length > 0 ||
+            modifiedAccrualExpenditures.data.length > 0) && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+              <ExpenseBreakdownChart
+                title="Expenses: Full Accrual"
+                description="Government-wide cost of services, includes depreciation & actuarial pension"
+                data={fullAccrualExpenses.data}
+                categories={fullAccrualExpenses.categories}
+                note={expenseNote}
+              />
+              <ExpenseBreakdownChart
+                title="Expenditures: Modified Accrual"
+                description="Governmental funds actual spend, includes capital outlay & debt principal"
+                data={modifiedAccrualExpenditures.data}
+                categories={modifiedAccrualExpenditures.categories}
+                note={expenseNote}
+              />
+            </div>
+          )}
         </div>
       </section>
 

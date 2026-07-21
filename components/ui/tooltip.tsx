@@ -1,7 +1,7 @@
 import { InfoIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const Tooltip = ({ message }: { message: string }) => {
+export const Tooltip = ({ message, size = 5 }: { message: string, size?: number }) => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const openerRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
@@ -100,7 +100,7 @@ export const Tooltip = ({ message }: { message: string }) => {
         onClick={handleClick}
         className="mt-1 ml-1"
       >
-        <InfoIcon className="h-5 w-5 text-muted-foreground" />
+        <InfoIcon className={`h-${size} w-${size} text-muted-foreground`} />
       </div>
     </>
   );

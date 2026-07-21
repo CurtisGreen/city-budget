@@ -9,18 +9,21 @@ export interface CityFinancialData {
   operatingGrantsAndContributions: number;
   capitalGrantsAndContributions: number;
   debtInterest: number;
-  // Tax revenue by source (Statement of Activities general revenues); recent years only.
   propertyTaxRevenue?: number;
   salesTaxRevenue?: number;
   hotelTaxRevenue?: number;
-  // Optional Statement of Activities figures, governmental vs business-type.
-  // Forney FY2023+ only; report order after debtInterest.
   governmentalExpenses?: number;
-  // Governmental capital grants (one-time); subset of TPG capitalGrantsAndContributions.
+  // Gov-wide Statement of Activities, full accrual: includes depreciation & actuarial pension; excludes capital outlay & debt principal.
+  fullAccrualExpenses?: { name: string; value: number }[];
+  // Governmental funds statement, modified accrual: includes capital outlay & debt principal; excludes depreciation; pension = cash contributions.
+  modifiedAccrualExpenditures?: {
+    current: { name: string; value: number }[];
+    debtService: { principal: number; interest: number };
+    capitalOutlay: number;
+    total: number;
+  };
   governmentalCapitalGrants?: number;
-  // Governmental operating grants; subset of TPG operatingGrantsAndContributions.
   governmentalOperatingGrants?: number;
-  // Governmental revenues, all-in (program + general, excludes transfers).
   governmentalRevenues?: number;
   businessTypeExpenses?: number;
   capitalAssetsNetofDepreciation?: number;
