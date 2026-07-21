@@ -162,6 +162,7 @@ export default function LeafletMap({
               "Total Revenue Per Acre",
               "5-Year Change in Population",
               "5-Year Change in Population %",
+              "Population per Sq. Mi",
               // Not rendered yet (see types.ts).
               // "Structural Operating Ratio",
               // "Utility Self-Support",

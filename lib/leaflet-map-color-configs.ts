@@ -220,6 +220,31 @@ const changeInPopulationPercent: ColorConfig = {
   },
 };
 
+const populationDensityConfig: ColorConfig = {
+  greenLabel: ">= 4k",
+  yellowLabel: ">= 3k",
+  redLabel: "< 3k",
+  colorFunction: (ratio: number) => {
+    if (ratio >= 4000) return "oklch(0.696 0.17 162)"; // green - excellent
+    if (ratio >= 3000) return "oklch(0.769 0.188 70)"; // yellow - okay
+    return "oklch(0.577 0.245 27)"; // red - poor
+  },
+  getValue: (cityData: CityData) => {
+    const currentPopulation = cityData.info.populations.at(-1)?.value || 0;
+    const populationDensity = currentPopulation / cityData.info.area;
+    return populationDensity;
+  },
+  getFormattedValue: (cityData: CityData) => {
+    const currentPopulation = cityData.info.populations.at(-1)?.value || 0;
+    const populationDensity = currentPopulation / cityData.info.area;
+    return new Intl.NumberFormat("en-US", {
+      style: "decimal",
+      notation: "compact",
+      maximumFractionDigits: 2,
+    }).format(populationDensity);
+  },
+};
+
 export const getColorConfig = (metric: string): ColorConfig => {
   if (metric == "Years of Financial Cushion") return yearsOfFinancialCushionConfig;
   // Not rendered yet (see above).
@@ -231,7 +256,7 @@ export const getColorConfig = (metric: string): ColorConfig => {
   if (metric == "5-Year Change in Asset Life") return changeInAssetLifeConfig;
   if (metric == "Total Revenue Per Acre") return revenuePerAcreConfig;
   if (metric == "5-Year Change in Population") return changeInPopulation;
-  if (metric == "5-Year Change in Population %")
-    return changeInPopulationPercent;
+  if (metric == "5-Year Change in Population %") return changeInPopulationPercent;
+  if (metric === "Population per Sq. Mi") return populationDensityConfig
   return changeInAssetsToLiabilitiesConfig;
 };
