@@ -18,7 +18,14 @@ export interface CityFinancialData {
   // Governmental funds statement, modified accrual: includes capital outlay & debt principal; excludes depreciation; pension = cash contributions.
   modifiedAccrualExpenditures?: {
     current: { name: string; value: number }[];
-    debtService: { principal: number; interest: number };
+    // refundingEscrow = "Payment to refunded bond escrow agent" when a city books it as a
+    // debt-service EXPENDITURE (in Total Expenditures), e.g. Dallas. Omit when the city books it
+    // under Other Financing Uses instead (excluded from expenditures), e.g. Addison.
+    debtService: {
+      principal: number;
+      interest: number;
+      refundingEscrow?: number;
+    };
     capitalOutlay: number;
     total: number;
   };

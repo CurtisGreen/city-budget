@@ -108,7 +108,8 @@ export const ExpenseBreakdownChart = ({
               />
             }
           />
-          <Legend />
+          {/* Sort by the value of the first column in descending order */}
+          <Legend itemSorter={(prop) => -1 * chartData[0][prop.value || ""]} />
           {orderedData.map((c) => (
             <Bar key={c} dataKey={c} stackId="a" fill={fillFor(c)} />
           ))}
