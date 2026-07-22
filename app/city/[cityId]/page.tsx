@@ -322,14 +322,14 @@ export default async function CityPage({ params }: CityPageProps) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
               <ExpenseBreakdownChart
                 title="Expenses: Full Accrual"
-                description="Government-wide cost of services, includes depreciation & actuarial pension"
+                description="Cost of services, includes depreciation & expected pension costs"
                 data={fullAccrualExpenses.data}
                 categories={fullAccrualExpenses.categories}
                 note={expenseNote}
               />
               <ExpenseBreakdownChart
                 title="Expenditures: Modified Accrual"
-                description="Governmental funds actual spend, includes capital outlay & debt principal"
+                description="Money spent this year, includes full cost of new assets & paying down debt"
                 data={modifiedAccrualExpenditures.data}
                 categories={modifiedAccrualExpenditures.categories}
                 note={expenseNote}
