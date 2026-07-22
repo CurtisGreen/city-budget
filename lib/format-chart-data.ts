@@ -264,16 +264,18 @@ export function toFullAccrualExpenseChart(
 ): ExpenseChartData {
   const groups = expenseCategoryGroups[cityId]?.groups ?? {};
   const categories = new Set<string>();
-  const data = financialData.flatMap((fd) => {
-    if (!fd.fullAccrualExpenses) return [];
-    const row: Record<string, number> = { fiscalYear: fd.fiscalYear };
-    for (const expense of fd.fullAccrualExpenses) {
-      const name = groups[expense.name] ?? expense.name;
-      row[name] = (row[name] ?? 0) + expense.value;
-      categories.add(name);
-    }
-    return [row];
-  });
+  const data = financialData
+    .filter((fd) => fd.fullAccrualExpenses)
+    .map((fd) => {
+      const row: Record<string, number> = { fiscalYear: fd.fiscalYear };
+      for (const expense of fd.fullAccrualExpenses!) {
+        const name = groups[expense.name] ?? expense.name;
+        const value = (row[name] ?? 0) + expense.value;
+        row[name] = value;
+        categories.add(name);
+      }
+      return row;
+    });
   return { data, categories: [...categories] };
 }
 
@@ -283,24 +285,28 @@ export function toModifiedAccrualExpenditureChart(
 ): ExpenseChartData {
   const groups = expenseCategoryGroups[cityId]?.groups ?? {};
   const categories = new Set<string>();
-  const data = financialData.flatMap((fd) => {
-    const expenditures = fd.modifiedAccrualExpenditures;
-    if (!expenditures) return [];
+  const data = financialData
+    .filter((fd) => fd.modifiedAccrualExpenditures)
+    .map((fd) => {
+      const expenditures = fd.modifiedAccrualExpenditures!;
 
-    const row: Record<string, number> = { fiscalYear: fd.fiscalYear };
-    for (const expenditure of expenditures.current) {
-      const name = groups[expenditure.name] ?? expenditure.name;
-      row[name] = (row[name] ?? 0) + expenditure.value;
-      categories.add(name);
-    }
-    row["Debt service"] =
-      expenditures.debtService.principal +
-      expenditures.debtService.interest +
-      (expenditures.debtService.refundingEscrow ?? 0);
-    categories.add("Debt service");
-    row["Capital outlay"] = expenditures.capitalOutlay;
-    categories.add("Capital outlay");
-    return [row];
-  });
+      const row: Record<string, number> = { fiscalYear: fd.fiscalYear };
+      for (const expenditure of expenditures.current) {
+        const name = groups[expenditure.name] ?? expenditure.name;
+        const value = (row[name] ?? 0) + expenditure.value;
+        row[name] = value;
+        categories.add(name);
+      }
+
+      row["Debt service"] =
+        expenditures.debtService.principal +
+        expenditures.debtService.interest +
+        (expenditures.debtService.refundingEscrow ?? 0);
+      categories.add("Debt service");
+
+      row["Capital outlay"] = expenditures.capitalOutlay;
+      categories.add("Capital outlay");
+      return row;
+    });
   return { data, categories: [...categories] };
 }

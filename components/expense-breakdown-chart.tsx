@@ -27,9 +27,6 @@ const COLORS = [
   "var(--chart-5)",
 ];
 
-const OTHER = "Other";
-const TOP_N = 5;
-
 const formatCurrency = (value: number) =>
   new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -53,30 +50,41 @@ export const ExpenseBreakdownChart = ({
 }) => {
   if (data.length === 0) return null;
 
-  // Keep the TOP_N categories by total across all years; fold the rest into "Other".
-  const total = (c: string) => data.reduce((s, r) => s + (r[c] ?? 0), 0);
-  const ranked = [...categories].sort((a, b) => total(b) - total(a));
-  const kept = ranked.slice(0, TOP_N);
-  const otherCats = ranked.slice(TOP_N);
+  const getTotal = (c: string) => data.reduce((s, r) => s + (r[c] ?? 0), 0);
+  const sortedCategories = [...categories].sort(
+    (a, b) => getTotal(b) - getTotal(a),
+  );
+  const top5Categories = sortedCategories.slice(0, 5);
+  const otherCategories = sortedCategories.slice(5);
 
-  // Distinct color per shown category (kept ≤ TOP_N ≤ COLORS.length), stable by rank.
-  const colorFor = new Map(kept.map((c, i) => [c, COLORS[i % COLORS.length]]));
+  const colorFor = new Map(
+    top5Categories.map((c, i) => [c, COLORS[i % COLORS.length]]),
+  );
 
   const chartData = data.map((row) => {
-    const r: Record<string, number> = { fiscalYear: row.fiscalYear };
-    for (const c of kept) r[c] = row[c] ?? 0;
-    if (otherCats.length)
-      r[OTHER] = otherCats.reduce((s, c) => s + (row[c] ?? 0), 0);
-    return r;
-  });
-  const shown = otherCats.length ? [...kept, OTHER] : kept;
+    const mappedRow: Record<string, number> = { fiscalYear: row.fiscalYear };
+    for (const category of top5Categories) {
+      mappedRow[category] = row[category] ?? 0;
+    }
 
-  // Stack largest first year value on the bottom, smallest on top
-  const orderedData = [...shown].sort(
+    if (otherCategories.length)
+      mappedRow["Other"] = otherCategories.reduce(
+        (s, c) => s + (row[c] ?? 0),
+        0,
+      );
+    return mappedRow;
+  });
+
+  const displayedCategories = otherCategories.length
+    ? [...top5Categories, "Other"]
+    : top5Categories;
+
+  // Put the largest bars on the bottom of the stack
+  const orderedData = [...displayedCategories].sort(
     (a, b) => (chartData[0][b] ?? 0) - (chartData[0][a] ?? 0),
   );
   const fillFor = (c: string) =>
-    c === OTHER ? "var(--muted-foreground)" : colorFor.get(c);
+    c === "Other" ? "var(--muted-foreground)" : colorFor.get(c);
 
   return (
     <Card>
@@ -94,9 +102,14 @@ export const ExpenseBreakdownChart = ({
           }}
           responsive
           data={chartData}
-          stackOffset={"sign"}
+          stackOffset="sign"
           margin={{ top: 20, right: 20, left: 30, bottom: 20 }}
-          className={"text-xs"}
+          className={`
+            text-xs
+            [&_.recharts-layer]:outline-hidden
+            [&_.recharts-sector[stroke='#fff']]:stroke-transparent
+            [&_.recharts-surface]:outline-hidden
+          `}
         >
           <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
           <XAxis dataKey="fiscalYear" />
@@ -121,10 +134,13 @@ export const ExpenseBreakdownChart = ({
               <InfoTooltip message={note.detail} size={4} />
             </span>
           )}
-          {otherCats.length > 0 && (
+          {otherCategories.length > 0 && (
             <span className="flex items-center">
-              {OTHER}
-              <InfoTooltip message={`Includes ${otherCats.join(", ")}`} size={4} />
+              Other
+              <InfoTooltip
+                message={`Includes ${otherCategories.join(", ")}`}
+                size={4}
+              />
             </span>
           )}
         </div>
