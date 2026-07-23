@@ -81,7 +81,9 @@ export const ExpenseBreakdownChart = ({
 
   // Put the largest bars on the bottom of the stack
   const orderedData = [...displayedCategories].sort(
-    (a, b) => (chartData[0][b] ?? 0) - (chartData[0][a] ?? 0),
+    (a, b) =>
+      (chartData[chartData.length - 1][b] ?? 0) -
+      (chartData[chartData.length - 1][a] ?? 0),
   );
   const fillFor = (c: string) =>
     c === "Other" ? "var(--muted-foreground)" : colorFor.get(c);
@@ -121,8 +123,13 @@ export const ExpenseBreakdownChart = ({
               />
             }
           />
-          {/* Sort by the value of the first column in descending order */}
-          <Legend itemSorter={(prop) => -1 * chartData[0][prop.value || ""]} />
+          {/* Sort by the value of the last column in descending order */}
+          <Legend
+            itemSorter={(prop) => {
+              const value = chartData[chartData.length - 1][prop.value || ""];
+              return -1 * (value || 0);
+            }}
+          />
           {orderedData.map((c) => (
             <Bar key={c} dataKey={c} stackId="a" fill={fillFor(c)} />
           ))}
