@@ -317,8 +317,7 @@ export default async function CityPage({ params }: CityPageProps) {
             />
           </div>
 
-          {(fullAccrualExpenses.data.length > 0 ||
-            modifiedAccrualExpenditures.data.length > 0) && (
+          {fullAccrualExpenses.data.length > 0 && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
               <ExpenseBreakdownChart
                 title="Expenses: Full Accrual"
@@ -343,7 +342,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {cityData.info.notes && (
         <section className="py-8">
           <div className="container mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-6">Notes</h3>
+            <div className="text-2xl font-bold mb-6">Notes</div>
             <ul className="ml-4">
               {cityData.info.notes.map((note) => (
                 <li key={note} className="list-disc mb-2">
