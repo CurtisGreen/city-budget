@@ -9,6 +9,7 @@ import { cedarHillAcfr } from "./cedar-hill";
 import { celinaAcfr } from "./celina";
 import { colleyvilleAcfr } from "./colleyville";
 import { coppellAcfr } from "./coppell";
+import { corinthAcfr } from "./corinth";
 import { dallasAcfr } from "./dallas";
 import { dentonAcfr } from "./denton";
 import { desotoAcfr } from "./desoto";
@@ -63,6 +64,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   celina: celinaAcfr,
   colleyville: colleyvilleAcfr,
   coppell: coppellAcfr,
+  corinth: corinthAcfr,
   dallas: dallasAcfr,
   denton: dentonAcfr,
   desoto: desotoAcfr,
