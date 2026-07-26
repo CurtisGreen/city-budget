@@ -1,0 +1,72 @@
+{
+  "id": "sachse",
+  "city": "Sachse",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/2870",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/2871",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/3305",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/3401",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/3497",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/3716",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/4027",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/4257",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/4471",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/4612",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofsachse.com/ArchiveCenter/ViewFile/Item/4701",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sachse/sachse-acfr-FY2025.pdf"
+    }
+  ]
+}

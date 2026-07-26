@@ -1,0 +1,72 @@
+{
+  "id": "colleyville",
+  "city": "Colleyville",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://web.archive.org/web/20220307193134id_/https://www.colleyville.com/home/showpublisheddocument/436/636043764013900000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://web.archive.org/web/20220307184940id_/https://www.colleyville.com/home/showpublisheddocument/1010/636570787660430000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2017.pdf",
+      "file": "inbox/parsed/colleyville-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://web.archive.org/web/20220307185900id_/https://www.colleyville.com/home/showpublisheddocument/4458/636894490214570000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.colleyville.com/home/showpublisheddocument/5605/637177932521030000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://web.archive.org/web/20220302141301id_/https://www.colleyville.com/home/showpublisheddocument/8153/637526116215230000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://web.archive.org/web/20250130131026id_/https://www.colleyville.com/home/showpublisheddocument/9426/637889032104400000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://web.archive.org/web/20260414191422id_/https://www.colleyville.com/home/showpublisheddocument/10343/638151610893230000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://web.archive.org/web/20250130173037id_/https://www.colleyville.com/home/showpublisheddocument/11436/638465205773470000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://web.archive.org/web/20260414180050id_/https://www.colleyville.com/home/showpublisheddocument/12514/638773959543100000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://web.archive.org/web/20260414174811id_/https://www.colleyville.com/home/showpublisheddocument/13529/639070109299900000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-colleyville/colleyville-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "coppell",
+  "city": "Coppell",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/coppell-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/coppell-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "manual",
+      "file": "inbox/coppell-FY2018.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "file": "inbox/coppell-FY2019.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.coppelltx.gov/DocumentCenter/View/3504",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.coppelltx.gov/DocumentCenter/View/4326",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.coppelltx.gov/DocumentCenter/View/5239",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.coppelltx.gov/DocumentCenter/View/9363",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-coppell/coppell-acfr-FY2025.pdf"
+    }
+  ]
+}

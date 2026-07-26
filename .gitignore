@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Manually-obtained ACFR PDFs staged for IA upload
+inbox/*.pdf
+inbox/parsed/*.pdf

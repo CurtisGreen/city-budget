@@ -1,0 +1,66 @@
+{
+  "id": "lewisville",
+  "city": "Lewisville",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/10415/638173440501700000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/14692/638173441275300000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/17857/638173441372330000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/19544/638173441443430000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/22195/638173441502030000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/23959/638173441563730000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/25963/638173441628430000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/27927/638467057561330000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/29266/638781455716570000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityoflewisville.com/home/showpublisheddocument/30453/639111596961430000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lewisville/lewisville-acfr-FY2025.pdf"
+    }
+  ]
+}

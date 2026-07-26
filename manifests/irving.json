@@ -1,0 +1,72 @@
+{
+  "id": "irving",
+  "city": "Irving",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Comprehensive%20Annual%20Financial%20Report%202015%20%28PDF%29_2015_COI_CAFR_FINAL_OPTIMIZE_10455.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Comprehensive%20Annual%20Financial%20Report%202016%20%28PDF%29_2016%20City%20of%20Irving%20CAFR%20Final_10454.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Comprehensive%20Annual%20Financial%20Report%202017%20%28PDF%29_2017%20City%20of%20Irving%20CAFR%20Final%20Optimized_5445.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Comprehensive%20Annual%20Financial%20Report%202018%20%28PDF%29_2018%20COI%20CAFR%20Final_5446.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Comprehensive%20Annual%20Financial%20Report%202019%20%28PDF%29_2019%20CAFR%20Optimized_5447.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Comprehensive%20Annual%20Financial%20Report%202020%20%28PDF%29_Comprehensive%20Annual%20Financial%20Report%202020_5448.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Annual%20Comprehensive%20Financial%20Report%202021%20%28PDF%29_Annual%20Comprehensive%20Financial%20Report%202021_5435.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Annual%20Comprehensive%20Financial%20Report%202022%20%28PDF%29_City%20of%20Irving%20-%20ACFR%202021-22%20Final_5436.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_%20Annual%20Comprehensive%20Financial%20Report%202023%20%28PDF%29%20_City%20of%20Irving-%20FY2022-23%20ACFR%20Final_5434.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29_Annual%20Comprehensive%20Financial%20Report%202024%20%28PDF%29_2024%20ACFR_5437.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/Irving%20-%20ACFR%20FINAL%20%28latest%29_1774365561.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-irving/irving-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "fort-worth",
+  "city": "Fort Worth",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/fy2015-comprehensive-annual-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/3/finance/documents/fy2016-comprehensive-annual-financial-report.2.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/fy2017-comprehensive-annual-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/fy2018-comprehensive-annual-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/fy2019-comprehensive-annual-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/2/finance/documents/fy2020-comprehensive-annual-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/2/finance/documents/fy2021-acfr-city-of-fort-worth-texas-final_official-protected.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/2/finance/fy2022-annual-comprehensive-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/fy2023_annual_comprehensive_financial_report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/financial-reporting/fy2024-annual-comprehensive-financial-report-final-digital-copy.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.fortworthtexas.gov/files/assets/public/v/1/finance/documents/financial-reporting/fy2025-acfr-digital-copy.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-fort-worth/fort-worth-acfr-FY2025.pdf"
+    }
+  ]
+}

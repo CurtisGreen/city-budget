@@ -1,0 +1,72 @@
+{
+  "id": "hurst",
+  "city": "Hurst",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/hurst-FY2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/hurst-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/hurst-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/8542/636892758973470000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/9378/637196279548730000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/10118/637564957921400000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/10912/637818987835500000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/12066/638188817803570000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/12790/638453097311500000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/13620/638773706418070000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.hursttx.gov/home/showpublisheddocument/14452/639102227230530000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-hurst/hurst-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "plano",
+  "city": "Plano",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/db9cdfd8-430f-4c67-a3a8-61adc10b7a23",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/6e320704-3cc3-4b93-afe8-974c91de14e3",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/bf4af459-fec9-42a8-8c55-6148d850ac1a",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/95ab38e2-54b8-48bb-b88e-4efd2cda93ac",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/e64e8ff7-8a01-4f8f-97ba-7b8814414a87",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/f96d61dc-28c3-4334-ad3a-a6989b59ae90",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/543438b6-0426-4feb-a715-2b2e41037318",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/5b6c51c4-6b50-428c-bf1e-eee9585fb243",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/aaedd093-5d36-4e22-bb0f-a3d3e54e9cdb",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/808dc693-6862-468d-96fc-077342c4fb19",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-plano/606612a7-3160-4df4-bd55-c376ab32e92c",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-plano/plano-acfr-FY2025.pdf"
+    }
+  ]
+}

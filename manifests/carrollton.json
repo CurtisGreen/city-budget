@@ -1,0 +1,72 @@
+{
+  "id": "carrollton",
+  "city": "Carrollton",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/14764/636519551473670000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/17793/636519549508930000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/20422/636606760537570000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/22975/637157211119530000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/26064/637200378486570000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/30305/637478559364570000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/33281/637798203598000000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/35466/638146411177730000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/39130/638762548359100000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/39132/638762550551470000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofcarrollton.com/home/showpublisheddocument/40561/639063313646600000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-carrollton/carrollton-acfr-FY2025.pdf"
+    }
+  ]
+}

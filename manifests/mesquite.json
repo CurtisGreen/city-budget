@@ -1,0 +1,72 @@
+{
+  "id": "mesquite",
+  "city": "Mesquite",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/6854",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/8256",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/10655",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/12777",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/15404",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/18788",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/21609",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/24344",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/26041",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/28576",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://cityofmesquite.com/DocumentCenter/View/30199",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mesquite/mesquite-acfr-FY2025.pdf"
+    }
+  ]
+}

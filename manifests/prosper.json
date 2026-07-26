@@ -1,0 +1,66 @@
+{
+  "id": "prosper",
+  "city": "Prosper",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/prosper-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/prosper-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "manual",
+      "file": "inbox/prosper-FY2018.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=51",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=52",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=53",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=358",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=489",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=574",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.prospertx.gov/Archive.aspx?ADID=682",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-prosper/prosper-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "watauga",
+  "city": "Watauga",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/942",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1142",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1267",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1492",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1640",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1745",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1812",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1853",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1898",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cowtx.org/Archive/ViewFile/Item/1949",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cowtx.org/DocumentCenter/View/20655",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-watauga/watauga-acfr-FY2025.pdf"
+    }
+  ]
+}

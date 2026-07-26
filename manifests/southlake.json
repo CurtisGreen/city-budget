@@ -1,0 +1,42 @@
+{
+  "id": "southlake",
+  "city": "Southlake",
+  "pdfs": [
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofsouthlake.com/DocumentCenter/View/25650",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-southlake/southlake-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofsouthlake.com/DocumentCenter/View/37817",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-southlake/southlake-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofsouthlake.com/DocumentCenter/View/39512",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-southlake/southlake-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofsouthlake.com/DocumentCenter/View/41392",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-southlake/southlake-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofsouthlake.com/DocumentCenter/View/44978/City-of-Southlake-2024-ACFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-southlake/southlake-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofsouthlake.com/DocumentCenter/View/46065",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-southlake/southlake-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "dallas",
+  "city": "Dallas",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2018.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2019.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2020.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/afr_fy2021.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/Annual%20Comprehensive%20Financial%20Report%202022.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2023.pdf",
+      "file": "inbox/parsed/dallas-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://dallascityhall.com/departments/budget/financialtransparency/AuditedFinancials/Annual%20Comprehensive%20Financial%20Report%202024.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dallas/dallas-acfr-FY2025.pdf",
+      "file": "inbox/parsed/dallas-FY2025.pdf"
+    }
+  ]
+}

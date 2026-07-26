@@ -1,0 +1,72 @@
+{
+  "id": "garland",
+  "city": "Garland",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=283",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=284",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=285",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=493",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=494",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=521",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=519",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=551",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=547",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=566",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.garlandtx.gov/Archive.aspx?ADID=614",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-garland/garland-acfr-FY2025.pdf"
+    }
+  ]
+}

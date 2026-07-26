@@ -1,0 +1,72 @@
+{
+  "id": "grand-prairie",
+  "city": "Grand Prairie",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/2/departments/finance/documents/comprehensive-annual-financial-report-2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/2/departments/finance/documents/comprehensive-annual-financial-report-2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/2/departments/finance/documents/comprehensive-annual-financial-report-2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/2/departments/finance/documents/comprehensive-annual-financial-report-2018.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/2/departments/finance/documents/comprehensive-annual-financial-report-2019.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/2/departments/finance/documents/comprehensive-annual-financial-report-2020.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/1/departments/finance/documents/comprehensive-annual-financial-report-2021.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/1/departments/finance/documents/city-of-grand-prairie-annual-comprehensive-financial-report-03-29-2023.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/1/departments/finance/documents/finance-reports/fiscal-year-ended-september-302023.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/1/departments/finance/documents/city-of-grand-prairie-2024-final-acfr.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.gptx.org/files/sharedassets/public/v/1/departments/finance/documents/grand-prairie-acfr-fy25.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grand-prairie/grand-prairie-acfr-FY2025.pdf"
+    }
+  ]
+}

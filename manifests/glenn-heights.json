@@ -1,0 +1,66 @@
+{
+  "id": "glenn-heights",
+  "city": "Glenn Heights",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=61",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=62",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=63",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=122",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=146",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=177",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=178",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=183",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=185",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.glennheightstx.gov/DocumentCenter/View/3918/2025-Comprehensive-Annual-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2025.pdf"
+    }
+  ]
+}

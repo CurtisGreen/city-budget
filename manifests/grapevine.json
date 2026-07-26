@@ -1,0 +1,66 @@
+{
+  "id": "grapevine",
+  "city": "Grapevine",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/2592/Comprehensive-Annual-Financial-Report-2015?bidId=",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/5540/2017-CAFR-City-of-Grapevine?bidId=",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/6451/Annual-Comprehensive-Financial-Report-2018?bidId=",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/7252/Annual-Comprehensive-Financial-Report-2019?bidId=",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/8031",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/8927",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/9525",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/10331",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/11373",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.grapevinetexas.gov/DocumentCenter/View/11910",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-grapevine/grapevine-acfr-FY2025.pdf"
+    }
+  ]
+}

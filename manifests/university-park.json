@@ -1,0 +1,72 @@
+{
+  "id": "university-park",
+  "city": "University Park",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/university-park-FY2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/university-park-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/55",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2018.pdf",
+      "file": "inbox/parsed/university-park-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/53",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/52",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/56",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/115",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/140",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.uptexas.org/ArchiveCenter/ViewFile/Item/153",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.uptexas.org/DocumentCenter/View/3203/Fiscal-Year-2025-ACFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-university-park/university-park-acfr-FY2025.pdf"
+    }
+  ]
+}

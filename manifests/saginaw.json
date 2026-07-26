@@ -1,0 +1,66 @@
+{
+  "id": "saginaw",
+  "city": "Saginaw",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/2016%20Comprehensive%20Annual%20Financial%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/City%20of%20Saginaw%20CAFR%20FY17.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/2018%20Comprehensive%20Annual%20Financial%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2019.pdf",
+      "file": "inbox/parsed/saginaw-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/2020%20Comprehensive%20Annual%20Financial%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/2021%20Annual%20Comprehensive%20Financial%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/City%20of%20Saginaw%20Final%202022%20Report%20(1).pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/2023%20ACFR%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/2024%20Annual%20Comprehensive%20Financial%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://cms2.revize.com/revize/saginawtx/Document%20Center/Department/Finance/Annual%20Comprehensive%20Financial%20Reports/City%20of%20Saginaw%202025%20Audit%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-saginaw/saginaw-acfr-FY2025.pdf"
+    }
+  ]
+}

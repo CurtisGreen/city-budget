@@ -1,0 +1,72 @@
+{
+  "id": "little-elm",
+  "city": "Little Elm",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.littleelm.gov/DocumentCenter/View/8376/2015-Report",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.littleelm.org/DocumentCenter/View/9122/Town-of-Little-Elm-Comprehensive-Annual-Financial-Report-FY-2016",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.littleelm.org/DocumentCenter/View/12264/Little-Elm-Final-2017-Report",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.littleelm.org/DocumentCenter/View/13228/Town-of-Little-Elm-Comprehensive-Annual-Financial-Report-FY-2018",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.littleelm.org/DocumentCenter/View/13810/2019-CAFR",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.littleelm.org/DocumentCenter/View/14413/Town-of-Little-Elm-Final-Report",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.littleelm.gov/DocumentCenter/View/16729/Town-of-Little-Elm-ACFR-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.littleelm.gov/DocumentCenter/View/17107/Town-of-Little-Elm-2022-Annual-Financial-Report",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.littleelm.gov/DocumentCenter/View/20173",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.littleelm.gov/DocumentCenter/View/20970",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.littleelm.gov/DocumentCenter/View/21669/ACFR-2025",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-little-elm/little-elm-acfr-FY2025.pdf"
+    }
+  ]
+}

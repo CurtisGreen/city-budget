@@ -1,0 +1,72 @@
+{
+  "id": "lancaster",
+  "city": "Lancaster",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/10900",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/10901",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/10902",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/12441",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/13652",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2020.pdf",
+      "file": "inbox/parsed/lancaster-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://lancaster-tx.com/Archive.aspx?ADID=3660",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/17129",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/18144",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/18941",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://lancaster-tx.com/DocumentCenter/View/19558",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lancaster/lancaster-acfr-FY2025.pdf"
+    }
+  ]
+}

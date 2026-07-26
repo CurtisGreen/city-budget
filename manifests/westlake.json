@@ -1,0 +1,72 @@
+{
+  "id": "westlake",
+  "city": "Westlake",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/1045",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/1445",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/2355",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/3200",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/3457",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/3853",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/4675",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/5604",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/6048",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/6503",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://westlake-tx.org/DocumentCenter/View/6647",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-westlake/westlake-acfr-FY2025.pdf"
+    }
+  ]
+}

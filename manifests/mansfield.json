@@ -1,0 +1,72 @@
+{
+  "id": "mansfield",
+  "city": "Mansfield",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=198",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=199",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=200",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=201",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=231",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=283",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=334",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=390",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=436",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/Archive.aspx?ADID=546",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.mansfieldtexas.gov/DocumentCenter/View/18401",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mansfield/mansfield-acfr-FY2025.pdf"
+    }
+  ]
+}

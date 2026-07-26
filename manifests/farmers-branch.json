@@ -1,0 +1,18 @@
+{
+  "id": "farmers-branch",
+  "city": "Farmers Branch",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/farmers-branch-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-farmers-branch/farmers-branch-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/farmers-branch-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-farmers-branch/farmers-branch-acfr-FY2017.pdf"
+    }
+  ]
+}

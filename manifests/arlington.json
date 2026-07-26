@@ -1,0 +1,72 @@
+{
+  "id": "arlington",
+  "city": "Arlington",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2015-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2016-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2017-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2018-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2019-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/3/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2020-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2021-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2022-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/2/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2023-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.arlingtontx.gov/files/assets/city/v/3/finance/documents/annual-financial-reports/annual-comprehensive-financial-reports/fy-2024-annual-comprehensive-financial-report-archived.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-arlington/arlington-acfr-FY2025.pdf",
+      "file": "inbox/parsed/arlington-FY2025.pdf"
+    }
+  ]
+}

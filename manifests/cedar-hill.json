@@ -1,0 +1,72 @@
+{
+  "id": "cedar-hill",
+  "city": "Cedar Hill",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/22199",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2016.pdf",
+      "file": "inbox/parsed/cedar-hill-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/28821",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/32135",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/34731",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/36660",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/38667",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2022.pdf",
+      "file": "inbox/parsed/cedar-hill-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/43487",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/45603",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cedarhilltx.com/DocumentCenter/View/46744",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cedar-hill/cedar-hill-acfr-FY2025.pdf"
+    }
+  ]
+}

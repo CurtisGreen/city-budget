@@ -1,0 +1,72 @@
+{
+  "id": "euless",
+  "city": "Euless",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/1260/637148472609770000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/1262/637148472615070000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/1266/637148472624430000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/1270/637148472633670000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/1730/637183317250730000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/2202/637509849935470000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/2462/637823305551670000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/2808/638152690744470000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/3166/638447280039700000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/3544/638762721965100000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.eulesstx.gov/home/showpublisheddocument/3868/639101192647700000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-euless/euless-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "duncanville",
+  "city": "Duncanville",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://web.archive.org/web/20201017042224id_/http://duncanville.com/wp-content/uploads/2016/06/2014-2015-Comp-Annual-Fin-Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=plAEAF2v",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=qFAEAFOv",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=qlAEAFGv",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://web.archive.org/web/20201017030041id_/http://duncanville.com/wp-content/uploads/2020/03/2018-2019-comprehensive-annual-financial-report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=rlAEAFWv",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=sFAEAEuv",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=slAEAEmv",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=tFAEAE%2bv",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=tlAEAE2v",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.duncanvilletx.gov/common/pages/GetFile.ashx?key=BOAEAP8f",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-duncanville/duncanville-acfr-FY2025.pdf"
+    }
+  ]
+}

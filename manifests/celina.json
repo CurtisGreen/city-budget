@@ -1,0 +1,66 @@
+{
+  "id": "celina",
+  "city": "Celina",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/1878",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/7188",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/7190",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/7189",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/8875",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/10088",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/11061",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/12146",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/14012",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.celina-tx.gov/DocumentCenter/View/15082",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-celina/celina-acfr-FY2025.pdf"
+    }
+  ]
+}

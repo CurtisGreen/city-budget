@@ -1,0 +1,72 @@
+{
+  "id": "frisco",
+  "city": "Frisco",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=3720",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=1943",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=3723",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=2541",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=2694",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=3721",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=3714",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive.aspx?ADID=3715",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive/ViewFile/Item/3642",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/Archive/ViewFile/Item/3653",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.friscotexas.gov/DocumentCenter/View/40308/Annual-Comprehensive-Financial-Report-9-30-25-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-frisco/frisco-acfr-FY2025.pdf"
+    }
+  ]
+}

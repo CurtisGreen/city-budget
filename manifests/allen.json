@@ -1,0 +1,72 @@
+{
+  "id": "allen",
+  "city": "Allen",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://web.archive.org/web/20240928164415id_/https://www.cityofallen.org/Documents/Departments/Finance/Financial%20Transparency/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29/City%20of%20Allen%202015%20CAFR%20electronic%20_RN1420.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://web.archive.org/web/20240928155756id_/https://www.cityofallen.org/Documents/Departments/Finance/Financial%20Transparency/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29/City%20of%20Allen%20CAFR%20FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://web.archive.org/web/20240930042221id_/https://www.cityofallen.org/Documents/Departments/Finance/Financial%20Transparency/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29/City%20Of%20Allen%20FY17%20CAFR.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://web.archive.org/web/20240928151714id_/https://www.cityofallen.org/Documents/Departments/Finance/Financial%20Transparency/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29/City%20of%20Allen%202018%20CAFR%20Final.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://web.archive.org/web/20240928151211id_/https://www.cityofallen.org/Documents/Departments/Finance/Financial%20Transparency/Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29/FY2019-Comprehensive-Annual-Financial-Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofallen.org/Archived%20Documents/Finance/Annual%20Comprehensive%20Financial%20Reports/2020%20Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofallen.org/Archived%20Documents/Finance/Annual%20Comprehensive%20Financial%20Reports/2021%20Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofallen.org/Archived%20Documents/Finance/Annual%20Comprehensive%20Financial%20Reports/2022%20Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofallen.org/Archived%20Documents/Finance/Annual%20Comprehensive%20Financial%20Reports/2023%20Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofallen.org/Archived%20Documents/Finance/Annual%20Comprehensive%20Financial%20Reports/2024%20Annual%20Comprehensive%20Financial%20Report%20%28ACFR%29.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofallen.org/Documents/Departments/Finance/Financial%20Transparency/Other%20Documents/FY%202025%20Annual%20Comprehensive%20Financial%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-allen/allen-acfr-FY2025.pdf"
+    }
+  ]
+}

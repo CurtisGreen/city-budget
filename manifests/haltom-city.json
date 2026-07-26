@@ -1,0 +1,66 @@
+{
+  "id": "haltom-city",
+  "city": "Haltom City",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=53",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=52",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=51",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=50",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=55",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2021.pdf",
+      "file": "inbox/parsed/haltom-city-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=97",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=122",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/Archive.aspx?ADID=151",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.haltomcitytx.com/DocumentCenter/View/1936/Haltom-City---Annual-Comprehensive-Financial-Report-2025-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haltom-city/haltom-city-acfr-FY2025.pdf"
+    }
+  ]
+}

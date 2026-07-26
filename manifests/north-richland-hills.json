@@ -1,0 +1,72 @@
+{
+  "id": "north-richland-hills",
+  "city": "North Richland Hills",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/north-richland-hills-FY2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/north-richland-hills-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/north-richland-hills-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "manual",
+      "file": "inbox/north-richland-hills-FY2018.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "file": "inbox/north-richland-hills-FY2019.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.nrhtx.com/DocumentCenter/View/10928",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.nrhtx.com/DocumentCenter/View/12547",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.nrhtx.com/DocumentCenter/View/13271",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.nrhtx.com/DocumentCenter/View/15027",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.nrhtx.com/DocumentCenter/View/17214",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.nrhtx.com/DocumentCenter/View/21983",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-north-richland-hills/north-richland-hills-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "murphy",
+  "city": "Murphy",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1110",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1441",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1524",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1544",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1563",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1579",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1602",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1618",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1682",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1699",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.murphytx.org/ArchiveCenter/ViewFile/Item/1715",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-murphy/murphy-acfr-FY2025.pdf"
+    }
+  ]
+}

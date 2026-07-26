@@ -1,0 +1,48 @@
+{
+  "id": "flower-mound",
+  "city": "Flower Mound",
+  "pdfs": [
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/28406",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/30701",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/34011",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/37811",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/41125",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/44403",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.flowermound.gov/DocumentCenter/View/49840",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-flower-mound/flower-mound-acfr-FY2025.pdf"
+    }
+  ]
+}

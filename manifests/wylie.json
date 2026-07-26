@@ -1,0 +1,72 @@
+{
+  "id": "wylie",
+  "city": "Wylie",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/FY_2015_CAFR___Website.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/Departments/Finance/Wylie%20Final%202016%20Report%20-%20Website.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/FY%202017%20CAFR.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/Departments/Finance/FY_2018_CAFR.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/FY%202019%20Final%20CAFR%20Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/Departments/Finance/FY%202020%20Final%20CAFR.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/Departments/Finance/Wylie%20Final%202021%20Report-Website.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/FY%202022%20City%20of%20Wylie%20ACFR%20-%20Website.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2023.pdf",
+      "file": "inbox/parsed/wylie-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/Departments/Finance/FY%202024%20ACFR%20Report%20-%20Web.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.wylietexas.gov/Departments/Finance/City%20of%20Wylie%20FY25%20ACFR.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-wylie/wylie-acfr-FY2025.pdf"
+    }
+  ]
+}

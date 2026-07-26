@@ -1,0 +1,72 @@
+{
+  "id": "rockwall",
+  "city": "Rockwall",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "bundle",
+      "url": "https://rockwall.com/documents/finance/Audit%202019%20and%20Prior.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "bundle",
+      "url": "https://rockwall.com/documents/finance/Audit%202019%20and%20Prior.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "bundle",
+      "url": "https://rockwall.com/documents/finance/Audit%202019%20and%20Prior.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "bundle",
+      "url": "https://rockwall.com/documents/finance/Audit%202019%20and%20Prior.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "bundle",
+      "url": "https://rockwall.com/documents/finance/Audit%202019%20and%20Prior.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://rockwall.com/documents/finance/Audit2020.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-rockwall/rockwall-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://rockwall.com/documents/finance/Audit%202021.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-rockwall/rockwall-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://rockwall.com/documents/finance/Audit%202022.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-rockwall/rockwall-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://rockwall.com/documents/finance/Audit%202023.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-rockwall/rockwall-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://rockwall.com/documents/finance/Audit2024.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-rockwall/rockwall-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://rockwall.com/documents/finance/Audit2025.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-rockwall/rockwall-acfr-FY2025.pdf"
+    }
+  ]
+}

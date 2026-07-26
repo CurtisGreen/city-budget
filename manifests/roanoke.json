@@ -1,0 +1,72 @@
+{
+  "id": "roanoke",
+  "city": "Roanoke",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/904",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/1111",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/1842",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/2128",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/2517",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/3270",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/4101",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/5458",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/7056",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/7852",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.roanoketexas.gov/DocumentCenter/View/8294",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-roanoke/roanoke-acfr-FY2025.pdf"
+    }
+  ]
+}

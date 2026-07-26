@@ -1,0 +1,72 @@
+{
+  "id": "richardson",
+  "city": "Richardson",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/14615/636467846659270000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/18200/636467846659270000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/20900/636543073699930000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/25506/636897916182330000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/28199/637170166641430000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/30675/637496656400770000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/34793/637817336608200000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/38050/638252684487370000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/39906/638470612700700000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/42852/638773715959200000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cor.net/home/showpublisheddocument/45797/639105713291030000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-richardson/richardson-acfr-FY2025.pdf"
+    }
+  ]
+}

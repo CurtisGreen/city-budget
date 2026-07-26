@@ -1,0 +1,72 @@
+{
+  "id": "mckinney",
+  "city": "McKinney",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2015.pdf",
+      "file": "inbox/parsed/mckinney-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=1570",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=1867",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2045",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2226",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2352",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2500",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2502",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2665",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2754",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.mckinneytexas.org/Archive.aspx?ADID=2846",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-mckinney/mckinney-acfr-FY2025.pdf"
+    }
+  ]
+}

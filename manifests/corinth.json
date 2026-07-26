@@ -1,0 +1,72 @@
+{
+  "id": "corinth",
+  "city": "Corinth",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/comprehensive_annual_financial_report_2015_1.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/2016_cafr_with_page_numbers.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/comprehensive_annual_financial_report_2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/cafr_2018_final.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/cafr_2019_final.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/2020_cafr.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/annual_comprehensive_financial_report_2021.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/2022_acfr.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/2023_acfr.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-corinth/corinth-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/annual_comprehensive_financial_report_2024.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.corinthtx.gov/sites/default/files/fileattachments/finance/page/2631/annual_comprehensive_financial_report_2025.pdf",
+      "archiveUrl": null
+    }
+  ]
+}

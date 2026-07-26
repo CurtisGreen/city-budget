@@ -1,0 +1,72 @@
+{
+  "id": "denton",
+  "city": "Denton",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/denton-FY2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/denton-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/denton-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=775",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2019.pdf",
+      "file": "inbox/parsed/denton-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=771",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=772",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=773",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=774",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=787",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofdenton.com/Archive.aspx?ADID=870",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-denton/denton-acfr-FY2025.pdf"
+    }
+  ]
+}

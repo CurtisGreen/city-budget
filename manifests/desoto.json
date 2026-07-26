@@ -1,0 +1,72 @@
+{
+  "id": "desoto",
+  "city": "DeSoto",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=474",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=475",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=485",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=476",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2019.pdf",
+      "file": "inbox/parsed/desoto-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2020.pdf",
+      "file": "inbox/parsed/desoto-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=479",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=480",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=481",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=482",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.desototexas.gov/Archive.aspx?ADID=483",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-desoto/desoto-acfr-FY2025.pdf"
+    }
+  ]
+}

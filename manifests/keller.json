@@ -1,0 +1,48 @@
+{
+  "id": "keller",
+  "city": "Keller",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2015.pdf",
+      "file": "inbox/parsed/keller-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityofkeller.com/home/showpublisheddocument/17502/636281933412200000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityofkeller.com/home/showpublisheddocument/20890/636579305219170000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofkeller.com/home/showpublisheddocument/22108/636921359046670000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofkeller.com/home/showpublisheddocument/25104/637255643092770000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofkeller.com/home/showpublisheddocument/25836/637564131994770000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofkeller.com/home/showpublisheddocument/27911/638180227011100000",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-keller/keller-acfr-FY2022.pdf"
+    }
+  ]
+}

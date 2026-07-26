@@ -1,0 +1,72 @@
+{
+  "id": "balch-springs",
+  "city": "Balch Springs",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cityofbalchsprings.com/DocumentCenter/View/2397",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityofbalchsprings.com/DocumentCenter/View/2398",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityofbalchsprings.com/DocumentCenter/View/2399",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofbalchsprings.com/DocumentCenter/View/2497",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofbalchsprings.com/DocumentCenter/View/2991",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofbalchsprings.com/DocumentCenter/View/3647",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.balchspringstx.gov/DocumentCenter/View/6373/AFR-2020-2021",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.balchspringstx.gov/DocumentCenter/View/16256",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.balchspringstx.gov/DocumentCenter/View/16849",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.balchspringstx.gov/DocumentCenter/View/17357",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.balchspringstx.gov/DocumentCenter/View/18105",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-balch-springs/balch-springs-acfr-FY2025.pdf"
+    }
+  ]
+}
