@@ -36,5 +36,8 @@ export const corinthInfo: CityInfo = {
     { usage: "Crime control & prevention", percent: 0.25 },
     { usage: "Fire control, prevention & emergency", percent: 0.25 },
   ],
+  notes: [
+    `ACFR 2023: "Long-term liabilities increased to $77,988,221 during fiscal year 2022-2023. The increase is due primarily to the issuance of bonds."`,
+  ],
   area: 7.77,
 };
