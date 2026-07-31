@@ -55,6 +55,7 @@ import { littleElmInfo } from "@/data/info/little-elm";
 import { southlakeInfo } from "@/data/info/southlake";
 import { balchSpringsInfo } from "@/data/info/balch-springs";
 import { wataugaInfo } from "@/data/info/watauga";
+import { whiteSettlementInfo } from "@/data/info/white-settlement";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -109,6 +110,7 @@ import { littleElmGeoJson } from "@/data/geojson/little-elm-geojson";
 import { southlakeGeoJson } from "@/data/geojson/southlake-geojson";
 import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 import { wataugaGeoJson } from "@/data/geojson/watauga-geojson";
+import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson";
 
 const basicCityInfo = [
   dallasInfo,
@@ -164,6 +166,7 @@ const basicCityInfo = [
   southlakeInfo,
   balchSpringsInfo,
   wataugaInfo,
+  whiteSettlementInfo,
 ];
 
 // Calculate metrics for each city
@@ -235,4 +238,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...southlakeGeoJson.features,
   ...balchSpringsGeoJson.features,
   ...wataugaGeoJson.features,
+  ...whiteSettlementGeoJson.features,
 ] as GeoJSONFeature[];

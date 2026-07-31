@@ -51,6 +51,7 @@ import { theColonyAcfr } from "./the-colony";
 import { universityParkAcfr } from "./university-park";
 import { wataugaAcfr } from "./watauga";
 import { westlakeAcfr } from "./westlake";
+import { whiteSettlementAcfr } from "./white-settlement";
 import { wylieAcfr } from "./wylie";
 
 export const acfrData: Record<string, CityFinancialData[]> = {
@@ -106,5 +107,6 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   "university-park": universityParkAcfr,
   watauga: wataugaAcfr,
   westlake: westlakeAcfr,
+  "white-settlement": whiteSettlementAcfr,
   wylie: wylieAcfr,
 };

@@ -1,0 +1,72 @@
+{
+  "id": "white-settlement",
+  "city": "White Settlement",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/1202",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/1203",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/1204",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/1205",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2019.pdf",
+      "file": "inbox/parsed/white-settlement-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/1632",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/2304",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/3077",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/3842",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2024.pdf",
+      "file": "inbox/parsed/white-settlement-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.wstx.us/DocumentCenter/View/4863",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-white-settlement/white-settlement-acfr-FY2025.pdf"
+    }
+  ]
+}
