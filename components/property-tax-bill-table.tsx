@@ -60,7 +60,7 @@ export function ComparisonTable2({ cities }: { cities: CityData[] }) {
         </div>
         <div className="text-sm text-muted-foreground mt-4">
           Population from US Census, all other stats from the city's Annual
-          Comprehensive Financial Report (ACFR) and budget
+          Comprehensive Financial Report (ACFR)
         </div>
       </CardContent>
     </Card>

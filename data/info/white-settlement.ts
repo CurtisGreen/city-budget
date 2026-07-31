@@ -9,6 +9,7 @@ export const whiteSettlementInfo: CityInfo = {
     { year: 2000, value: 14831 },
     { year: 2010, value: 16116 },
     { year: 2020, value: 18269 },
+    { year: 2025, value: 17932 },
   ],
   propertyValues: [
     {
