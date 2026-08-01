@@ -1,0 +1,42 @@
+{
+  "id": "haslet",
+  "city": "Haslet",
+  "pdfs": [
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.haslet.org/DocumentCenter/View/3201/Final-Audit-9-30-2020",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.haslet.org/DocumentCenter/View/3760/Final-City-of-Haslet-Audit---9302021",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.haslet.org/DocumentCenter/View/3906/FY2021-2022-Audit",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.haslet.org/DocumentCenter/View/5651/FY-2023-Audit",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.haslet.org/DocumentCenter/View/5652/FY-2024-Audit",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.haslet.org/DocumentCenter/View/6219/City-of-Haslet-Annual-Financial-Report---Fiscal-Year-Ending-September-30-2025",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -16,6 +16,7 @@ import { grapevineInfo } from "@/data/info/grapevine";
 import { highlandParkInfo } from "@/data/info/highland-park";
 import { coppellInfo } from "@/data/info/coppell";
 import { corinthInfo } from "@/data/info/corinth";
+import { hasletInfo } from "@/data/info/haslet";
 import { colleyvilleInfo } from "@/data/info/colleyville";
 import { sachseInfo } from "@/data/info/sachse";
 import { saginawInfo } from "@/data/info/saginaw";
@@ -69,6 +70,7 @@ import { highlandParkGeoJson } from "@/data/geojson/highland-park-geojson";
 import { planoGeoJson } from "@/data/geojson/plano-geojson";
 import { coppellGeoJson } from "@/data/geojson/coppell-geojson";
 import { corinthGeoJson } from "@/data/geojson/corinth-geojson";
+import { hasletGeoJson } from "@/data/geojson/haslet-geojson";
 import { colleyvilleGeoJson } from "@/data/geojson/colleyville-geojson";
 import { friscoGeoJson } from "@/data/geojson/frisco-geojson";
 import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
@@ -128,6 +130,7 @@ const basicCityInfo = [
   highlandParkInfo,
   coppellInfo,
   corinthInfo,
+  hasletInfo,
   colleyvilleInfo,
   sachseInfo,
   saginawInfo,
@@ -197,6 +200,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...planoGeoJson.features,
   ...coppellGeoJson.features,
   ...corinthGeoJson.features,
+  ...hasletGeoJson.features,
   ...colleyvilleGeoJson.features,
   ...friscoGeoJson.features,
   ...grapevineGeoJson.features,

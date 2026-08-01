@@ -25,6 +25,7 @@ import { glennHeightsAcfr } from "./glenn-heights";
 import { grandPrairieAcfr } from "./grand-prairie";
 import { grapevineAcfr } from "./grapevine";
 import { haltomCityAcfr } from "./haltom-city";
+import { hasletAcfr } from "./haslet";
 import { highlandParkAcfr } from "./highland-park";
 import { highlandVillageAcfr } from "./highland-village";
 import { hurstAcfr } from "./hurst";
@@ -81,6 +82,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   "grand-prairie": grandPrairieAcfr,
   grapevine: grapevineAcfr,
   "haltom-city": haltomCityAcfr,
+  haslet: hasletAcfr,
   "highland-park": highlandParkAcfr,
   "highland-village": highlandVillageAcfr,
   hurst: hurstAcfr,
