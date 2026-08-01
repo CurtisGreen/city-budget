@@ -49,6 +49,7 @@ import { sachseAcfr } from "./sachse";
 import { saginawAcfr } from "./saginaw";
 import { southlakeAcfr } from "./southlake";
 import { theColonyAcfr } from "./the-colony";
+import { trophyClubAcfr } from "./trophy-club";
 import { universityParkAcfr } from "./university-park";
 import { wataugaAcfr } from "./watauga";
 import { westlakeAcfr } from "./westlake";
@@ -106,6 +107,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   saginaw: saginawAcfr,
   southlake: southlakeAcfr,
   "the-colony": theColonyAcfr,
+  "trophy-club": trophyClubAcfr,
   "university-park": universityParkAcfr,
   watauga: wataugaAcfr,
   westlake: westlakeAcfr,

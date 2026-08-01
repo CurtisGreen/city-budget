@@ -1,0 +1,72 @@
+{
+  "id": "trophy-club",
+  "city": "Trophy Club",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/60",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/61",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/62",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/138",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/145",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2020.pdf",
+      "file": "inbox/parsed/trophy-club-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/154",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/157",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/166",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/171",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.trophyclub.org/ArchiveCenter/ViewFile/Item/178",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-trophy-club/trophy-club-acfr-FY2025.pdf"
+    }
+  ]
+}
