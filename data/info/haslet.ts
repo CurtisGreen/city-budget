@@ -9,6 +9,7 @@ export const hasletInfo: CityInfo = {
     { year: 2000, value: 1134 },
     { year: 2010, value: 1517 },
     { year: 2020, value: 1952 },
+    { year: 2025, value: 5267 },
   ],
   propertyValues: [
     {
