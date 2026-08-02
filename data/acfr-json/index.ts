@@ -4,6 +4,7 @@ import { allenAcfr } from "./allen";
 import { arlingtonAcfr } from "./arlington";
 import { balchSpringsAcfr } from "./balch-springs";
 import { bedfordAcfr } from "./bedford";
+import { benbrookAcfr } from "./benbrook";
 import { carrolltonAcfr } from "./carrollton";
 import { cedarHillAcfr } from "./cedar-hill";
 import { celinaAcfr } from "./celina";
@@ -62,6 +63,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   arlington: arlingtonAcfr,
   "balch-springs": balchSpringsAcfr,
   bedford: bedfordAcfr,
+  benbrook: benbrookAcfr,
   carrollton: carrolltonAcfr,
   "cedar-hill": cedarHillAcfr,
   celina: celinaAcfr,

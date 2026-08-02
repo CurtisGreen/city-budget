@@ -1,0 +1,72 @@
+{
+  "id": "benbrook",
+  "city": "Benbrook",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2015.pdf",
+      "file": "inbox/parsed/benbrook-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://web.archive.org/web/20211208011856id_/http://ci.benbrook.tx.us/ArchiveCenter/ViewFile/Item/165",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=186",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=196",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=207",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=208",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=209",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=210",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=211",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=212",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.benbrook-tx.gov/Archive.aspx?ADID=213",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-benbrook/benbrook-acfr-FY2025.pdf"
+    }
+  ]
+}
