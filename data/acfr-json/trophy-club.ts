@@ -163,8 +163,8 @@ export const trophyClubAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2025,
-    currentAndOtherAssets: 49_591_312,
-    capitalAssets: 63_853_250,
+    currentAndOtherAssets: 49_620_812,
+    capitalAssets: 63_823_750,
     deferredOutflows: 2_549_542,
     liabilities: 39_430_645,
     deferredInflows: 573_224,
@@ -172,6 +172,7 @@ export const trophyClubAcfr: CityFinancialData[] = [
     operatingGrantsAndContributions: 18_547,
     capitalGrantsAndContributions: 0,
     debtInterest: 500_376,
+    capitalAssetsNetofDepreciation: 63_853_250,
     governmentCapitalAssetsNotBeingDepreciated: 13_105_592,
     governmentCapitalAssetsBeingDepreciated: 105_809_929,
     businessCapitalAssetsNotBeingDepreciated: 29_500,
