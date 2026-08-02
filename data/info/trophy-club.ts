@@ -84,11 +84,8 @@ export const trophyClubInfo: CityInfo = {
     { usage: "Crime Control and Prevention District", percent: 0.25 },
   ],
   notes: [
-    `ACFR 2019: "The Town restated beginning net position/fund balance within governmental
-     activities and discretely present component unit activities to correct accounting errors
-     related to accrued receivables and capital assets. In addition, the Crime Control and
-     Prevention fund was reclassified from a nonmajor governmental fund to a discretely
-     presented component unit." [...] "Correct reporting of assessment receivables 25,285,577"`,
+    `In FY 2015-2017 the reports recorded the PID No. 1 debt but not the money property owners owe to pay off that debt, understating those years by about $25M.
+    The jump in FY 2018 is a correction to this, not a real change in finances.`,
   ],
   area: 3.98,
 };
