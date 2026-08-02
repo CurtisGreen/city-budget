@@ -20,6 +20,14 @@ export default function HomePage() {
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(totalAssets);
+  const totalPopulation = cities.reduce(
+    (sum, city) => sum + (city.info.populations.at(-1)?.value || 0),
+    0,
+  );
+  const formattedTotalPopulation = Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(totalPopulation);
 
   return (
     <div className="min-h-screen">
@@ -61,12 +69,18 @@ export default function HomePage() {
       {/* Key Metrics Overview */}
       <section className="py-12 border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">
                 {cities.length}
               </div>
-              <div className="text-muted-foreground">Cities Tracked</div>
+              <div className="text-muted-foreground">Cities</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">
+                {formattedTotalPopulation}
+              </div>
+              <div className="text-muted-foreground">Residents</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">
