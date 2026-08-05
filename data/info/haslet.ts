@@ -13,6 +13,31 @@ export const hasletInfo: CityInfo = {
   ],
   propertyValues: [
     {
+      fiscalYear: 2015,
+      moRate: 0.255648,
+      isRate: 0.065221,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.236708,
+      isRate: 0.048985,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.240965,
+      isRate: 0.049288,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.279504,
+      isRate: 0.05354,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.252854,
+      isRate: 0.053106,
+    },
+    {
       fiscalYear: 2020,
       moRate: 0.258966,
       isRate: 0.038617,
@@ -60,6 +85,10 @@ export const hasletInfo: CityInfo = {
     { usage: "Street Maintenance", percent: 0.25 },
   ],
   notes: [
+    `ACFR 2019: "The current year increase was largely due to capital contributions from
+     developers." [...] "This is a net increase in capital assets of $7,510,258 and mostly
+     attributable to street and drainage improvements and additions to water system
+     infrastructure."`,
     `ACFR 2023: "the City issued the Series 2022 Combination Tax and Revenue Bonds in the
      original principal amount of $16,075,000 (split between governmental and business type
      activities)." [...] "the City budgeted for the expenditure of all proceeds from the Series

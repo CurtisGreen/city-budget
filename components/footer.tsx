@@ -64,8 +64,8 @@ export const Footer = () => {
           for inspiring this site
         </p>
         <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
-          Data sourced from Annual Comprehensive Financial Reports (ACFR),
-          budgets, and other audited statements
+          Data sourced from Annual Comprehensive Financial Reports (ACFR) and
+          other audited statements
         </p>
       </footer>
     </div>

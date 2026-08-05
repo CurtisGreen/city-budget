@@ -262,7 +262,7 @@ export function toFullAccrualExpenseChart(
   financialData: CityFinancialData[],
   cityId: string,
 ): ExpenseChartData {
-  const groups = expenseCategoryGroups[cityId]?.groups ?? {};
+  const groups = expenseCategoryGroups[cityId]?.fullAccrualGroups ?? {};
   const categories = new Set<string>();
   const data = financialData
     .filter((fd) => fd.fullAccrualExpenses)
@@ -283,7 +283,7 @@ export function toModifiedAccrualExpenditureChart(
   financialData: CityFinancialData[],
   cityId: string,
 ): ExpenseChartData {
-  const groups = expenseCategoryGroups[cityId]?.groups ?? {};
+  const groups = expenseCategoryGroups[cityId]?.modifiedAccrualGroups ?? {};
   const categories = new Set<string>();
   const data = financialData
     .filter((fd) => fd.modifiedAccrualExpenditures)

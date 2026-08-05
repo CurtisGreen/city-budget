@@ -3,6 +3,36 @@
   "city": "Haslet",
   "pdfs": [
     {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/haslet-FY2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/haslet-FY2016.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/haslet-FY2017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "manual",
+      "file": "inbox/haslet-FY2018.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "file": "inbox/haslet-FY2019.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-haslet/haslet-acfr-FY2019.pdf"
+    },
+    {
       "year": 2020,
       "source": "url",
       "url": "https://www.haslet.org/DocumentCenter/View/3201/Final-Audit-9-30-2020",

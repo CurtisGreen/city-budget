@@ -320,15 +320,15 @@ export default async function CityPage({ params }: CityPageProps) {
           {fullAccrualExpenses.data.length > 0 && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
               <ExpenseBreakdownChart
-                title="Expenses: Full Accrual"
-                description="Cost of services, includes depreciation & expected pension costs"
+                title="Expenses"
+                description="Cost of services, includes depreciation & expected pension costs (Full Accrual)"
                 data={fullAccrualExpenses.data}
                 categories={fullAccrualExpenses.categories}
                 note={expenseNote}
               />
               <ExpenseBreakdownChart
-                title="Expenditures: Modified Accrual"
-                description="Money spent this year, includes full cost of new assets & paying down debt"
+                title="Expenditures"
+                description="Money spent this year, includes full cost of new assets & paying down debt (Modified Accrual)"
                 data={modifiedAccrualExpenditures.data}
                 categories={modifiedAccrualExpenditures.categories}
                 note={expenseNote}
