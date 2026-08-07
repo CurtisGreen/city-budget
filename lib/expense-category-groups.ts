@@ -27,7 +27,6 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       Planning: "Finance and planning",
       "City secretary": "General government",
     },
-    // Same as the accrual map but without the Streets/Parks and Finance/Planning consolidation
     modifiedAccrualGroups: {
       "Interest on long-term debt": "Interest on Long-Term Debt",
       "Interest and charges on long-term debt": "Interest on Long-Term Debt",

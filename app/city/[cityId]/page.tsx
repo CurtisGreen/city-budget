@@ -22,6 +22,8 @@ import { RevenueChart } from "@/components/revenue-chart";
 import { ACFRDownloadButton } from "@/components/ui/acfr-download-button";
 import { SimplePieChart } from "@/components/ui/pie-chart-simple";
 import { ExpenseBreakdownChart } from "@/components/expense-breakdown-chart";
+import { TaxRevenueChart } from "@/components/tax-revenue-chart";
+import { TaxVsInflationTable } from "@/components/tax-vs-inflation-table";
 import { expenseCategoryGroups } from "@/lib/expense-category-groups";
 
 interface CityPageProps {
@@ -332,6 +334,17 @@ export default async function CityPage({ params }: CityPageProps) {
                 data={modifiedAccrualExpenditures.data}
                 categories={modifiedAccrualExpenditures.categories}
                 note={expenseNote}
+              />
+            </div>
+          )}
+
+          {/* Revenue and Expenditures vs Time */}
+          {modifiedAccrualExpenditures.data.length > 0 && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+              <TaxRevenueChart financialData={cityData.financialData} />
+              <TaxVsInflationTable
+                financialData={cityData.financialData}
+                expenditures={modifiedAccrualExpenditures}
               />
             </div>
           )}
