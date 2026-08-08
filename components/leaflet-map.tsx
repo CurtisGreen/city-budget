@@ -163,9 +163,6 @@ export default function LeafletMap({
               "5-Year Change in Population",
               "5-Year Change in Population %",
               "Population per Sq. Mi",
-              // Not rendered yet (see types.ts).
-              // "Structural Operating Ratio",
-              // "Utility Self-Support",
             ]}
             onSelectionChange={setSelectedMetric}
           />

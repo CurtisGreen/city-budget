@@ -37,21 +37,6 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const totalSurplus = netFinancialPosition + surplusAssetLife;
   const yearsOfFinancialCushion = totalSurplus / data.totalRevenue;
 
-  // Not rendered yet.
-  // const govRecurringRevenue =
-  //   (data.governmentalRevenues ?? NaN) -
-  //   (data.governmentalCapitalGrants ?? 0) -
-  //   (data.governmentalOperatingGrants ?? 0);
-  // const structuralOperatingRatio =
-  //   (data.governmentalExpenses ?? NaN) / govRecurringRevenue;
-  //
-  // const businessCapitalGrants =
-  //   data.capitalGrantsAndContributions - (data.governmentalCapitalGrants ?? 0);
-  // const businessRecurringRevenue =
-  //   data.totalRevenue - (data.governmentalRevenues ?? NaN) - businessCapitalGrants;
-  // const utilitySelfSupport =
-  //   businessRecurringRevenue / (data.businessTypeExpenses ?? NaN);
-
   return {
     fiscalYear: data.fiscalYear,
     netFinancialPosition,
@@ -62,8 +47,6 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
     netBookValueToCostOfTCA,
     externalTransfersToRevenue,
     yearsOfFinancialCushion,
-    // structuralOperatingRatio,
-    // utilitySelfSupport,
   };
 }
 

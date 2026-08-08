@@ -32,43 +32,6 @@ const yearsOfFinancialCushionConfig: ColorConfig = {
   },
 };
 
-// Not rendered yet (see types.ts).
-// const structuralOperatingRatioConfig: ColorConfig = {
-//   greenLabel: "< 95%",
-//   yellowLabel: "< 100%",
-//   redLabel: ">= 100%",
-//   colorFunction: (ratio: number) => {
-//     if (ratio < 0.95) return "oklch(0.696 0.17 162)"; // green - self-funding
-//     if (ratio < 1.0) return "oklch(0.769 0.188 70)"; // yellow - break-even
-//     return "oklch(0.577 0.245 27)"; // red - structural deficit
-//   },
-//   getValue: (cityData: CityData) =>
-//     cityData.metrics.at(-1)?.structuralOperatingRatio || 0,
-//   getFormattedValue: (cityData: CityData) => {
-//     const value = cityData.metrics.at(-1)?.structuralOperatingRatio;
-//     if (value === undefined || Number.isNaN(value)) return "N/A";
-//     return Math.round(value * 100) + "%";
-//   },
-// };
-
-// const utilitySelfSupportConfig: ColorConfig = {
-//   greenLabel: ">= 100%",
-//   yellowLabel: ">= 90%",
-//   redLabel: "< 90%",
-//   colorFunction: (ratio: number) => {
-//     if (ratio >= 1.0) return "oklch(0.696 0.17 162)"; // green - self-supporting
-//     if (ratio >= 0.9) return "oklch(0.769 0.188 70)"; // yellow - marginal
-//     return "oklch(0.577 0.245 27)"; // red - subsidized by general fund
-//   },
-//   getValue: (cityData: CityData) =>
-//     cityData.metrics.at(-1)?.utilitySelfSupport || 0,
-//   getFormattedValue: (cityData: CityData) => {
-//     const value = cityData.metrics.at(-1)?.utilitySelfSupport;
-//     if (value === undefined || Number.isNaN(value)) return "N/A";
-//     return Math.round(value * 100) + "%";
-//   },
-// };
-
 const netDebtConfig: ColorConfig = {
   greenLabel: "= 0%",
   yellowLabel: "0% - 100%",
@@ -100,7 +63,7 @@ const assetLifeConfig: ColorConfig = {
   getFormattedValue: (cityData: CityData) =>
     Math.round(
       cityData.metrics[cityData.metrics.length - 1].netBookValueToCostOfTCA *
-      100,
+        100,
     ) + "%",
 };
 
@@ -142,7 +105,7 @@ const changeInAssetsToLiabilitiesConfig: ColorConfig = {
     Math.round(
       (cityData.metrics[cityData.metrics.length - 1].assetsToLiabilities -
         cityData.metrics[cityData.metrics.length - 6].assetsToLiabilities) *
-      100,
+        100,
     ) + "%",
 };
 
@@ -166,7 +129,7 @@ const revenuePerAcreConfig: ColorConfig = {
       maximumFractionDigits: 1,
     }).format(
       cityData.financialData[cityData.financialData.length - 1].totalRevenue /
-      (cityData.info.area * 640),
+        (cityData.info.area * 640),
     ),
 };
 
@@ -246,17 +209,15 @@ const populationDensityConfig: ColorConfig = {
 };
 
 export const getColorConfig = (metric: string): ColorConfig => {
-  if (metric == "Years of Financial Cushion") return yearsOfFinancialCushionConfig;
-  // Not rendered yet (see above).
-  // if (metric == "Structural Operating Ratio")
-  //   return structuralOperatingRatioConfig;
-  // if (metric == "Utility Self-Support") return utilitySelfSupportConfig;
+  if (metric == "Years of Financial Cushion")
+    return yearsOfFinancialCushionConfig;
   if (metric == "Net Debt to Revenue") return netDebtConfig;
   if (metric == "Asset Life") return assetLifeConfig;
   if (metric == "5-Year Change in Asset Life") return changeInAssetLifeConfig;
   if (metric == "Total Revenue Per Acre") return revenuePerAcreConfig;
   if (metric == "5-Year Change in Population") return changeInPopulation;
-  if (metric == "5-Year Change in Population %") return changeInPopulationPercent;
-  if (metric === "Population per Sq. Mi") return populationDensityConfig
+  if (metric == "5-Year Change in Population %")
+    return changeInPopulationPercent;
+  if (metric === "Population per Sq. Mi") return populationDensityConfig;
   return changeInAssetsToLiabilitiesConfig;
 };

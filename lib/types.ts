@@ -12,7 +12,6 @@ export interface CityFinancialData {
   propertyTaxRevenue?: number;
   salesTaxRevenue?: number;
   hotelTaxRevenue?: number;
-  governmentalExpenses?: number;
   // Gov-wide Statement of Activities, full accrual: includes depreciation & actuarial pension; excludes capital outlay & debt principal.
   fullAccrualExpenses?: { name: string; value: number }[];
   // Governmental funds statement, modified accrual: includes capital outlay & debt principal; excludes depreciation; pension = cash contributions.
@@ -38,10 +37,6 @@ export interface CityFinancialData {
     actuariallyDeterminedContribution?: number;
     actualContribution: number;
   }[];
-  governmentalCapitalGrants?: number;
-  governmentalOperatingGrants?: number;
-  governmentalRevenues?: number;
-  businessTypeExpenses?: number;
   capitalAssetsNetofDepreciation?: number;
   governmentCapitalAssetsNotBeingDepreciated: number;
   governmentCapitalAssetsBeingDepreciated: number;
@@ -59,9 +54,6 @@ export interface CityMetrics {
   netBookValueToCostOfTCA: number;
   externalTransfersToRevenue: number;
   yearsOfFinancialCushion: number;
-  // Not rendered yet (see lib/format-chart-data.ts).
-  // structuralOperatingRatio: number;
-  // utilitySelfSupport: number;
 }
 
 export interface Population {
