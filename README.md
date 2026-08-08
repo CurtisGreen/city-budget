@@ -13,7 +13,7 @@ Setup the sheet:
 1. From wikipedia get: 1980, 1990, 2000, 2010, and 2020 populations
 1. From wikipedia get: Land area in square miles
 1. From US Census Quickfacts: Get 2025 population
-1. Transpose data into "Formatted Data" tab so it can be put into a .csv
+1. Transpose data into "Formatted Data" tab, then write it into `data/acfr-json/{id}.ts`
 1. Get the city boundaries from overpass and export -> copy it into the geojson format
 1. Using the ACFR and city website, find out how the city uses the 1% local sales tax. Ex: transit, economic development corporation, etc.
 

@@ -13,7 +13,7 @@ Two purposes:
 
 ```jsonc
 {
-  "id": "little-elm",        // kebab-case city id (matches data/acfr/{id}.csv)
+  "id": "little-elm",        // kebab-case city id (matches data/acfr-json/{id}.ts)
   "city": "Little Elm",      // display name; also the wrong-city verification string
   "pdfs": [
     {
