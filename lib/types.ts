@@ -29,6 +29,15 @@ export interface CityFinancialData {
     capitalOutlay: number;
     total: number;
   };
+  // RSI pension schedules, one entry per plan. Values as printed; funded ratio and ADC coverage are derived.
+  pensionPlans?: {
+    name: string;
+    totalPensionLiability: number;
+    fiduciaryNetPosition: number;
+    // Omitted when the schedule reports no ADC, e.g. Dallas Police & Fire FY2016 (statutory rate only, pre-HB 3158).
+    actuariallyDeterminedContribution?: number;
+    actualContribution: number;
+  }[];
   governmentalCapitalGrants?: number;
   governmentalOperatingGrants?: number;
   governmentalRevenues?: number;

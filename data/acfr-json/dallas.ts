@@ -62,6 +62,21 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2016,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_367_567_000,
+        fiduciaryNetPosition: 3_202_208_000,
+        actuariallyDeterminedContribution: 81_838_000,
+        actualContribution: 56_987_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 9_536_840_000,
+        fiduciaryNetPosition: 2_680_124_000,
+        actualContribution: 118_508_000,
+      },
+    ],
     propertyTaxRevenue: 791_420_000,
     salesTaxRevenue: 285_669_000,
     hotelTaxRevenue: 59_225_000,
@@ -125,6 +140,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2017,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_291_805_000,
+        fiduciaryNetPosition: 3_352_043_000,
+        actuariallyDeterminedContribution: 88_547_000,
+        actualContribution: 58_045_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 8_450_280_000,
+        fiduciaryNetPosition: 2_150_662_000,
+        actuariallyDeterminedContribution: 202_167_000,
+        actualContribution: 120_351_000,
+      },
+    ],
     propertyTaxRevenue: 854_136_000,
     salesTaxRevenue: 295_361_000,
     hotelTaxRevenue: 59_746_000,
@@ -181,6 +212,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2018,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_377_847_000,
+        fiduciaryNetPosition: 3_612_261_000,
+        actuariallyDeterminedContribution: 91_977_000,
+        actualContribution: 60_589_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 4_497_346_000,
+        fiduciaryNetPosition: 2_103_345_000,
+        actuariallyDeterminedContribution: 157_997_000,
+        actualContribution: 151_850_000,
+      },
+    ],
     propertyTaxRevenue: 914_272_000,
     salesTaxRevenue: 307_149_000,
     hotelTaxRevenue: 65_307_000,
@@ -241,6 +288,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2019,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_547_967_000,
+        fiduciaryNetPosition: 3_282_314_000,
+        actuariallyDeterminedContribution: 85_945_000,
+        actualContribution: 62_462_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 4_501_668_000,
+        fiduciaryNetPosition: 2_041_914_000,
+        actuariallyDeterminedContribution: 157_368_000,
+        actualContribution: 151_850_000,
+      },
+    ],
     propertyTaxRevenue: 998_861_000,
     salesTaxRevenue: 320_413_000,
     hotelTaxRevenue: 67_836_000,
@@ -297,6 +360,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2020,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_658_725_000,
+        fiduciaryNetPosition: 3_658_089_000,
+        actuariallyDeterminedContribution: 92_567_000,
+        actualContribution: 61_798_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 4_731_960_000,
+        fiduciaryNetPosition: 2_057_857_000,
+        actuariallyDeterminedContribution: 193_748_000,
+        actualContribution: 161_928_000,
+      },
+    ],
     propertyTaxRevenue: 1_080_445_000,
     salesTaxRevenue: 314_385_000,
     hotelTaxRevenue: 41_602_000,
@@ -353,6 +432,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2021,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 6_209_853_000,
+        fiduciaryNetPosition: 3_706_753_000,
+        actuariallyDeterminedContribution: 96_558_000,
+        actualContribution: 61_892_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 5_122_372_000,
+        fiduciaryNetPosition: 1_943_699_000,
+        actuariallyDeterminedContribution: 223_152_000,
+        actualContribution: 165_330_000,
+      },
+    ],
     propertyTaxRevenue: 1_154_660_000,
     salesTaxRevenue: 354_288_000,
     hotelTaxRevenue: 40_416_000,
@@ -409,6 +504,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2022,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_094_363_000,
+        fiduciaryNetPosition: 4_093_214_000,
+        actuariallyDeterminedContribution: 107_167_000,
+        actualContribution: 68_492_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 5_163_730_000,
+        fiduciaryNetPosition: 2_157_839_000,
+        actuariallyDeterminedContribution: 228_658_000,
+        actualContribution: 169_910_000,
+      },
+    ],
     propertyTaxRevenue: 1_204_389_000,
     salesTaxRevenue: 407_309_000,
     hotelTaxRevenue: 70_365_000,
@@ -465,6 +576,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2023,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 6_502_685_000,
+        fiduciaryNetPosition: 3_516_279_000,
+        actuariallyDeterminedContribution: 109_527_000,
+        actualContribution: 72_640_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 5_254_658_000,
+        fiduciaryNetPosition: 1_806_565_000,
+        actuariallyDeterminedContribution: 248_327_000,
+        actualContribution: 171_671_000,
+      },
+    ],
     propertyTaxRevenue: 1_326_845_000,
     salesTaxRevenue: 425_543_000,
     hotelTaxRevenue: 103_587_000,
@@ -521,6 +648,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2024,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 6_647_257_000,
+        fiduciaryNetPosition: 3_649_100_000,
+        actuariallyDeterminedContribution: 122_066_000,
+        actualContribution: 79_830_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 5_307_252_000,
+        fiduciaryNetPosition: 1_934_814_000,
+        actuariallyDeterminedContribution: 266_810_000,
+        actualContribution: 182_333_000,
+      },
+    ],
     propertyTaxRevenue: 1_415_798_000,
     salesTaxRevenue: 439_666_000,
     hotelTaxRevenue: 109_446_000,
@@ -577,6 +720,22 @@ export const dallasAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2025,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_626_850_000,
+        fiduciaryNetPosition: 3_769_849_000,
+        actuariallyDeterminedContribution: 130_555_000,
+        actualContribution: 83_380_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 5_566_759_000,
+        fiduciaryNetPosition: 2_011_420_000,
+        actuariallyDeterminedContribution: 248_142_000,
+        actualContribution: 205_616_000,
+      },
+    ],
     propertyTaxRevenue: 1_490_106_000,
     salesTaxRevenue: 453_319_000,
     hotelTaxRevenue: 107_634_000,

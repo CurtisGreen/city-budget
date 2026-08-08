@@ -65,6 +65,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_016,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 1_925_177,
+        fiduciaryNetPosition: 1_900_426,
+        actuariallyDeterminedContribution: 105_969,
+        actualContribution: 105_969,
+      },
+    ],
     currentAndOtherAssets: 12_220_914,
     capitalAssets: 21_029_263,
     deferredOutflows: 219_593,
@@ -106,6 +115,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_017,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 2_199_361,
+        fiduciaryNetPosition: 2_192_805,
+        actuariallyDeterminedContribution: 115_524,
+        actualContribution: 115_524,
+      },
+    ],
     currentAndOtherAssets: 9_523_621,
     capitalAssets: 24_541_603,
     deferredOutflows: 169_654,
@@ -161,6 +179,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_018,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 2_540_128,
+        fiduciaryNetPosition: 2_669_505,
+        actuariallyDeterminedContribution: 124_490,
+        actualContribution: 124_490,
+      },
+    ],
     currentAndOtherAssets: 9_690_611,
     capitalAssets: 25_707_397,
     deferredOutflows: 110_179,
@@ -216,6 +243,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_019,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 2_889_629,
+        fiduciaryNetPosition: 2_786_453,
+        actuariallyDeterminedContribution: 135_187,
+        actualContribution: 135_187,
+      },
+    ],
     currentAndOtherAssets: 14_254_948,
     capitalAssets: 33_217_655,
     deferredOutflows: 393_055,
@@ -271,6 +307,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_020,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 3_349_610,
+        fiduciaryNetPosition: 3_393_540,
+        actuariallyDeterminedContribution: 143_571,
+        actualContribution: 143_571,
+      },
+    ],
     currentAndOtherAssets: 23_817_962,
     capitalAssets: 36_255_686,
     deferredOutflows: 298_260,
@@ -326,6 +371,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_021,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 3_864_214,
+        fiduciaryNetPosition: 3_882_904,
+        actuariallyDeterminedContribution: 152_450,
+        actualContribution: 152_450,
+      },
+    ],
     currentAndOtherAssets: 21_706_318,
     capitalAssets: 44_712_734,
     deferredOutflows: 348_594,
@@ -382,6 +436,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_022,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 4_328_325,
+        fiduciaryNetPosition: 4_618_191,
+        actuariallyDeterminedContribution: 163_936,
+        actualContribution: 163_936,
+      },
+    ],
     currentAndOtherAssets: 28_207_337,
     capitalAssets: 51_720_251,
     deferredOutflows: 257_944,
@@ -438,6 +501,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_023,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 4_894_713,
+        fiduciaryNetPosition: 4_494_976,
+        actuariallyDeterminedContribution: 183_964,
+        actualContribution: 183_964,
+      },
+    ],
     currentAndOtherAssets: 50_845_547,
     capitalAssets: 52_977_702,
     deferredOutflows: 593_105,
@@ -494,6 +566,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_024,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 5_647_175,
+        fiduciaryNetPosition: 5_260_142,
+        actuariallyDeterminedContribution: 227_702,
+        actualContribution: 227_702,
+      },
+    ],
     currentAndOtherAssets: 55_449_725,
     capitalAssets: 54_618_156,
     deferredOutflows: 519_917,
@@ -550,6 +631,15 @@ export const hasletAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2_025,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 6_514_266,
+        fiduciaryNetPosition: 6_152_438,
+        actuariallyDeterminedContribution: 251_798,
+        actualContribution: 251_798,
+      },
+    ],
     currentAndOtherAssets: 60_878_070,
     capitalAssets: 60_065_731,
     deferredOutflows: 453_644,

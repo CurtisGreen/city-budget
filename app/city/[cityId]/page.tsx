@@ -22,6 +22,7 @@ import { RevenueChart } from "@/components/revenue-chart";
 import { ACFRDownloadButton } from "@/components/ui/acfr-download-button";
 import { SimplePieChart } from "@/components/ui/pie-chart-simple";
 import { ExpenseBreakdownChart } from "@/components/expense-breakdown-chart";
+import { PensionChart } from "@/components/pension-chart";
 import { TaxRevenueChart } from "@/components/tax-revenue-chart";
 import { TaxVsInflationTable } from "@/components/tax-vs-inflation-table";
 import { expenseCategoryGroups } from "@/lib/expense-category-groups";
@@ -127,6 +128,10 @@ export default async function CityPage({ params }: CityPageProps) {
   const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
   const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
 
+  const hasPensionData = cityData.financialData.some(
+    (d) => d.pensionPlans?.length,
+  );
+
   const fullAccrualExpenses = toFullAccrualExpenseChart(
     cityData.financialData,
     cityId,
@@ -222,6 +227,27 @@ export default async function CityPage({ params }: CityPageProps) {
                 />
               </div>
             ))}
+
+            {hasPensionData &&
+              (["adcCoverage", "pensionFundedRatio"] as const).map((key) => (
+                <div
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+                  key={key}
+                >
+                  <div className="lg:col-span-2">
+                    <PensionChart
+                      cityName={cityData.info.name}
+                      financialData={cityData.financialData}
+                      metricKey={key}
+                    />
+                  </div>
+                  <ChartExplanationCard
+                    understandingTheMetric={chartConfigs[key].whatItMeans}
+                    whatToLookFor={chartConfigs[key].whatToLookFor}
+                    formula={chartConfigs[key].formula}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </section>

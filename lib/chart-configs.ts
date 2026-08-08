@@ -81,6 +81,32 @@ export const chartConfigs: Record<string, ChartConfig> = {
     formula:
       "Capital assets / (Government & Business capital assets being depreciated + Not being depreciated)",
   },
+  adcCoverage: {
+    title: "Pension Contribution Coverage",
+    description:
+      "The share of the Actuarially Determined Contribution (ADC) the city actually paid into its pension plans.",
+    whatItMeans:
+      "Each year an actuary calculates what the city must contribute to cover benefits earned that year plus a payment against the existing shortfall. Below 100% means the city is underfunding its pension.",
+    whatToLookFor:
+      "At or above 100% every year means the city is paying what its actuary says it owes. A value persistently below 100% is a policy choice to defer cost onto future budgets.",
+    positiveDirection: "up",
+    upwardDescription: "More Sustainable",
+    downwardDescription: "Less Sustainable",
+    formula:
+      "Contributions in relation to the ADC / ADC",
+  },
+  pensionFundedRatio: {
+    title: "Pension Funded Ratio",
+    description: "The ratio of pension assets vs liabilities",
+    whatItMeans:
+      "This is how much of the retirement benefits already earned by employees is actually backed by money in the plan. 100% means fully funded. The remainder is an obligation that current or future taxpayers must cover.",
+    whatToLookFor:
+      "Rising toward 100% is healthy. Changes in investment returns, discount rate, or benefit terms can also affect this, so you need to look at the broader trend over time.",
+    positiveDirection: "up",
+    upwardDescription: "More Sustainable",
+    downwardDescription: "Less Sustainable",
+    formula: "Plan fiduciary net position / Total pension liability",
+  },
   externalTransfersToRevenue: {
     title: "External Transfers to Total Revenue",
     description: "The percentage of revenue from capital and operating grants",

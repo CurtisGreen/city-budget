@@ -19,6 +19,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2016,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_127_343_000,
+        fiduciaryNetPosition: 2_003_270_000,
+        actuariallyDeterminedContribution: 101_340_000,
+        actualContribution: 84_747_000,
+      },
+    ],
     currentAndOtherAssets: 1_569_057_000,
     capitalAssets: 4_974_166_000,
     deferredOutflows: 565_171_000,
@@ -35,6 +44,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2017,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_318_307_000,
+        fiduciaryNetPosition: 2_097_717_000,
+        actuariallyDeterminedContribution: 112_185_000,
+        actualContribution: 89_408_000,
+      },
+    ],
     currentAndOtherAssets: 1_899_044_000,
     capitalAssets: 5_270_793_000,
     deferredOutflows: 1_323_340_000,
@@ -51,6 +69,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2018,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_354_700_000,
+        fiduciaryNetPosition: 2_270_522_000,
+        actuariallyDeterminedContribution: 131_766_000,
+        actualContribution: 93_504_000,
+      },
+    ],
     currentAndOtherAssets: 1_932_500_000,
     capitalAssets: 5_437_022_000,
     deferredOutflows: 1_234_838_000,
@@ -67,6 +94,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2019,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_422_613_000,
+        fiduciaryNetPosition: 2_324_335_000,
+        actuariallyDeterminedContribution: 136_168_000,
+        actualContribution: 113_110_000,
+      },
+    ],
     currentAndOtherAssets: 2_171_805_000,
     capitalAssets: 5_659_892_000,
     deferredOutflows: 971_060_000,
@@ -83,6 +119,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2020,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_571_921_000,
+        fiduciaryNetPosition: 2_312_863_000,
+        actuariallyDeterminedContribution: 160_159_000,
+        actualContribution: 124_744_000,
+      },
+    ],
     currentAndOtherAssets: 2_496_130_000,
     capitalAssets: 6_475_514_000,
     deferredOutflows: 1_308_335_000,
@@ -99,6 +144,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2021,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_728_027_000,
+        fiduciaryNetPosition: 2_368_161_000,
+        actuariallyDeterminedContribution: 165_707_000,
+        actualContribution: 128_046_000,
+      },
+    ],
     currentAndOtherAssets: 2_766_190_000,
     capitalAssets: 6_916_062_000,
     deferredOutflows: 970_873_000,
@@ -115,6 +169,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2022,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_892_875_000,
+        fiduciaryNetPosition: 2_830_439_000,
+        actuariallyDeterminedContribution: 174_315_000,
+        actualContribution: 137_012_000,
+      },
+    ],
     currentAndOtherAssets: 3_097_414_000,
     capitalAssets: 7_243_454_000,
     deferredOutflows: 526_886_000,
@@ -131,6 +194,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2023,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_039_106_000,
+        fiduciaryNetPosition: 2_504_060_000,
+        actuariallyDeterminedContribution: 175_059_000,
+        actualContribution: 148_282_000,
+      },
+    ],
     currentAndOtherAssets: 3_609_294_000,
     capitalAssets: 7_667_536_000,
     deferredOutflows: 593_425_000,
@@ -147,6 +219,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2024,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_103_442_000,
+        fiduciaryNetPosition: 2_604_614_000,
+        actuariallyDeterminedContribution: 192_983_000,
+        actualContribution: 167_207_000,
+      },
+    ],
     propertyTaxRevenue: 749_673_000,
     salesTaxRevenue: 353_942_000,
     hotelTaxRevenue: 59_674_000,
@@ -166,6 +247,15 @@ export const fortWorthAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2025,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 5_289_022_000,
+        fiduciaryNetPosition: 2_988_369_000,
+        actuariallyDeterminedContribution: 206_077_000,
+        actualContribution: 178_622_000,
+      },
+    ],
     propertyTaxRevenue: 789_222_000,
     salesTaxRevenue: 368_854_000,
     hotelTaxRevenue: 67_418_000,

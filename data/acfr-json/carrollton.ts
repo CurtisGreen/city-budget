@@ -46,6 +46,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2016,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 378_581_941,
+        fiduciaryNetPosition: 346_336_400,
+        actuariallyDeterminedContribution: 6_108_431,
+        actualContribution: 7_256_852,
+      },
+    ],
     propertyTaxRevenue: 66_690_804,
     salesTaxRevenue: 34_512_467,
     hotelTaxRevenue: 243_946,
@@ -89,6 +98,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2017,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 396_236_792,
+        fiduciaryNetPosition: 365_406_453,
+        actuariallyDeterminedContribution: 6_527_064,
+        actualContribution: 7_072_321,
+      },
+    ],
     propertyTaxRevenue: 71_827_346,
     salesTaxRevenue: 36_782_925,
     hotelTaxRevenue: 292_908,
@@ -132,6 +150,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2018,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 414_941_180,
+        fiduciaryNetPosition: 410_286_205,
+        actuariallyDeterminedContribution: 6_563_597,
+        actualContribution: 7_233_075,
+      },
+    ],
     propertyTaxRevenue: 77_233_249,
     salesTaxRevenue: 39_811_034,
     hotelTaxRevenue: 237_466,
@@ -175,6 +202,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2019,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 431_606_390,
+        fiduciaryNetPosition: 389_865_679,
+        actuariallyDeterminedContribution: 5_979_973,
+        actualContribution: 6_310_121,
+      },
+    ],
     propertyTaxRevenue: 82_924_296,
     salesTaxRevenue: 39_683_052,
     hotelTaxRevenue: 189_529,
@@ -219,6 +255,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2020,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 449_427_990,
+        fiduciaryNetPosition: 441_933_519,
+        actuariallyDeterminedContribution: 7_397_973,
+        actualContribution: 7_763_315,
+      },
+    ],
     propertyTaxRevenue: 89_122_477,
     salesTaxRevenue: 40_032_543,
     hotelTaxRevenue: 211_851,
@@ -263,6 +308,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2021,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 466_999_463,
+        fiduciaryNetPosition: 467_443_323,
+        actuariallyDeterminedContribution: 8_045_686,
+        actualContribution: 8_554_378,
+      },
+    ],
     propertyTaxRevenue: 93_158_498,
     salesTaxRevenue: 46_187_884,
     hotelTaxRevenue: 122_512,
@@ -307,6 +361,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2022,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 492_353_030,
+        fiduciaryNetPosition: 518_929_531,
+        actuariallyDeterminedContribution: 7_239_953,
+        actualContribution: 7_867_711,
+      },
+    ],
     propertyTaxRevenue: 96_924_730,
     salesTaxRevenue: 48_705_881,
     hotelTaxRevenue: 173_648,
@@ -351,6 +414,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2023,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 515_220_132,
+        fiduciaryNetPosition: 469_473_588,
+        actuariallyDeterminedContribution: 7_532_281,
+        actualContribution: 8_227_783,
+      },
+    ],
     propertyTaxRevenue: 105_091_592,
     salesTaxRevenue: 50_596_808,
     hotelTaxRevenue: 594_040,
@@ -395,6 +467,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2024,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 534_793_431,
+        fiduciaryNetPosition: 512_150_501,
+        actuariallyDeterminedContribution: 8_829_954,
+        actualContribution: 9_601_862,
+      },
+    ],
     propertyTaxRevenue: 115_162_154,
     salesTaxRevenue: 49_712_276,
     hotelTaxRevenue: 577_425,
@@ -439,6 +520,15 @@ export const carrolltonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2025,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 560_829_234,
+        fiduciaryNetPosition: 554_086_916,
+        actuariallyDeterminedContribution: 9_952_862,
+        actualContribution: 10_781_624,
+      },
+    ],
     propertyTaxRevenue: 120_216_758,
     salesTaxRevenue: 52_632_624,
     hotelTaxRevenue: 534_573,

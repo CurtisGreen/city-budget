@@ -52,6 +52,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2016,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 136_067_935,
+        fiduciaryNetPosition: 109_184_735,
+        actuariallyDeterminedContribution: 1_786_827,
+        actualContribution: 1_786_827,
+      },
+    ],
     propertyTaxRevenue: 22_559_004,
     salesTaxRevenue: 12_831_723,
     hotelTaxRevenue: 6_138_213,
@@ -101,6 +110,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2017,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 120_425_219,
+        fiduciaryNetPosition: 113_444_939,
+        actuariallyDeterminedContribution: 1_893_931,
+        actualContribution: 1_893_931,
+      },
+    ],
     propertyTaxRevenue: 23_521_642,
     salesTaxRevenue: 14_032_616,
     hotelTaxRevenue: 5_954_703,
@@ -150,6 +168,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2018,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 126_145_081,
+        fiduciaryNetPosition: 126_349_360,
+        actuariallyDeterminedContribution: 2_136_195,
+        actualContribution: 2_136_195,
+      },
+    ],
     propertyTaxRevenue: 23_783_670,
     salesTaxRevenue: 16_449_993,
     hotelTaxRevenue: 5_552_084,
@@ -199,6 +226,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2019,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 130_237_725,
+        fiduciaryNetPosition: 118_484_626,
+        actuariallyDeterminedContribution: 2_172_375,
+        actualContribution: 2_172_375,
+      },
+    ],
     propertyTaxRevenue: 25_196_771,
     salesTaxRevenue: 15_017_082,
     hotelTaxRevenue: 5_427_585,
@@ -248,6 +284,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2020,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 136_646_183,
+        fiduciaryNetPosition: 133_628_634,
+        actuariallyDeterminedContribution: 2_259_912,
+        actualContribution: 2_259_912,
+      },
+    ],
     propertyTaxRevenue: 26_876_741,
     salesTaxRevenue: 14_302_624,
     hotelTaxRevenue: 3_240_946,
@@ -297,6 +342,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2021,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 142_180_149,
+        fiduciaryNetPosition: 139_904_904,
+        actuariallyDeterminedContribution: 2_450_696,
+        actualContribution: 2_450_696,
+      },
+    ],
     propertyTaxRevenue: 29_869_955,
     salesTaxRevenue: 14_881_277,
     hotelTaxRevenue: 2_523_560,
@@ -346,6 +400,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2022,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 148_507_800,
+        fiduciaryNetPosition: 154_879_692,
+        actuariallyDeterminedContribution: 2_796_361,
+        actualContribution: 2_796_361,
+      },
+    ],
     propertyTaxRevenue: 30_578_292,
     salesTaxRevenue: 15_997_283,
     hotelTaxRevenue: 4_353_355,
@@ -395,6 +458,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2023,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 169_078_831,
+        fiduciaryNetPosition: 140_394_280,
+        actuariallyDeterminedContribution: 4_059_743,
+        actualContribution: 4_059_743,
+      },
+    ],
     propertyTaxRevenue: 33_396_217,
     salesTaxRevenue: 16_661_868,
     hotelTaxRevenue: 5_683_639,
@@ -444,6 +516,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2024,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 175_159_295,
+        fiduciaryNetPosition: 153_862_672,
+        actuariallyDeterminedContribution: 4_741_162,
+        actualContribution: 4_741_162,
+      },
+    ],
     propertyTaxRevenue: 35_679_220,
     salesTaxRevenue: 17_298_041,
     hotelTaxRevenue: 5_374_881,
@@ -493,6 +574,15 @@ export const addisonAcfr: CityFinancialData[] = [
   },
   {
     fiscalYear: 2025,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 182_599_003,
+        fiduciaryNetPosition: 167_248_707,
+        actuariallyDeterminedContribution: 5_247_345,
+        actualContribution: 5_247_345,
+      },
+    ],
     propertyTaxRevenue: 37_741_604,
     salesTaxRevenue: 17_634_389,
     hotelTaxRevenue: 5_042_545,
