@@ -67,9 +67,9 @@ export default function HomePage() {
       </section>
 
       {/* Key Metrics Overview */}
-      <section className="py-12 border-b">
+      <section className="pb-12 border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">
                 {cities.length}
