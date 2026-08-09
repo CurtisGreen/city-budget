@@ -80,7 +80,7 @@ export const sunnyvaleInfo: CityInfo = {
   },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
-    { usage: "4B Development Corporation", percent: 0.5 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
   ],
   area: 16.52,
   notes: [
