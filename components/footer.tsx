@@ -42,7 +42,7 @@ export const Footer = () => {
           </Link>
         </div>
         <p className="text-xs text-gray-400 dark:text-gray-500">
-          © 2025 Budget.City - Making municipal finances easy and accessible
+          © 2026 Budget.City - Making municipal finances easy and accessible
         </p>
         <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
           Thanks to{" "}

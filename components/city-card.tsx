@@ -79,7 +79,7 @@ export function CityCard({ city }: CityCardProps) {
               variant="outline"
             >
               View Details
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4 text-green-700" />
             </Button>
           </Link>
         </div>

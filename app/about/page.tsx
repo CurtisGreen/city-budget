@@ -22,7 +22,7 @@ export default function About() {
               for North Texas cities. It's inspired by the{" "}
               <Link
                 href="https://www.strongtowns.org/decoder-resources"
-                className="text-blue-600 hover:underline"
+                className="text-green-600 hover:underline"
               >
                 Strong Towns Finance Decoder
               </Link>
@@ -54,7 +54,7 @@ export default function About() {
               Fill out{" "}
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLScMDDshJD5WTaYiHanzhJ_uUnqaRlkiaCSj-eCiGTFcL1-_9g/viewform?usp=dialog"
-                className="text-blue-600 hover:underline"
+                className="text-green-600 hover:underline"
               >
                 this form
               </Link>{" "}
@@ -64,7 +64,7 @@ export default function About() {
               If you have a North Texas city you want to add, fill out the{" "}
               <Link
                 href="https://www.strongtowns.org/decoder-resources"
-                className="text-blue-600 hover:underline"
+                className="text-green-600 hover:underline"
               >
                 Strong Towns Finance Decoder
               </Link>{" "}

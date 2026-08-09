@@ -46,7 +46,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="#map">
-                <Button size="lg" className="gap-2 cursor-pointer">
+                <Button size="lg" className="gap-2 cursor-pointer bg-green-700">
                   <Map className="h-5 w-5" />
                   Explore Map
                 </Button>
@@ -57,7 +57,7 @@ export default function HomePage() {
                   variant="outline"
                   className="gap-2 bg-transparent cursor-pointer"
                 >
-                  <TrendingUp className="h-5 w-5" />
+                  <TrendingUp className="h-5 w-5 text-green-700" />
                   View Cities
                 </Button>
               </Link>
