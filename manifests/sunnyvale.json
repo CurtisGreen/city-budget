@@ -1,0 +1,72 @@
+{
+  "id": "sunnyvale",
+  "city": "Sunnyvale",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/3281",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/3415",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/3638",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/4291",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/4683",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/4975",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/5371",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/5861",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/6241",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/6605",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.townofsunnyvale.org/DocumentCenter/View/7035",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-sunnyvale/sunnyvale-acfr-FY2025.pdf"
+    }
+  ]
+}

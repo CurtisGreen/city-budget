@@ -56,6 +56,7 @@ import { highlandVillageInfo } from "@/data/info/highland-village";
 import { westlakeInfo } from "@/data/info/westlake";
 import { littleElmInfo } from "@/data/info/little-elm";
 import { southlakeInfo } from "@/data/info/southlake";
+import { sunnyvaleInfo } from "@/data/info/sunnyvale";
 import { balchSpringsInfo } from "@/data/info/balch-springs";
 import { wataugaInfo } from "@/data/info/watauga";
 import { whiteSettlementInfo } from "@/data/info/white-settlement";
@@ -114,6 +115,7 @@ import { highlandVillageGeoJson } from "@/data/geojson/highland-village-geojson"
 import { westlakeGeoJson } from "@/data/geojson/westlake-geojson";
 import { littleElmGeoJson } from "@/data/geojson/little-elm-geojson";
 import { southlakeGeoJson } from "@/data/geojson/southlake-geojson";
+import { sunnyvaleGeoJson } from "@/data/geojson/sunnyvale-geojson";
 import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 import { wataugaGeoJson } from "@/data/geojson/watauga-geojson";
 import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson";
@@ -173,6 +175,7 @@ const basicCityInfo = [
   westlakeInfo,
   littleElmInfo,
   southlakeInfo,
+  sunnyvaleInfo,
   balchSpringsInfo,
   wataugaInfo,
   whiteSettlementInfo,
@@ -248,6 +251,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...westlakeGeoJson.features,
   ...littleElmGeoJson.features,
   ...southlakeGeoJson.features,
+  ...sunnyvaleGeoJson.features,
   ...balchSpringsGeoJson.features,
   ...wataugaGeoJson.features,
   ...whiteSettlementGeoJson.features,
