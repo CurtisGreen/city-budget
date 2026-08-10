@@ -1,6 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { CityData } from "@/lib/types";
-import { Users, DollarSign, TrendingUp, Building } from "lucide-react";
+import {
+  Users,
+  DollarSign,
+  TrendingUp,
+  Building,
+  Notebook,
+  NotebookText,
+} from "lucide-react";
 import Link from "next/link";
 
 interface CityInfoCardProps {
@@ -22,13 +29,16 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
     }).format(value);
   };
 
+  const years = cityData.financialData.map((f) => f.fiscalYear);
+  const id = cityData.info.id;
+
   return (
     <Card>
       <CardHeader className="flex gap-1">
         <CardTitle className="text-lg">City Overview</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 md:grid-flow-col md:grid-rows-2 gap-4">
           <div className="flex items-start gap-3">
             <Users className="h-5 w-5 text-muted-foreground mt-0.5" />
             <div>
@@ -73,10 +83,33 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
               </p>
             </div>
           </div>
+
+          <div className="col-span-2 md:col-span-1 flex items-start gap-3">
+            <NotebookText className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <div>
+              <p className="text-sm text-muted-foreground">
+                Financial Report Archive Links
+              </p>
+              <div className="flex flex-wrap gap-2 max-w-[230px]">
+                {years.map((year) => (
+                  <a
+                    key={year}
+                    href={`https://archive.org/download/city-budget-acfr-${id}/${id}-acfr-FY${year}.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-sm hover:text-green-600"
+                  >
+                    {year}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className="text-[11px] text-muted-foreground mt-4">
           Population from US Census, all other stats from the city's Annual
-          Comprehensive Financial Report (ACFR) or budget
+          Comprehensive Financial Report (ACFR)
         </div>
       </CardContent>
     </Card>
