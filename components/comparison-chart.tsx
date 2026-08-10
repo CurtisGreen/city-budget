@@ -50,9 +50,6 @@ export function ComparisonChart({
   formatType = "percent",
   maximumFractionDigits = 1,
 }: ComparisonChartProps) {
-  const uniqueId = useId();
-  const chartId = `chart-${uniqueId.replace(/:/g, "")}`;
-
   const formatter = chartFormatters[formatType];
   const averageMetrics = calculateAverageMetrics(
     allCities.map((c) => c.financialData),
@@ -97,8 +94,6 @@ export function ComparisonChart({
       </CardHeader>
       <CardContent className="flex">
         <div
-          data-slot="chart"
-          data-chart={chartId}
           className={`
             w-full 
             aspect-video 

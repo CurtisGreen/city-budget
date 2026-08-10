@@ -46,7 +46,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="#map">
-                <Button size="lg" className="gap-2 cursor-pointer bg-green-700">
+                <Button size="lg" className="gap-2 cursor-pointer">
                   <Map className="h-5 w-5" />
                   Explore Map
                 </Button>

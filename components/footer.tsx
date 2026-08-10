@@ -45,7 +45,8 @@ export const Footer = () => {
           © 2026 Budget.City - Making municipal finances easy and accessible
         </p>
         <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
-          Thanks to{" "}
+          Made by <span className="text-black">Curtis</span>{" "}
+          <span className="text-green-600">Green</span>. Thanks to{" "}
           <Link
             href="https://www.strongtowns.org"
             className="hover:text-gray-600 underline"

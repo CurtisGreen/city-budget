@@ -58,10 +58,15 @@ export function TaxVsInflationTable({
 
   // Category casing varies by city: "Public Safety"/"Public safety", "General government and administration"
   const publicSafety = expenditures.categories.find(
-    (c) => c.toLowerCase() === "public safety",
+    (c) =>
+      c.toLowerCase() === "public safety" ||
+      c.toLowerCase().startsWith("police"),
   )!;
   const generalGovernment = expenditures.categories.find((c) =>
     c.toLowerCase().startsWith("general government"),
+  )!;
+  const debtService = expenditures.categories.find((c) =>
+    c.toLowerCase().includes("debt"),
   )!;
 
   const sections = [
@@ -118,6 +123,15 @@ export function TaxVsInflationTable({
           change: change(
             firstExpenditures[generalGovernment],
             lastExpenditures[generalGovernment],
+          ),
+        },
+        {
+          label: debtService,
+          first: currency(firstExpenditures[debtService]),
+          last: currency(lastExpenditures[debtService]),
+          change: change(
+            firstExpenditures[debtService],
+            lastExpenditures[debtService],
           ),
         },
       ],

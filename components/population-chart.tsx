@@ -99,8 +99,6 @@ export function PopulationChart({
       </CardHeader>
       <CardContent className="flex">
         <div
-          data-slot="chart"
-          data-chart={chartId}
           className={`
             w-full
             aspect-video

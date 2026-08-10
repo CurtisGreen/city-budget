@@ -8,19 +8,13 @@ import { cn } from "@/lib/utils";
 function Popover({
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Root>) {
-  return <PopoverPrimitive.Root data-slot="popover" {...props} />;
+  return <PopoverPrimitive.Root {...props} />;
 }
 
 function PopoverTrigger({
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {
-  return (
-    <PopoverPrimitive.Trigger
-      data-slot="popover-trigger"
-      {...props}
-      className="z-1001"
-    />
-  );
+  return <PopoverPrimitive.Trigger {...props} className="z-1001" />;
 }
 
 function PopoverContent({
@@ -32,7 +26,6 @@ function PopoverContent({
   return (
     <PopoverPrimitive.Portal>
       <PopoverPrimitive.Content
-        data-slot="popover-content"
         align={align}
         sideOffset={sideOffset}
         className={cn(
@@ -48,13 +41,7 @@ function PopoverContent({
 function PopoverAnchor({
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Anchor>) {
-  return (
-    <PopoverPrimitive.Anchor
-      data-slot="popover-anchor"
-      {...props}
-      className="z-1001"
-    />
-  );
+  return <PopoverPrimitive.Anchor {...props} className="z-1001" />;
 }
 
 export { Popover, PopoverTrigger, PopoverContent, PopoverAnchor };
