@@ -87,5 +87,7 @@ export const irvingInfo: CityInfo = {
   area: 66.98,
   notes: [
     `FY 2018 ACFR: During the fiscal year over $90 million was contributed to the city by the developer of the Entertainment Center.`,
+    `FY 2022 ACFR: To fund a substantial portion of each pension plan's unfunded actuarially accrued liability for each of the city's three pension plans, Pension Obligation Bonds (POBs) in the amount of $167 million were sold in 2022.
+    This is why FY 2022 pension contributions run several times the actuarially determined amount, and why the funded ratios step up that year.`,
   ],
 };
