@@ -3,6 +3,7 @@
 import {
   Line,
   LineChart,
+  ReferenceDot,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -64,6 +65,18 @@ export function PensionChart({
       return row;
     });
 
+  // Years above the capped axis (a pension obligation bond year) get pinned to the top edge with
+  // their real value as a label, so clipping the axis never hides one.
+  const yMax = chartConfig.range?.[1];
+  const overflow =
+    typeof yMax === "number"
+      ? chartData.flatMap((row) =>
+          planNames
+            .filter((plan) => row[plan] > yMax)
+            .map((plan) => ({ year: row.year, plan, value: row[plan] })),
+        )
+      : [];
+
   return (
     <Card className="h-full">
       <CardHeader>
@@ -94,6 +107,8 @@ export function PensionChart({
             <YAxis
               tickFormatter={(value) => formatter(value, 0)}
               className="text-xs"
+              domain={chartConfig.range}
+              allowDataOverflow={chartConfig.range !== undefined}
             />
             <Tooltip
               content={
@@ -113,6 +128,27 @@ export function PensionChart({
                 strokeWidth={2}
                 name={`${cityName} - ${plan}`}
                 dot={{ r: 4 }}
+              />
+            ))}
+
+            {overflow.map(({ year, plan, value }, index, all) => (
+              <ReferenceDot
+                key={`${year}-${plan}`}
+                x={year}
+                y={yMax}
+                r={4}
+                fill={PLAN_COLORS[planNames.indexOf(plan) % PLAN_COLORS.length]}
+                stroke="none"
+                label={{
+                  value: formatter(value, 0),
+                  position: "top",
+                  // stack labels when several plans overflow in the same year
+                  dy:
+                    all.slice(0, index).filter((o) => o.year === year).length *
+                    -13,
+                  fontSize: 10,
+                  className: "fill-muted-foreground",
+                }}
               />
             ))}
           </LineChart>

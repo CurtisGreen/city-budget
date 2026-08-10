@@ -92,6 +92,10 @@ export const chartConfigs: Record<string, ChartConfig> = {
     positiveDirection: "up",
     upwardDescription: "More Sustainable",
     downwardDescription: "Less Sustainable",
+    // Capped so the 90-110% band stays readable. A city that dumps pension obligation bond
+    // proceeds into a plan reports coverage in the hundreds of percent for that one year
+    // (Irving FY2022: 860% / 423%) — PensionChart pins those to the top edge and labels them.
+    range: [0, 2],
     formula: "Contributions in relation to the ADC / ADC",
   },
   pensionFundedRatio: {
