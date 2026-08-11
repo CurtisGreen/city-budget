@@ -1,14 +1,10 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+import { Atkinson_Hyperlegible_Next } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-});
+const atkinson = Atkinson_Hyperlegible_Next({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://budget.city"),
@@ -31,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={atkinson.className + " antialiased"}>
         {children}
         <Analytics />
       </body>

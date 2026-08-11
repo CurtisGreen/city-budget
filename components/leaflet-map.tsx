@@ -151,29 +151,27 @@ export default function LeafletMap({
     <div>
       {/* Legend */}
       <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[100px] md:ml-[500px] lg:ml-[700px] mt-[-20px] gap-2">
-        <div className="text-sm font-semibold">
-          <Dropdown
-            options={[
-              "Years of Financial Cushion",
-              "Net Debt to Revenue",
-              "Asset Life",
-              "5-Year Change in Asset Life",
-              "5-Year Change in Assets to Liabilities",
-              "Total Revenue Per Acre",
-              "5-Year Change in Population",
-              "5-Year Change in Population %",
-              "Population per Sq. Mi",
-            ]}
-            onSelectionChange={setSelectedMetric}
-          />
-        </div>
+        <Dropdown
+          options={[
+            "Years of Financial Cushion",
+            "Net Debt to Revenue",
+            "Asset Life",
+            "5-Year Change in Asset Life",
+            "5-Year Change in Assets to Liabilities",
+            "Total Revenue Per Acre",
+            "5-Year Change in Population",
+            "5-Year Change in Population %",
+            "Population per Sq. Mi",
+          ]}
+          onSelectionChange={setSelectedMetric}
+        />
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
             />
-            <span className="text-xs">
+            <span className="text-sm">
               {colorConfig.greenLabel} (Excellent)
             </span>
           </div>
@@ -182,14 +180,14 @@ export default function LeafletMap({
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
             />
-            <span className="text-xs">{colorConfig.yellowLabel} (Okay)</span>
+            <span className="text-sm">{colorConfig.yellowLabel} (Okay)</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
             />
-            <span className="text-xs">{colorConfig.redLabel} (Poor)</span>
+            <span className="text-sm">{colorConfig.redLabel} (Poor)</span>
           </div>
         </div>
       </Card>
