@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const GraphLogo = () => (
+const GraphLogo = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
