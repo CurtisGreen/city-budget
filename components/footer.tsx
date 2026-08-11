@@ -41,10 +41,10 @@ export const Footer = () => {
             Github
           </Link>
         </div>
-        <p className="text-xs text-gray-400 dark:text-gray-500">
+        <p className="text-xs text-gray-400">
           © 2026 Budget.City - Making municipal finances easy and accessible
         </p>
-        <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
+        <p className="mt-2 text-xs text-gray-400">
           Made by <span className="text-black">Curtis</span>{" "}
           <span className="text-green-600">Green</span>. Thanks to{" "}
           <Link
@@ -64,7 +64,7 @@ export const Footer = () => {
           </Link>{" "}
           for inspiring this site
         </p>
-        <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
+        <p className="mt-2 text-xs text-gray-400">
           Data sourced from Annual Comprehensive Financial Reports (ACFR) and
           other audited statements
         </p>
