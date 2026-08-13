@@ -148,9 +148,9 @@ export default function LeafletMap({
     });
 
   return (
-    <div>
+    <div className="relative w-full md:w-[700px] lg:w-[900px] mx-auto">
       {/* Legend */}
-      <Card className="absolute p-4 mb-4 w-fit z-1000 ml-[100px] md:ml-[500px] lg:ml-[700px] mt-[-20px] gap-2">
+      <Card className="p-4 mb-[-10px] w-full gap-2 relative z-1000 md:absolute md:top-2 md:right-2 md:mb-0 md:w-fit md:max-w-[calc(100%-1rem)]">
         <Dropdown
           options={[
             "Years of Financial Cushion",
@@ -200,7 +200,7 @@ export default function LeafletMap({
         // zoomControl={false}
         doubleClickZoom={false}
         // dragging={false}
-        className="h-[400px] md:h-[600px] lg:h-[650px] w-[300px] md:w-[700px] lg:w-[900px] rounded-md mx-auto"
+        className="h-[400px] md:h-[600px] lg:h-[650px] w-full rounded-md"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
