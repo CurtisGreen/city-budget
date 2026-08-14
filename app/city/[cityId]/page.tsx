@@ -155,7 +155,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   variant="outline"
                   className="bg-transparent cursor-pointer"
                 >
-                  <GitCompare className="mr-2 h-4 w-4" />
+                  <GitCompare className="mr-2 h-4 w-4 text-green-700" />
                   Compare
                 </Button>
               </Link>

@@ -24,7 +24,7 @@ const GraphLogo = () => (
 export const LogoButton = () => (
   <Link
     href="/"
-    className="flex items-center gap-2 hover:bg-accent hover:text-accent-foreground rounded-md p-1 transition-all cursor-pointer"
+    className="flex items-center gap-2 hover:bg-accent hover:text-accent-foreground rounded-md px-4 py-2 transition-all cursor-pointer"
   >
     <GraphLogo />
     <h1 className="text-2xl font-bold">Budget.City</h1>
