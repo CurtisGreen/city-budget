@@ -65,9 +65,7 @@ export function TaxVsInflationTable({
   const generalGovernment = expenditures.categories.find((c) =>
     c.toLowerCase().startsWith("general government"),
   )!;
-  const debtService = expenditures.categories.find((c) =>
-    c.toLowerCase().includes("debt"),
-  )!;
+  const debtService = expenditures.categories.find((c) => c == "Debt service")!;
 
   const sections = [
     {

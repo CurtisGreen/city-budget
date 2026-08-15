@@ -44,7 +44,7 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       Parks: "Streets and parks",
       Finance: "Finance and planning",
       Planning: "Finance and planning",
-      "Administration": "General government",
+      Administration: "General government",
       "City secretary": "General government",
     },
     notes: {
@@ -78,6 +78,15 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     notes: {
       "Public Works":
         "Contains: code enforcement, streets & street lighting, sanitation, and public works & transportation. Dallas recategorized these functions across years.",
+    },
+  },
+  richardson: {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      "General administration": "General government",
+    },
+    notes: {
+      "General government": "Contains: General government, administration",
     },
   },
 };
