@@ -148,7 +148,7 @@ def main():
     print(f"\nrepaired {len(ok)}/{len(args.targets)}" + (f", failed: {', '.join(failed)}" if failed else ""))
     if ok and not args.no_repoint:
         print("manifests repointed to inbox/parsed/*. Re-upload with:")
-        print("  python scripts/fetch_to_ia.py " +
+        print("  python scripts/upload_to_ia.py " +
               " ".join(f"manifests/{c}.json" for c in sorted({c for c, _ in args.targets})))
     return 1 if failed else 0
 

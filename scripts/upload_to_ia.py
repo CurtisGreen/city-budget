@@ -10,9 +10,9 @@ Setup (once):
   cp scripts/.env.example scripts/.env    # paste keys from archive.org/account/s3.php
 
 Usage:
-  python scripts/fetch_to_ia.py manifests/little-elm.json
-  python scripts/fetch_to_ia.py manifests/little-elm.json --force
-  python scripts/fetch_to_ia.py manifests/*.json
+  python scripts/upload_to_ia.py manifests/little-elm.json
+  python scripts/upload_to_ia.py manifests/little-elm.json --force
+  python scripts/upload_to_ia.py manifests/*.json
 """
 
 import argparse

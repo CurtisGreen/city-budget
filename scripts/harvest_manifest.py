@@ -11,7 +11,7 @@ Usage (pick one source mode):
   --urls    URL1 URL2 ...               explicit URLs, e.g. read off a JS-rendered page
   --pattern ".../report-{year}.pdf"     static template (+ --years 2015-2025)
 
-  python scripts/harvest_manifest.py --id keller --city Keller --page https://...
+  python scripts/harvest_manifest.py --id keller --city "Keller" --page "https://..."
 """
 
 import argparse

@@ -1,0 +1,72 @@
+{
+  "id": "burleson",
+  "city": "Burleson",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=5717",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=6198",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=6763",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=7190",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=7587",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=7980",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=8410",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=8584",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=9011",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=9132",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.burlesontx.com/Archive.aspx?ADID=9377",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-burleson/burleson-acfr-FY2025.pdf"
+    }
+  ]
+}

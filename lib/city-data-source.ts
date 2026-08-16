@@ -19,6 +19,7 @@ import { corinthInfo } from "@/data/info/corinth";
 import { hasletInfo } from "@/data/info/haslet";
 import { trophyClubInfo } from "@/data/info/trophy-club";
 import { benbrookInfo } from "@/data/info/benbrook";
+import { burlesonInfo } from "@/data/info/burleson";
 import { colleyvilleInfo } from "@/data/info/colleyville";
 import { sachseInfo } from "@/data/info/sachse";
 import { saginawInfo } from "@/data/info/saginaw";
@@ -77,6 +78,7 @@ import { corinthGeoJson } from "@/data/geojson/corinth-geojson";
 import { hasletGeoJson } from "@/data/geojson/haslet-geojson";
 import { trophyClubGeoJson } from "@/data/geojson/trophy-club-geojson";
 import { benbrookGeoJson } from "@/data/geojson/benbrook-geojson";
+import { burlesonGeoJson } from "@/data/geojson/burleson-geojson";
 import { colleyvilleGeoJson } from "@/data/geojson/colleyville-geojson";
 import { friscoGeoJson } from "@/data/geojson/frisco-geojson";
 import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
@@ -141,6 +143,7 @@ const basicCityInfo = [
   hasletInfo,
   trophyClubInfo,
   benbrookInfo,
+  burlesonInfo,
   colleyvilleInfo,
   sachseInfo,
   saginawInfo,
@@ -215,6 +218,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...hasletGeoJson.features,
   ...trophyClubGeoJson.features,
   ...benbrookGeoJson.features,
+  ...burlesonGeoJson.features,
   ...colleyvilleGeoJson.features,
   ...friscoGeoJson.features,
   ...grapevineGeoJson.features,
