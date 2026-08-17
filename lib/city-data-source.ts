@@ -50,6 +50,7 @@ import { theColonyInfo } from "@/data/info/the-colony";
 import { kellerInfo } from "@/data/info/keller";
 import { hurstInfo } from "@/data/info/hurst";
 import { forneyInfo } from "@/data/info/forney";
+import { forestHillInfo } from "@/data/info/forest-hill";
 import { richlandHillsInfo } from "@/data/info/richland-hills";
 import { roanokeInfo } from "@/data/info/roanoke";
 import { rockwallInfo } from "@/data/info/rockwall";
@@ -111,6 +112,7 @@ import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
 import { forneyGeoJson } from "@/data/geojson/forney-geojson";
+import { forestHillGeoJson } from "@/data/geojson/forest-hill-geojson";
 import { richlandHillsGeoJson } from "@/data/geojson/richland-hills-geojson";
 import { roanokeGeoJson } from "@/data/geojson/roanoke-geojson";
 import { rockwallGeoJson } from "@/data/geojson/rockwall-geojson";
@@ -173,6 +175,7 @@ const basicCityInfo = [
   kellerInfo,
   hurstInfo,
   forneyInfo,
+  forestHillInfo,
   richlandHillsInfo,
   roanokeInfo,
   rockwallInfo,
@@ -251,6 +254,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...kellerGeoJson.features,
   ...hurstGeoJson.features,
   ...forneyGeoJson.features,
+  ...forestHillGeoJson.features,
   ...richlandHillsGeoJson.features,
   ...roanokeGeoJson.features,
   ...rockwallGeoJson.features,

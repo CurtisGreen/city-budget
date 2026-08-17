@@ -1,0 +1,66 @@
+{
+  "id": "forest-hill",
+  "city": "Forest Hill",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=62",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=57",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=58",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=59",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=60",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=61",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=56",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/Archive.aspx?ADID=214",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/DocumentCenter/View/4778",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.foresthilltx.org/DocumentCenter/View/5185",
+      "archiveUrl": null
+    }
+  ]
+}
