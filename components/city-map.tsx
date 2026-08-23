@@ -104,21 +104,21 @@ export function CityMap({ cities }: CityMapProps) {
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
             />
             <span className="text-sm">{"= 0 (Excellent)"}</span>
           </div>
           <div className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
             />
             <span className="text-sm">{"0 - 1.0 (Okay)"}</span>
           </div>
           <div className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
             />
             <span className="text-sm">{"> 1 (Poor)"}</span>

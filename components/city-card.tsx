@@ -36,7 +36,7 @@ export function CityCard({ city }: CityCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200">
       <CardHeader>
-        <CardTitle>{city.info.name}</CardTitle>
+        <CardTitle className="text-lg">{city.info.name}</CardTitle>
         <CardDescription>Population: {population}</CardDescription>
       </CardHeader>
       <CardContent>
@@ -44,13 +44,13 @@ export function CityCard({ city }: CityCardProps) {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="text-sm text-muted-foreground">Revenue</p>
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-medium">
                 {formatCurrency(latestYear.totalRevenue)}
               </p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Liabilities</p>
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-medium">
                 {formatCurrency(latestYear.liabilities)}
               </p>
             </div>
@@ -61,13 +61,13 @@ export function CityCard({ city }: CityCardProps) {
               <p className="text-sm text-muted-foreground">
                 Net Debt / Revenue
               </p>
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-medium">
                 {formatPercent(latestMetrics.netDebtToRevenue, 0)}
               </p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Asset Life</p>
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-medium">
                 {formatPercent(latestMetrics.netBookValueToCostOfTCA, 0)}
               </p>
             </div>

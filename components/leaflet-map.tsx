@@ -168,7 +168,7 @@ export default function LeafletMap({
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: "oklch(0.696 0.17 162)" }}
             />
             <span className="text-sm">
@@ -177,14 +177,14 @@ export default function LeafletMap({
           </div>
           <div className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: "oklch(0.769 0.188 70)" }}
             />
             <span className="text-sm">{colorConfig.yellowLabel} (Okay)</span>
           </div>
           <div className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: "oklch(0.577 0.245 27)" }}
             />
             <span className="text-sm">{colorConfig.redLabel} (Poor)</span>
@@ -200,7 +200,7 @@ export default function LeafletMap({
         // zoomControl={false}
         doubleClickZoom={false}
         // dragging={false}
-        className="h-[400px] md:h-[600px] lg:h-[650px] w-full rounded-md"
+        className="h-[400px] md:h-[600px] lg:h-[650px] w-full rounded-sm"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

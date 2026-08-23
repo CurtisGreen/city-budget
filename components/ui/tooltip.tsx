@@ -1,7 +1,13 @@
 import { InfoIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const Tooltip = ({ message, size = 5 }: { message: string, size?: number }) => {
+export const Tooltip = ({
+  message,
+  size = 5,
+}: {
+  message: string;
+  size?: number;
+}) => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const openerRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
@@ -88,7 +94,7 @@ export const Tooltip = ({ message, size = 5 }: { message: string, size?: number 
       <div
         ref={tooltipRef}
         popover="manual"
-        className="fixed bg-black text-white rounded-md p-2 text-xs z-50 pointer-events-none"
+        className="fixed bg-black text-white rounded-sm p-2 text-xs z-50 pointer-events-none"
       >
         {message}
       </div>

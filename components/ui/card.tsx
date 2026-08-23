@@ -6,7 +6,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-sm border py-6 shadow-sm",
         className,
       )}
       {...props}
@@ -18,7 +18,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 [.border-b]:pb-6",
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1 px-6 [.border-b]:pb-6",
         className,
       )}
       {...props}

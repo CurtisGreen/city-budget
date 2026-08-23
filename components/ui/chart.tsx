@@ -15,8 +15,8 @@ export function ChartTooltipContent({
   return (
     <div
       className={cn(
-        "border-border/50 bg-background grid min-w-[8rem] items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl",
-        className
+        "border-border/50 bg-background grid min-w-[8rem] items-start gap-1.5 rounded-sm border px-2.5 py-1.5 text-xs shadow-xl",
+        className,
       )}
     >
       {payload
@@ -52,7 +52,7 @@ export function ChartTooltipContent({
                     item.name,
                     item,
                     index,
-                    item.payload
+                    item.payload,
                   )}
                 </span>
               )}

@@ -146,7 +146,7 @@ export default async function CityPage({ params }: CityPageProps) {
             <nav className="flex items-center gap-4">
               <Link href="/" className="hidden sm:block">
                 <Button variant="ghost" className="cursor-pointer">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  <ArrowLeft className="mr-2 h-4 w-4 text-green-700" />
                   Home
                 </Button>
               </Link>
@@ -165,12 +165,10 @@ export default async function CityPage({ params }: CityPageProps) {
       </header>
 
       {/* City Header */}
-      <section className="bg-gradient-to-b from-muted/50 to-background py-12">
+      <section className="bg-gradient-to-b from-muted/50 to-background pt-12 pb-6">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-2">{cityData.info.name}</h2>
-          <p className="text-xl text-muted-foreground">
-            Financial Data & Analysis
-          </p>
+          <p className="text-xl text-muted-foreground">Financial History</p>
         </div>
       </section>
 

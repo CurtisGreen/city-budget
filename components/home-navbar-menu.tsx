@@ -29,17 +29,17 @@ export function HomeNavbarMenu() {
           <LogoButton />
           <nav className="hidden md:flex items-center gap-4">
             <Link href="/">
-              <Button variant="ghost" className="cursor-pointer">
+              <Button variant="ghost" className="cursor-pointer font-medium">
                 Home
               </Button>
             </Link>
             <Link href="/compare">
-              <Button variant="ghost" className="cursor-pointer">
+              <Button variant="ghost" className="cursor-pointer font-medium">
                 Compare Cities
               </Button>
             </Link>
             <Link href="/about">
-              <Button variant="ghost" className="cursor-pointer">
+              <Button variant="ghost" className="cursor-pointer font-medium">
                 About
               </Button>
             </Link>
@@ -68,7 +68,7 @@ export function HomeNavbarMenu() {
                 <Link href="/">
                   <Button
                     variant="ghost"
-                    className="w-full justify-start cursor-pointer"
+                    className="w-full justify-start cursor-pointer font-medium"
                   >
                     Home
                   </Button>
@@ -76,7 +76,7 @@ export function HomeNavbarMenu() {
                 <Link href="/compare">
                   <Button
                     variant="ghost"
-                    className="w-full justify-start cursor-pointer"
+                    className="w-full justify-start cursor-pointer text-medium"
                   >
                     Compare Cities
                   </Button>
@@ -84,7 +84,7 @@ export function HomeNavbarMenu() {
                 <Link href="/about">
                   <Button
                     variant="ghost"
-                    className="w-full justify-start cursor-pointer"
+                    className="w-full justify-start cursor-pointer font-medium"
                   >
                     About
                   </Button>

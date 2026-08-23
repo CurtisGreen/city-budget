@@ -108,7 +108,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
             <nav className="flex items-center gap-4">
               <Link href="/">
                 <Button variant="ghost" className="cursor-pointer">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  <ArrowLeft className="mr-2 h-4 w-4 text-green-700" />
                   Home
                 </Button>
               </Link>
@@ -129,7 +129,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
       </section>
 
       {/* City Selection */}
-      <section className="py-8">
+      <section className="pb-4">
         <div className="container mx-auto px-4">
           <div className="max-w-xl">
             <label className="block text-sm font-medium mb-2">

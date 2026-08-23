@@ -66,7 +66,7 @@ export function CitySelector({
           className="w-full justify-between bg-transparent"
         >
           {selectedCityNames || "Select cities..."}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 text-green-700" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[400px] p-0">
@@ -89,7 +89,7 @@ export function CitySelector({
                   >
                     <Check
                       className={cn(
-                        "mr-2 h-4 w-4",
+                        "mr-2 h-4 w-4 text-green-700",
                         isSelected ? "opacity-100" : "opacity-0",
                       )}
                     />

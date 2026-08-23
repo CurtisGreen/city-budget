@@ -5,10 +5,8 @@ import {
   DollarSign,
   TrendingUp,
   Building,
-  Notebook,
   NotebookText,
 } from "lucide-react";
-import Link from "next/link";
 
 interface CityInfoCardProps {
   cityData: CityData;
@@ -40,7 +38,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
       <CardContent>
         <div className="grid grid-cols-2 md:grid-flow-col md:grid-rows-2 gap-4">
           <div className="flex items-start gap-3">
-            <Users className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <Users className="h-5 w-5 mt-0.5 text-green-700" />
             <div>
               <p className="text-sm text-muted-foreground">Population</p>
               <p className="text-lg font-semibold">
@@ -50,7 +48,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
           </div>
 
           <div className="flex items-start gap-3">
-            <DollarSign className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <DollarSign className="h-5 w-5 mt-0.5 text-green-700" />
             <div>
               <p className="text-sm text-muted-foreground">Total Revenue</p>
               <p className="text-lg font-semibold">
@@ -60,7 +58,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
           </div>
 
           <div className="flex items-start gap-3">
-            <TrendingUp className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <TrendingUp className="h-5 w-5 mt-0.5 text-green-700" />
             <div>
               <p className="text-sm text-muted-foreground">
                 Net Financial Position change over 5 years
@@ -75,7 +73,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
           </div>
 
           <div className="flex items-start gap-3">
-            <Building className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <Building className="h-5 w-5 mt-0.5 text-green-700" />
             <div>
               <p className="text-sm text-muted-foreground">Total Assets</p>
               <p className="text-lg font-semibold">
@@ -85,7 +83,7 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
           </div>
 
           <div className="col-span-2 md:col-span-1 flex items-start gap-3">
-            <NotebookText className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <NotebookText className="h-5 w-5 mt-0.5 text-green-700" />
             <div>
               <p className="text-sm text-muted-foreground">
                 Financial Report Archive Links
