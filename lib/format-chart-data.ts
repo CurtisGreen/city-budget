@@ -284,7 +284,8 @@ export function toModifiedAccrualExpenditureChart(
       row["Debt service"] =
         expenditures.debtService.principal +
         expenditures.debtService.interest +
-        (expenditures.debtService.refundingEscrow ?? 0);
+        (expenditures.debtService.refundingEscrow ?? 0) +
+        (expenditures.debtService.issuanceCosts ?? 0);
       categories.add("Debt service");
 
       row["Capital outlay"] = expenditures.capitalOutlay;

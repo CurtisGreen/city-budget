@@ -14,26 +14,22 @@ export interface CityFinancialData {
   hotelTaxRevenue?: number;
   // Gov-wide Statement of Activities, full accrual: includes depreciation & actuarial pension; excludes capital outlay & debt principal.
   fullAccrualExpenses?: { name: string; value: number }[];
-  // Governmental funds statement, modified accrual: includes capital outlay & debt principal; excludes depreciation; pension = cash contributions.
+  // Governmental fundss statement, modified accrual: includes capital outlay & debt principal; excludes depreciation; pension = cash contributions.
   modifiedAccrualExpenditures?: {
     current: { name: string; value: number }[];
-    // refundingEscrow = "Payment to refunded bond escrow agent" when a city books it as a
-    // debt-service EXPENDITURE (in Total Expenditures), e.g. Dallas. Omit when the city books it
-    // under Other Financing Uses instead (excluded from expenditures), e.g. Addison.
     debtService: {
       principal: number;
       interest: number;
       refundingEscrow?: number;
+      issuanceCosts?: number;
     };
     capitalOutlay: number;
     total: number;
   };
-  // RSI pension schedules, one entry per plan. Values as printed; funded ratio and ADC coverage are derived.
   pensionPlans?: {
     name: string;
     totalPensionLiability: number;
     fiduciaryNetPosition: number;
-    // Omitted when the schedule reports no ADC, e.g. Dallas Police & Fire FY2016 (statutory rate only, pre-HB 3158).
     actuariallyDeterminedContribution?: number;
     actualContribution: number;
   }[];

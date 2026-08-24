@@ -89,4 +89,23 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "General government": "Contains: General government, administration",
     },
   },
+  princeton: {
+    fullAccrualGroups: {
+      Library: "Culture and recreation",
+      "Parks and recreation": "Culture and recreation",
+      "Culture and recreation": "Culture and recreation",
+      Interest: "Interest on long-term debt",
+      "Interest on long-term debt": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {
+      Library: "Culture and recreation",
+      "Parks and recreation": "Culture and recreation",
+      "Culture and recreation": "Culture and recreation",
+      "Public services and operation": "Public services and operations",
+      "Public services and operations": "Public services and operations",
+    },
+    notes: {
+      "Culture and recreation": "Contains: library, parks and recreation",
+    },
+  },
 };
