@@ -13,6 +13,54 @@
       "source": "manual",
       "file": "inbox/farmers-branch-FY2017.pdf",
       "archiveUrl": "https://archive.org/download/city-budget-acfr-farmers-branch/farmers-branch-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/f6683eba-f2e8-42fa-9250-fa2cb66241ae",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/8e68c305-c59d-45ff-9c7b-65c81758f573",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/555f4305-35ca-462f-beaf-9c26c94bbabd",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/e3b2a509-6fd3-4c96-92af-95b8e18f0145",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/9b658d7d-627f-4ef6-af25-0521cbcd89f1",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/ff95a386-d015-4713-a8d8-e612b0028698",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/e0b0c8ef-0ad8-4417-b6c6-ba7699b261c6",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://content.civicplus.com/api/assets/tx-farmersbranch/8712fd12-1b0e-4f94-aba6-8c2d461cb498",
+      "archiveUrl": null
     }
   ]
 }

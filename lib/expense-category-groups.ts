@@ -89,6 +89,17 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "General government": "Contains: General government, administration",
     },
   },
+  "farmers-branch": {
+    fullAccrualGroups: {
+      "Interest on long-term debt": "Interest on long-term debt",
+      "Interest on long term debt": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {
+      "Interest on long-term debt":
+        "The FY2018 and later reports drop the hyphen ('Interest on long term debt'); same row.",
+    },
+  },
   princeton: {
     fullAccrualGroups: {
       Library: "Culture and recreation",
