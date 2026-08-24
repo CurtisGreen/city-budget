@@ -1,0 +1,72 @@
+{
+  "id": "princeton",
+  "city": "Princeton",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=196",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=197",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=194",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=195",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=193",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=189",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=300",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=736",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=967",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=968",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://princetontx.gov/Archive.aspx?ADID=984",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-princeton/princeton-acfr-FY2025.pdf"
+    }
+  ]
+}

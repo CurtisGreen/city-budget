@@ -43,6 +43,7 @@ import { mesquiteAcfr } from "./mesquite";
 import { murphyAcfr } from "./murphy";
 import { northRichlandHillsAcfr } from "./north-richland-hills";
 import { planoAcfr } from "./plano";
+import { princetonAcfr } from "./princeton";
 import { prosperAcfr } from "./prosper";
 import { richardsonAcfr } from "./richardson";
 import { richlandHillsAcfr } from "./richland-hills";
@@ -106,6 +107,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   murphy: murphyAcfr,
   "north-richland-hills": northRichlandHillsAcfr,
   plano: planoAcfr,
+  princeton: princetonAcfr,
   prosper: prosperAcfr,
   richardson: richardsonAcfr,
   "richland-hills": richlandHillsAcfr,

@@ -63,6 +63,7 @@ import { sunnyvaleInfo } from "@/data/info/sunnyvale";
 import { balchSpringsInfo } from "@/data/info/balch-springs";
 import { wataugaInfo } from "@/data/info/watauga";
 import { whiteSettlementInfo } from "@/data/info/white-settlement";
+import { princetonInfo } from "@/data/info/princeton";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -125,6 +126,7 @@ import { sunnyvaleGeoJson } from "@/data/geojson/sunnyvale-geojson";
 import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 import { wataugaGeoJson } from "@/data/geojson/watauga-geojson";
 import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson";
+import { princetonGeoJson } from "@/data/geojson/princeton-geojson";
 
 const basicCityInfo = [
   dallasInfo,
@@ -188,6 +190,7 @@ const basicCityInfo = [
   balchSpringsInfo,
   wataugaInfo,
   whiteSettlementInfo,
+  princetonInfo,
 ];
 
 // Calculate metrics for each city
@@ -267,4 +270,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...balchSpringsGeoJson.features,
   ...wataugaGeoJson.features,
   ...whiteSettlementGeoJson.features,
+  ...princetonGeoJson.features,
 ] as GeoJSONFeature[];
