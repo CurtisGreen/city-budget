@@ -84,13 +84,11 @@ export const kennedaleInfo: CityInfo = {
   ],
   area: 6.61,
   notes: [
-    `FY 2016 ACFR: "Governmental activities net position increased by $2,950,956.
-     The increase is more than the prior year increase of $1,027,630 due primarily to an increase in
-     capital grants and contributions, property taxes and other taxes." [...] "Charges for water and
-     sewer services were $4,782,055 and capital contributions were $1,479,937 for the fiscal year
-     2016, which is $2,578,690 more than the 2014-2015 fiscal year revenue, $3,683,823. This increase
-     is a result of a change in donation of capital assets from developers and water and sewer rates
-     were increased mid-year."`,
+    `FY 2016 ACFR: "Charges for water and sewer services were $4,782,055 
+     and capital contributions were $1,479,937 for the fiscal year 2016, 
+     which is $2,578,690 more than the 2014-2015 fiscal year revenue, $3,683,823. 
+     This increase is a result of a change in donation of capital assets from developers 
+     and water and sewer rates  were increased mid-year."`,
     `FY 2024 ACFR: "Both current and other assets and long-term liabilities primarily increased due to
      the issuance of over $13 million in debt towards the end of the year that will be used for future
      capital projects."`,

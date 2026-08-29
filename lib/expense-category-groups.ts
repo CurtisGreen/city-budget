@@ -5,7 +5,7 @@ export interface ExpenseCategoryGroup {
   notes: Record<string, string>;
 }
 
-// City-specific groupings for cities whose ACFR renames/splits functions across years.
+// City-specific groupings for cities whose ACFR renames/splits functions across years
 export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
   haslet: {
     fullAccrualGroups: {
@@ -49,13 +49,13 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     },
     notes: {
       "Public Safety": "Contains: Public Safety, Fire, Fire Marshall, Court",
-      "Economic development": "FY2025 relabels as 'Building services'.",
+      "Economic development": "FY2025 relabels as 'Building services'",
       "Information Technology":
-        "Reported as 'Non-departmental' through FY2023, FY2025 relabels as 'Information technology'.",
+        "Reported as 'Non-departmental' through FY2023, FY2025 relabels as 'Information technology'",
       "Streets and parks":
         "FY2017 onward combines 'Streets and parks' for full-accrual",
       "Finance and planning":
-        "FY2017 onward combines 'Finance and planning' for full-accural.",
+        "FY2017 onward combines 'Finance and planning' for full-accural",
     },
   },
   dallas: {
@@ -95,10 +95,7 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Interest on long term debt": "Interest on long-term debt",
     },
     modifiedAccrualGroups: {},
-    notes: {
-      "Interest on long-term debt":
-        "The FY2018 and later reports drop the hyphen ('Interest on long term debt'); same row.",
-    },
+    notes: {},
   },
   parker: {
     fullAccrualGroups: {
@@ -108,12 +105,15 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     modifiedAccrualGroups: {
       "Parks and recreation": "Culture and recreation",
       "Culture and recreation": "Culture and recreation",
+      "Police department": "Public safety",
+      "Fire department": "Public safety",
+      "Municipal court": "Public safety",
+      "City property": "General government",
     },
     notes: {
       "Public works":
-        "Reported as 'Transportation' through FY2019, renamed 'Public works' from FY2020.",
-      "Culture and recreation":
-        "FY2015 reports the fund-level row as 'Parks and recreation'.",
+        "FY2015-2019 'Transportation', renamed 'Public works' from FY2020",
+      "Culture and recreation": "Includes parks",
     },
   },
   princeton: {
@@ -132,7 +132,7 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Public services and operations": "Public services and operations",
     },
     notes: {
-      "Culture and recreation": "Contains: library, parks and recreation",
+      "Culture and recreation": "Contains library and parks",
     },
   },
   lucas: {
@@ -141,8 +141,6 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Interest expense": "Interest on long-term debt",
     },
     modifiedAccrualGroups: {},
-    notes: {
-      "Interest on long-term debt": "FY2025 relabels as 'Interest expense'.",
-    },
+    notes: {},
   },
 };

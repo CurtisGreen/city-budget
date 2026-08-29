@@ -80,7 +80,7 @@ export const parkerInfo: CityInfo = {
   },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
-    { usage: "Street Maintenance Sales Tax", percent: 1 },
+    { usage: "Street Maintenance", percent: 1 },
   ],
   area: 8.52,
   notes: [
