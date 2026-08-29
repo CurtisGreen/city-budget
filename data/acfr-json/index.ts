@@ -34,14 +34,17 @@ import { highlandVillageAcfr } from "./highland-village";
 import { hurstAcfr } from "./hurst";
 import { irvingAcfr } from "./irving";
 import { kellerAcfr } from "./keller";
+import { kennedaleAcfr } from "./kennedale";
 import { lancasterAcfr } from "./lancaster";
 import { lewisvilleAcfr } from "./lewisville";
 import { littleElmAcfr } from "./little-elm";
+import { lucasAcfr } from "./lucas";
 import { mansfieldAcfr } from "./mansfield";
 import { mckinneyAcfr } from "./mckinney";
 import { mesquiteAcfr } from "./mesquite";
 import { murphyAcfr } from "./murphy";
 import { northRichlandHillsAcfr } from "./north-richland-hills";
+import { parkerAcfr } from "./parker";
 import { planoAcfr } from "./plano";
 import { princetonAcfr } from "./princeton";
 import { prosperAcfr } from "./prosper";
@@ -98,14 +101,17 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   hurst: hurstAcfr,
   irving: irvingAcfr,
   keller: kellerAcfr,
+  kennedale: kennedaleAcfr,
   lancaster: lancasterAcfr,
   lewisville: lewisvilleAcfr,
   "little-elm": littleElmAcfr,
+  lucas: lucasAcfr,
   mansfield: mansfieldAcfr,
   mckinney: mckinneyAcfr,
   mesquite: mesquiteAcfr,
   murphy: murphyAcfr,
   "north-richland-hills": northRichlandHillsAcfr,
+  parker: parkerAcfr,
   plano: planoAcfr,
   princeton: princetonAcfr,
   prosper: prosperAcfr,

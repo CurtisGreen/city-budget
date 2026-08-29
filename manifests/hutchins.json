@@ -1,0 +1,60 @@
+{
+  "id": "hutchins",
+  "city": "Hutchins",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/221",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/216",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/236",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/226",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/231",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/241",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/1581",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/7306",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofhutchinstx.gov/media/9506",
+      "archiveUrl": null
+    }
+  ]
+}

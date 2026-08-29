@@ -48,7 +48,9 @@ import { eulessInfo } from "@/data/info/euless";
 import { bedfordInfo } from "@/data/info/bedford";
 import { theColonyInfo } from "@/data/info/the-colony";
 import { kellerInfo } from "@/data/info/keller";
+import { kennedaleInfo } from "@/data/info/kennedale";
 import { hurstInfo } from "@/data/info/hurst";
+import { lucasInfo } from "@/data/info/lucas";
 import { forneyInfo } from "@/data/info/forney";
 import { forestHillInfo } from "@/data/info/forest-hill";
 import { richlandHillsInfo } from "@/data/info/richland-hills";
@@ -64,6 +66,7 @@ import { balchSpringsInfo } from "@/data/info/balch-springs";
 import { wataugaInfo } from "@/data/info/watauga";
 import { whiteSettlementInfo } from "@/data/info/white-settlement";
 import { princetonInfo } from "@/data/info/princeton";
+import { parkerInfo } from "@/data/info/parker";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
@@ -111,7 +114,9 @@ import { eulessGeoJson } from "@/data/geojson/euless-geojson";
 import { bedfordGeoJson } from "@/data/geojson/bedford-geojson";
 import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
+import { kennedaleGeoJson } from "@/data/geojson/kennedale-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
+import { lucasGeoJson } from "@/data/geojson/lucas-geojson";
 import { forneyGeoJson } from "@/data/geojson/forney-geojson";
 import { forestHillGeoJson } from "@/data/geojson/forest-hill-geojson";
 import { richlandHillsGeoJson } from "@/data/geojson/richland-hills-geojson";
@@ -127,6 +132,7 @@ import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 import { wataugaGeoJson } from "@/data/geojson/watauga-geojson";
 import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson";
 import { princetonGeoJson } from "@/data/geojson/princeton-geojson";
+import { parkerGeoJson } from "@/data/geojson/parker-geojson";
 
 const basicCityInfo = [
   dallasInfo,
@@ -175,7 +181,9 @@ const basicCityInfo = [
   bedfordInfo,
   theColonyInfo,
   kellerInfo,
+  kennedaleInfo,
   hurstInfo,
+  lucasInfo,
   forneyInfo,
   forestHillInfo,
   richlandHillsInfo,
@@ -191,6 +199,7 @@ const basicCityInfo = [
   wataugaInfo,
   whiteSettlementInfo,
   princetonInfo,
+  parkerInfo,
 ];
 
 // Calculate metrics for each city
@@ -255,7 +264,9 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...bedfordGeoJson.features,
   ...theColonyGeoJson.features,
   ...kellerGeoJson.features,
+  ...kennedaleGeoJson.features,
   ...hurstGeoJson.features,
+  ...lucasGeoJson.features,
   ...forneyGeoJson.features,
   ...forestHillGeoJson.features,
   ...richlandHillsGeoJson.features,
@@ -271,4 +282,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...wataugaGeoJson.features,
   ...whiteSettlementGeoJson.features,
   ...princetonGeoJson.features,
+  ...parkerGeoJson.features,
 ] as GeoJSONFeature[];

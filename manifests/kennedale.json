@@ -1,0 +1,72 @@
+{
+  "id": "kennedale",
+  "city": "Kennedale",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/2415/City-Financials-2015",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/2866/City-Financials-2016",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/3706/City-Financials-2017",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/4389/City-Financials-2018",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/5531/City-Financials-2019",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/5846/City-Financials-2020",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/6145/City-Financials-2021",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/7348/City-Financials-2022",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/7397/City-Financials-2023",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/8437/City-Financials-2024",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://cityofkennedale.com/DocumentCenter/View/9287/City-Financials-2025",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-kennedale/kennedale-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "parker",
+  "city": "Parker",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=947",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=1002",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=1202",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=1398",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=1611",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=1868",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=2075",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=3389",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=3605",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=3891",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.parkertexas.us/Archive.aspx?ADID=4166",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-parker/parker-acfr-FY2025.pdf"
+    }
+  ]
+}

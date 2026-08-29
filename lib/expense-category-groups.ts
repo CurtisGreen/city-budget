@@ -100,6 +100,22 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "The FY2018 and later reports drop the hyphen ('Interest on long term debt'); same row.",
     },
   },
+  parker: {
+    fullAccrualGroups: {
+      Transportation: "Public works",
+      "Public works": "Public works",
+    },
+    modifiedAccrualGroups: {
+      "Parks and recreation": "Culture and recreation",
+      "Culture and recreation": "Culture and recreation",
+    },
+    notes: {
+      "Public works":
+        "Reported as 'Transportation' through FY2019, renamed 'Public works' from FY2020.",
+      "Culture and recreation":
+        "FY2015 reports the fund-level row as 'Parks and recreation'.",
+    },
+  },
   princeton: {
     fullAccrualGroups: {
       Library: "Culture and recreation",
@@ -117,6 +133,16 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     },
     notes: {
       "Culture and recreation": "Contains: library, parks and recreation",
+    },
+  },
+  lucas: {
+    fullAccrualGroups: {
+      "Interest and fiscal charges": "Interest on long-term debt",
+      "Interest expense": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {
+      "Interest on long-term debt": "FY2025 relabels as 'Interest expense'.",
     },
   },
 };

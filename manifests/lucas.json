@@ -1,0 +1,72 @@
+{
+  "id": "lucas",
+  "city": "Lucas",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2015.pdf",
+      "file": "inbox/parsed/lucas-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=69",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=68",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=67",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=66",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=82",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=81",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=80",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=79",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=78",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.lucastexas.us/Archive.aspx?ADID=754",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-lucas/lucas-acfr-FY2025.pdf"
+    }
+  ]
+}
