@@ -151,22 +151,16 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       Court: "Municipal court",
       Administrative: "General government",
     },
-    notes: {
-      "General government":
-        "FY2023 adds a one-time 'Theft' line ($30,343 net credit-card loss by a terminated employee, per Note V.F); FY2024 onward the funds statement relabels this 'Administrative'",
-      "Municipal court": "Reported as 'Court' through FY2023",
-      "Community development":
-        "Its own function through FY2023; not broken out from FY2024",
-    },
+    notes: {},
   },
   pantego: {
     fullAccrualGroups: {
       "Municipal court": "General government",
-      "Community relations": "Other",
+      // "Community relations": "Other",
     },
     modifiedAccrualGroups: {
       "Municipal court": "General government",
-      "Community relations": "Other",
+      // "Community relations": "Other",
     },
     notes: {},
   },
