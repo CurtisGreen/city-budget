@@ -66,6 +66,7 @@ import { balchSpringsInfo } from "@/data/info/balch-springs";
 import { wataugaInfo } from "@/data/info/watauga";
 import { whiteSettlementInfo } from "@/data/info/white-settlement";
 import { princetonInfo } from "@/data/info/princeton";
+import { pantegoInfo } from "@/data/info/pantego";
 import { parkerInfo } from "@/data/info/parker";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
@@ -132,6 +133,7 @@ import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 import { wataugaGeoJson } from "@/data/geojson/watauga-geojson";
 import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson";
 import { princetonGeoJson } from "@/data/geojson/princeton-geojson";
+import { pantegoGeoJson } from "@/data/geojson/pantego-geojson";
 import { parkerGeoJson } from "@/data/geojson/parker-geojson";
 
 const basicCityInfo = [
@@ -199,6 +201,7 @@ const basicCityInfo = [
   wataugaInfo,
   whiteSettlementInfo,
   princetonInfo,
+  pantegoInfo,
   parkerInfo,
 ];
 
@@ -282,5 +285,6 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...wataugaGeoJson.features,
   ...whiteSettlementGeoJson.features,
   ...princetonGeoJson.features,
+  ...pantegoGeoJson.features,
   ...parkerGeoJson.features,
 ] as GeoJSONFeature[];

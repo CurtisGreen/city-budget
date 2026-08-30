@@ -143,4 +143,15 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     modifiedAccrualGroups: {},
     notes: {},
   },
+  pantego: {
+    fullAccrualGroups: {
+      "Municipal court": "General government",
+      "Community relations": "Other",
+    },
+    modifiedAccrualGroups: {
+      "Municipal court": "General government",
+      "Community relations": "Other",
+    },
+    notes: {},
+  },
 };

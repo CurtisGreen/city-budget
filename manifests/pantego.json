@@ -1,0 +1,72 @@
+{
+  "id": "pantego",
+  "city": "Pantego",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2015%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2016%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2017%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2018%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2019%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2020%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2021%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2022%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2023%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2024%20Financial%20Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.townofpantego.com/media/DEPT/Finance/Audit/2026%20Financial%20Report",
+      "archiveUrl": null
+    }
+  ]
+}
