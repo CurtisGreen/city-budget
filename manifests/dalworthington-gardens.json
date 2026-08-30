@@ -1,0 +1,42 @@
+{
+  "id": "dalworthington-gardens",
+  "city": "Dalworthington Gardens",
+  "pdfs": [
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofdwg.net/documents/243/DWG_9.30.20_Report_-_FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dalworthington-gardens/dalworthington-gardens-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofdwg.net/documents/243/DWG_-_9.30.21_Report_-_FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dalworthington-gardens/dalworthington-gardens-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofdwg.net/documents/243/DWG_-_9.30.22_Report_-_FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dalworthington-gardens/dalworthington-gardens-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofdwg.net/documents/243/DWG_9.30.23_ACFR_Report_-_FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dalworthington-gardens/dalworthington-gardens-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofdwg.net/documents/243/DWG_9.30.24_Report_-_FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dalworthington-gardens/dalworthington-gardens-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofdwg.net/documents/243/DWG_-_9.30.25_Report_-_FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-dalworthington-gardens/dalworthington-gardens-acfr-FY2025.pdf"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import type { CityData } from "./types";
 import { acfrData } from "@/data/acfr-json";
 import { calculateACFRMetrics } from "./format-chart-data";
 import { dallasInfo } from "@/data/info/dallas";
+import { dalworthingtonGardensInfo } from "@/data/info/dalworthington-gardens";
 import { arlingtonInfo } from "@/data/info/arlington";
 import { planoInfo } from "@/data/info/plano";
 import { irvingInfo } from "@/data/info/irving";
@@ -70,6 +71,7 @@ import { pantegoInfo } from "@/data/info/pantego";
 import { parkerInfo } from "@/data/info/parker";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
+import { dalworthingtonGardensGeoJson } from "@/data/geojson/dalworthington-gardens-geojson";
 import { addisonGeoJson } from "@/data/geojson/addison-geojson";
 import { irvingGeoJson } from "@/data/geojson/irving-geojson";
 import { carrolltonGeoJson } from "@/data/geojson/carrollton-geojson";
@@ -138,6 +140,7 @@ import { parkerGeoJson } from "@/data/geojson/parker-geojson";
 
 const basicCityInfo = [
   dallasInfo,
+  dalworthingtonGardensInfo,
   planoInfo,
   arlingtonInfo,
   irvingInfo,
@@ -222,6 +225,7 @@ export function getAllCities(): CityData[] {
 
 export const geoJsonFeatures: GeoJSONFeature[] = [
   ...dallasGeoJson.features,
+  ...dalworthingtonGardensGeoJson.features,
   ...addisonGeoJson.features,
   ...irvingGeoJson.features,
   ...carrolltonGeoJson.features,

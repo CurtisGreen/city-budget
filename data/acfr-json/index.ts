@@ -13,6 +13,7 @@ import { colleyvilleAcfr } from "./colleyville";
 import { coppellAcfr } from "./coppell";
 import { corinthAcfr } from "./corinth";
 import { dallasAcfr } from "./dallas";
+import { dalworthingtonGardensAcfr } from "./dalworthington-gardens";
 import { dentonAcfr } from "./denton";
 import { desotoAcfr } from "./desoto";
 import { duncanvilleAcfr } from "./duncanville";
@@ -81,6 +82,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   coppell: coppellAcfr,
   corinth: corinthAcfr,
   dallas: dallasAcfr,
+  "dalworthington-gardens": dalworthingtonGardensAcfr,
   denton: dentonAcfr,
   desoto: desotoAcfr,
   duncanville: duncanvilleAcfr,
