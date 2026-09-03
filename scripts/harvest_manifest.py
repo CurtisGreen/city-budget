@@ -34,9 +34,9 @@ MIN_PAGES = 20  # reports are usually 90-150 pages
 ACFR_TITLE = r"comprehensive annual financial|annual comprehensive financial|\bacfr\b|\bcafr\b"
 AFR_TITLE = r"annual financial report|\bafr\b"
 # Name + cover only: a real ACFR's contents page lists its own Single Audit and PAFR sections
-NOT_THE_REPORT = r"single audit|popular annual|\bpafr\b"
+NOT_THE_REPORT = r"single audit|popular annual|\bpafr\b|citizen[\u2019']?s? financial report"
 # Name only: these appear in legitimate ACFR body text ("budgetary comparison schedule")
-JUNK_NAME = r"single audit|popular|\bpafr\b|budget|quarterly|monthly|interim|debt schedule"
+JUNK_NAME = r"single audit|popular|\bpafr\b|citizen|budget|quarterly|monthly|interim|debt schedule"
 
 
 def get(url):
