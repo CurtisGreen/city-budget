@@ -9,7 +9,7 @@ const atkinson = Atkinson_Hyperlegible_Next({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://budget.city"),
   title: "Budget.City",
-  description: "Financial data for North Texas cities",
+  description: "Making city finances easy-peasy",
   icons: {
     icon: [
       {

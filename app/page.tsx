@@ -38,11 +38,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-              City Financial Data Visualized
+              Making city finances easy-peasy
             </h2>
             <p className="text-xl text-muted-foreground mb-8 text-pretty">
-              Compare revenue, debt levels, and spending patterns across North
-              Texas cities
+              Check out how cities in North Texas are doing
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="#map">
@@ -106,7 +105,7 @@ export default function HomePage() {
               North Texas Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
-              Click on a city to view detailed financial information
+              Click on a city to see what's going in, and what's going out
             </p>
             <div className="m-auto">
               <LazyMap geoJSONFeatures={geoJsonFeatures} cities={cities} />
