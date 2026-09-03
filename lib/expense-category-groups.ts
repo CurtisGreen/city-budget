@@ -164,4 +164,17 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     },
     notes: {},
   },
+  crowley: {
+    fullAccrualGroups: {
+      "Fire and ambulance": "Public safety",
+      "Municipal court": "Public safety",
+      "Administration and finance": "General Government",
+    },
+    modifiedAccrualGroups: {
+      "Fire and ambulance": "Public safety",
+      "Municipal court": "Public safety",
+      "Administration and finance": "General Government",
+    },
+    notes: {},
+  },
 };
