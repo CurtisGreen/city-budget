@@ -1,0 +1,72 @@
+{
+  "id": "crowley",
+  "city": "Crowley",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8696",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8691",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8686",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8681",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8676",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8671",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8666",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/8661",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/21931",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/22926",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.ci.crowley.tx.us/media/25856",
+      "archiveUrl": null
+    }
+  ]
+}
