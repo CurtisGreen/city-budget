@@ -59,7 +59,7 @@ export function TaxVsInflationTable({
   // Category casing varies by city: "Public Safety"/"Public safety", "General government and administration"
   const publicSafety = expenditures.categories.find(
     (c) =>
-      c.toLowerCase() === "public safety" ||
+      c.toLowerCase().startsWith("public safety") ||
       c.toLowerCase().startsWith("police"),
   )!;
   const generalGovernment = expenditures.categories.find((c) =>

@@ -168,13 +168,34 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     fullAccrualGroups: {
       "Fire and ambulance": "Public safety",
       "Municipal court": "Public safety",
-      "Administration and finance": "General Government",
+      "Administration and finance": "General government",
+      "Recreation center": "Parks and recreation",
+      "Parks": "Parks and recreation",
+      "Senior citizens center": "Parks and recreation",
+      "Community center": "Parks and recreation",
     },
     modifiedAccrualGroups: {
       "Fire and ambulance": "Public safety",
       "Municipal court": "Public safety",
-      "Administration and finance": "General Government",
+      "Administrative and finance": "General government",
+      "Recreation center": "Parks and recreation",
+      "Parks": "Parks and recreation",
+      "Senior citizens center": "Parks and recreation",
+      "Community center": "Parks and recreation",
     },
-    notes: {},
+    notes: {
+      "Parks and recreation": "Contains recreation center, parks, senior citizens center, community center"
+    },
+  },
+  "grand-prairie": {
+    fullAccrualGroups: {
+      "Support services": "General government",
+    },
+    modifiedAccrualGroups: {
+      "Support services": "General government",
+    },
+    notes: {
+      "General government": "Renamed from 'Support services' to be more consistent with other cities"
+    },
   },
 };

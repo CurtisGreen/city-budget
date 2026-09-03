@@ -25,6 +25,7 @@ const COLORS = [
   "var(--chart-3)",
   "var(--chart-4)",
   "var(--chart-5)",
+  "var(--muted-foreground)",
 ];
 
 const formatCurrency = (value: number) =>
@@ -34,6 +35,26 @@ const formatCurrency = (value: number) =>
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(value);
+
+const partitionCategories = (
+  data: Record<string, number>[],
+  categories: string[],
+) => {
+  const getTotal = (c: string) => data.reduce((s, r) => s + (r[c] ?? 0), 0);
+  const sortedCategories = [...categories].sort(
+    (a, b) => getTotal(b) - getTotal(a),
+  );
+
+  if (sortedCategories.length <= 6)
+    return {
+      topCategories: sortedCategories,
+      otherCategories: [],
+    };
+  return {
+    topCategories: sortedCategories.slice(0, 5),
+    otherCategories: sortedCategories.slice(5),
+  };
+};
 
 export const ExpenseBreakdownChart = ({
   title,
@@ -50,20 +71,17 @@ export const ExpenseBreakdownChart = ({
 }) => {
   if (data.length === 0) return null;
 
-  const getTotal = (c: string) => data.reduce((s, r) => s + (r[c] ?? 0), 0);
-  const sortedCategories = [...categories].sort(
-    (a, b) => getTotal(b) - getTotal(a),
+  const { topCategories, otherCategories } = partitionCategories(
+    data,
+    categories,
   );
-  const top5Categories = sortedCategories.slice(0, 5);
-  const otherCategories = sortedCategories.slice(5);
-
   const colorFor = new Map(
-    top5Categories.map((c, i) => [c, COLORS[i % COLORS.length]]),
+    topCategories.map((c, i) => [c, COLORS[i % COLORS.length]]),
   );
 
   const chartData = data.map((row) => {
     const mappedRow: Record<string, number> = { fiscalYear: row.fiscalYear };
-    for (const category of top5Categories) {
+    for (const category of topCategories) {
       mappedRow[category] = row[category] ?? 0;
     }
 
@@ -76,8 +94,8 @@ export const ExpenseBreakdownChart = ({
   });
 
   const displayedCategories = otherCategories.length
-    ? [...top5Categories, "Other"]
-    : top5Categories;
+    ? [...topCategories, "Other"]
+    : topCategories;
 
   // Put the largest bars on the bottom of the stack
   const orderedData = [...displayedCategories].sort(
