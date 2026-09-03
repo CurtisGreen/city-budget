@@ -69,6 +69,7 @@ import { whiteSettlementInfo } from "@/data/info/white-settlement";
 import { princetonInfo } from "@/data/info/princeton";
 import { pantegoInfo } from "@/data/info/pantego";
 import { parkerInfo } from "@/data/info/parker";
+import { crowleyInfo } from "@/data/info/crowley";
 
 import { dallasGeoJson } from "@/data/geojson/dallas-geojson";
 import { dalworthingtonGardensGeoJson } from "@/data/geojson/dalworthington-gardens-geojson";
@@ -137,6 +138,7 @@ import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson"
 import { princetonGeoJson } from "@/data/geojson/princeton-geojson";
 import { pantegoGeoJson } from "@/data/geojson/pantego-geojson";
 import { parkerGeoJson } from "@/data/geojson/parker-geojson";
+import { crowleyGeoJson } from "@/data/geojson/crowley-geojson";
 
 const basicCityInfo = [
   dallasInfo,
@@ -206,6 +208,7 @@ const basicCityInfo = [
   princetonInfo,
   pantegoInfo,
   parkerInfo,
+  crowleyInfo,
 ];
 
 // Calculate metrics for each city
@@ -291,4 +294,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...princetonGeoJson.features,
   ...pantegoGeoJson.features,
   ...parkerGeoJson.features,
+  ...crowleyGeoJson.features,
 ] as GeoJSONFeature[];
