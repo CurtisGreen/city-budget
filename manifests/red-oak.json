@@ -1,0 +1,72 @@
+{
+  "id": "red-oak",
+  "city": "Red Oak",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/2073",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/2638",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/3056",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/3753",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/4132",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/5037",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/5769",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/6677",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/7792",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/10081",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.redoaktx.org/DocumentCenter/View/10756",
+      "archiveUrl": null
+    }
+  ]
+}

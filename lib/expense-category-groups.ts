@@ -221,4 +221,19 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "Renamed from 'Support services' to be more consistent with other cities",
     },
   },
+  "red-oak": {
+    fullAccrualGroups: {
+      "Cultural and recreational": "Culture and recreation",
+      "Interest on long-term government": "Interest on Long-Term Debt",
+      "Interest and fiscal charges": "Interest on Long-Term Debt",
+      "Interest on long term debt": "Interest on Long-Term Debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {
+      "Culture and recreation":
+        "Labeled 'Cultural and recreational' through FY2019, 'Culture and recreation' from FY2020",
+      "Interest on Long-Term Debt":
+        "The Statement of Activities interest line is labeled 'Interest on long-term government' through FY2019, 'Interest and fiscal charges' FY2020-FY2024, and 'Interest on long term debt' in FY2025",
+    },
+  },
 };
