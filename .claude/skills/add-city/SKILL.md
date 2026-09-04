@@ -1,11 +1,11 @@
 ---
 name: add-city
-description: Add a new city to the city-budget project — fetch ACFR/Wikipedia/Census/Overpass data, create the ACFR financials (ALL fields: base, tax-by-source, expense breakdowns, pensionPlans), CityInfo, and GeoJSON files, and register the city in lib/city-data-source.ts. Use when asked to add a city, e.g. "add Little Elm".
+description: Add a new city to the city-budget project — fetch ACFR/Wikipedia/Census/Overpass data, create the ACFR financials (ALL fields: base, tax-by-source, expense breakdowns, pensionPlans), CityInfo, and GeoJSON files, and register the city in lib/city-data-source.ts + lib/geojson-features.ts. Use when asked to add a city, e.g. "add Little Elm".
 ---
 
 # Add a city
 
-Goal: from a city name, produce 3 new files + 2 registry edits (+ a lib/expense-category-groups.ts
+Goal: from a city name, produce 3 new files + 3 registry edits (+ a lib/expense-category-groups.ts
 entry if the city renames functions across years), then verify the build.
 Attempt every step automatically. If a data source can't be fetched/parsed, STOP that
 step and ask the user (AskUserQuestion or plain prompt) rather than guessing or fabricating.
@@ -248,11 +248,13 @@ curl -s -A "city-budget-data/1.0" https://overpass-api.de/api/interpreter \
   existing files (json.dump then prepend the `export const`).
 - If the name is ambiguous (multiple TX matches), confirm the relation id with the user.
 
-## 5. Register in two files (6 edits)
-**a. `lib/city-data-source.ts`** — grep `hurstInfo` and `hurstGeoJson` for insertion points:
+## 5. Register in three files (6 edits)
+**a. `lib/city-data-source.ts`** — grep `hurstInfo` for insertion points:
 - `import { {camelId}Info } from "@/data/info/{id}";`
-- `import { {camelId}GeoJson } from "@/data/geojson/{id}-geojson";`
 - `{camelId}Info,` in the `basicCityInfo` array
+
+**a2. `lib/geojson-features.ts`** — grep `hurstGeoJson` for insertion points:
+- `import { {camelId}GeoJson } from "@/data/geojson/{id}-geojson";`
 - `...{camelId}GeoJson.features,` in the `geoJsonFeatures` array
 
 **b. `data/acfr-json/index.ts`** — grep `forneyAcfr` for both insertion points (keep the
