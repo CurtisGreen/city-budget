@@ -146,12 +146,18 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
   "dalworthington-gardens": {
     fullAccrualGroups: {
       Theft: "General government",
+      Police: "Public safety",
+      Fire: "Public safety",
+      "Municipal court": "Public safety",
     },
     modifiedAccrualGroups: {
       Court: "Municipal court",
       Administrative: "General government",
     },
-    notes: {},
+    notes: {
+      "Public safety":
+        "FY2019 full-accrual splits into Police, Fire and Municipal court",
+    },
   },
   pantego: {
     fullAccrualGroups: {
@@ -170,7 +176,7 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Municipal court": "Public safety",
       "Administration and finance": "General government",
       "Recreation center": "Parks and recreation",
-      "Parks": "Parks and recreation",
+      Parks: "Parks and recreation",
       "Senior citizens center": "Parks and recreation",
       "Community center": "Parks and recreation",
     },
@@ -179,12 +185,13 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Municipal court": "Public safety",
       "Administrative and finance": "General government",
       "Recreation center": "Parks and recreation",
-      "Parks": "Parks and recreation",
+      Parks: "Parks and recreation",
       "Senior citizens center": "Parks and recreation",
       "Community center": "Parks and recreation",
     },
     notes: {
-      "Parks and recreation": "Contains recreation center, parks, senior citizens center, community center"
+      "Parks and recreation":
+        "Contains recreation center, parks, senior citizens center, community center",
     },
   },
   "grand-prairie": {
@@ -195,7 +202,8 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Support services": "General government",
     },
     notes: {
-      "General government": "Renamed from 'Support services' to be more consistent with other cities"
+      "General government":
+        "Renamed from 'Support services' to be more consistent with other cities",
     },
   },
 };

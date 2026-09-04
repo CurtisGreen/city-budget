@@ -13,6 +13,31 @@ export const dalworthingtonGardensInfo: CityInfo = {
   ],
   propertyValues: [
     {
+      fiscalYear: 2015,
+      moRate: 0.20549,
+      isRate: 0.057249,
+    },
+    {
+      fiscalYear: 2016,
+      moRate: 0.200492,
+      isRate: 0.053178,
+    },
+    {
+      fiscalYear: 2017,
+      moRate: 0.237827,
+      isRate: 0.036152,
+    },
+    {
+      fiscalYear: 2018,
+      moRate: 0.287827,
+      isRate: 0.086552,
+    },
+    {
+      fiscalYear: 2019,
+      moRate: 0.487983,
+      isRate: 0.092017,
+    },
+    {
       fiscalYear: 2020,
       moRate: 0.487983,
       isRate: 0.092017,

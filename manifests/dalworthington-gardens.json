@@ -3,6 +3,36 @@
   "city": "Dalworthington Gardens",
   "pdfs": [
     {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/dwg-FY2015",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "manual",
+      "file": "inbox/dwg-FY2016",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "manual",
+      "file": "inbox/dwg-FY2017",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "manual",
+      "file": "inbox/dwg-FY2018",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "manual",
+      "file": "inbox/dwg-FY2019",
+      "archiveUrl": null
+    },
+    {
       "year": 2020,
       "source": "url",
       "url": "https://www.cityofdwg.net/documents/243/DWG_9.30.20_Report_-_FINAL.pdf",

@@ -80,7 +80,7 @@ export const fateInfo: CityInfo = {
   },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
-    { usage: "Municipal Development District No. 1", percent: 0.5 },
+    { usage: "Municipal Development District", percent: 0.5 },
   ],
   area: 11.85,
   notes: [
