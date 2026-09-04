@@ -1,0 +1,48 @@
+{
+  "id": "cockrell-hill",
+  "city": "Cockrell Hill",
+  "pdfs": [
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/751/City-of-Cockrell-Hill---Financial-Statements-Fiscal-Year-Ended-September-30-2019-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/1663/City-of-Cockrell-Hill---Financial-Statements-Fiscal-Year-Ended-September-30-2020-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/1664/City-of-Cockrell-Hill---Financial-Statements-Fiscal-Year-Ended-September-30-2021-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/1723/City-of-Cockrell-Hill---Financial-Statements-Fiscal-Year-Ended-September-30-2022-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/2013/City-of-Cockrell-Hill---Financial-Statements-Fiscal-Year-Ended-September-30-2023-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/2401/City-of-Cockrell-Hill---Financial-Statements-Fiscal-Year-Ended-September-30-2024-FInal",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://cityofcockrellhill.us/DocumentCenter/View/2918/City-of-Cockrell-Hill-Financial-Statements-Fiscal-Year-Ended-September-30-2025-Final",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-cockrell-hill/cockrell-hill-acfr-FY2025.pdf"
+    }
+  ]
+}

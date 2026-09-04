@@ -24,9 +24,9 @@ export const dalworthingtonGardensAcfr: CityFinancialData[] = [
     capitalGrantsAndContributions: 0,
     debtInterest: 66_443,
     fullAccrualExpenses: [
-      { name: "General government", value: 1_060_768 },
+      { name: "General government", value: 817_514 },
       { name: "Public safety", value: 2_109_499 },
-      { name: "Public works", value: 450_297 },
+      { name: "Public works", value: 693_551 },
       { name: "Interest and fiscal charges", value: 66_443 },
     ],
     modifiedAccrualExpenditures: {

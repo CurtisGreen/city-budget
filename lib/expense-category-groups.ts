@@ -151,13 +151,13 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Municipal court": "Public safety",
     },
     modifiedAccrualGroups: {
-      Court: "Municipal court",
       Administrative: "General government",
+      Police: "Public safety",
+      Fire: "Public safety",
+      "Municipal court": "Public safety",
+      Court: "Public safety",
     },
-    notes: {
-      "Public safety":
-        "FY2019 full-accrual splits into Police, Fire and Municipal court",
-    },
+    notes: {},
   },
   pantego: {
     fullAccrualGroups: {
@@ -192,6 +192,21 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     notes: {
       "Parks and recreation":
         "Contains recreation center, parks, senior citizens center, community center",
+    },
+  },
+  "cockrell-hill": {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      "Administration and non-departmental": "General government",
+      Police: "Public safety",
+      Fire: "Public safety",
+      "Municipal court": "Public safety",
+      "Code enforcement": "Public safety",
+      "Cultural and recreational": "Parks, recreation and culture",
+    },
+    notes: {
+      "Public safety":
+        "FY2021 onward the reports split police, fire, municipal court and code enforcement",
     },
   },
   "grand-prairie": {
