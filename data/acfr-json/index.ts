@@ -20,6 +20,7 @@ import { desotoAcfr } from "./desoto";
 import { duncanvilleAcfr } from "./duncanville";
 import { eulessAcfr } from "./euless";
 import { farmersBranchAcfr } from "./farmers-branch";
+import { fateAcfr } from "./fate";
 import { flowerMoundAcfr } from "./flower-mound";
 import { forestHillAcfr } from "./forest-hill";
 import { forneyAcfr } from "./forney";
@@ -90,6 +91,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   duncanville: duncanvilleAcfr,
   euless: eulessAcfr,
   "farmers-branch": farmersBranchAcfr,
+  fate: fateAcfr,
   "flower-mound": flowerMoundAcfr,
   "forest-hill": forestHillAcfr,
   forney: forneyAcfr,

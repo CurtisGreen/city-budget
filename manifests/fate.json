@@ -1,0 +1,72 @@
+{
+  "id": "fate",
+  "city": "Fate",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.fatetx.gov/ArchiveCenter/ViewFile/Item/120",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/606/FY-2016-CAFR-PDF?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/1068/ACFR-Fiscal-Year-2017?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/1571/ACFR-Fiscal-Year-2018?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/1933/ACFR-Fiscal-Year-2019",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/2406/ACFR-Fiscal-Year-2020?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/2966/ACFR-Fiscal-Year-2021?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/3559/ACFR-Fiscal-Year-2022?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/4197/ACFR-Fiscal-Year-2023?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/4747/ACFR-Fiscal-Year-2024?bidId=",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.fatetx.gov/DocumentCenter/View/5186/Annual--Comprehensive-Financial-Report-FY-2025?bidId=",
+      "archiveUrl": null
+    }
+  ]
+}

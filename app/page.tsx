@@ -105,7 +105,9 @@ export default function HomePage() {
               North Texas Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
-              Click on a city to see what's going in, and what's going out
+              Click on a city to see what's going in, and what's going out. Or
+              change the dropdown on the map to see different stats for all
+              cities.
             </p>
             <div className="m-auto">
               <LazyMap geoJSONFeatures={geoJsonFeatures} cities={cities} />
