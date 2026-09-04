@@ -27,6 +27,10 @@ import { TaxRevenueChart } from "@/components/tax-revenue-chart";
 import { TaxVsInflationTable } from "@/components/tax-vs-inflation-table";
 import { expenseCategoryGroups } from "@/lib/expense-category-groups";
 
+export const dynamic = "error";
+export const revalidate = false;
+export const dynamicParams = false;
+
 interface CityPageProps {
   params: Promise<{
     cityId: string;

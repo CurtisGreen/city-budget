@@ -2,6 +2,9 @@ import { Footer } from "@/components/footer";
 import { HomeNavbarMenu } from "@/components/home-navbar-menu";
 import Link from "next/link";
 
+export const dynamic = "error";
+export const revalidate = false;
+
 export default function About() {
   return (
     <div>

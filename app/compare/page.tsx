@@ -2,6 +2,9 @@ import { Suspense } from "react";
 import { getAllCities } from "@/lib/city-data-source";
 import { ComparePageContent } from "./compare-page-content";
 
+export const dynamic = "error";
+export const revalidate = false;
+
 export default function ComparePage() {
   const allCities = getAllCities();
   return (

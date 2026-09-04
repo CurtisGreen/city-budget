@@ -1,12 +1,15 @@
 import { CityCard } from "@/components/city-card";
 import { Button } from "@/components/ui/button";
-import { geoJsonFeatures, getAllCities } from "@/lib/city-data-source";
+import { getAllCities } from "@/lib/city-data-source";
 import Link from "next/link";
 import { Map, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { HomeNavbarMenu } from "@/components/home-navbar-menu";
 import { LazyMap } from "@/components/lazy-map";
 import { CityLeaderboard } from "@/components/city-leaderboard";
+
+export const dynamic = "error";
+export const revalidate = false;
 
 export default function HomePage() {
   const cities = getAllCities();
@@ -110,7 +113,7 @@ export default function HomePage() {
               cities.
             </p>
             <div className="m-auto">
-              <LazyMap geoJSONFeatures={geoJsonFeatures} cities={cities} />
+              <LazyMap cities={cities} />
             </div>
           </div>
         </div>

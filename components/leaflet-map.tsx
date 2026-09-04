@@ -10,11 +10,8 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import {
-  GeoJSONFeature,
-  GeoJSONMultiPolygon,
-  GeoJSONPolygon,
-} from "@/lib/overpass-types";
+import { GeoJSONMultiPolygon, GeoJSONPolygon } from "@/lib/overpass-types";
+import { geoJsonFeatures } from "@/lib/geojson-features";
 import { CityData } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { Card } from "./ui/card";
@@ -113,18 +110,12 @@ function CityShape({
   );
 }
 
-export default function LeafletMap({
-  geoJSONFeatures,
-  cities,
-}: {
-  geoJSONFeatures: GeoJSONFeature[];
-  cities: CityData[];
-}) {
+export default function LeafletMap({ cities }: { cities: CityData[] }) {
   const [selectedMetric, setSelectedMetric] = useState(
     "Years of Financial Cushion",
   );
   const colorConfig = getColorConfig(selectedMetric);
-  const features = geoJSONFeatures
+  const features = geoJsonFeatures
     .filter((f) => ["Polygon", "MultiPolygon"].includes(f.geometry.type))
     .map((f) => {
       const coordinates =
