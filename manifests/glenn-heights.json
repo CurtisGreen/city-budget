@@ -52,9 +52,9 @@
     },
     {
       "year": 2024,
-      "source": "url",
-      "url": "https://www.glennheightstx.gov/Archive.aspx?ADID=185",
-      "archiveUrl": null
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-glenn-heights/glenn-heights-acfr-FY2024.pdf",
+      "file": "inbox/parsed/glenn-heights-FY2024.pdf"
     },
     {
       "year": 2025,

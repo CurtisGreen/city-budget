@@ -61,12 +61,6 @@
       "source": "url",
       "url": "https://www.cityofhutchinstx.gov/media/9506",
       "archiveUrl": "https://archive.org/download/city-budget-acfr-hutchins/hutchins-acfr-FY2024.pdf"
-    },
-    {
-      "year": 2025,
-      "source": "manual",
-      "file": "inbox/hutchins-FY2025.pdf",
-      "archiveUrl": null
     }
   ]
 }

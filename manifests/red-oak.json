@@ -6,67 +6,67 @@
       "year": 2015,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/2073",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2015.pdf"
     },
     {
       "year": 2016,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/2638",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2016.pdf"
     },
     {
       "year": 2017,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/3056",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2017.pdf"
     },
     {
       "year": 2018,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/3753",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2018.pdf"
     },
     {
       "year": 2019,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/4132",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2019.pdf"
     },
     {
       "year": 2020,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/5037",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2020.pdf"
     },
     {
       "year": 2021,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/5769",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2021.pdf"
     },
     {
       "year": 2022,
-      "source": "url",
-      "url": "https://www.redoaktx.org/DocumentCenter/View/6677",
-      "archiveUrl": null
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2022.pdf",
+      "file": "inbox/parsed/red-oak-FY2022.pdf"
     },
     {
       "year": 2023,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/7792",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2023.pdf"
     },
     {
       "year": 2024,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/10081",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2024.pdf"
     },
     {
       "year": 2025,
       "source": "url",
       "url": "https://www.redoaktx.org/DocumentCenter/View/10756",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-red-oak/red-oak-acfr-FY2025.pdf"
     }
   ]
 }

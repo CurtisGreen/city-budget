@@ -6,67 +6,67 @@
       "year": 2015,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=64",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2015.pdf"
     },
     {
       "year": 2016,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=65",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2016.pdf"
     },
     {
       "year": 2017,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=66",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2017.pdf"
     },
     {
       "year": 2018,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=93",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2018.pdf"
     },
     {
       "year": 2019,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=97",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2019.pdf"
     },
     {
       "year": 2020,
-      "source": "url",
-      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/1057",
-      "archiveUrl": null
+      "source": "manual",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2020.pdf",
+      "file": "inbox/parsed/northlake-FY2020.pdf"
     },
     {
       "year": 2021,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/DocumentCenter/View/1406",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2021.pdf"
     },
     {
       "year": 2022,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/DocumentCenter/View/2280",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2022.pdf"
     },
     {
       "year": 2023,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/DocumentCenter/View/2894",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2023.pdf"
     },
     {
       "year": 2024,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/DocumentCenter/View/3481",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2024.pdf"
     },
     {
       "year": 2025,
       "source": "url",
       "url": "https://www.town.northlake.tx.us/DocumentCenter/View/4057",
-      "archiveUrl": null
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-northlake/northlake-acfr-FY2025.pdf"
     }
   ]
 }
