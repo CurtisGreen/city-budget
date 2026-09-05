@@ -251,10 +251,7 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Interest on long-term debt": "Interest on long-term debt",
     },
     modifiedAccrualGroups: {},
-    notes: {
-      "Interest on long-term debt":
-        "FY2015-2024 'Interest and fiscal charges', renamed 'Interest on long-term debt' in FY2025",
-    },
+    notes: {},
   },
   northlake: {
     fullAccrualGroups: {
