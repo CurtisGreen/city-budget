@@ -221,6 +221,20 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "Renamed from 'Support services' to be more consistent with other cities",
     },
   },
+  wilmer: {
+    fullAccrualGroups: {
+      "Community services": "Public works",
+      "Cultural and recreational": "Community development",
+      "Community development": "Community development",
+      "Interest on long-term debt": "Interest on Long-Term Debt",
+      "Interest and fiscal charges": "Interest on Long-Term Debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {
+      "Community development":
+        "FY2017-2019 'Cultural and recreational', renamed 'Community development' from FY2020",
+    },
+  },
   "red-oak": {
     fullAccrualGroups: {
       "Cultural and recreational": "Culture and recreation",
@@ -230,5 +244,41 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     },
     modifiedAccrualGroups: {},
     notes: {},
+  },
+  fairview: {
+    fullAccrualGroups: {
+      "Interest and fiscal charges": "Interest on long-term debt",
+      "Interest on long-term debt": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {
+      "Interest on long-term debt":
+        "FY2015-2024 'Interest and fiscal charges', renamed 'Interest on long-term debt' in FY2025",
+    },
+  },
+  northlake: {
+    fullAccrualGroups: {
+      "Municipal court": "Public safety",
+      Police: "Public safety",
+      "Interest on long-term debt": "Interest and fiscal charges",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
+  mesquite: {
+    fullAccrualGroups: {
+      "Field services": "Public works",
+    },
+    modifiedAccrualGroups: {
+      "Field services": "Public works",
+      "Housing services": "Housing and community services",
+      "Community services": "Housing and community services",
+    },
+    notes: {
+      "Public works":
+        "FY2015 reported 'Field services' separately; combined into Public works from FY2016",
+      "Housing and community services":
+        "FY2015 split 'Housing services' and 'Community services'; combined from FY2016",
+    },
   },
 };

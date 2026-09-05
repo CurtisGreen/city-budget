@@ -1,0 +1,66 @@
+{
+  "id": "fairview",
+  "city": "Fairview",
+  "pdfs": [
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://fairviewtexas.org/images/Financials/CAFR_Town_of_Fairview_Final_2016_Report_-_Only_Electronic_Dont_Print.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://fairviewtexas.org/images/Town_of_Fairview_Issued_CAFR_FY17.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://web.archive.org/web/20260521075757id_/https://fairviewtexas.org/pdf/AuditBudget/2017-2018-Town-of-Fairview-Comprehensive-Annual-Financial-Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://fairviewtexas.org/wp-content/uploads/2024/09/Town-of-Fairview-2019-CAFR-FINAL.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://fairviewtexas.org/wp-content/uploads/2024/09/Town-of-Fairview-Report---2020-Final.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://fairviewtexas.org/wp-content/uploads/2024/09/2020-21-Town-of-Fairview-Annual-Financial-Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://fairviewtexas.org/wp-content/uploads/2024/09/Town-of-Fairview-Final-2022-Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://fairviewtexas.org/wp-content/uploads/2026/07/Town-of-Fairview-2023-Final-Report.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://web.archive.org/web/20251219145834id_/https://www.fairviewtexas.org/pdf/AuditBudget/Town-of-Fairview-2024-ACFR.pdf",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://fairviewtexas.org/wp-content/uploads/2026/04/Town-of-Fairview-2025-ACFR-FINAL.pdf",
+      "archiveUrl": null
+    }
+  ]
+}

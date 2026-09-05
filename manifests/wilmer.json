@@ -1,0 +1,54 @@
+{
+  "id": "wilmer",
+  "city": "Wilmer",
+  "pdfs": [
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/1473",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/1474/R2020-0827A",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/1475/R2022-0317B",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/3876/Annual-Financial-Report-Fiscal-Year-Ended-September-30-2021",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/7647",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/7648",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/7672",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofwilmer.net/DocumentCenter/View/7928",
+      "archiveUrl": null
+    }
+  ]
+}

@@ -21,6 +21,7 @@ import { desotoAcfr } from "./desoto";
 import { duncanvilleAcfr } from "./duncanville";
 import { eulessAcfr } from "./euless";
 import { farmersBranchAcfr } from "./farmers-branch";
+import { fairviewAcfr } from "./fairview";
 import { fateAcfr } from "./fate";
 import { flowerMoundAcfr } from "./flower-mound";
 import { forestHillAcfr } from "./forest-hill";
@@ -48,6 +49,7 @@ import { mckinneyAcfr } from "./mckinney";
 import { mesquiteAcfr } from "./mesquite";
 import { murphyAcfr } from "./murphy";
 import { northRichlandHillsAcfr } from "./north-richland-hills";
+import { northlakeAcfr } from "./northlake";
 import { pantegoAcfr } from "./pantego";
 import { parkerAcfr } from "./parker";
 import { planoAcfr } from "./plano";
@@ -69,6 +71,7 @@ import { universityParkAcfr } from "./university-park";
 import { wataugaAcfr } from "./watauga";
 import { westlakeAcfr } from "./westlake";
 import { whiteSettlementAcfr } from "./white-settlement";
+import { wilmerAcfr } from "./wilmer";
 import { wylieAcfr } from "./wylie";
 
 export const acfrData: Record<string, CityFinancialData[]> = {
@@ -94,6 +97,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   duncanville: duncanvilleAcfr,
   euless: eulessAcfr,
   "farmers-branch": farmersBranchAcfr,
+  fairview: fairviewAcfr,
   fate: fateAcfr,
   "flower-mound": flowerMoundAcfr,
   "forest-hill": forestHillAcfr,
@@ -121,6 +125,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   mesquite: mesquiteAcfr,
   murphy: murphyAcfr,
   "north-richland-hills": northRichlandHillsAcfr,
+  northlake: northlakeAcfr,
   pantego: pantegoAcfr,
   parker: parkerAcfr,
   plano: planoAcfr,
@@ -142,5 +147,6 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   watauga: wataugaAcfr,
   westlake: westlakeAcfr,
   "white-settlement": whiteSettlementAcfr,
+  wilmer: wilmerAcfr,
   wylie: wylieAcfr,
 };

@@ -54,6 +54,7 @@ import { lucasGeoJson } from "@/data/geojson/lucas-geojson";
 import { forneyGeoJson } from "@/data/geojson/forney-geojson";
 import { forestHillGeoJson } from "@/data/geojson/forest-hill-geojson";
 import { fateGeoJson } from "@/data/geojson/fate-geojson";
+import { fairviewGeoJson } from "@/data/geojson/fairview-geojson";
 import { redOakGeoJson } from "@/data/geojson/red-oak-geojson";
 import { richlandHillsGeoJson } from "@/data/geojson/richland-hills-geojson";
 import { roanokeGeoJson } from "@/data/geojson/roanoke-geojson";
@@ -67,10 +68,12 @@ import { sunnyvaleGeoJson } from "@/data/geojson/sunnyvale-geojson";
 import { balchSpringsGeoJson } from "@/data/geojson/balch-springs-geojson";
 import { wataugaGeoJson } from "@/data/geojson/watauga-geojson";
 import { whiteSettlementGeoJson } from "@/data/geojson/white-settlement-geojson";
+import { wilmerGeoJson } from "@/data/geojson/wilmer-geojson";
 import { princetonGeoJson } from "@/data/geojson/princeton-geojson";
 import { pantegoGeoJson } from "@/data/geojson/pantego-geojson";
 import { parkerGeoJson } from "@/data/geojson/parker-geojson";
 import { crowleyGeoJson } from "@/data/geojson/crowley-geojson";
+import { northlakeGeoJson } from "@/data/geojson/northlake-geojson";
 
 export const geoJsonFeatures: GeoJSONFeature[] = [
   ...dallasGeoJson.features,
@@ -127,6 +130,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...forneyGeoJson.features,
   ...forestHillGeoJson.features,
   ...fateGeoJson.features,
+  ...fairviewGeoJson.features,
   ...redOakGeoJson.features,
   ...richlandHillsGeoJson.features,
   ...roanokeGeoJson.features,
@@ -140,8 +144,10 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...balchSpringsGeoJson.features,
   ...wataugaGeoJson.features,
   ...whiteSettlementGeoJson.features,
+  ...wilmerGeoJson.features,
   ...princetonGeoJson.features,
   ...pantegoGeoJson.features,
   ...parkerGeoJson.features,
   ...crowleyGeoJson.features,
+  ...northlakeGeoJson.features,
 ] as GeoJSONFeature[];

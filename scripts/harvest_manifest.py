@@ -65,10 +65,11 @@ def parse_year(filename, text):
     m = re.search(r"9-30-(\d\d)\b", fn, re.I) or re.search(r"FY\s?(20)?(\d\d)\b", fn, re.I)
     if m:
         return 2000 + int(m.groups()[-1])
-    m = re.search(r"September 30,?\s*(20\d\d)", text)  # cover text is authoritative
+    m = re.search(r"September 30,?\s*(20\d\d)", text, re.I)  # cover text is authoritative
     if m:
         return int(m.group(1))
-    return int(m.group(1)) if (m := re.search(r"\b(20[12]\d)\b", fn)) else None
+    # Handle underscore, ex: "..._2016_Report"
+    return int(m.group(1)) if (m := re.search(r"(?<!\d)(20[12]\d)(?!\d)", fn)) else None
 
 
 def cover_year(url, city):

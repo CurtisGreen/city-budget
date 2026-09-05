@@ -1,0 +1,72 @@
+{
+  "id": "northlake",
+  "city": "Northlake",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=64",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=65",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=66",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=93",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/Archive.aspx?ADID=97",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/1057",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/1406",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/2280",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/2894",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/3481",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.town.northlake.tx.us/DocumentCenter/View/4057",
+      "archiveUrl": null
+    }
+  ]
+}

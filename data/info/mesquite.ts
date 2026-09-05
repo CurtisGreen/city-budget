@@ -74,9 +74,9 @@ export const mesquiteInfo: CityInfo = {
     },
   ],
   revenueBySource: {
-    property: 89790000,
-    sales: 61086000,
-    hotel: 1990000,
+    property: 89842408,
+    sales: 63386760,
+    hotel: 1990388,
   },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
