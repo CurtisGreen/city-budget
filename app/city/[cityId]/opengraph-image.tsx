@@ -1,6 +1,15 @@
 import { getAllCities } from "@/lib/city-data-source";
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  const cities = getAllCities();
+  return cities.map((city) => ({
+    cityId: city.info.id,
+  }));
+}
+
 const width = 300;
 const height = 200;
 const padding = 40;
@@ -18,25 +27,23 @@ export default async function GET({
     value: m.netFinancialPosition,
   }));
   return new ImageResponse(
-    (
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "white",
-        }}
-      >
-        <div tw="text-slate-600 mt-4" style={{ display: "flex" }}>
-          {city.info.name} - Net Financial Position
-        </div>
-        <LineGraph data={data} />
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "white",
+      }}
+    >
+      <div tw="text-slate-600 mt-4" style={{ display: "flex" }}>
+        {city.info.name} - Net Financial Position
       </div>
-    ),
-    { width, height }
+      <LineGraph data={data} />
+    </div>,
+    { width, height },
   );
 }
 
