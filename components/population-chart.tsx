@@ -143,7 +143,7 @@ export function PopulationChart({
                 dot={{ r: 4 }}
               />
             ))}
-            {averageMetrics?.length && (
+            {!!averageMetrics?.length && (
               <Line
                 type="monotone"
                 dataKey="average"

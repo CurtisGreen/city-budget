@@ -13,7 +13,10 @@ import { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
 import { Footer } from "@/components/footer";
 import { LogoButton } from "@/components/ui/logo-button";
 import { PopulationChart } from "@/components/population-chart";
-import { calculateAveragePopulationDensity } from "@/lib/format-chart-data";
+import {
+  calculateAverageMetrics,
+  calculateAveragePopulationDensity,
+} from "@/lib/format-chart-data";
 import { RevenueChart } from "@/components/revenue-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
 
@@ -91,6 +94,10 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
 
   const averagePopulationDensityData = calculateAveragePopulationDensity(
     allCities.map((c) => c.info),
+  );
+
+  const averageMetrics = calculateAverageMetrics(
+    allCities.map((c) => c.financialData),
   );
 
   const revenues = allCities.map((c) => c.info.revenueBySource);
@@ -176,7 +183,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                   <div className="lg:col-span-2">
                     <ComparisonChart
                       cities={selectedCities}
-                      allCities={allCities}
+                      averageMetrics={averageMetrics}
                       metricKey={metricConfig.key}
                       title={chartConfigs[metricConfig.key].title}
                       description={chartConfigs[metricConfig.key].description}

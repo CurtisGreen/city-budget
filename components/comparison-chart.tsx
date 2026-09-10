@@ -18,14 +18,13 @@ import {
 } from "@/components/ui/card";
 import { ChartTooltipContent } from "@/components/ui/chart";
 import type { ChartFormatType, CityData, CityMetrics } from "@/lib/types";
-import { calculateAverageMetrics } from "@/lib/format-chart-data";
 import { chartFormatters } from "@/lib/chart-utils";
 import { chartConfigs } from "@/lib/chart-configs";
 import { useId } from "react";
 
 interface ComparisonChartProps {
   cities: CityData[];
-  allCities: CityData[];
+  averageMetrics?: CityMetrics[];
   metricKey: keyof CityMetrics;
   title: string;
   description: string;
@@ -43,7 +42,7 @@ const CITY_COLORS = [
 
 export function ComparisonChart({
   cities,
-  allCities,
+  averageMetrics = [],
   metricKey,
   title,
   description,
@@ -51,9 +50,6 @@ export function ComparisonChart({
   maximumFractionDigits = 1,
 }: ComparisonChartProps) {
   const formatter = chartFormatters[formatType];
-  const averageMetrics = calculateAverageMetrics(
-    allCities.map((c) => c.financialData),
-  );
   const chartConfig = chartConfigs[metricKey];
 
   // Get all unique years
@@ -141,7 +137,7 @@ export function ComparisonChart({
               />
             ))}
 
-            {averageMetrics.length && (
+            {averageMetrics.length > 0 && (
               <Line
                 type="monotone"
                 dataKey="average"

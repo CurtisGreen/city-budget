@@ -13,6 +13,7 @@ import { PopulationChart } from "@/components/population-chart";
 import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
 import {
+  calculateAverageMetrics,
   calculateAveragePopulationDensity,
   toFullAccrualExpenseChart,
   toModifiedAccrualExpenditureChart,
@@ -115,6 +116,12 @@ export default async function CityPage({ params }: CityPageProps) {
     allCities.map((c) => c.info),
   );
 
+  // Computed on the server so the ~1.2 MB allCities dataset never reaches the
+  // RSC payload -- only these ~11 rows of averages do.
+  const averageMetrics = calculateAverageMetrics(
+    allCities.map((c) => c.financialData),
+  );
+
   const revenues = allCities.map((c) => c.info.revenueBySource);
   const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
   const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
@@ -201,7 +208,9 @@ export default async function CityPage({ params }: CityPageProps) {
                 <div className="lg:col-span-2">
                   <ComparisonChart
                     cities={[cityData]}
-                    allCities={config.showAverage ? allCities : []}
+                    averageMetrics={
+                      config.showAverage ? averageMetrics : undefined
+                    }
                     metricKey={config.key}
                     title={chartConfigs[config.key].title}
                     description={chartConfigs[config.key].description}
