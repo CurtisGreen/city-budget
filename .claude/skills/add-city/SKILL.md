@@ -163,7 +163,10 @@ e. Same pass, same dumps: the remaining optional fields. Field order per
      fiscal-year headers, unlabeled continuation pages, missing ADC, >100% coverage, `(in 000's)`
      units), `§3` (expense table rules + the `lib/expense-category-groups.ts` entry when function
      names drift across years), and `§4` (PROVE the pension parse by reproducing every printed
-     funded ratio) before extracting.** Those rules are not restated here.
+     funded ratio) before extracting.** Those rules are not restated here. If you add a
+     `lib/expense-category-groups.ts` entry, **open `§3c` before writing its `notes`** — the default
+     is `notes: {}`, and an interest-row relabel, a Police/Fire→Public safety merge, or a cosmetic
+     rename must NOT get a note.
    - A field you can't source cleanly for a year: OMIT that key and report it (the charts skip a
      year that lacks the field). Never estimate.
 f. CROSS-CHECK before trusting (cheap, catches restatements/misreads):

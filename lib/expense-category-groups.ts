@@ -245,6 +245,17 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     modifiedAccrualGroups: {},
     notes: {},
   },
+  hutchins: {
+    fullAccrualGroups: {
+      "Interest and fiscal charges": "Interest on long-term debt",
+      "Interest on long-term debt": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {
+      "Cultural and recreation": "Cultural and recreational",
+      "Cultural and recreational": "Cultural and recreational",
+    },
+    notes: {},
+  },
   fairview: {
     fullAccrualGroups: {
       "Interest and fiscal charges": "Interest on long-term debt",

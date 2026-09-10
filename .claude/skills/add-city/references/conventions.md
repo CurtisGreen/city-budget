@@ -305,8 +305,17 @@ governmental-funds statement (or vice versa):
 - **Function-name drift across years → `lib/expense-category-groups.ts`.** If the ACFR renames or
   re-splits a function over the series (Dallas: "Code enforcement" / "Streets, … and code
   enforcement" / "Public works and transportation" all → one "Public Works" bucket), add a `{id}`
-  entry mapping each raw label → a display bucket (+ a `notes` line explaining the merge). Members
-  sharing a bucket are summed per year. Stable names across all years (Addison) need no entry.
+  entry mapping each raw label → a display bucket. Members sharing a bucket are summed per year.
+  Stable names across all years (Addison) need no entry.
+  - **`notes` defaults to `{}` — most entries get NO note.** A note is only for a merge a reader
+    would otherwise misread: one function's dollars moving into a differently-named bucket, or a
+    bucket swallowing a member you would not expect in it (Municipal court / Code enforcement under
+    Public safety). **Never note the interest row** ("Interest on long-term debt" ↔ "Interest and
+    fiscal charges" ↔ "Interest expense" are one statement line), **never note Police/Fire/EMS →
+    Public safety**, and **never note a cosmetic relabel** ("Cultural and recreational" ↔ "Cultural
+    and recreation"). Rule of thumb: if the mapping only changes wording, or merges labels any
+    reader would expect together, the mapping speaks for itself. Full rules: populate-pension-and-
+    expenses `SKILL.md §3c` — read it before writing any note.
 - Charts skip a year that lacks the field (`flatMap`→`[]`), so partial population renders without
   error — but populate every sourceable year for a complete chart.
 - The audit script `.claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}` reports coverage

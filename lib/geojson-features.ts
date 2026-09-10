@@ -50,6 +50,7 @@ import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 import { kennedaleGeoJson } from "@/data/geojson/kennedale-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
+import { hutchinsGeoJson } from "@/data/geojson/hutchins-geojson";
 import { lucasGeoJson } from "@/data/geojson/lucas-geojson";
 import { forneyGeoJson } from "@/data/geojson/forney-geojson";
 import { forestHillGeoJson } from "@/data/geojson/forest-hill-geojson";
@@ -126,6 +127,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...kellerGeoJson.features,
   ...kennedaleGeoJson.features,
   ...hurstGeoJson.features,
+  ...hutchinsGeoJson.features,
   ...lucasGeoJson.features,
   ...forneyGeoJson.features,
   ...forestHillGeoJson.features,

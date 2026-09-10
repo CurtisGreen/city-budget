@@ -37,6 +37,7 @@ import { hasletAcfr } from "./haslet";
 import { highlandParkAcfr } from "./highland-park";
 import { highlandVillageAcfr } from "./highland-village";
 import { hurstAcfr } from "./hurst";
+import { hutchinsAcfr } from "./hutchins";
 import { irvingAcfr } from "./irving";
 import { kellerAcfr } from "./keller";
 import { kennedaleAcfr } from "./kennedale";
@@ -113,6 +114,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   "highland-park": highlandParkAcfr,
   "highland-village": highlandVillageAcfr,
   hurst: hurstAcfr,
+  hutchins: hutchinsAcfr,
   irving: irvingAcfr,
   keller: kellerAcfr,
   kennedale: kennedaleAcfr,
