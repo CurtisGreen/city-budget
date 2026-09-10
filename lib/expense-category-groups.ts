@@ -278,4 +278,46 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "FY2015 split 'Housing services' and 'Community services'; combined from FY2016",
     },
   },
+  bedford: {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      Police: "Public safety",
+      Fire: "Public safety",
+      "Leisure services": "Community services",
+    },
+    notes: {
+      "Community services": "Also contains 'Leisure services' separately",
+    },
+  },
+  benbrook: {
+    fullAccrualGroups: {
+      "Interest on long-term debt": "Interest and fiscal charges",
+      "Payments to discrete component units": "Payment to TIF",
+    },
+    modifiedAccrualGroups: {
+      "Public service": "Public works",
+      "Payments to discrete component units": "Payment to TIF",
+    },
+    notes: {
+      "Payment to TIF":
+        "FY2023 relabels as Payments to discrete component units",
+    },
+  },
+  burleson: {
+    fullAccrualGroups: {
+      "Interest and other fees": "Interest on long-term debt",
+      "Culture and recreation": "Culture and recreation",
+      "Parks and recreation": "Culture and recreation",
+      Library: "Culture and recreation",
+    },
+    modifiedAccrualGroups: {
+      "Culture and recreation": "Culture and recreation",
+      "Parks and recreation": "Culture and recreation",
+      Library: "Culture and recreation",
+    },
+    notes: {
+      "Culture and recreation":
+        "FY2022 onward splits into 'Parks and recreation' and 'Library'",
+    },
+  },
 };

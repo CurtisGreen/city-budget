@@ -180,8 +180,28 @@ it without being asked.
 If a city renames/splits a function across years (audit-expenses.mjs WARN, or you see e.g. "Culture
 and Recreation" one year and "Parks and Recreation" the next), the chart shows them as separate
 categories. Add a `{id}` entry to `lib/expense-category-groups.ts` mapping each raw label → one
-display bucket (+ a `notes` line explaining the merge), as `dallas` does. If names are stable across
-all years (Addison), no entry is needed.
+display bucket, as `dallas` does. If names are stable across all years (Addison), no entry is needed.
+
+**`notes` are for merges a reader would otherwise misread** — one function's dollars moving into a
+differently-named bucket (Leisure services folded into Community services; Housing services split out
+in FY2015 and combined after), a bucket that swallows a member you would not expect in it (municipal
+court or code enforcement landing under Public safety), or a bucketing that was a judgment call you
+want on record. Write the note for those.
+
+**Do not write a note for a mapping a reader can already guess.** Two standing cases:
+
+- **The interest row.** "Interest on long-term debt" / "Interest and fiscal charges" / "Interest and
+  fiscal agent fees" / "Interest expense" all name the same single statement line — map them and say
+  nothing. `"Interest and fiscal charges": "Reported as 'Interest on long-term debt' through FY2019"`
+  is noise.
+- **Police / Fire / Emergency Services → Public safety.** Cities split and recombine these constantly
+  and the grouping is self-evident from the mapping itself. Map them silently. Only note the bucket
+  when it also absorbs something outside that set (e.g. Municipal court, Code enforcement).
+
+Cosmetic relabels of one line need no note either ("Community develop." → "Community development",
+"Public service" → "Public works"). Rule of thumb: if the mapping changes only the wording, or merges
+labels any reader would expect together, it needs no note. An entry with only such mappings gets
+`notes: {}`.
 
 ## 4. Prove the pension parse before writing
 The funded ratio IS printed. Recompute it from the TPL/FNP you parsed and confirm you reproduce the
