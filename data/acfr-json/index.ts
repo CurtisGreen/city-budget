@@ -64,6 +64,7 @@ import { rockwallAcfr } from "./rockwall";
 import { rowlettAcfr } from "./rowlett";
 import { sachseAcfr } from "./sachse";
 import { saginawAcfr } from "./saginaw";
+import { seagovilleAcfr } from "./seagoville";
 import { southlakeAcfr } from "./southlake";
 import { sunnyvaleAcfr } from "./sunnyvale";
 import { theColonyAcfr } from "./the-colony";
@@ -141,6 +142,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   rowlett: rowlettAcfr,
   sachse: sachseAcfr,
   saginaw: saginawAcfr,
+  seagoville: seagovilleAcfr,
   southlake: southlakeAcfr,
   sunnyvale: sunnyvaleAcfr,
   "the-colony": theColonyAcfr,

@@ -24,6 +24,7 @@ import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
 import { arlingtonGeoJson } from "@/data/geojson/arlington-geojson";
 import { sachseGeoJson } from "@/data/geojson/sachse-geojson";
 import { saginawGeoJson } from "@/data/geojson/saginaw-geojson";
+import { seagovilleGeoJson } from "@/data/geojson/seagoville-geojson";
 import { universityParkGeoJson } from "@/data/geojson/university-park-geojson";
 import { grandPrairieGeoJson } from "@/data/geojson/grand-prairie-geojson";
 import { mesquiteGeoJson } from "@/data/geojson/mesquite-geojson";
@@ -101,6 +102,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...arlingtonGeoJson.features,
   ...sachseGeoJson.features,
   ...saginawGeoJson.features,
+  ...seagovilleGeoJson.features,
   ...universityParkGeoJson.features,
   ...grandPrairieGeoJson.features,
   ...mesquiteGeoJson.features,

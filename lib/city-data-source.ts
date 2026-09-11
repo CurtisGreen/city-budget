@@ -25,6 +25,7 @@ import { cockrellHillInfo } from "@/data/info/cockrell-hill";
 import { colleyvilleInfo } from "@/data/info/colleyville";
 import { sachseInfo } from "@/data/info/sachse";
 import { saginawInfo } from "@/data/info/saginaw";
+import { seagovilleInfo } from "@/data/info/seagoville";
 import { universityParkInfo } from "@/data/info/university-park";
 import { grandPrairieInfo } from "@/data/info/grand-prairie";
 import { mesquiteInfo } from "@/data/info/mesquite";
@@ -102,6 +103,7 @@ const basicCityInfo = [
   colleyvilleInfo,
   sachseInfo,
   saginawInfo,
+  seagovilleInfo,
   universityParkInfo,
   grandPrairieInfo,
   mesquiteInfo,

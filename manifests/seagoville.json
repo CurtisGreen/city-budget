@@ -1,0 +1,72 @@
+{
+  "id": "seagoville",
+  "city": "Seagoville",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/1349",
+      "archiveUrl": null
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/1521",
+      "archiveUrl": null
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/1880",
+      "archiveUrl": null
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/2255",
+      "archiveUrl": null
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/2618",
+      "archiveUrl": null
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/3999",
+      "archiveUrl": null
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/4639",
+      "archiveUrl": null
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/4758",
+      "archiveUrl": null
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/5236",
+      "archiveUrl": null
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/5544",
+      "archiveUrl": null
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.seagoville.us/DocumentCenter/View/5841",
+      "archiveUrl": null
+    }
+  ]
+}
