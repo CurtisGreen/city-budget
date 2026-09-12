@@ -39,7 +39,7 @@ export const dallasAcfr: CityFinancialData[] = [
           value: 186_631_000,
         },
         { name: "Environmental and health services", value: 17_757_000 },
-        { name: "Public works and transportation", value: 17_725_000 },
+        { name: "Public works and transportation", value: 17_257_000 },
         { name: "Equipment and building services", value: 23_439_000 },
         { name: "Culture and recreation", value: 129_866_000 },
         { name: "Housing", value: 13_551_000 },

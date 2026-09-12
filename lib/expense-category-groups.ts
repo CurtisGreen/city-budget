@@ -331,4 +331,14 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "FY2022 onward splits into 'Parks and recreation' and 'Library'",
     },
   },
+  desoto: {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      "Non-departmental": "General government",
+    },
+    notes: {
+      "General government":
+        "Absorbs the separate 'Non-departmental' expenditure line the governmental-funds statements carried through FY2018; from FY2019 the City reports those costs inside General government, and the government-wide statements never broke them out at all",
+    },
+  },
 };
