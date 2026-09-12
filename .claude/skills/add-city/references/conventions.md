@@ -16,12 +16,8 @@ many years, or both current + prior, at once:
   total program revenues, Operating grants, Capital grants (sum gov + business for TPG),
   expenses, and General Revenues (property tax, sales tax). `Total revenues = TPG program
   revenues + TPG general revenues`. **CAVEAT: use it for TOTALS, not for the operating-vs-capital
-  grant SPLIT.** This 10-yr statistical table can misclassify a business-type grant between the
-  operating and capital rows — take the split from the **MD&A "Changes in Net Position" table or
-  the audited Statement of Activities** instead (Carrollton FY2016: the statistical table put a
-  $557,072 Golf *capital* grant on the *operating* row, while the MD&A Changes table AND audited
-  SoA both had biz operating grants = 0). The op+cap TOTAL still ties, so a wrong split doesn't
-  change `Total revenues` — but it corrupts the `Operating Grants` and `Capital Grants` columns.
+  grant SPLIT** — take the split from the MD&A "Changes in Net Position" table or the audited
+  Statement of Activities (see the Pitfalls entry for why, and the Carrollton case).
 - **Statistical "Direct and Overlapping Property Tax Rates" (10-year)** — M&O (Operating)
   and I&S (Debt Service) rates for ~10 years at once, already as decimals per $100.
 - **Statistical "Changes in Fund Balances" / sales-tax history note** — pure Sales tax per
@@ -105,6 +101,13 @@ Statement of Activities.
   the `debtInterest` field rule). The MD&A "Summary of Changes in Net Position" condensed table is a fine,
   faster source only if it keeps those same interest line(s); if it folds interest into totals,
   use the full Statement of Activities.
+  - **That disagreement is rarely confined to the interest row — treat it as a WHOLE-YEAR flag.**
+    When `audit-expenses.mjs` WARNs that a year's `fullAccrualExpenses` interest entry differs from
+    its stored `debtInterest`, the statistical table is diverging from the audited SoA for that
+    year generally, and the other function rows can be off without anything surfacing it. Re-source
+    that year's ENTIRE row set from the audited SoA, not just the interest line. Colleyville FY2020:
+    the WARN fired on interest (240,231 vs 234,986) but General government was ALSO off by 2,518
+    (stat gov-activities total 31,808,718 vs audited 31,805,991), and only the interest half showed.
 - **A tiny interest figure is often CORRECT, not a data error.** If a city's bonded debt
   sits in **business-type/enterprise (water-sewer) funds**, that interest is buried inside the
   enterprise function expenses and the SoA may show only a small governmental "Interest and
@@ -119,18 +122,21 @@ Statement of Activities.
 - **MD&A "Totals" columns can be mis-keyed — verify `gov + business == total`.** Southlake's
   FY2023 MD&A deferred-outflows/inflows Totals were off by 314,383 (the per-activity columns
   were correct). When it doesn't tie, fall back to the government-wide **Statement of Net
-  Position** for the 5 balance-sheet aggregates (the prescribed source anyway).
+  Position** for that year's 5 balance-sheet aggregates — the same exception route as the
+  mislabel case below, not a change of default.
 - **The MD&A "Condensed Net Position" table can mislabel total NONCURRENT assets as
   "Capital assets, net"** — folding restricted cash/investments into the capital row. The tell:
   net "Capital Assets" ends up **> gross** capital (impossible), and/or `Current and Other Assets`
   no longer equals `Total Assets − net capital`. It can be inconsistent BETWEEN activities in the
   same table (Celina FY2025: governmental row lumped $164,222,050 restricted cash into capital
-  while the business row didn't). ALWAYS take the 5 balance-sheet aggregates from the **audited
-  government-wide Statement of Net Position**, not the MD&A condensed table — the audited
-  statement lists restricted cash on its own line under Noncurrent, separate from "Capital
-  assets, net", so `Capital Assets` = the capital line(s) only and `Current and Other Assets`
-  = Total Assets − that. Verify: net capital `<= gross`, and it equals the capital-note ending
-  balance and (where the optional `capitalAssetsNetofDepreciation` field is populated) that field.
+  while the business row didn't). **This is an EXCEPTION to the MD&A-is-source-of-truth rule above,
+  not a competing default** — when the tell fires for a city-year, re-source THAT year's 5
+  aggregates from the **audited government-wide Statement of Net Position**; when it doesn't, keep
+  the MD&A condensed values with their rounding. The audited statement lists restricted cash on its
+  own line under Noncurrent, separate from "Capital assets, net", so `Capital Assets` = the capital
+  line(s) only and `Current and Other Assets` = Total Assets − that. Verify: net capital
+  `<= gross`, and it equals the capital-note ending balance and (where the optional
+  `capitalAssetsNetofDepreciation` field is populated) that field.
 - **The capital-assets note number varies (Note 4 vs Note 5) and MD&A layout varies by year.**
   Recent reports give MD&A condensed tables with current+prior **Totals** columns; older ones
   split into separate single-year gov/business/total tables — read each by position, don't
@@ -148,7 +154,11 @@ Statement of Activities.
 ## Fields <- ACFR location
 Field names and which are optional `?` come from `lib/types.ts`. Sources per field:
 - `currentAndOtherAssets`, `capitalAssets`, `deferredOutflows`, `liabilities`,
-  `deferredInflows` -> Statement of Net Position (search "Current and other").
+  `deferredInflows` -> the MD&A **"Condensed Schedule of Net Position"**, with its rounding
+  (usually thousands) — the default, per the Pitfalls entry. Fall back to the audited
+  government-wide **Statement of Net Position** (search "Current and other") only for a year where
+  the MD&A table fails a tell: Totals don't equal gov + business, net capital > gross, or
+  `Current and Other Assets ≠ Total Assets − net capital`.
   - **`currentAndOtherAssets` = ALL non-capital assets = Total Assets − net capital
     assets.** This is a two-bucket split (capital vs everything-else), NOT current-vs-noncurrent:
     it INCLUDES noncurrent restricted cash & investments, long-term/notes receivable, net
@@ -156,9 +166,8 @@ Field names and which are optional `?` come from `lib/types.ts`. Sources per fie
     `currentAndOtherAssets + capitalAssets == Total Assets` (PG total column) every year.
     (Frisco FY2025 is the clean reference: 11 non-capital lines summed to CA; $816.5M of it was
     noncurrent restricted cash/investments.)
-  - **`capitalAssets` = net book value (net of accumulated depreciation)** and must be
-    `<= gross` (the sum of the 4 gov/business being+not-being-depreciated fields). Net > gross
-    is impossible — see the MD&A-mislabel pitfall below.
+  - **`capitalAssets` = net book value (net of accumulated depreciation)**, `<= gross` (the sum of
+    the 4 gov/business being+not-being-depreciated fields). See the MD&A-mislabel pitfall.
   - **The two net-capital fields feed DIFFERENT formulas and may legitimately differ.**
     `format-chart-data.ts`: `totalAssets = currentAndOtherAssets + capitalAssets`, but
     Asset Life numerator = `capitalAssetsNetofDepreciation || capitalAssets`
@@ -189,15 +198,13 @@ Field names and which are optional `?` come from `lib/types.ts`. Sources per fie
     (Forney FY2019: a repeated `886,190` "Public services" charge-for-services line inflated
     program revenue but not the change figure). In that case trust `expenses + change` (record
     that value) rather than program+general — the change-in-net-position line is authoritative.
-- `debtInterest` -> the interest expense as reported in the **Statement of Activities
-  (Changes in Net Position) expenses section** — the same government-wide table used for Total
-  revenue, operating grants, and capital grants. Take the interest total the table presents for
-  the primary government, exactly as presented; do NOT reconstruct interest buried inside a
-  functional/enterprise expense row from the notes (buried interest is not counted). Nearly always
-  a single "Interest on long-term debt" line (business interest buried in the enterprise
-  functions); on the rare report that splits it (University Park FY2025 = 54,562), take the total
-  as presented. Only deviate if the report itself has an error — then use the corrected figure and
-  add a note explaining it.
+- `debtInterest` -> the interest expense in the **Statement of Activities expenses section** (never
+  the statistical table — see the Pitfalls entry). Take the primary-government interest total
+  exactly as presented; do NOT reconstruct interest buried inside a functional/enterprise expense
+  row from the notes (buried interest is not counted). Nearly always a single "Interest on
+  long-term debt" line; on the rare report that splits it (University Park FY2025 = 54,562), take
+  the total as presented. Only deviate if the report itself has an error — then use the corrected
+  figure and add a note explaining it.
 - `government*`/`business*CapitalAssets(Not)BeingDepreciated` -> capital assets
   note; search "not being depreciated" / "depreciable".
 - If current-year and prior-year ACFRs conflict, use the LATEST year's number.
@@ -217,6 +224,13 @@ Field names and which are optional `?` come from `lib/types.ts`. Sources per fie
   report lacks a standalone schedule (older/smaller years), read the special-revenue **combining**
   statement's "Taxes" row and take the escrow/hotel fund's column (verify the row sums across
   fund columns to the total). Omit years before the city levied it (genuinely 0/none).
+  - **This field, not the 10-yr tables, sets your fetch budget — so locate it FIRST.** Pension and
+    the two expense breakdowns come from 10-year schedules, so two reports cover the whole series.
+    Hotel tax does not: a budget-vs-actual schedule yields 2 years/report (~6 reports), and a
+    combining statement yields **1 year/report — i.e. every ACFR in the manifest**. Determine which
+    of the three cases a city is (general revenue / budget schedule / combining statement) before
+    planning step-1 fetches, rather than discovering it after the "two reports cover everything"
+    pass. Colleyville, McKinney, Grand Prairie and Balch Springs are all combining-statement cities.
   - **Big-city exception — hotel tax is a government-wide general revenue.** Cities that run hotel
     tax through an enterprise/business-type activity (a convention center) print "Hotel occupancy
     tax" as its OWN line in the government-wide **general-revenues** section (business-type column)
@@ -234,13 +248,22 @@ The two per-year, json-only breakdowns that drive the stacked-bar expense charts
 **populate-pension-and-expenses** skill, which backfills these into existing cities). `dallas.ts` is the
 reference shape. Both take function/line names **verbatim** ("take the table as presented").
 
-**The two bases are not two views of one number — they include different things.** Never
-cross-check one against the other, and never source a year's `fullAccrualExpenses` from a
-governmental-funds statement (or vice versa):
+**The two bases are not two views of one number — they include different things.** Never expect
+them to TIE, never "reconcile" one to the other, and never source a year's `fullAccrualExpenses`
+from a governmental-funds statement (or vice versa):
 - `fullAccrualExpenses` = government-wide Statement of Activities, **full accrual**: INCLUDES
   depreciation and actuarial (accrued) pension cost; EXCLUDES capital outlay and debt principal.
 - `modifiedAccrualExpenditures` = governmental funds statement, **modified accrual**: INCLUDES
   capital outlay and debt principal; EXCLUDES depreciation; pension = cash contributions only.
+- **But DO compare them per function as a mis-key tripwire.** The ratio between the two bases for
+  one function is stable across a city's years (capital-heavy functions like Streets/Public works
+  legitimately sit near 0.2 in EVERY year — that is depreciation, not an error, so an absolute
+  threshold is useless). A function whose ratio lurches in ONE year is the signature of a
+  statistical column whose values landed on the wrong labels — which sums to the printed total and
+  therefore passes every arithmetic check. `audit-expenses.mjs` runs this automatically (>3x from
+  that function's own median); when it WARNs, re-source that year from the AUDITED statements.
+  Colleyville FY2017: Table 4's labels took the values in the audited statement's row order, putting
+  Municipal court at 9.1x its median while the column still totalled correctly.
 - **PRIMARY SOURCE — the 10-year STATISTICAL tables (one recent ACFR ≈ 10 years of BOTH fields).**
   These are NOT single-year-only (an earlier version of this note wrongly said "read every ACFR" —
   that wastes ~10× the reports). The statistical section carries both breakdowns by function for the
@@ -307,15 +330,14 @@ governmental-funds statement (or vice versa):
   enforcement" / "Public works and transportation" all → one "Public Works" bucket), add a `{id}`
   entry mapping each raw label → a display bucket. Members sharing a bucket are summed per year.
   Stable names across all years (Addison) need no entry.
-  - **`notes` defaults to `{}` — most entries get NO note.** A note is only for a merge a reader
-    would otherwise misread: one function's dollars moving into a differently-named bucket, or a
-    bucket swallowing a member you would not expect in it (Municipal court / Code enforcement under
-    Public safety). **Never note the interest row** ("Interest on long-term debt" ↔ "Interest and
-    fiscal charges" ↔ "Interest expense" are one statement line), **never note Police/Fire/EMS →
-    Public safety**, and **never note a cosmetic relabel** ("Cultural and recreational" ↔ "Cultural
-    and recreation"). Rule of thumb: if the mapping only changes wording, or merges labels any
-    reader would expect together, the mapping speaks for itself. Full rules: populate-pension-and-
-    expenses `SKILL.md §3c` — read it before writing any note.
+  - **`notes` defaults to `{}` — most entries get NO note.** Note only a merge a reader would
+    otherwise misread: one function's dollars moving into a differently-named bucket, or a bucket
+    swallowing an unexpected member (Municipal court / Code enforcement under Public safety).
+    **Never** note the interest row ("Interest on long-term debt" ↔ "Interest and fiscal charges" ↔
+    "Interest expense" are one statement line), Police/Fire/EMS → Public safety, or a cosmetic
+    relabel ("Cultural and recreational" ↔ "Cultural and recreation"). If the mapping only changes
+    wording, or merges labels any reader would expect together, it speaks for itself. Worked
+    examples: populate-pension-and-expenses `SKILL.md §3c`.
 - Charts skip a year that lacks the field (`flatMap`→`[]`), so partial population renders without
   error — but populate every sourceable year for a complete chart.
 - The audit script `.claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}` reports coverage
@@ -476,11 +498,11 @@ wrong years. Workflow:
   assuming GF = 1% (Balch Springs: gov sales = 1.5% = GF 1.25% + street 0.25%; EDC A+B = 0.5%
   sit in component units — a 3× gap vs one EDC is expected, not a misread). Use the gov line
   as-is for revenues[] (component units are excluded by convention).
-- **Hotel-occupancy tax is NOT in any 10-yr statistical table.** It sits only in its own
-  special-revenue fund and is frequently mislabeled (Southlake books it under "Municipal sales
-  tax"). Pull multi-year hotel actuals from the **budget book**'s Hotel Occupancy Tax Fund
-  summary (FY-2 Actual / FY-1 columns); sanity-check against the ACFR fund's beginning fund
-  balance roll-forward. If the city has no hotel fund, hotel = 0 (sourced).
+- **Hotel-occupancy tax** — sourcing rules are under "Tax revenue fields" above (three cases; it
+  sets the fetch budget). Two extras for `revenues[]`: it is frequently mislabeled (Southlake books
+  it under "Municipal sales tax"), and multi-year actuals also sit in the **budget book**'s Hotel
+  Occupancy Tax Fund summary (FY-2 Actual / FY-1 columns) — sanity-check against the ACFR fund's
+  beginning-fund-balance roll-forward. No hotel fund → hotel = 0 (sourced).
 
 ## NEVER GUESS
 Reminder: if any figure here can't be sourced with confidence, prompt the user. Do not
