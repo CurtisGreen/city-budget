@@ -122,6 +122,25 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "FY2017 onward combines 'Finance and planning' for full-accural",
     },
   },
+  "little-elm": {
+    fullAccrualGroups: {
+      "Community service": "Community services",
+      "Community services": "Community services",
+      "Interest expense": "Interest and fiscal charges",
+      "Interest and fiscal charges": "Interest and fiscal charges",
+      Interest: "Interest and fiscal charges",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
+  lancaster: {
+    fullAccrualGroups: {
+      "Interest and fiscal charges": "Interest and fiscal charges",
+      Interest: "Interest and fiscal charges",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
   dallas: {
     fullAccrualGroups: {
       "Code enforcement": "Public Works",
