@@ -273,6 +273,14 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "FY2021 onward the reports split police, fire, municipal court and code enforcement",
     },
   },
+  "glenn-heights": {
+    fullAccrualGroups: {
+      "Interest and fiscal charges": "Interest on long-term debt",
+      "Interest on long-term debt": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
   "grand-prairie": {
     fullAccrualGroups: {
       "Support services": "General government",
@@ -403,6 +411,21 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     notes: {
       "General government":
         "Absorbs the separate 'Non-departmental' expenditure line the governmental-funds statements carried through FY2018; from FY2019 the City reports those costs inside General government, and the government-wide statements never broke them out at all",
+    },
+  },
+  grapevine: {
+    fullAccrualGroups: {
+      "Interest on long-term debt": "Interest on long-term debt",
+      "Interest and fiscal charges": "Interest on long-term debt",
+      Interest: "Interest on long-term debt",
+      "Bond issuance costs": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {
+      "Economic Development": "Economic development",
+    },
+    notes: {
+      "Interest on long-term debt":
+        "FY2015 is the one year the Statement of Activities prints 'Bond issuance costs' as its own governmental function row; it is grouped here because the City's own ten-year statistical table reports the two lines combined on the interest row",
     },
   },
 };

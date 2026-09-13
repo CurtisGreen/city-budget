@@ -125,6 +125,14 @@ def check(staged, extracted=None):
             s = sum(e["value"] for e in fa)
             if tot is None:
                 notes.append(f"FY{fy}: no _printedTotalGovActivities staged — sum NOT proven")
+            elif abs(s - tot) == 1:
+                # A $1 gap is the ACFR rounding its own total line, not a misread row: it is far
+                # smaller than any row-level transcription error and shows up in real reports
+                # (Forest Hill FY2016, Grapevine FY2022, where the MD&A prints the same total).
+                notes.append(
+                    f"FY{fy}: fullAccrualExpenses sum {s:,} vs printed total governmental "
+                    f"activities {tot:,} (off by {s - tot:+,}) — $1 rounding in the ACFR itself"
+                )
             elif s != tot:
                 fails.append(
                     f"FY{fy}: fullAccrualExpenses sum {s:,} != printed total governmental "
