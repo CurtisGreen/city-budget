@@ -13,20 +13,23 @@ steps 2d–2e), so this skill is the BACKFILL path: cities added before that, or
 run left as gaps. Reuses **add-city** `SKILL.md §2` (source discovery) and
 `references/conventions.md` (per-field source rules).
 
-**Why merged:** both halves live in the SAME two ACFRs (latest + FY2024) — pension in the RSI
-10-year schedules, expenses/taxes in the statistical-section 10-year tables. Fetch and
-`pdftotext` each report ONCE, grep all five tables out of the same text dump, write one edit, run
-one build. Never fetch or convert a PDF twice.
+**Why merged:** both halves come out of the SAME reports — pension from the RSI schedules,
+expenses/taxes from the statistical ten-year tables or, in a city without a statistical section,
+from each year's own audited statements. Convert every report ONCE, run `extract-statements.py`
+over all the dumps in ONE call, write one edit, run one build. Never fetch or convert a PDF twice.
 
 ## Core rules
+
 - **NEVER GUESS.** Every value written comes from a PDF you actually read. A figure you can't source
   cleanly is left OUT (omit the key for that year) and reported — never estimated.
-- **BATCH EVERY CALL.** Each tool call re-reads the whole context, so a turn costs ~75K tokens
-  whatever it does — turn COUNT, not output size, is what this job spends. A measured run cost 5.6M
-  cache-read tokens across 55 turns; the same work in 12 turns costs 1.2M. So: one Bash call per
-  STEP, not per command (`;`-join them), all five table reads in ONE call, and `--rows` (below) on
-  any table where you already know which rows you need. Getting an argument wrong costs a whole
-  turn — check `--occurrence` and anchors before sending.
+- **SPEND TURNS, NOT BYTES.** Every tool call re-reads the whole transcript, so turn COUNT is what
+  this job costs. Measured on one AFR-style city: 83 API calls, 10.2M cache-read, starting from a
+  ~49K base and ending near 197K — the growth, not the base, is the bill. So: one Bash call per
+  STEP, `;`-joined, never one per command.
+  The single biggest saving is NOT batching harder — it is not hunting anchors at all. You cannot
+  batch a read whose anchor you only learn from the previous read's output, and anchors are not
+  portable between years. Run `extract-statements.py` over every dump first (step 1) and go to the
+  PDF only for what it flags.
 - **NEVER OVERWRITE.** A field already present for a year stays exactly as is (even if you'd source
   it differently), unless an audit flags it as arithmetically wrong. Fill genuine gaps only.
 - **STORE WHAT'S PRINTED, DERIVE NOTHING.** Funded ratio and ADC coverage are computed at render
@@ -34,7 +37,9 @@ one build. Never fetch or convert a PDF twice.
   or `Contribution deficiency (excess)` (both are differences of stored fields).
 
 ## The fields this skill fills
+
 Full per-field source rules live in `add-city/references/conventions.md`:
+
 - **`pensionPlans[]`** — per plan per year, from the RSI schedules (shape below).
 - **Tax by source** — `propertyTaxRevenue`, `salesTaxRevenue`, `hotelTaxRevenue`
   (conventions "Tax revenue fields").
@@ -61,6 +66,7 @@ Legend renders as `{City} - {name}`, so keep `name` short: `"TMRS"`, `"Employees
 `"Police & Fire Combined Plan"`. Don't paste the full statutory plan title.
 
 ## 0. Resolve the city + audit BOTH halves FIRST (cheap, no PDFs)
+
 `id` = kebab-case of the name. Require `data/acfr-json/{id}.ts`; if absent the city isn't added —
 say so and point to **add-city** (don't populate a city that doesn't exist). Then, from repo root:
 
@@ -73,10 +79,10 @@ node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id
   fullAccrualExpenses interest entry ≈ debtInterest), and flags fullAccrualExpenses label drift
   across years (→ may need a grouping entry, step 3c). Exit 1 = a stored value is wrong.
   Two WARNs deserve a PDF, not a shrug:
-  - *modified/accrual ratio Nx that function's median* → a year's statistical column was probably
+  - _modified/accrual ratio Nx that function's median_ → a year's statistical column was probably
     mis-keyed onto the wrong labels. It reconciles against the printed total, so this is the ONLY
     check that sees it. Re-source that year from the audited statements.
-  - *fullAccrual interest vs debtInterest* → the statistical table is diverging from the audited SoA
+  - _fullAccrual interest vs debtInterest_ → the statistical table is diverging from the audited SoA
     for that year **generally**; other rows in the same year can be wrong silently. Re-source the
     year's whole row set, not just the interest line.
 - `audit-pension.py` prints pension coverage and anomalies.
@@ -86,6 +92,7 @@ stop — nothing to do. If only one half has gaps, still do the single shared fe
 skip the other half's extraction.
 
 ## 1. Fetch the shared PDFs — ONCE
+
 Source PDFs come from `manifests/{id}.json`. Fetch per **validate-city §2a**: manifest `file` →
 `url` (curl_cffi `impersonate="chrome"` for Akamai/Cloudflare) → `archiveUrl`. Discovery quirks per
 **add-city `SKILL.md §2 a/a1/a2`** (verify right-city + FYE). Any city-specific access quirk is
@@ -94,31 +101,100 @@ worth a `reference` memory note (e.g. addison-acfr-sources).
 **Two reports cover FY2015→latest for BOTH halves**, because GASB 68 RSI schedules and the
 statistical-section schedules are both 10-year:
 
-| Report | Covers |
-| --- | --- |
-| latest ACFR (e.g. FY2025) | FY2016–2025, all fields |
-| FY2024 ACFR | FY2015 (its 10-yr window reaches back one further) |
+| Report                    | Covers                                             |
+| ------------------------- | -------------------------------------------------- |
+| latest ACFR (e.g. FY2025) | FY2016–2025, all fields                            |
+| FY2024 ACFR               | FY2015 (its 10-yr window reaches back one further) |
 
 **…for every field EXCEPT `hotelTaxRevenue` — settle that one BEFORE you fetch.** There is no
 10-year hotel table. Which of three cases the city is in decides the whole fetch budget:
 
-| Where hotel tax lives | Reports needed |
-| --- | --- |
+| Where hotel tax lives                                               | Reports needed                           |
+| ------------------------------------------------------------------- | ---------------------------------------- |
 | government-wide general revenue (big-city / convention-center case) | 0 extra — same table as property + sales |
-| the fund's budget-vs-actual schedule (actual + prior-year columns) | ~6 (2 years each) |
-| the special-revenue **combining** statement (1 year/report) | **every ACFR in the manifest** |
+| the fund's budget-vs-actual schedule (actual + prior-year columns)  | ~6 (2 years each)                        |
+| the special-revenue **combining** statement (1 year/report)         | **every ACFR in the manifest**           |
 
 Colleyville, McKinney, Grand Prairie, Balch Springs are combining-statement cities — 11 reports, not
 two. Check the latest report for which case applies, then fetch once for the whole job.
 
-Convert each report ONCE to a text dump you keep for the whole session:
+Convert each report ONCE to a text dump you keep for the whole session, then run the EXTRACTOR over
+every dump at once — one call for the whole city, however many reports it has:
 
 ```bash
-pdftotext -layout {report}.pdf {scratch}/{id}-fy{year}.txt
+S=.claude/skills/populate-pension-and-expenses/scripts
+for y in $(seq 2015 2025); do pdftotext -layout {scratch}/{id}-fy$y.pdf {scratch}/{id}-fy$y.txt; done
+python3 $S/extract-statements.py {scratch}/{id}-fy*.txt > {scratch}/extracted.json   # ALL dumps, one call
+python3 $S/extract-statements.py {scratch}/{id}-fy2025.txt --summary                  # orient on ONE report
 ```
 
-Then read all five tables out of that SAME dump **in one Bash call** — `show-table.py` costs roughly
-half the tokens of `sed`, because `pdftotext -layout` spends most of its bytes on column padding:
+**Write the JSON to a file and query it; do not `--summary` the whole city.** `--summary` is for
+orienting yourself on ONE report — what tables that city has, which flags fire. Across a whole
+manifest it is the most expensive thing in the job: measured on Forney's 11 reports it printed
+11,456 characters, 62% of every byte that run spent on tool results. Querying the JSON with a few
+lines of Python costs a fraction and gives you the values themselves rather than a description of
+them. Pass `--table soa` (or `funds`/`rsi`/`mda`/`stat`) to narrow further.
+
+**Do this before reading any table by hand.** The find-then-read loop is what the job actually
+spends: you cannot batch a read whose anchor you only learn from the previous read, anchors are not
+portable between years (`^REVENUES` lands in the table of contents in one report, `Total
+Expenditures` fails to match in the next because OCR ate the spacing), and each miss costs a whole
+turn that re-reads the entire transcript. `extract-statements.py` does find-then-read inside one
+process, for every report at once.
+
+It emits the SoA function rows, the governmental-funds expenditure block and tax rows, both RSI
+schedules (with each block's basis header VERBATIM, because measurement-year-vs-fiscal-year is
+city-specific and it must not be guessed) and the MD&A condensed table. It decides nothing: every
+figure is verbatim and every check it fails is reported rather than repaired. Treat its output as a
+first draft to verify, not as an answer — then `show-table.py` the specific rows it flags.
+
+Take its flags seriously; on the Forest Hill run each one was a real defect:
+
+| Flag                                    | What it means                                                                                                                                                                                                                                                                                                                                             |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `health: scan` / `health: mojibake`     | OCR the PDF. Mojibake = plenty of text, none of it English (a broken ToUnicode map); it passes any naive "has text?" test. If a page comes back garbled after OCR, it is landscape — re-OCR that page with `sips -r 90`.                                                                                                                                  |
+| `CHECK_FAIL` (soa)                      | rows do not sum to the report's own printed total. Cross-check the MD&A: Forest Hill FY2016 is off by $1 in the ACFR itself, and the MD&A rows foot exactly.                                                                                                                                                                                              |
+| `TOTAL_UNREADABLE`                      | the total line is damaged. It is refused rather than returned, because a partly-parsed total is a plausible wrong number.                                                                                                                                                                                                                                 |
+| `COLUMN_SUSPECT`                        | the statement is split across two pages, so the rightmost column is ONE FUND, not Total Governmental Funds. Such a column reconciles perfectly — this is the only check that sees it.                                                                                                                                                                     |
+| `UNPARSED_ROWS`                         | a row carries digits but no parsable figure, almost always OCR writing the thousands separator as `.`. It names the line. Do NOT accept the obvious repair: FY2023's `71.869` was really 77,869.                                                                                                                                                          |
+| `CHECK_FAIL` (funds)                    | current+debt+capital does not equal the printed total; the delta usually names the dropped row outright.                                                                                                                                                                                                                                                  |
+| `generalRevenues.UNRESOLVED`            | the SoA prints its general-revenue LABELS on one page and the figures on the facing page, and the figure block could not be located by proof. Read those rows yourself; never count down the facing block from the top, because it BEGINS with one net-(expense) row per function. When it does resolve, `_proof` names the printed total that proves it. |
+| `WRONG_TABLE_SUSPECT`                   | the chosen expenditures block totals wildly unlike the same report's Statement of Activities, so it is probably not the fund statement at all. Only comparing the two bases sees this -- each table checks out on its own terms.                                                                                                                          |
+| `continuationPageMerged` (not an error) | the statement's columns spilled onto a second page and the Total Governmental Funds column was read from there, aligned positionally. Alignment is refused unless both pages hold the same number of rows.                                                                                                                                                |
+
+A report holds several blocks that open `EXPENDITURES` and close `Total Expenditures`, and the wrong
+ones are not obviously wrong: a **budgetary comparison schedule**'s variance column foots exactly as
+the real statement's Total column does, and the statistical section's **General Governmental
+Expenditures by Function, Last Ten Fiscal Years** foots per column too -- but its columns are YEARS,
+not funds. Both are rejected as `funds` by header signature — the statistical table is instead
+parsed properly under its own kind, `stat`.
+
+**`stat` is the cheapest source in the job and the most dangerous.** One ten-year table carries every
+year, so a city with a statistical section needs a handful of reads rather than one per year. The
+danger is that its columns are YEARS and the year header is re-typeset on every page the table
+spans, so a page headed with the wrong years still sums to its own totals and nothing inside that
+page can see the error. The parser therefore reports **each page's year header separately and
+verbatim** and flags when one table's pages disagree:
+
+| `stat` flag                               | What it means                                                                                                                                                                                                                                                                                                               |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `year N appears in the header on BOTH...` | two pages of ONE table claim the same year — a page header is mis-keyed (this is the Duncanville case).                                                                                                                                                                                                                     |
+| `not a contiguous run`                    | the same error wearing a different hat.                                                                                                                                                                                                                                                                                     |
+| `NOT aligned` + `unalignedPages`          | `pdftotext` split a long row across lines or dropped an all-zero row, so the continuation page cannot be aligned positionally. Both pages' rows come back under `unalignedPages` — align them by section order yourself, in the SAME call. Never guess an offset here; it would shift every figure onto a neighbouring row. |
+
+Two layouts come back. Years-as-COLUMNS (Changes in Net Position, Changes in Fund Balances) gives
+`rows[].byYear`. Years-as-ROWS (Tax Revenues by Source) gives `byYear[year] = [cells in printed
+order]` — the parser does NOT name those columns, so read `columnHeader` and map them yourself.
+
+**Cross-check the stat tables against each other and against the audited statements.** They
+disagree in real reports: Forney's Table 3 prints the MODIFIED-accrual property tax for FY2022
+(14,954,167) while Table 2 and the audited SoA both say 15,063,814. Whenever two printed sources
+differ, the audited statement wins.
+
+Use `show-table.py` to eyeball anything the extractor flags, or a table it does not model —
+statistical-section tables, hotel-fund schedules, the footnotes that drive
+`lib/expense-category-groups.ts`. It costs roughly half the tokens of `sed`, because
+`pdftotext -layout` spends most of its bytes on column padding:
 
 ```bash
 S=.claude/skills/populate-pension-and-expenses/scripts
@@ -139,13 +215,13 @@ stored rows out of ~26, so filter them (−80% tokens; the title/basis/year-head
 filtered, and it reports how many rows it hid). Read the two statistical tables UNFILTERED — you need
 to see every function row, the footnotes that flag renames, and whether a row you expected is absent.
 
-| Table (one dump, one pass) | Fills |
-| --- | --- |
-| RSI **Schedule of Changes in Net Pension Liability and Related Ratios** | `(a)` → `totalPensionLiability`, `(b)` → `fiduciaryNetPosition` |
-| RSI **Schedule of (City/Town) Contributions** | `actuariallyDeterminedContribution`, `actualContribution` |
-| Statistical **Changes in Net Position** (accrual) | `fullAccrualExpenses` + the tax rows |
-| Statistical **Changes in Fund Balances, Governmental Funds** (modified accrual) | `modifiedAccrualExpenditures` |
-| The hotel/motel special-revenue fund schedule (per conventions) | `hotelTaxRevenue`, when the city isn't a big-city general-revenue case |
+| Table (one dump, one pass)                                                      | Fills                                                                  |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| RSI **Schedule of Changes in Net Pension Liability and Related Ratios**         | `(a)` → `totalPensionLiability`, `(b)` → `fiduciaryNetPosition`        |
+| RSI **Schedule of (City/Town) Contributions**                                   | `actuariallyDeterminedContribution`, `actualContribution`              |
+| Statistical **Changes in Net Position** (accrual)                               | `fullAccrualExpenses` + the tax rows                                   |
+| Statistical **Changes in Fund Balances, Governmental Funds** (modified accrual) | `modifiedAccrualExpenditures`                                          |
+| The hotel/motel special-revenue fund schedule (per conventions)                 | `hotelTaxRevenue`, when the city isn't a big-city general-revenue case |
 
 **Per-year statements are the FALLBACK + cross-check** for the expense half (a year outside every
 statistical window, or a table that collapses categories). Locate fast:
@@ -173,9 +249,10 @@ on, and stage `_printedModAccrualTaxes` (step 5a) so `verify-extraction.py` prov
 is what drives the `lib/expense-category-groups.ts` entry (step 3c).
 
 ## 2. Extract the pension half (the five traps)
+
 **a. Year labeling differs by city.** TMRS cities and Fort Worth head the NPL schedule with
 **Measurement Year** (Dec 31), so `MY = FY − 1` — MY2024 is FY2025. Dallas heads it with fiscal
-year. Worse, the two schedules can disagree *within one report*: Addison's NPL schedule is
+year. Worse, the two schedules can disagree _within one report_: Addison's NPL schedule is
 measurement-year while its contributions schedule is fiscal-year. Read the column header every
 time; taking columns at face value misdates the whole series by a year.
 
@@ -209,6 +286,7 @@ plan per year — the chart draws one line per plan and does not aggregate. Dall
 it without being asked.
 
 ## 3. Extract the expense/tax half (see conventions for the exact table + line rules)
+
 - **fullAccrualExpenses[]**: one `{ name, value }` per governmental-activities function row of the
   Statement of Activities EXPENSES column, INCLUDING the "Interest on Long-Term Debt" row as the
   last entry. Names verbatim (conventions "take the table as presented"). Self-check: the values sum
@@ -225,7 +303,7 @@ it without being asked.
   (cities split it into Engineering/Contractual + Construction/Equipment — add them);
   `total` = the "Total Expenditures" line.
   Self-check: `current + principal + interest + (refundingEscrow ?? 0) + (issuanceCosts ?? 0) +
-  capitalOutlay == total`. **This check passes on a mis-keyed column** — the values are the right
+capitalOutlay == total`. **This check passes on a mis-keyed column** — the values are the right
   year's, merely on the wrong labels — so it proves arithmetic, not attribution. A row that looks
   implausible against the same year's accrual figure (a Municipal court costing more than Police)
   is the real tell; confirm against the audited statement.
@@ -237,6 +315,7 @@ it without being asked.
   pre-existing inconsistency in the already-present years.
 
 ### 3c. Function-name drift → lib/expense-category-groups.ts
+
 If a city renames/splits a function across years (audit-expenses.mjs WARN, or you see e.g. "Culture
 and Recreation" one year and "Parks and Recreation" the next), the chart shows them as separate
 categories. Add a `{id}` entry to `lib/expense-category-groups.ts` mapping each raw label → one
@@ -264,6 +343,7 @@ labels any reader would expect together, it needs no note. An entry with only su
 `notes: {}`.
 
 ## 4. Prove the pension parse before writing
+
 The printed funded ratio is an independent check on every TPL/FNP pair — it catches a misaligned
 continuation page and an off-by-one year mapping. **Don't do that arithmetic yourself:** stage each
 plan-year's printed percentage as `_printedFundedRatio` and let step 5b's `verify-extraction.py`
@@ -272,6 +352,7 @@ it agree. The ratio is unit-invariant, so it cannot see a thousands-scaled RSI; 
 checks that separately against the year's revenue.
 
 ## 5. Stage → prove → write — one edit, one build
+
 Do NOT hand-edit the `.ts` and do NOT write a throwaway generator. Stage everything as JSON, prove
 it, then let the writer emit it — the writer enforces field order, numeric separators, NEVER
 OVERWRITE and NEVER GUESS mechanically, so none of those depend on remembering them mid-run.
@@ -287,8 +368,27 @@ omission), which is reported separately from a gap.
 **b. Prove, before anything is written:**
 
 ```bash
-python3 .claude/skills/populate-pension-and-expenses/scripts/verify-extraction.py {scratch}/staged.json
+python3 .claude/skills/populate-pension-and-expenses/scripts/verify-extraction.py {scratch}/staged.json \
+    --extracted {scratch}/extracted.json      # run from the REPO ROOT
 ```
+
+Pass `--extracted` (extract-statements.py's JSON) whenever you have it — it adds the strongest tax
+check there is: every staged tax field against that year's **audited Statement of Activities**
+general revenues. Same basis, same year, same audited statement, so a mismatch is an error, not a
+basis difference, and it FAILs. That check is what catches a statistical table disagreeing with the
+audited statements — Forney's Table 3 prints FY2015 property tax as 7,698,456 where the SoA says
+7,627,533, and nothing else in the script could see it.
+
+Two mismatches are legitimate and must be DECLARED, not silenced:
+
+- The SoA line bundles another tax. Many cities book hotel tax inside the government-wide
+  "Sales Taxes" line, so `salesTaxRevenue` is stored net of it — the check spots this itself and
+  says the gap is exactly that year's hotel tax.
+- The city's stored convention is deliberately a different source (Addison stores the statistical
+  schedule's modified-accrual "1% Town Sales Tax").
+
+Declare either with a top-level `"_taxConvention": "<why, with the arithmetic>"` in the staging JSON,
+which turns those mismatches into reported notes. An empty reason is refused.
 
 It checks five things: each plan-year's printed funded ratio against your TPL/FNP (catches a misread
 column or off-by-one year mapping); `fullAccrualExpenses` summed against the printed
@@ -318,11 +418,13 @@ Expect no GAPS (or only genuinely-unsourceable years, which you report), `reconc
 plausible funded ratios, no anomalies. Add `lib/expense-category-groups.ts` to the prettier line if
 you edited it. The `tsc` grep should print nothing — pre-existing errors in `city-map.tsx` /
 `ui/chart.tsx` are unrelated. Build ONCE, after both halves are written.
+
 - Optionally `npm run dev` and load the city: the two stacked-bar expense charts should render
   fully, and the two pension charts at the end of "Financial Metrics Over Time" show one legend
   entry per plan. Pension charts appear only when `pensionPlans` exists, so no other city changes.
 
 ## 6. Report
+
 One summary covering both halves: fields × years filled; plans found and the year-labeling
 convention each report used (measurement vs fiscal); which ACFRs and which tables everything came
 from (and whether a third PDF was needed, with why); the step-4 verification result; any year or

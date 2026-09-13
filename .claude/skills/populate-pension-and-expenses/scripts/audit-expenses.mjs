@@ -134,7 +134,7 @@ const readGroups = (field) => {
   } catch {
     return new Map();
   }
-  const blk = new RegExp(`^  ${id}: \\{(.*?)^  \\},$`, "ms").exec(src);
+  const blk = new RegExp(`^  "?${id}"?: \\{(.*?)^  \\},$`, "ms").exec(src);
   if (!blk) return new Map();
   const inner = new RegExp(`${field}: \\{(.*?)\\},`, "s").exec(blk[1]);
   if (!inner) return new Map();
