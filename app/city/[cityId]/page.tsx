@@ -193,7 +193,7 @@ export default async function CityPage({ params }: CityPageProps) {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="flex mb-6">
-            <h3 className="text-2xl font-bold">Financial Metrics Over Time</h3>
+            <h3 className="text-2xl font-bold">Finances Over Time</h3>
             <div className="mt-1 ml-1">
               <ACFRDownloadButton cityData={cityData} />
             </div>

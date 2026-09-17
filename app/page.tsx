@@ -107,8 +107,8 @@ export default function HomePage() {
               North Texas Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
-              Click on a city to see what's going on. Or change the dropdown on
-              the map to see different stats for all cities.
+              Change the dropdown on the map to see different stats, or click on
+              a city to visit their page
             </p>
             <div className="m-auto">
               <LazyMap cities={cities} />
@@ -130,9 +130,7 @@ export default function HomePage() {
       {/* City Cards */}
       <section id="cities" className="py-12">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-8 text-center">
-            City Financial Overview
-          </h3>
+          <h3 className="text-3xl font-bold mb-8 text-center">Cities</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             {cities
               .toSorted(
