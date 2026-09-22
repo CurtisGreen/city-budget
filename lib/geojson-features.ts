@@ -76,6 +76,7 @@ import { pantegoGeoJson } from "@/data/geojson/pantego-geojson";
 import { parkerGeoJson } from "@/data/geojson/parker-geojson";
 import { crowleyGeoJson } from "@/data/geojson/crowley-geojson";
 import { northlakeGeoJson } from "@/data/geojson/northlake-geojson";
+import { melissaGeoJson } from "@/data/geojson/melissa-geojson";
 
 export const geoJsonFeatures: GeoJSONFeature[] = [
   ...dallasGeoJson.features,
@@ -154,4 +155,5 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...parkerGeoJson.features,
   ...crowleyGeoJson.features,
   ...northlakeGeoJson.features,
+  ...melissaGeoJson.features,
 ] as GeoJSONFeature[];

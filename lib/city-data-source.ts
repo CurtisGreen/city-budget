@@ -77,6 +77,7 @@ import { pantegoInfo } from "@/data/info/pantego";
 import { parkerInfo } from "@/data/info/parker";
 import { crowleyInfo } from "@/data/info/crowley";
 import { northlakeInfo } from "@/data/info/northlake";
+import { melissaInfo } from "@/data/info/melissa";
 
 const basicCityInfo = [
   dallasInfo,
@@ -155,6 +156,7 @@ const basicCityInfo = [
   parkerInfo,
   crowleyInfo,
   northlakeInfo,
+  melissaInfo,
 ];
 
 // Calculate metrics for each city

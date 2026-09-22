@@ -447,4 +447,38 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "FY2015 is the one year the Statement of Activities prints 'Bond issuance costs' as its own governmental function row; it is grouped here because the City's own ten-year statistical table reports the two lines combined on the interest row",
     },
   },
+  melissa: {
+    fullAccrualGroups: {
+      "General Government": "General government",
+      "Public Safety": "Public safety",
+      Streets: "Public works",
+      "Culture & Recreation": "Culture and recreation",
+      "Interest & Fiscal Charges": "Interest and fiscal charges",
+      "Interest and other": "Interest and fiscal charges",
+      "Bond issuance cost": "Interest and fiscal charges",
+    },
+    modifiedAccrualGroups: {
+      "General Government": "General government",
+      Administration: "General government",
+      "Planning and development": "General government",
+      "Code enforcement": "General government",
+      "Public library": "General government",
+      "Municipal court": "General government",
+      "Building maintenance": "General government",
+      "Public Safety": "Public safety",
+      Street: "Public works",
+      Streets: "Public works",
+      "Grant expenses": "Public works",
+      "Culture & Recreation": "Culture and recreation",
+      "Parks and recreation": "Culture and recreation",
+    },
+    notes: {
+      "General government":
+        "FY2017-2021 fund statements split this into separate Administration, Planning and development, Code enforcement, Public library, Municipal court, and Building maintenance lines instead of one consolidated function",
+      "Public works":
+        "Contains the FY2020 Transportation Construction fund's one-time 'Grant expenses' line",
+      "Interest and fiscal charges":
+        "Contains the FY2023 'Bond issuance cost' line, which that year's Statement of Activities prints as its own governmental function",
+    },
+  },
 };

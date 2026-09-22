@@ -1,0 +1,72 @@
+{
+  "id": "melissa",
+  "city": "Melissa",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=71",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=72",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=73",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=91",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=90",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=93",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=97",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=98",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=100",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/Archive.aspx?ADID=146",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.cityofmelissa.com/DocumentCenter/View/3401/Annual-Comprehensive-Financial-Report-FY2025",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-melissa/melissa-acfr-FY2025.pdf"
+    }
+  ]
+}

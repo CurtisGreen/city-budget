@@ -47,6 +47,7 @@ import { littleElmAcfr } from "./little-elm";
 import { lucasAcfr } from "./lucas";
 import { mansfieldAcfr } from "./mansfield";
 import { mckinneyAcfr } from "./mckinney";
+import { melissaAcfr } from "./melissa";
 import { mesquiteAcfr } from "./mesquite";
 import { murphyAcfr } from "./murphy";
 import { northRichlandHillsAcfr } from "./north-richland-hills";
@@ -125,6 +126,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   lucas: lucasAcfr,
   mansfield: mansfieldAcfr,
   mckinney: mckinneyAcfr,
+  melissa: melissaAcfr,
   mesquite: mesquiteAcfr,
   murphy: murphyAcfr,
   "north-richland-hills": northRichlandHillsAcfr,
