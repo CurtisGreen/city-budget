@@ -499,4 +499,12 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "Includes Mayor/council, Administration, Finance, and Municipal court",
     },
   },
+  "the-colony": {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      "Cultural and recreation": "Culture and recreation",
+      "Culture and recreation": "Culture and recreation",
+    },
+    notes: {},
+  },
 };

@@ -88,5 +88,8 @@ export const theColonyInfo: CityInfo = {
     `FY 2025 ACFR: The capital projects fund had an increase in fund balance of $51.16 million due
     primarily to the receipt of debt proceeds. [...] At the end of the current fiscal year, the City
     had total bonded debt outstanding of $174,825,000.`,
+    `FY 2025 (Author's note): Half of sales tax now passes through the General Fund to the development corps.
+      City sales tax +$10.3M, dev corps -$9.6M (net +$0.7M). The new $23.5M Economic development
+      expense is that pass-through plus TIRZ costs.`,
   ],
 };
