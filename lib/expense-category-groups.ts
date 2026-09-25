@@ -481,4 +481,22 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "Contains the FY2023 'Bond issuance cost' line, which that year's Statement of Activities prints as its own governmental function",
     },
   },
+  rockwall: {
+    fullAccrualGroups: {
+      "Mayor/council": "General government",
+      Administration: "General government",
+      Finance: "General government",
+      "Municipal court": "General government",
+      Police: "Public safety",
+      Fire: "Public safety",
+      "Interest and fiscal charges": "Interest on long-term debt",
+      "Interest and other on long-term debt": "Interest on long-term debt",
+      Interest: "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {
+      "General government":
+        "Includes Mayor/council, Administration, Finance, and Municipal court",
+    },
+  },
 };
