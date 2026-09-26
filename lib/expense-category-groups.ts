@@ -553,7 +553,48 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       Library: "Public services and operations",
     },
     notes: {
-      "Public services and operations": "Contains Parks and recreation and Library"
+      "Public services and operations":
+        "Contains Parks and recreation and Library",
+    },
+  },
+  "trophy-club": {
+    fullAccrualGroups: {
+      "General Government": "General government",
+      "Information Services": "Information services",
+      "Community Development": "Community development",
+      Court: "Municipal court",
+      Recreation: "Parks and recreation",
+      Parks: "Parks and recreation",
+      Streets: "Public works",
+      "PID Activities": "PID activities",
+      "Town secretary": "Manager's office",
+      "Mayor & council": "Manager's office",
+      "Streets and infrastructure": "Public works",
+      "Water and sewer": "Public works",
+      "Town Storm Drainage": "Public works",
+      "Information services": "Information services",
+      Tourism: "Tourism",
+      Sanitation: "Sanitation",
+      "Interest and fiscal charges on long-term debt":
+        "Interest on long-term debt",
+      "Interest and fiscal charges": "Interest on long-term debt",
+      Interest: "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {
+      "General Government": "General government",
+      "Information Services": "Information services",
+      "Community Development": "Community development",
+      Court: "Municipal court",
+      Recreation: "Parks and recreation",
+      Parks: "Parks and recreation",
+      Streets: "Public works",
+      "PID Activities": "PID activities",
+      "Town secretary": "Manager's office",
+      "Mayor & council": "Manager's office",
+    },
+    notes: {
+      "Public works": "Contains: Streets, water, sewer, storm drainage",
+      "Manager's office": "Contains: Town secretary, Mayor & council",
     },
   },
 };
