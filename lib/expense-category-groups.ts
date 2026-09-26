@@ -516,4 +516,44 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     modifiedAccrualGroups: {},
     notes: {},
   },
+  southlake: {
+    fullAccrualGroups: {
+      "Promotion of culture and tourism": "Culture and recreation",
+    },
+    modifiedAccrualGroups: {
+      "Promotion of culture and tourism": "Culture and recreation",
+    },
+    notes: {
+      "Culture and recreation": "Contains: Promotion of culture and tourism",
+    },
+  },
+  sunnyvale: {
+    fullAccrualGroups: {
+      "General Government": "General government",
+      "Public Safety": "Public safety",
+      "Public Works": "Public works",
+      "Public Services and Operations": "Public services and operations",
+      "Public Services and operations": "Public services and operations",
+      "Parks and Recreation": "Public services and operations",
+      "Parks and recreation": "Public services and operations",
+      "Parks and recreational": "Public services and operations",
+      Library: "Public services and operations",
+      "Interest on Long-Term Debt": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {
+      "General Government": "General government",
+      "Public Safety": "Public safety",
+      "Public safety": "Public safety",
+      "Public Works": "Public works",
+      "Public Services and Operations": "Public services and operations",
+      "Public Services and operations": "Public services and operations",
+      "Parks and Recreation": "Public services and operations",
+      "Parks and recreation": "Public services and operations",
+      "Parks and recreational": "Public services and operations",
+      Library: "Public services and operations",
+    },
+    notes: {
+      "Public services and operations": "Contains Parks and recreation and Library"
+    },
+  },
 };
