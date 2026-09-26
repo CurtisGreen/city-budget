@@ -507,4 +507,13 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     },
     notes: {},
   },
+  sachse: {
+    fullAccrualGroups: {
+      "Culture and recreation": "Leisure services",
+      "Community development": "Development services",
+      "Interest on long-term debt": "Interest and fiscal charges",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
 };
