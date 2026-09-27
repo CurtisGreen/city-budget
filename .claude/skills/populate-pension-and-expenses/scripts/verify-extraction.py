@@ -24,6 +24,7 @@ to the .ts.
        "_printedModAccrualTaxes": {"property": 13486702, "sales": 6705914, "hotel": None},
        "fullAccrualExpenses": [{"name": "...", "value": 123}, ...],
        "_printedTotalGovActivities": 27394207,
+       "_printedBusinessInterest": 5403,     <- SoA business-type interest row, when printed
        "modifiedAccrualExpenditures": {"current": [...], "debtService": {...},
                                        "capitalOutlay": 1, "total": 2}}}}
 
@@ -140,6 +141,10 @@ def check(staged, extracted=None):
                 )
             di = existing.get(fy, {}).get("debtInterest")
             ie = next((e["value"] for e in fa if "interest" in e["name"].lower()), None)
+            # debtInterest sums gov + business-type interest; the SoA's business-type
+            # interest row, when printed, is staged as _printedBusinessInterest.
+            if ie is not None:
+                ie += y.get("_printedBusinessInterest", 0)
             if di is not None and ie is not None and abs(ie - di) > max(1000, di * 0.02):
                 fails.append(
                     f"FY{fy}: interest entry {ie:,} vs stored debtInterest {di:,} — the statistical "
