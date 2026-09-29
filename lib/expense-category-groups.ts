@@ -597,4 +597,13 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       "Manager's office": "Contains: Town secretary, Mayor & council",
     },
   },
+  westlake: {
+    fullAccrualGroups: {
+      "Cultural recreation": "Cultural and recreation",
+    },
+    modifiedAccrualGroups: {
+      "Cultural recreation": "Cultural and recreation",
+    },
+    notes: {},
+  },
 };
