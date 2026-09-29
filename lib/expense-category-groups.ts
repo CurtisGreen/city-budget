@@ -606,4 +606,24 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     },
     notes: {},
   },
+  "white-settlement": {
+    fullAccrualGroups: {
+      "Cultural and recreation": "Culture and recreation",
+      "Economic development": "Planning and development",
+      "Public health": "Public health",
+      "Non departmental": "Non departmental",
+      "Interest on long-term debt": "Interest on long-term debt",
+      "Interest and fiscal charges": "Interest on long-term debt",
+      Interest: "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {
+      "Economic development": "Planning and development",
+    },
+    notes: {
+      "Planning and development":
+        "Contains as Economic development through FY2023. the Economic Development Corporation was blended into the City starting FY2016",
+      Other:
+        "The report lumps Non departmental and Economic development spending into 'Other' through FY2019",
+    },
+  },
 };
