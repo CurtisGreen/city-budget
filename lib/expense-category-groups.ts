@@ -5,6 +5,40 @@ export interface ExpenseCategoryGroup {
   notes: Record<string, string>;
 }
 
+export function mapDFWExpenseGroups(name: string, groups: Record<string, string>) {
+  const mappedName = groups[name] ?? name;
+  const n = mappedName.toLowerCase();
+
+  if (name.toLowerCase().includes("court") || name.toLowerCase().includes("judicial")) return "Public safety"
+
+  if (n.includes("public safety") || n.includes("police") || n.includes("fire") || n.includes("emergency")) return "Public safety"
+  if (n.includes("public works") || n.includes("street") || n.includes("public services") || n.includes("transport") || n.includes("infrastructure")) return "Public works"
+  if (n.includes("culture") || n.includes("recreation") || n.includes("parks") || n.includes("librar") || n.includes("leisure")) return "Parks, culture, and recreation"
+  if (n.includes("general government") || n.includes("admin") || n.includes("equipment and building") || n.includes("fleet") || n.includes("facilities management")) return "General government"
+  if (n.includes("interest") || n.includes("bond issuance")) return "Interest on long-term debt"
+  if (n.includes("animal")) return "Animal services"
+  if (n.includes("development") || n.includes("inspect") || n.includes("planning") || n.includes("code")) return "Development services"
+  if (n.includes("technolog") || n.includes("information")) return "Technology"
+  if (n.includes("health") || n.includes("welfare") || n.includes("human services") || n.includes("environment")) return "Health, welfare, and environmental services"
+  if (n.includes("financ")) return "Finance"
+  if (n.includes("community")) return "Community services"
+  if (n.includes("human resources")) return "Human resources"
+  if (n.includes("visit") || n.includes("touris") || n.includes("convention")) return "Visitor services"
+  return mappedName;
+}
+
+export function mapDFWSalesTaxUsage(usage: string) {
+  const n = usage.toLowerCase();
+
+  if (n.includes("general fund")) return "General fund"
+  if (n.includes("crime") || n.includes("fire")) return "Public Safety"
+  if (n.includes("dart") || n.includes("dcta") || n.includes("trinity metro") || n.includes("texrail")) return "Mass transit"
+  if (n.includes("property tax")) return "Property tax relief"
+  if (n.includes("street") || n.includes("road") || n.includes("infrastructure")) return "Streets and infrastructure"
+  if (n.includes("corporation") || n.includes("development") || n.includes("park") || n.includes("library") || n.includes("epic")) return "Economic and community development corporation"
+  return usage;
+}
+
 // City-specific groupings for cities whose ACFR renames/splits functions across years
 export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
   "forest-hill": {
@@ -312,18 +346,33 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "Renamed from 'Support services' to be more consistent with other cities",
     },
   },
+  garland: {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      Nondepartmental: "General government",
+      Operations: "Community services",
+      "Issue costs on issuance of debt": "Interest and fiscal charges",
+      "Other charges": "Interest and fiscal charges",
+    },
+    notes: {
+      "General government": "Also includes: Nondepartmental",
+    },
+  },
   wilmer: {
     fullAccrualGroups: {
-      "Community services": "Public works",
-      "Cultural and recreational": "Community development",
-      "Community development": "Community development",
+      "Public works": "Development services",
+      "Community services": "Development services",
+      "Cultural and recreational": "Culture and recreation",
+      "Community development": "Culture and recreation",
       "Interest on long-term debt": "Interest on Long-Term Debt",
       "Interest and fiscal charges": "Interest on Long-Term Debt",
     },
     modifiedAccrualGroups: {},
     notes: {
-      "Community development":
-        "FY2017-2019 'Cultural and recreational', renamed 'Community development' from FY2020",
+      "Development services":
+        "FY2017-2019 'Public works', labeled 'Community services' in the FY2020+ Statement of Activities (MD&A still says 'Public works'). Matches the Community Services department (permitting, inspections, code enforcement) and its permit-fee revenue",
+      "Culture and recreation":
+        "FY2017-2019 'Cultural and recreational', labeled 'Community development' in the FY2020+ Statement of Activities (MD&A still says 'Cultural and recreational'). Appears to be Type B (community development corporation) quality-of-life spending such as recreational facilities",
     },
   },
   "red-oak": {

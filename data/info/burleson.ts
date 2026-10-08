@@ -81,7 +81,7 @@ export const burlesonInfo: CityInfo = {
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Services Development Corporation", percent: 0.5 },
-    { usage: "4A Economic Development Corporation", percent: 0.5 },
+    { usage: "Economic Development Corporation", percent: 0.5 },
   ],
   area: 28.25,
   notes: [

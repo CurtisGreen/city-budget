@@ -337,6 +337,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <TaxVsInflationTable
                 financialData={cityData.financialData}
                 expenditures={modifiedAccrualExpenditures}
+                isDfw={isDfw}
               />
             </div>
           )}

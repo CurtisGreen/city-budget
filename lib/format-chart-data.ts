@@ -6,7 +6,11 @@ import type {
   Population,
   PropertyValues,
 } from "./types";
-import { expenseCategoryGroups } from "./expense-category-groups";
+import {
+  expenseCategoryGroups,
+  mapDFWExpenseGroups,
+  mapDFWSalesTaxUsage,
+} from "./expense-category-groups";
 
 export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const totalAssets = data.currentAndOtherAssets + data.capitalAssets;
@@ -53,10 +57,19 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
 }
 
 export function calculateDFWData(allCities: CityData[]): CityData {
+  const years = new Set(
+    allCities.flatMap((c) => c.financialData.map((f) => f.fiscalYear)),
+  );
+
+  // Only include cities with all years of data
+  const cities = allCities.filter(
+    (c) => new Set(c.financialData.map((f) => f.fiscalYear)).size === years.size,
+  );
+
   // Group by year
   const yearMap = new Map<number, (CityFinancialData & { id: string })[]>();
 
-  allCities.forEach((cityData) => {
+  cities.forEach((cityData) => {
     cityData.financialData.forEach((yearData) => {
       if (!yearMap.has(yearData.fiscalYear)) {
         yearMap.set(yearData.fiscalYear, []);
@@ -92,34 +105,46 @@ export function calculateDFWData(allCities: CityData[]): CityData {
         ),
       );
 
-
-      const mapDFWExpenseGroups = (name: string, id: string) => {
-        const groups = expenseCategoryGroups[id]?.fullAccrualGroups ?? {};
-        const mappedName = groups[name] ?? name;
-        const n = mappedName.toLowerCase();
-
-        if (n.includes("public safety") || n.includes("police") || n.includes("fire") || n.includes("emergency")) return "Public safety"
-        if (n.includes("culture") || n.includes("recreation") || n.includes("parks") || n.includes("librar") || n.includes("leisure")) return "Parks, culture, and recreation"
-        if (n.includes("public works") || n.includes("street") || n.includes("public services") || n.includes("transport") || n.includes("infrastructure")) return "Public works"
-        if (n.includes("general government") || n.includes("admin")) return "General government"
-        if (n.includes("interest")) return "Interest on long-term debt"
-        if (n.includes("animal")) return "Animal services"
-        if (n.includes("development") || n.includes("inspect") || n.includes("planning") || n.includes("code")) return "Development services"
-        if (n.includes("technolog") || n.includes("information")) return "Technology"
-        if (n.includes("health") || n.includes("welfare") || n.includes("environment")) return "Health, welfare, and environmental services"
-        if (n.includes("financ")) return "Finance"
-        if (n.includes("community")) return "Community services"
-        if (n.includes("human")) return "Human resources"
-        if (n.includes("visit") || n.includes("touris")) return "Visitor services"
-        return mappedName;
-      }
+      const getModifiedAccrualGroups = (id: string) =>
+        expenseCategoryGroups[id]?.modifiedAccrualGroups ?? {};
+      const getFullAccrualGroups = (id: string) =>
+        expenseCategoryGroups[id]?.modifiedAccrualGroups ?? {};
 
       const fullAccrualExpenses = dataPoints.flatMap((d) => {
         return d.fullAccrualExpenses.map((e) => ({
-          name: mapDFWExpenseGroups(e.name, d.id),
+          name: mapDFWExpenseGroups(e.name, getFullAccrualGroups(d.id)),
           value: e.value,
         }));
       });
+
+      const modifiedAccrualCities = dataPoints.filter(
+        (d) => d.modifiedAccrualExpenditures,
+      );
+      const modifiedAccrual = modifiedAccrualCities.map(
+        (d) => d.modifiedAccrualExpenditures!,
+      );
+
+
+      const modifiedAccrualExpenditures = {
+        current: modifiedAccrualCities.flatMap((d) =>
+          d.modifiedAccrualExpenditures!.current.map((e) => ({
+            name: mapDFWExpenseGroups(e.name, getModifiedAccrualGroups(d.id)),
+            value: e.value,
+          })),
+        ),
+        debtService: {
+          principal: sum(modifiedAccrual.map((m) => m.debtService.principal)),
+          interest: sum(modifiedAccrual.map((m) => m.debtService.interest)),
+          refundingEscrow: sum(
+            modifiedAccrual.map((m) => m.debtService.refundingEscrow ?? 0),
+          ),
+          issuanceCosts: sum(
+            modifiedAccrual.map((m) => m.debtService.issuanceCosts ?? 0),
+          ),
+        },
+        capitalOutlay: sum(modifiedAccrual.map((m) => m.capitalOutlay)),
+        total: sum(modifiedAccrual.map((m) => m.total)),
+      };
 
       return {
         fiscalYear,
@@ -152,7 +177,9 @@ export function calculateDFWData(allCities: CityData[]): CityData {
         ),
         propertyTaxRevenue: sum(dataPoints.map((d) => d.propertyTaxRevenue)),
         salesTaxRevenue: sum(dataPoints.map((d) => d.salesTaxRevenue)),
+        hotelTaxRevenue: sum(dataPoints.map((d) => d.hotelTaxRevenue || 0)),
         fullAccrualExpenses,
+        modifiedAccrualExpenditures,
         pensionPlans:
           // Exclude 2015 & 2016, no actuariallyDeterminedContribution for Dallas and several other cities for those years
           fiscalYear > 2016
@@ -178,17 +205,19 @@ export function calculateDFWData(allCities: CityData[]): CityData {
       populations: calculateDFWPopulation(allCities),
       propertyValues: dfwPropertyTaxRates,
       revenueBySource: {
-        property: sum(allCities.map((c) => c.info.revenueBySource.property)),
-        sales: sum(allCities.map((c) => c.info.revenueBySource.sales)),
-        hotel: sum(allCities.map((c) => c.info.revenueBySource.hotel)),
+        property: sum(cities.map((c) => c.info.revenueBySource.property)),
+        sales: sum(cities.map((c) => c.info.revenueBySource.sales)),
+        hotel: sum(cities.map((c) => c.info.revenueBySource.hotel)),
       },
-      salesTaxUsage: [],
+      salesTaxUsage: calculateDFWSalesTaxUsage(cities),
       area: sum(allCities.map((c) => c.info.area)),
       notes: [
         "This page shows data for DFW as if all cities were one large city",
-        `I calculated the property tax rates for DFW by dollar-weighting them with property tax revenue. 
-         5 out of the ${allCities.length} cities don't have full revenue data so they are excluded from this calculation. 
-         The result is neglibly changed.`,
+        `Only cities with data for every year are included (${cities.length} of ${allCities.length}), so the mix of cities doesn't change over time`,
+        `Public safety swings between 2016-2021 are mostly pension accounting.
+         Dallas in 2016 had a $2.9B net pension liability increase, and in 2018 had a -$350M expense due to HB 3158.
+         Fort Worth in 2020 similarly had a -$168M public safety pension expense`,
+        `I calculated the property tax rates for DFW by dollar-weighting them by property tax revenue`,
         "2015-2016 are excluded for pensions because Dallas and several other cities don't have 'actuarial determined contributions' for those years"
       ],
     },
@@ -225,6 +254,31 @@ export function calculateAveragePopulationDensity(
     }));
 
   return populationDensityPerYear;
+}
+
+// Average share of the city's 2% sales tax by use, weighted by each city's latest sales tax revenue
+export function calculateDFWSalesTaxUsage(
+  cities: CityData[],
+): CityInfo["salesTaxUsage"] {
+  const percentTimesWeight: Record<string, number> = {};
+  let totalWeight = 0;
+  for (const city of cities) {
+    const weight = city.financialData.at(-1)?.salesTaxRevenue ?? 0;
+    const totalPercent = sum(city.info.salesTaxUsage.map((u) => u.percent));
+    if (!weight || !totalPercent) continue;
+    totalWeight += weight;
+    for (const u of city.info.salesTaxUsage) {
+      const name = mapDFWSalesTaxUsage(u.usage);
+      percentTimesWeight[name] =
+        (percentTimesWeight[name] ?? 0) + (u.percent / totalPercent) * 2 * weight;
+    }
+  }
+  return Object.entries(percentTimesWeight)
+    .map(([usage, value]) => ({
+      usage,
+      percent: parseFloat((value / totalWeight).toFixed(4)),
+    }))
+    .sort((a, b) => b.percent - a.percent);
 }
 
 export function calculateDFWPopulation(

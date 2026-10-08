@@ -35,11 +35,13 @@ const change = (first?: number, last?: number) => {
 interface TaxVsInflationTableProps {
   financialData: CityFinancialData[];
   expenditures: ExpenseChartData;
+  isDfw: boolean;
 }
 
 export function TaxVsInflationTable({
   financialData,
   expenditures,
+  isDfw,
 }: TaxVsInflationTableProps) {
   const years = expenditures.data.map((r) => r.fiscalYear);
   const firstYear = Math.min(...years);
@@ -65,7 +67,6 @@ export function TaxVsInflationTable({
   const generalGovernment = expenditures.categories.find((c) =>
     c.toLowerCase().startsWith("general government"),
   )!;
-  const debtService = expenditures.categories.find((c) => c == "Debt service")!;
 
   const sections = [
     {
@@ -124,12 +125,21 @@ export function TaxVsInflationTable({
           ),
         },
         {
-          label: debtService,
-          first: currency(firstExpenditures[debtService]),
-          last: currency(lastExpenditures[debtService]),
+          label: "Debt service",
+          first: currency(firstExpenditures["Debt service"]),
+          last: currency(lastExpenditures["Debt service"]),
           change: change(
-            firstExpenditures[debtService],
-            lastExpenditures[debtService],
+            firstExpenditures["Debt service"],
+            lastExpenditures["Debt service"],
+          ),
+        },
+        {
+          label: "Capital outlay",
+          first: currency(firstExpenditures["Capital outlay"]),
+          last: currency(lastExpenditures["Capital outlay"]),
+          change: change(
+            firstExpenditures["Capital outlay"],
+            lastExpenditures["Capital outlay"],
           ),
         },
       ],
@@ -144,7 +154,7 @@ export function TaxVsInflationTable({
     <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-lg">
-          Core Revenue and Expenditure Growth
+          Revenue and Expenditure Growth
         </CardTitle>
         <CardDescription>
           Change from FY{firstYear} to FY{lastYear}
