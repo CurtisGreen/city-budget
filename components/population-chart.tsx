@@ -17,7 +17,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ChartTooltipContent } from "@/components/ui/chart";
-import { useId } from "react";
 
 interface Data {
   year: number;
@@ -54,9 +53,6 @@ export function PopulationChart({
   title,
   subtitle,
 }: ComparisonChartProps) {
-  const uniqueId = useId();
-  const chartId = `chart-${uniqueId.replace(/:/g, "")}`;
-
   // Get all unique years
   const years = new Set<number>();
   cities.forEach((c) => {

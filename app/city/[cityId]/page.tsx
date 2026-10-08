@@ -13,7 +13,7 @@ import { PopulationChart } from "@/components/population-chart";
 import { PropertyTaxRateChart } from "@/components/property-tax-rate-chart";
 import { ChartExplanationCard } from "@/components/chart-explanation-card";
 import {
-  calculateAverageMetrics,
+  calculateDFWData,
   calculateAveragePopulationDensity,
   toFullAccrualExpenseChart,
   toModifiedAccrualExpenditureChart,
@@ -39,70 +39,69 @@ interface CityPageProps {
 
 export async function generateStaticParams() {
   const cities = getAllCities();
-  return cities.map((city) => ({
+  const cityIds = cities.map((city) => ({
     cityId: city.info.id,
   }));
+  return cityIds.concat([{ cityId: "dfw" }]);
 }
-
-const metricConfigs: {
-  key: keyof CityMetrics;
-  formatType: ChartFormatType;
-  showAverage: boolean;
-  maximumFractionDigits?: number;
-}[] = [
-  {
-    key: "yearsOfFinancialCushion",
-    formatType: "number",
-    showAverage: true,
-  },
-  {
-    key: "netFinancialPosition",
-    formatType: "currency",
-    showAverage: false,
-  },
-  {
-    key: "financialAssetsToLiabilities",
-    formatType: "percent",
-    showAverage: true,
-    maximumFractionDigits: 0,
-  },
-  {
-    key: "assetsToLiabilities",
-    formatType: "percent",
-    showAverage: true,
-    maximumFractionDigits: 0,
-  },
-  {
-    key: "netDebtToRevenue",
-    formatType: "percent",
-    showAverage: true,
-    maximumFractionDigits: 0,
-  },
-  {
-    key: "interestToRevenue",
-    formatType: "percent",
-    showAverage: true,
-  },
-  {
-    key: "netBookValueToCostOfTCA",
-    formatType: "percent",
-    showAverage: true,
-  },
-  {
-    key: "externalTransfersToRevenue",
-    formatType: "percent",
-    showAverage: true,
-  },
-];
 
 export default async function CityPage({ params }: CityPageProps) {
   const { cityId } = await params;
   const allCities = getAllCities();
-  const cityData = getCityData(cityId);
+  const isDfw = cityId === "dfw";
+  const dfwData = calculateDFWData(allCities);
+  const cityData = isDfw ? dfwData : getCityData(cityId);
 
   if (!cityData) {
     notFound();
   }
+
+  const metricConfigs = [
+    {
+      key: "yearsOfFinancialCushion",
+      formatType: "number",
+      showAverage: true,
+      hide: isDfw,
+    },
+    {
+      key: "netFinancialPosition",
+      formatType: "currency",
+      showAverage: false,
+    },
+    {
+      key: "financialAssetsToLiabilities",
+      formatType: "percent",
+      showAverage: true,
+      maximumFractionDigits: 0,
+    },
+    {
+      key: "assetsToLiabilities",
+      formatType: "percent",
+      showAverage: true,
+      maximumFractionDigits: 0,
+    },
+    {
+      key: "netDebtToRevenue",
+      formatType: "percent",
+      showAverage: true,
+      maximumFractionDigits: 0,
+    },
+    {
+      key: "interestToRevenue",
+      formatType: "percent",
+      showAverage: true,
+    },
+    {
+      key: "netBookValueToCostOfTCA",
+      formatType: "percent",
+      showAverage: true,
+    },
+    {
+      key: "externalTransfersToRevenue",
+      formatType: "percent",
+      showAverage: true,
+    },
+  ].filter((config) => !config.hide);
 
   const populationDensity = {
     ...cityData.info,
@@ -114,12 +113,6 @@ export default async function CityPage({ params }: CityPageProps) {
 
   const averagePopulationDensity = calculateAveragePopulationDensity(
     allCities.map((c) => c.info),
-  );
-
-  // Computed on the server so the ~1.2 MB allCities dataset never reaches the
-  // RSC payload -- only these ~11 rows of averages do.
-  const averageMetrics = calculateAverageMetrics(
-    allCities.map((c) => c.financialData),
   );
 
   const revenues = allCities.map((c) => c.info.revenueBySource);
@@ -205,12 +198,12 @@ export default async function CityPage({ params }: CityPageProps) {
                   <ComparisonChart
                     cities={[cityData]}
                     averageMetrics={
-                      config.showAverage ? averageMetrics : undefined
+                      config.showAverage && !isDfw ? dfwData.metrics : undefined
                     }
-                    metricKey={config.key}
+                    metricKey={config.key as keyof CityMetrics}
                     title={chartConfigs[config.key].title}
                     description={chartConfigs[config.key].description}
-                    formatType={config.formatType}
+                    formatType={config.formatType as ChartFormatType}
                     maximumFractionDigits={config.maximumFractionDigits}
                   />
                 </div>
@@ -257,45 +250,29 @@ export default async function CityPage({ params }: CityPageProps) {
               title="Population Density"
               subtitle="Population per square mile of land"
               cities={[populationDensity]}
-              averageMetrics={averagePopulationDensity}
+              averageMetrics={isDfw ? undefined : averagePopulationDensity}
             />
           </div>
           {cityData.info.propertyValues && (
-            <>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-                <div className="lg:col-span-2">
-                  <PropertyTaxRateChart
-                    propertyValues={cityData.info.propertyValues}
-                  />
-                </div>
-                <ChartExplanationCard
-                  understandingTheMetric="The debt service portion is dedicated to paying off 
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+              <div className="lg:col-span-2">
+                <PropertyTaxRateChart
+                  propertyValues={cityData.info.propertyValues}
+                />
+              </div>
+              <ChartExplanationCard
+                understandingTheMetric="The debt service portion is dedicated to paying off 
                       bonds or other long-term debt.
                       The operations portion of the property tax rate 
                       is flexible and can be used as needed."
-                  whatToLookFor="A rising debt service rate means more money has been borrowed,
+                whatToLookFor="A rising debt service rate means more money has been borrowed,
                       resulting in less flexibility on the tax rate. If the cost
                       of providing services rises faster than property values,
                       then an increased tax rate could be necessary to provide
                       the same level of service. Similarly, property values rising 
                       faster than the cost of services can allow for a rate reduction."
-                />
-              </div>
-              {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-                <div className="lg:col-span-2">
-                  <PropertyTaxesPaidChart
-                    propertyValues={cityData.info.propertyValues}
-                  />
-                </div>
-                <ChartExplanationCard
-                  understandingTheMetric="Annual city tax bill for the property of the average single family house. 
-                  This does not take into account senior/disabled homestead exemptions."
-                  whatToLookFor="Property taxes are paid to the city, county, and ISD to fund services. 
-                  This chart shows the city's portion. The rate, value, market value, and prevailing incomes
-                   are all important variables to understand."
-                />
-              </div> */}
-            </>
+              />
+            </div>
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
@@ -319,12 +296,10 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
             <SimplePieChart
               title={"Sales Tax Usage (FY 2025)"}
-              data={
-                cityData.info.salesTaxUsage?.map((item) => ({
-                  name: item.usage,
-                  value: item.percent,
-                })) || []
-              }
+              data={cityData.info.salesTaxUsage.map((item) => ({
+                name: item.usage,
+                value: item.percent,
+              }))}
             />
             <ChartExplanationCard
               understandingTheMetric="Out of the 8.25% sales tax, 6.25% goes to Texas and the remaining 2% goes to the city. 

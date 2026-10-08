@@ -1,20 +1,14 @@
 import type {
+  CityData,
   CityFinancialData,
   CityInfo,
   CityMetrics,
   Population,
+  PropertyValues,
 } from "./types";
 import { expenseCategoryGroups } from "./expense-category-groups";
 
-export function calculateACFRMetrics(
-  data: Omit<
-    CityFinancialData,
-    | "propertyTaxRevenue"
-    | "salesTaxRevenue"
-    | "fullAccrualExpenses"
-    | "pensionPlans"
-  >,
-): CityMetrics {
+export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   const totalAssets = data.currentAndOtherAssets + data.capitalAssets;
   const totalLiabilities = data.liabilities + data.deferredInflows;
   const totalExternalTransfers =
@@ -58,14 +52,12 @@ export function calculateACFRMetrics(
   };
 }
 
-export function calculateAverageMetrics(
-  allCitiesData: CityFinancialData[][],
-): CityMetrics[] {
+export function calculateDFWData(allCities: CityData[]): CityData {
   // Group by year
   const yearMap = new Map<number, CityFinancialData[]>();
 
-  allCitiesData.forEach((cityData) => {
-    cityData.forEach((yearData) => {
+  allCities.forEach((cityData) => {
+    cityData.financialData.forEach((yearData) => {
       if (!yearMap.has(yearData.fiscalYear)) {
         yearMap.set(yearData.fiscalYear, []);
       }
@@ -73,11 +65,32 @@ export function calculateAverageMetrics(
     });
   });
 
-  // Calculate average for each year
-  const averagePerYear = Array.from(yearMap.entries())
+  // Calculate totals for each year
+  const dfwFinancials: CityFinancialData[] = Array.from(yearMap.entries())
     .sort(([a], [b]) => a - b)
     .map(([fiscalYear, dataPoints]) => {
-      const sumOfCities = {
+      // const a = dataPoints.map(d => d.pensionPlans[0].)
+      const totalPensionLiability = sum(
+        dataPoints.flatMap((d) =>
+          d.pensionPlans.map((p) => p.totalPensionLiability),
+        ),
+      );
+      const fiduciaryNetPosition = sum(
+        dataPoints.flatMap((d) =>
+          d.pensionPlans.map((p) => p.fiduciaryNetPosition),
+        ),
+      );
+      const actuariallyDeterminedContribution = sum(
+        dataPoints.flatMap((d) =>
+          d.pensionPlans.map((p) => p.actuariallyDeterminedContribution || 0),
+        ),
+      );
+      const actualContribution = sum(
+        dataPoints.flatMap((d) =>
+          d.pensionPlans.map((p) => p.actualContribution),
+        ),
+      );
+      return {
         fiscalYear,
         currentAndOtherAssets: sum(
           dataPoints.map((d) => d.currentAndOtherAssets),
@@ -106,12 +119,48 @@ export function calculateAverageMetrics(
         businessCapitalAssetsBeingDepreciated: sum(
           dataPoints.map((d) => d.businessCapitalAssetsBeingDepreciated),
         ),
+        propertyTaxRevenue: sum(dataPoints.map((d) => d.propertyTaxRevenue)),
+        salesTaxRevenue: sum(dataPoints.map((d) => d.salesTaxRevenue)),
+        fullAccrualExpenses: [],
+        pensionPlans: [
+          {
+            totalPensionLiability,
+            fiduciaryNetPosition,
+            actuariallyDeterminedContribution,
+            actualContribution,
+            name: "DFW",
+          },
+        ],
       };
-
-      return calculateACFRMetrics(sumOfCities);
     });
+  const dfwMetrics: CityMetrics[] = dfwFinancials.map(calculateACFRMetrics);
+  const dfwPropertyTaxRates = getDFWPropertyTaxRates(allCities);
 
-  return averagePerYear;
+  const dfwCityData: CityData = {
+    info: {
+      id: "dfw",
+      name: "DFW",
+      populations: calculateDFWPopulation(allCities),
+      propertyValues: dfwPropertyTaxRates,
+      revenueBySource: {
+        property: sum(allCities.map((c) => c.info.revenueBySource.property)),
+        sales: sum(allCities.map((c) => c.info.revenueBySource.sales)),
+        hotel: sum(allCities.map((c) => c.info.revenueBySource.hotel)),
+      },
+      salesTaxUsage: [],
+      area: sum(allCities.map((c) => c.info.area)),
+      notes: [
+        "This page shows data for DFW as if all cities were one large city",
+        `I calculated the property tax rates for DFW by dollar-weighting them with property tax revenue. 
+         5 out of the ${allCities.length} cities don't have full revenue data so they are excluded from this calculation. 
+         The result is neglibly changed.`,
+      ],
+    },
+    financialData: dfwFinancials,
+    metrics: dfwMetrics,
+  };
+
+  return dfwCityData;
 }
 
 export function calculateAveragePopulationDensity(
@@ -142,107 +191,34 @@ export function calculateAveragePopulationDensity(
   return populationDensityPerYear;
 }
 
+export function calculateDFWPopulation(
+  allCitiesData: CityData[],
+): Population[] {
+  // Group by year
+  const yearMap = new Map<number, Population[]>();
+
+  allCitiesData.forEach((cityData) => {
+    cityData.info.populations.forEach((pop) => {
+      if (!yearMap.has(pop.year)) {
+        yearMap.set(pop.year, []);
+      }
+      yearMap.get(pop.year)!.push(pop);
+    });
+  });
+
+  const populationPerYear: Population[] = Array.from(yearMap.entries())
+    .sort(([a], [b]) => a - b)
+    .map(([year, dataPoints]) => ({
+      year,
+      value: sum(dataPoints.map((d) => d.value)),
+    }));
+
+  return populationPerYear;
+}
+
 function sum(numbers: number[]): number {
   return numbers.reduce((a, b) => a + b, 0);
 }
-
-// function calculateFinancialRanking(
-//   allCitiesData: CityData[],
-// ): { cityData: CityData; rank: number; percentile: number }[] {
-//   // Rank each category
-//   const byFinancialAssetsToLiabilities = allCitiesData.toSorted(
-//     (a, b) =>
-//       (b.metrics.at(-1)?.financialAssetsToLiabilities || 0) -
-//       (a.metrics.at(-1)?.financialAssetsToLiabilities || 0),
-//   );
-//   const byAssetsToLiabilities = allCitiesData.toSorted(
-//     (a, b) =>
-//       (b.metrics.at(-1)?.assetsToLiabilities || 0) -
-//       (a.metrics.at(-1)?.assetsToLiabilities || 0),
-//   );
-//   const byNetDebtToRevenue = allCitiesData.toSorted((a, b) => {
-//     const netDebtToRevenueA = a.metrics.at(-1)?.netDebtToRevenue || 0;
-//     const netDebtToRevenueB = b.metrics.at(-1)?.netDebtToRevenue || 0;
-//     const netFinancialPositionA = a.metrics.at(-1)?.netFinancialPosition || 0;
-//     const netFinancialPositionB = b.metrics.at(-1)?.netFinancialPosition || 0;
-//     return (
-//       netDebtToRevenueA - netDebtToRevenueB ||
-//       netFinancialPositionB - netFinancialPositionA
-//     );
-//   });
-//   const byInterestToRevenue = allCitiesData.toSorted(
-//     (a, b) =>
-//       (a.metrics.at(-1)?.interestToRevenue || 0) -
-//       (b.metrics.at(-1)?.interestToRevenue || 0),
-//   );
-
-//   // Include 2 change over time metrics
-//   const byAssetLife = allCitiesData.toSorted(
-//     (a, b) =>
-//       (b.metrics.at(-1)?.netBookValueToCostOfTCA || 0) -
-//       (a.metrics.at(-1)?.netBookValueToCostOfTCA || 0),
-//   );
-//   const byExternalTransfersToRevenue = allCitiesData.toSorted(
-//     (a, b) =>
-//       (a.metrics.at(-1)?.externalTransfersToRevenue || 0) -
-//       (b.metrics.at(-1)?.externalTransfersToRevenue || 0),
-//   );
-
-//   const byChangeInFinancialAssetsToLiabilities = allCitiesData.toSorted(
-//     (a, b) => {
-//       const aStartMetric = a.metrics.at(-1)?.financialAssetsToLiabilities || 0;
-//       const aEndMetric = a.metrics.at(-6)?.financialAssetsToLiabilities || 0;
-//       const bStartMetric = b.metrics.at(-1)?.financialAssetsToLiabilities || 0;
-//       const bEndMetric = b.metrics.at(-6)?.financialAssetsToLiabilities || 0;
-//       return bEndMetric - bStartMetric - (aEndMetric - aStartMetric);
-//     },
-//   );
-
-//   const byChangeInAssetLife = allCitiesData.toSorted((a, b) => {
-//     const aStartMetric = a.metrics.at(-1)?.netBookValueToCostOfTCA || 0;
-//     const aEndMetric = a.metrics.at(-6)?.netBookValueToCostOfTCA || 0;
-//     const bStartMetric = b.metrics.at(-1)?.netBookValueToCostOfTCA || 0;
-//     const bEndMetric = b.metrics.at(-6)?.netBookValueToCostOfTCA || 0;
-//     return bEndMetric - bStartMetric - (aEndMetric - aStartMetric);
-//   });
-
-//   const citiesWithScores: [CityData, number][] = allCitiesData.map(
-//     (cityData) => {
-//       const fatl = byFinancialAssetsToLiabilities.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const atl = byAssetsToLiabilities.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const ndtr = byNetDebtToRevenue.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const itr = byInterestToRevenue.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const alt = byAssetLife.findIndex((c) => c.info.id === cityData.info.id);
-//       const ettr = byExternalTransfersToRevenue.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const cifatl = byChangeInFinancialAssetsToLiabilities.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const cial = byChangeInAssetLife.findIndex(
-//         (c) => c.info.id === cityData.info.id,
-//       );
-//       const totalScore = sum([fatl, atl, ndtr, itr, alt, ettr, cifatl, cial]);
-//       return [cityData, totalScore];
-//     },
-//   );
-//   ``;
-//   return citiesWithScores
-//     .toSorted(([_, a], [__, b]) => a - b)
-//     .map(([cityData], i) => ({
-//       cityData,
-//       rank: i + 1,
-//       percentile: (i / (citiesWithScores.length - 1)) * 100,
-//     }));
-// }
 
 export interface ExpenseChartData {
   data: Record<string, number>[];
@@ -299,4 +275,127 @@ export function toModifiedAccrualExpenditureChart(
       return row;
     });
   return { data, categories: [...categories] };
+}
+
+const testCities = [
+  "Addison",
+  "Allen",
+  "Arlington",
+  "Balch Springs",
+  "Bedford",
+  "Benbrook",
+  "Burleson",
+  "Carrollton",
+  "Cedar Hill",
+  "Celina",
+  "Colleyville",
+  "Coppell",
+  "Corinth",
+  "Crowley",
+  "Dallas",
+  "Dalworthington Gardens",
+  "Denton",
+  "DeSoto",
+  "Duncanville",
+  "Euless",
+  "Fairview",
+  "Farmers Branch",
+  "Fate",
+  "Flower Mound",
+  "Forest Hill",
+  "Forney",
+  "Fort Worth",
+  "Frisco",
+  "Garland",
+  "Glenn Heights",
+  "Grand Prairie",
+  "Grapevine",
+  "Haltom City",
+  "Haslet",
+  "Highland Park",
+  "Highland Village",
+  "Hurst",
+  "Hutchins",
+  "Irving",
+  "Keller",
+  "Kennedale",
+  "Lancaster",
+  "Lewisville",
+  "Little Elm",
+  "Lucas",
+  "McKinney",
+  "Mesquite",
+  "Northlake",
+  "Pantego",
+  "Parker",
+  "Plano",
+  "Princeton",
+  "Red Oak",
+  "Richardson",
+  "Saginaw",
+  "Seagoville",
+  "Watauga",
+  "White Settlement",
+];
+
+export function getDFWPropertyTaxRates(cities: CityData[]): PropertyValues[] {
+  const years = new Set(
+    cities.flatMap((city) => city.financialData.map((fd) => fd.fiscalYear)),
+  );
+
+  const citiesWithRatesAndRevenues = cities
+    // .filter(
+    //   (city) =>
+    //     city.financialData.filter(
+    //       (f) => years.has(f.fiscalYear) && !!f.propertyTaxRevenue,
+    //     ).length === years.size,
+    // )
+    .filter((city) => testCities.includes(city.info.name));
+
+  const isTaxableValuePerYear: Record<string, number> = {};
+  const moTaxableValuePerYear: Record<string, number> = {};
+  const totalRevenuesPerYear: Record<string, number> = {};
+  for (const city of citiesWithRatesAndRevenues) {
+    for (const year of years) {
+      if (!isTaxableValuePerYear[year]) {
+        isTaxableValuePerYear[year] = 0;
+      }
+      if (!moTaxableValuePerYear[year]) {
+        moTaxableValuePerYear[year] = 0;
+      }
+      if (!totalRevenuesPerYear[year]) {
+        totalRevenuesPerYear[year] = 0;
+      }
+
+      const propertyTaxRates = city.info.propertyValues.find(
+        (p) => p.fiscalYear === year,
+      );
+      const financialData = city.financialData.find(
+        (f) => f.fiscalYear === year,
+      );
+
+      const isRate = propertyTaxRates?.isRate || 0;
+      const moRate = propertyTaxRates?.moRate || 0;
+      const propertyTaxRevenue = financialData?.propertyTaxRevenue || 0;
+
+      totalRevenuesPerYear[year] += propertyTaxRevenue;
+      isTaxableValuePerYear[year] +=
+        isRate > 0 ? propertyTaxRevenue / isRate : 0;
+      moTaxableValuePerYear[year] += propertyTaxRevenue / moRate;
+    }
+  }
+
+  return [...years].map((year) => {
+    const totalRevenue = totalRevenuesPerYear[year];
+    const isTaxableValue = isTaxableValuePerYear[year];
+    const moTaxableValue = moTaxableValuePerYear[year];
+    const isRate = totalRevenue / isTaxableValue;
+    const moRate = totalRevenue / moTaxableValue;
+
+    return {
+      fiscalYear: year,
+      isRate: parseFloat(isRate.toFixed(4)),
+      moRate: parseFloat(moRate.toFixed(4)),
+    };
+  });
 }

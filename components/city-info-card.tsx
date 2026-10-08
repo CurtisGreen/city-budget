@@ -88,19 +88,29 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
               <p className="text-sm text-muted-foreground">
                 Financial Report Archive Links
               </p>
-              <div className="flex flex-wrap gap-2 max-w-[230px]">
-                {years.map((year) => (
-                  <a
-                    key={year}
-                    href={`https://archive.org/download/city-budget-acfr-${id}/${id}-acfr-FY${year}.pdf`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline text-sm hover:text-green-600"
-                  >
-                    {year}
-                  </a>
-                ))}
-              </div>
+              {id !== "dfw" && (
+                <div className="flex flex-wrap gap-2 max-w-[230px]">
+                  {years.map((year) => (
+                    <a
+                      key={year}
+                      href={`https://archive.org/download/city-budget-acfr-${id}/${id}-acfr-FY${year}.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline text-sm hover:text-green-600"
+                    >
+                      {year}
+                    </a>
+                  ))}
+                </div>
+              )}
+              {id === "dfw" && (
+                <div className="flex flex-wrap gap-2 max-w-[230px]">
+                  <div className="text-sm">
+                    DFW is all cities combined so there is no single report for
+                    it
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

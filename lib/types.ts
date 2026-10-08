@@ -80,9 +80,9 @@ export interface CityInfo {
   id: string;
   name: string;
   populations: Population[];
-  propertyValues?: PropertyValues[];
+  propertyValues: PropertyValues[];
   revenueBySource: RevenueBySource;
-  salesTaxUsage?: {
+  salesTaxUsage: {
     usage: string;
     percent: number;
   }[];
