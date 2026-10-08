@@ -54,14 +54,16 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
 
 export function calculateDFWData(allCities: CityData[]): CityData {
   // Group by year
-  const yearMap = new Map<number, CityFinancialData[]>();
+  const yearMap = new Map<number, (CityFinancialData & { id: string })[]>();
 
   allCities.forEach((cityData) => {
     cityData.financialData.forEach((yearData) => {
       if (!yearMap.has(yearData.fiscalYear)) {
         yearMap.set(yearData.fiscalYear, []);
       }
-      yearMap.get(yearData.fiscalYear)!.push(yearData);
+      yearMap
+        .get(yearData.fiscalYear)!
+        .push({ ...yearData, id: cityData.info.id });
     });
   });
 
@@ -69,7 +71,6 @@ export function calculateDFWData(allCities: CityData[]): CityData {
   const dfwFinancials: CityFinancialData[] = Array.from(yearMap.entries())
     .sort(([a], [b]) => a - b)
     .map(([fiscalYear, dataPoints]) => {
-      // const a = dataPoints.map(d => d.pensionPlans[0].)
       const totalPensionLiability = sum(
         dataPoints.flatMap((d) =>
           d.pensionPlans.map((p) => p.totalPensionLiability),
@@ -90,6 +91,36 @@ export function calculateDFWData(allCities: CityData[]): CityData {
           d.pensionPlans.map((p) => p.actualContribution),
         ),
       );
+
+
+      const mapDFWExpenseGroups = (name: string, id: string) => {
+        const groups = expenseCategoryGroups[id]?.fullAccrualGroups ?? {};
+        const mappedName = groups[name] ?? name;
+        const n = mappedName.toLowerCase();
+
+        if (n.includes("public safety") || n.includes("police") || n.includes("fire") || n.includes("emergency")) return "Public safety"
+        if (n.includes("culture") || n.includes("recreation") || n.includes("parks") || n.includes("librar") || n.includes("leisure")) return "Parks, culture, and recreation"
+        if (n.includes("public works") || n.includes("street") || n.includes("public services") || n.includes("transport") || n.includes("infrastructure")) return "Public works"
+        if (n.includes("general government") || n.includes("admin")) return "General government"
+        if (n.includes("interest")) return "Interest on long-term debt"
+        if (n.includes("animal")) return "Animal services"
+        if (n.includes("development") || n.includes("inspect") || n.includes("planning") || n.includes("code")) return "Development services"
+        if (n.includes("technolog") || n.includes("information")) return "Technology"
+        if (n.includes("health") || n.includes("welfare") || n.includes("environment")) return "Health, welfare, and environmental services"
+        if (n.includes("financ")) return "Finance"
+        if (n.includes("community")) return "Community services"
+        if (n.includes("human")) return "Human resources"
+        if (n.includes("visit") || n.includes("touris")) return "Visitor services"
+        return mappedName;
+      }
+
+      const fullAccrualExpenses = dataPoints.flatMap((d) => {
+        return d.fullAccrualExpenses.map((e) => ({
+          name: mapDFWExpenseGroups(e.name, d.id),
+          value: e.value,
+        }));
+      });
+
       return {
         fiscalYear,
         currentAndOtherAssets: sum(
@@ -121,16 +152,20 @@ export function calculateDFWData(allCities: CityData[]): CityData {
         ),
         propertyTaxRevenue: sum(dataPoints.map((d) => d.propertyTaxRevenue)),
         salesTaxRevenue: sum(dataPoints.map((d) => d.salesTaxRevenue)),
-        fullAccrualExpenses: [],
-        pensionPlans: [
-          {
-            totalPensionLiability,
-            fiduciaryNetPosition,
-            actuariallyDeterminedContribution,
-            actualContribution,
-            name: "DFW",
-          },
-        ],
+        fullAccrualExpenses,
+        pensionPlans:
+          // Exclude 2015 & 2016, no actuariallyDeterminedContribution for Dallas and several other cities for those years
+          fiscalYear > 2016
+            ? [
+              {
+                totalPensionLiability,
+                fiduciaryNetPosition,
+                actuariallyDeterminedContribution,
+                actualContribution,
+                name: "DFW",
+              },
+            ]
+            : [],
       };
     });
   const dfwMetrics: CityMetrics[] = dfwFinancials.map(calculateACFRMetrics);
@@ -154,6 +189,7 @@ export function calculateDFWData(allCities: CityData[]): CityData {
         `I calculated the property tax rates for DFW by dollar-weighting them with property tax revenue. 
          5 out of the ${allCities.length} cities don't have full revenue data so they are excluded from this calculation. 
          The result is neglibly changed.`,
+        "2015-2016 are excluded for pensions because Dallas and several other cities don't have 'actuarial determined contributions' for those years"
       ],
     },
     financialData: dfwFinancials,
@@ -277,125 +313,54 @@ export function toModifiedAccrualExpenditureChart(
   return { data, categories: [...categories] };
 }
 
-const testCities = [
-  "Addison",
-  "Allen",
-  "Arlington",
-  "Balch Springs",
-  "Bedford",
-  "Benbrook",
-  "Burleson",
-  "Carrollton",
-  "Cedar Hill",
-  "Celina",
-  "Colleyville",
-  "Coppell",
-  "Corinth",
-  "Crowley",
-  "Dallas",
-  "Dalworthington Gardens",
-  "Denton",
-  "DeSoto",
-  "Duncanville",
-  "Euless",
-  "Fairview",
-  "Farmers Branch",
-  "Fate",
-  "Flower Mound",
-  "Forest Hill",
-  "Forney",
-  "Fort Worth",
-  "Frisco",
-  "Garland",
-  "Glenn Heights",
-  "Grand Prairie",
-  "Grapevine",
-  "Haltom City",
-  "Haslet",
-  "Highland Park",
-  "Highland Village",
-  "Hurst",
-  "Hutchins",
-  "Irving",
-  "Keller",
-  "Kennedale",
-  "Lancaster",
-  "Lewisville",
-  "Little Elm",
-  "Lucas",
-  "McKinney",
-  "Mesquite",
-  "Northlake",
-  "Pantego",
-  "Parker",
-  "Plano",
-  "Princeton",
-  "Red Oak",
-  "Richardson",
-  "Saginaw",
-  "Seagoville",
-  "Watauga",
-  "White Settlement",
-];
-
 export function getDFWPropertyTaxRates(cities: CityData[]): PropertyValues[] {
   const years = new Set(
     cities.flatMap((city) => city.financialData.map((fd) => fd.fiscalYear)),
   );
 
-  const citiesWithRatesAndRevenues = cities
-    // .filter(
-    //   (city) =>
-    //     city.financialData.filter(
-    //       (f) => years.has(f.fiscalYear) && !!f.propertyTaxRevenue,
-    //     ).length === years.size,
-    // )
-    .filter((city) => testCities.includes(city.info.name));
+  const citiesWithRatesAndRevenues = cities.filter(
+    (city) =>
+      city.financialData.filter(
+        (f) => years.has(f.fiscalYear) && !!f.propertyTaxRevenue,
+      ).length === years.size &&
+      city.info.propertyValues.filter(
+        (v) => years.has(v.fiscalYear) && v.moRate > 0,
+      ).length === years.size,
+  );
 
-  const isTaxableValuePerYear: Record<string, number> = {};
-  const moTaxableValuePerYear: Record<string, number> = {};
-  const totalRevenuesPerYear: Record<string, number> = {};
+  const taxableValuePerYear: Record<string, number> = {};
+  const isWeightedPerYear: Record<string, number> = {};
+  const moWeightedPerYear: Record<string, number> = {};
   for (const city of citiesWithRatesAndRevenues) {
     for (const year of years) {
-      if (!isTaxableValuePerYear[year]) {
-        isTaxableValuePerYear[year] = 0;
-      }
-      if (!moTaxableValuePerYear[year]) {
-        moTaxableValuePerYear[year] = 0;
-      }
-      if (!totalRevenuesPerYear[year]) {
-        totalRevenuesPerYear[year] = 0;
-      }
-
       const propertyTaxRates = city.info.propertyValues.find(
         (p) => p.fiscalYear === year,
       );
-      const financialData = city.financialData.find(
-        (f) => f.fiscalYear === year,
-      );
+      const propertyTaxRevenue =
+        city.financialData.find((f) => f.fiscalYear === year)
+          ?.propertyTaxRevenue || 0;
 
       const isRate = propertyTaxRates?.isRate || 0;
       const moRate = propertyTaxRates?.moRate || 0;
-      const propertyTaxRevenue = financialData?.propertyTaxRevenue || 0;
+      if (!propertyTaxRevenue || isRate + moRate <= 0) continue;
 
-      totalRevenuesPerYear[year] += propertyTaxRevenue;
-      isTaxableValuePerYear[year] +=
-        isRate > 0 ? propertyTaxRevenue / isRate : 0;
-      moTaxableValuePerYear[year] += propertyTaxRevenue / moRate;
+      const taxableValue = propertyTaxRevenue / (isRate + moRate);
+      taxableValuePerYear[year] =
+        (taxableValuePerYear[year] || 0) + taxableValue;
+      isWeightedPerYear[year] =
+        (isWeightedPerYear[year] || 0) + isRate * taxableValue;
+      moWeightedPerYear[year] =
+        (moWeightedPerYear[year] || 0) + moRate * taxableValue;
     }
   }
 
-  return [...years].map((year) => {
-    const totalRevenue = totalRevenuesPerYear[year];
-    const isTaxableValue = isTaxableValuePerYear[year];
-    const moTaxableValue = moTaxableValuePerYear[year];
-    const isRate = totalRevenue / isTaxableValue;
-    const moRate = totalRevenue / moTaxableValue;
-
-    return {
-      fiscalYear: year,
-      isRate: parseFloat(isRate.toFixed(4)),
-      moRate: parseFloat(moRate.toFixed(4)),
-    };
-  });
+  return [...years].map((year) => ({
+    fiscalYear: year,
+    isRate: parseFloat(
+      (isWeightedPerYear[year] / taxableValuePerYear[year]).toFixed(4),
+    ),
+    moRate: parseFloat(
+      (moWeightedPerYear[year] / taxableValuePerYear[year]).toFixed(4),
+    ),
+  }));
 }

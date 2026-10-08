@@ -143,23 +143,23 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
   },
   dallas: {
     fullAccrualGroups: {
-      "Code enforcement": "Public Works",
+      "Code enforcement": "Public works",
       "Streets, street lighting, sanitation and code enforcement":
-        "Public Works",
-      "Streets, street lighting & code enforcement": "Public Works",
-      "Public works and transportation": "Public Works",
-      "Streets, public works, and transportation": "Public Works",
+        "Public works",
+      "Streets, street lighting & code enforcement": "Public works",
+      "Public works and transportation": "Public works",
+      "Streets, public works, and transportation": "Public works",
     },
     modifiedAccrualGroups: {
-      "Code enforcement": "Public Works",
+      "Code enforcement": "Public works",
       "Streets, street lighting, sanitation and code enforcement":
-        "Public Works",
-      "Streets, street lighting & code enforcement": "Public Works",
-      "Public works and transportation": "Public Works",
-      "Streets, public works, and transportation": "Public Works",
+        "Public works",
+      "Streets, street lighting & code enforcement": "Public works",
+      "Public works and transportation": "Public works",
+      "Streets, public works, and transportation": "Public works",
     },
     notes: {
-      "Public Works":
+      "Public works":
         "Contains: code enforcement, streets & street lighting, sanitation, and public works & transportation. Dallas recategorized these functions across years.",
     },
   },
