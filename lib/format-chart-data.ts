@@ -6,7 +6,15 @@ import type {
 } from "./types";
 import { expenseCategoryGroups } from "./expense-category-groups";
 
-export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
+export function calculateACFRMetrics(
+  data: Omit<
+    CityFinancialData,
+    | "propertyTaxRevenue"
+    | "salesTaxRevenue"
+    | "fullAccrualExpenses"
+    | "pensionPlans"
+  >,
+): CityMetrics {
   const totalAssets = data.currentAndOtherAssets + data.capitalAssets;
   const totalLiabilities = data.liabilities + data.deferredInflows;
   const totalExternalTransfers =
@@ -69,7 +77,7 @@ export function calculateAverageMetrics(
   const averagePerYear = Array.from(yearMap.entries())
     .sort(([a], [b]) => a - b)
     .map(([fiscalYear, dataPoints]) => {
-      const sumOfCities: CityFinancialData = {
+      const sumOfCities = {
         fiscalYear,
         currentAndOtherAssets: sum(
           dataPoints.map((d) => d.currentAndOtherAssets),
@@ -247,18 +255,16 @@ export function toFullAccrualExpenseChart(
 ): ExpenseChartData {
   const groups = expenseCategoryGroups[cityId]?.fullAccrualGroups ?? {};
   const categories = new Set<string>();
-  const data = financialData
-    .filter((fd) => fd.fullAccrualExpenses)
-    .map((fd) => {
-      const row: Record<string, number> = { fiscalYear: fd.fiscalYear };
-      for (const expense of fd.fullAccrualExpenses!) {
-        const name = groups[expense.name] ?? expense.name;
-        const value = (row[name] ?? 0) + expense.value;
-        row[name] = value;
-        categories.add(name);
-      }
-      return row;
-    });
+  const data = financialData.map((fd) => {
+    const row: Record<string, number> = { fiscalYear: fd.fiscalYear };
+    for (const expense of fd.fullAccrualExpenses) {
+      const name = groups[expense.name] ?? expense.name;
+      const value = (row[name] ?? 0) + expense.value;
+      row[name] = value;
+      categories.add(name);
+    }
+    return row;
+  });
   return { data, categories: [...categories] };
 }
 

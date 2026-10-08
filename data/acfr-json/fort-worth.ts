@@ -3,6 +3,15 @@ import type { CityFinancialData } from "@/lib/types";
 export const fortWorthAcfr: CityFinancialData[] = [
   {
     fiscalYear: 2015,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 3_610_674_000,
+        fiduciaryNetPosition: 2_081_575_000,
+        actuariallyDeterminedContribution: 93_563_000,
+        actualContribution: 80_821_000,
+      },
+    ],
     propertyTaxRevenue: 413_687_000,
     salesTaxRevenue: 191_140_000,
     hotelTaxRevenue: 24_749_000,

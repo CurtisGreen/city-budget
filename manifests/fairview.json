@@ -3,6 +3,12 @@
   "city": "Fairview",
   "pdfs": [
     {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/fairview-FY2015.pdf",
+      "archiveUrl": null
+    },
+    {
       "year": 2016,
       "source": "url",
       "url": "https://fairviewtexas.org/images/Financials/CAFR_Town_of_Fairview_Final_2016_Report_-_Only_Electronic_Dont_Print.pdf",

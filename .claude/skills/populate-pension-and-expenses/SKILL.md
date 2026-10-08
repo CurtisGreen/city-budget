@@ -279,6 +279,16 @@ schedule header; getting this wrong is a silent 1000× error that still passes t
 check, since the ratio is unit-invariant. Sanity-check the magnitude against `totalRevenue` for the
 same year.
 
+**f. FY2015 can fall outside the FY2024 window for measurement-year cities.** The FY2024 report's
+10-year RSI starts at MY2015 = FY2016, so FY2015 (MY2014) is NOT in it, and the contributions
+schedule stops at FY2016 too. Don't log a gap yet: the FY2015 report itself (first GASB 68 year, often
+no RSI schedule) carries it in the **pension note** — NPL rollforward "Balance at 12/31/2014" gives
+`totalPensionLiability`/`fiduciaryNetPosition` (cross-check: they equal the FY2016 report's beginning
+balances), and the Contributions paragraph gives the amount paid (and "equal to the required
+contributions" → ADC = actual). `extract-statements.py` only finds RSI schedules, so read the note with
+`show-table.py` (OCR first if it is a scan). No printed funded ratio exists there, so
+`verify-extraction.py` reports `UNPROVEN`; the two-source TPL/FNP match is your substitute (Haslet).
+
 **Multi-plan cities.** Most cities are a single TMRS plan. Dallas has an Employees' Retirement Fund
 plus Police & Fire; Fort Worth has its own Employees' Retirement Fund. Store one array entry per
 plan per year — the chart draws one line per plan and does not aggregate. Dallas's Police & Fire

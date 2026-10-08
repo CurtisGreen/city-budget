@@ -23,6 +23,19 @@ export const fairviewAcfr: CityFinancialData[] = [
     operatingGrantsAndContributions: 52_040,
     capitalGrantsAndContributions: 243_087,
     debtInterest: 674_175,
+    modifiedAccrualExpenditures: {
+      current: [
+        { name: "General government", value: 1_800_903 },
+        { name: "Public safety", value: 3_962_334 },
+        { name: "Public works", value: 230_882 },
+        { name: "Inspections", value: 95_678 },
+        { name: "Municipal court", value: 181_369 },
+        { name: "Parks and recreation", value: 91_240 },
+      ],
+      debtService: { principal: 1_040_743, interest: 696_995 },
+      capitalOutlay: 1_238_709,
+      total: 9_338_853,
+    },
     fullAccrualExpenses: [
       { name: "General government", value: 2_156_109 },
       { name: "Public safety", value: 4_354_155 },

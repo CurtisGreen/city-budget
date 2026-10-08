@@ -44,26 +44,22 @@ export function PensionChart({
   const chartConfig = chartConfigs[metricKey];
 
   const planNames = [
-    ...new Set(
-      financialData.flatMap((d) => d.pensionPlans?.map((p) => p.name) ?? []),
-    ),
+    ...new Set(financialData.flatMap((d) => d.pensionPlans.map((p) => p.name))),
   ];
 
-  const chartData = financialData
-    .filter((d) => d.pensionPlans?.length)
-    .map((d) => {
-      const row: Record<string, number> = { year: d.fiscalYear };
-      for (const plan of d.pensionPlans!) {
-        const value =
-          metricKey === "pensionFundedRatio"
-            ? plan.fiduciaryNetPosition / plan.totalPensionLiability
-            : plan.actuariallyDeterminedContribution
-              ? plan.actualContribution / plan.actuariallyDeterminedContribution
-              : undefined;
-        if (value !== undefined) row[plan.name] = value;
-      }
-      return row;
-    });
+  const chartData = financialData.map((d) => {
+    const row: Record<string, number> = { year: d.fiscalYear };
+    for (const plan of d.pensionPlans) {
+      const value =
+        metricKey === "pensionFundedRatio"
+          ? plan.fiduciaryNetPosition / plan.totalPensionLiability
+          : plan.actuariallyDeterminedContribution
+            ? plan.actualContribution / plan.actuariallyDeterminedContribution
+            : undefined;
+      if (value !== undefined) row[plan.name] = value;
+    }
+    return row;
+  });
 
   // Years above the capped axis (a pension obligation bond year) get pinned to the top edge with
   // their real value as a label, so clipping the axis never hides one.

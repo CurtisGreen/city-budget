@@ -3,6 +3,15 @@ import type { CityFinancialData } from "@/lib/types";
 export const parkerAcfr: CityFinancialData[] = [
   {
     fiscalYear: 2015,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 2_810_522,
+        fiduciaryNetPosition: 2_156_458,
+        actuariallyDeterminedContribution: 125_535,
+        actualContribution: 125_535,
+      },
+    ],
     propertyTaxRevenue: 2_243_085,
     salesTaxRevenue: 145_308,
     currentAndOtherAssets: 8_585_165,

@@ -2,7 +2,16 @@ import type { CityFinancialData } from "@/lib/types";
 
 export const hasletAcfr: CityFinancialData[] = [
   {
-    fiscalYear: 2_015,
+    fiscalYear: 2015,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 1_663_235,
+        fiduciaryNetPosition: 1_765_989,
+        actuariallyDeterminedContribution: 87_476,
+        actualContribution: 87_476,
+      },
+    ],
     currentAndOtherAssets: 13_427_701,
     capitalAssets: 20_940_126,
     deferredOutflows: 138_405,
@@ -59,7 +68,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 11_223_870,
   },
   {
-    fiscalYear: 2_016,
+    fiscalYear: 2016,
     pensionPlans: [
       {
         name: "TMRS",
@@ -78,6 +87,27 @@ export const hasletAcfr: CityFinancialData[] = [
     operatingGrantsAndContributions: 108_750,
     capitalGrantsAndContributions: 255_896,
     debtInterest: 93_959,
+    modifiedAccrualExpenditures: {
+      current: [
+        { name: "Code enforcement", value: 82_381 },
+        { name: "Administration", value: 276_617 },
+        { name: "City secretary", value: 157_444 },
+        { name: "Fire", value: 431_209 },
+        { name: "Streets", value: 72_335 },
+        { name: "Parks", value: 281_368 },
+        { name: "Court", value: 116_560 },
+        { name: "Library", value: 252_404 },
+        { name: "Nondepartmental", value: 139_773 },
+        { name: "Public safety", value: 609_060 },
+        { name: "Finance", value: 131_830 },
+        { name: "Planning", value: 142_239 },
+        { name: "Economic development", value: 147_773 },
+        { name: "Public works", value: 247_424 },
+      ],
+      debtService: { principal: 213_500, interest: 71_876 },
+      capitalOutlay: 752_722,
+      total: 4_126_515,
+    },
     propertyTaxRevenue: 1_543_268,
     salesTaxRevenue: 1_748_831,
     fullAccrualExpenses: [
@@ -104,7 +134,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 11_223_870,
   },
   {
-    fiscalYear: 2_017,
+    fiscalYear: 2017,
     pensionPlans: [
       {
         name: "TMRS",
@@ -163,7 +193,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 11_256_766,
   },
   {
-    fiscalYear: 2_018,
+    fiscalYear: 2018,
     pensionPlans: [
       {
         name: "TMRS",
@@ -222,7 +252,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 14_466_144,
   },
   {
-    fiscalYear: 2_019,
+    fiscalYear: 2019,
     pensionPlans: [
       {
         name: "TMRS",
@@ -281,7 +311,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 19_242_072,
   },
   {
-    fiscalYear: 2_020,
+    fiscalYear: 2020,
     pensionPlans: [
       {
         name: "TMRS",
@@ -340,7 +370,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 19_875_849,
   },
   {
-    fiscalYear: 2_021,
+    fiscalYear: 2021,
     pensionPlans: [
       {
         name: "TMRS",
@@ -400,7 +430,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 19_882_414,
   },
   {
-    fiscalYear: 2_022,
+    fiscalYear: 2022,
     pensionPlans: [
       {
         name: "TMRS",
@@ -460,7 +490,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 20_001_826,
   },
   {
-    fiscalYear: 2_023,
+    fiscalYear: 2023,
     pensionPlans: [
       {
         name: "TMRS",
@@ -520,7 +550,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 23_686_307,
   },
   {
-    fiscalYear: 2_024,
+    fiscalYear: 2024,
     pensionPlans: [
       {
         name: "TMRS",
@@ -580,7 +610,7 @@ export const hasletAcfr: CityFinancialData[] = [
     businessCapitalAssetsBeingDepreciated: 23_686_307,
   },
   {
-    fiscalYear: 2_025,
+    fiscalYear: 2025,
     pensionPlans: [
       {
         name: "TMRS",

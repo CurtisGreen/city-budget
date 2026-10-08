@@ -3,6 +3,15 @@ import type { CityFinancialData } from "@/lib/types";
 export const addisonAcfr: CityFinancialData[] = [
   {
     fiscalYear: 2015,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 130_206_861,
+        fiduciaryNetPosition: 111_548_026,
+        actuariallyDeterminedContribution: 1_874_383,
+        actualContribution: 1_874_383,
+      },
+    ],
     propertyTaxRevenue: 20_560_124,
     salesTaxRevenue: 13_038_912,
     hotelTaxRevenue: 5_512_956,

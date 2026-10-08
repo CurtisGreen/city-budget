@@ -3,6 +3,15 @@ import type { CityFinancialData } from "@/lib/types";
 export const carrolltonAcfr: CityFinancialData[] = [
   {
     fiscalYear: 2015,
+    pensionPlans: [
+      {
+        name: "TMRS",
+        totalPensionLiability: 356_702_669,
+        fiduciaryNetPosition: 349_353_714,
+        actuariallyDeterminedContribution: 6_329_810,
+        actualContribution: 6_982_334,
+      },
+    ],
     propertyTaxRevenue: 61_990_961,
     salesTaxRevenue: 31_238_022,
     hotelTaxRevenue: 210_835,

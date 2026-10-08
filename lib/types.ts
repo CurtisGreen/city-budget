@@ -9,11 +9,11 @@ export interface CityFinancialData {
   operatingGrantsAndContributions: number;
   capitalGrantsAndContributions: number;
   debtInterest: number;
-  propertyTaxRevenue?: number;
-  salesTaxRevenue?: number;
+  propertyTaxRevenue: number;
+  salesTaxRevenue: number;
   hotelTaxRevenue?: number;
   // Gov-wide Statement of Activities, full accrual: includes depreciation & actuarial pension; excludes capital outlay & debt principal.
-  fullAccrualExpenses?: { name: string; value: number }[];
+  fullAccrualExpenses: { name: string; value: number }[];
   // Governmental fundss statement, modified accrual: includes capital outlay & debt principal; excludes depreciation; pension = cash contributions.
   modifiedAccrualExpenditures?: {
     current: { name: string; value: number }[];
@@ -26,7 +26,7 @@ export interface CityFinancialData {
     capitalOutlay: number;
     total: number;
   };
-  pensionPlans?: {
+  pensionPlans: {
     name: string;
     totalPensionLiability: number;
     fiduciaryNetPosition: number;

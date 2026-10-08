@@ -3,6 +3,21 @@ import type { CityFinancialData } from "@/lib/types";
 export const dallasAcfr: CityFinancialData[] = [
   {
     fiscalYear: 2015,
+    pensionPlans: [
+      {
+        name: "Employees' Retirement Fund",
+        totalPensionLiability: 4_004_055_000,
+        fiduciaryNetPosition: 3_398_485_000,
+        actuariallyDeterminedContribution: 68_100_000,
+        actualContribution: 49_135_000,
+      },
+      {
+        name: "Police & Fire Combined Plan",
+        totalPensionLiability: 8_048_930_000,
+        fiduciaryNetPosition: 3_074_195_000,
+        actualContribution: 113_026_000,
+      },
+    ],
     propertyTaxRevenue: 735_913_000,
     salesTaxRevenue: 275_250_000,
     hotelTaxRevenue: 53_931_000,
