@@ -3,14 +3,15 @@
   width="24"
   height="24"
   viewBox="0 0 24 24"
-  fill="white"
-  stroke="lab(47.0329% -47.0239 31.4788)"
+  fill="none"
+  stroke="black"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M3 3v18h20 v -18 h -20" stroke-width="1" stroke="black"></path>
-  <path d="M18 18V10"></path>
-  <path d="M13 18V6"></path>
-  <path d="M8 18v-3"></path>
+  <rect width="24" height="24" fill="white" stroke="none"></rect>
+  <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+  <path d="M18 17V9" stroke="#008236"></path>
+  <path d="M13 17V5" stroke="#008236"></path>
+  <path d="M8 17v-3" stroke="#008236"></path>
 </svg>
