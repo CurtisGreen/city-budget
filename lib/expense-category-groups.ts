@@ -572,9 +572,7 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     modifiedAccrualGroups: {
       "Promotion of culture and tourism": "Culture and recreation",
     },
-    notes: {
-      "Culture and recreation": "Contains: Promotion of culture and tourism",
-    },
+    notes: {},
   },
   sunnyvale: {
     fullAccrualGroups: {

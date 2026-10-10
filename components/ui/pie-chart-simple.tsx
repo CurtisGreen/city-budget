@@ -96,7 +96,7 @@ const renderCustomizedLabel = ({
       textAnchor={value || 0 >= 0.5 ? "middle" : x > ncx ? "start" : "end"}
       dominantBaseline="central"
     >
-      {`${value}%`}
+      {`${parseFloat(value.toFixed(3))}%`}
     </text>
   );
 };
