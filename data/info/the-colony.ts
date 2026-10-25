@@ -85,14 +85,23 @@ export const theColonyInfo: CityInfo = {
   ],
   area: 14.01,
   notes: [
-    `FY 2017 ACFR: "The overall increase in net position is primarily due to capital asset contributions
-    from the component unit of $48,903,001, developer's contributions of $2,983,056, and
-    contributions of capital assets from governmental activities of $2,014,203."`,
-    `FY 2025 ACFR: "The capital projects fund had an increase in fund balance of $51.16 million due
-    primarily to the receipt of debt proceeds." [...] "At the end of the current fiscal year, the City
-    had total bonded debt outstanding of $174,825,000."`,
+    `FY 2017 ACFR (regarding External Contributions): "The overall increase in net position is primarily due
+      to capital asset contributions from the component unit of $48,903,001, developer's contributions
+      of $2,983,056, and contributions of capital assets from governmental activities of $2,014,203."`,
+    `FY 2019 ACFR (regarding Net Financial Position): "The City's total long-term liabilities increased by
+      $17,456,849 during the current fiscal year. The most significant factor in this increase was the
+      issuance of $18,710,000 Certificates of Obligation."`,
+    `FY 2024 ACFR (regarding Property Taxes): "The City's 2024 Ad Valorem tax base increased from the prior
+      year by a little over 3% to $7.275 billion." [...] "During the year ended September 30, 2024,
+      the City abated $13,998,530 in property taxes and $13,169,444 in sales taxes."
+      [...] “Per the Tribute TIF agreement to fund water storage tank and construction of fire station,
+      and improve roadways, marina park and entertainment district, 55% of property taxes from development
+      limited to total property taxes less the agreement stated above was agreed to be abated.”`,
+    `FY 2025 ACFR (regarding Net Financial Position): "The capital projects fund had an increase in fund balance of $51.16 million due
+      primarily to the receipt of debt proceeds." [...] "At the end of the current fiscal year, the City
+      had total bonded debt outstanding of $174,825,000."`,
     `FY 2025 (Author's note): Half of sales tax now passes through the General Fund to the development corps.
-      City sales tax +$10.3M, dev corps -$9.6M (net +$0.7M). The new $23.5M Economic development
+      City sales tax +$10.3M, development corps -$9.6M (net +$0.7M). The new $23.5M Economic development
       expense is that pass-through plus TIRZ costs.`,
   ],
 };
