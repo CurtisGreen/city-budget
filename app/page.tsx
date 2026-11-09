@@ -16,7 +16,10 @@ export default function HomePage() {
   const dfwData = calculateDFWData(cities);
   const totalAssets = cities.reduce((sum, city) => {
     const latestFinancialData = city.financialData.at(-1);
-    return sum + (latestFinancialData?.capitalAssets ?? 0);
+    const capitalAssets = latestFinancialData?.capitalAssets ?? 0;
+    const currentAndOtherAssets =
+      latestFinancialData?.currentAndOtherAssets ?? 0;
+    return sum + capitalAssets + currentAndOtherAssets;
   }, 0);
   const formattedTotalAssets = Intl.NumberFormat("en-US", {
     style: "currency",
@@ -89,7 +92,7 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-primary mb-2">
                 {formattedTotalAssets}
               </div>
-              <div className="text-muted-foreground">Capital Assets</div>
+              <div className="text-muted-foreground">Assets</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">

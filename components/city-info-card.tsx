@@ -75,9 +75,11 @@ export function CityInfoCard({ cityData }: CityInfoCardProps) {
           <div className="flex items-start gap-3">
             <Building className="h-5 w-5 mt-0.5 text-green-700" />
             <div>
-              <p className="text-sm text-muted-foreground">Total Assets</p>
+              <p className="text-sm text-muted-foreground">Assets</p>
               <p className="text-lg font-semibold">
-                {formatCurrency(latestYear.capitalAssets)}
+                {formatCurrency(
+                  latestYear.capitalAssets + latestYear.currentAndOtherAssets,
+                )}
               </p>
             </div>
           </div>
