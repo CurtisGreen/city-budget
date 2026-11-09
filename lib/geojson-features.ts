@@ -22,6 +22,7 @@ import { colleyvilleGeoJson } from "@/data/geojson/colleyville-geojson";
 import { friscoGeoJson } from "@/data/geojson/frisco-geojson";
 import { grapevineGeoJson } from "@/data/geojson/grapevine-geojson";
 import { arlingtonGeoJson } from "@/data/geojson/arlington-geojson";
+import { argyleGeoJson } from "@/data/geojson/argyle-geojson";
 import { sachseGeoJson } from "@/data/geojson/sachse-geojson";
 import { saginawGeoJson } from "@/data/geojson/saginaw-geojson";
 import { seagovilleGeoJson } from "@/data/geojson/seagoville-geojson";
@@ -101,6 +102,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...friscoGeoJson.features,
   ...grapevineGeoJson.features,
   ...arlingtonGeoJson.features,
+  ...argyleGeoJson.features,
   ...sachseGeoJson.features,
   ...saginawGeoJson.features,
   ...seagovilleGeoJson.features,

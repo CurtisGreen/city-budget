@@ -4,6 +4,7 @@ import { calculateACFRMetrics } from "./format-chart-data";
 import { dallasInfo } from "@/data/info/dallas";
 import { dalworthingtonGardensInfo } from "@/data/info/dalworthington-gardens";
 import { arlingtonInfo } from "@/data/info/arlington";
+import { argyleInfo } from "@/data/info/argyle";
 import { planoInfo } from "@/data/info/plano";
 import { irvingInfo } from "@/data/info/irving";
 import { garlandInfo } from "@/data/info/garland";
@@ -84,6 +85,7 @@ const basicCityInfo = [
   dalworthingtonGardensInfo,
   planoInfo,
   arlingtonInfo,
+  argyleInfo,
   irvingInfo,
   garlandInfo,
   addisonInfo,
