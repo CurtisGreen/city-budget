@@ -40,7 +40,7 @@ export function TaxRevenueChart({ financialData }: TaxRevenueChartProps) {
           inflation adjusted)
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="h-full">
         <div
           className={`
             w-full
@@ -51,6 +51,7 @@ export function TaxRevenueChart({ financialData }: TaxRevenueChartProps) {
             [&_.recharts-sector[stroke='#fff']]:stroke-transparent
             [&_.recharts-surface]:outline-hidden
             ml-[-10px]
+            h-full
           `}
         >
           <LineChart

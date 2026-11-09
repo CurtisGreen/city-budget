@@ -27,7 +27,7 @@ const currency = (v?: number) => {
 };
 
 const change = (first?: number, last?: number) => {
-  if (first === undefined || last === undefined) return { text: "-" };
+  if (!first || !last) return { text: "-" };
   const pct = ((last - first) / first) * 100;
   return { text: `${pct >= 0 ? "+" : ""}${Math.round(pct)}%`, pct };
 };
@@ -35,13 +35,11 @@ const change = (first?: number, last?: number) => {
 interface TaxVsInflationTableProps {
   financialData: CityFinancialData[];
   expenditures: ExpenseChartData;
-  isDfw: boolean;
 }
 
 export function TaxVsInflationTable({
   financialData,
   expenditures,
-  isDfw,
 }: TaxVsInflationTableProps) {
   const years = expenditures.data.map((r) => r.fiscalYear);
   const firstYear = Math.min(...years);
