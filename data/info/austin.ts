@@ -79,4 +79,7 @@ export const austinInfo: CityInfo = {
     { usage: "Capital Metro", percent: 1 },
   ],
   area: 319.94,
+  notes: [
+    `FY 2025 ACFR: "The primary reason for the change in net position is due to a decrease in OPEB expenses of $756.8 million as a result of changes in plan benefits."`,
+  ],
 };
