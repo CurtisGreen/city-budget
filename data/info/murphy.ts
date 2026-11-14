@@ -74,11 +74,6 @@ export const murphyInfo: CityInfo = {
       isRate: 0.09128,
     },
   ],
-  revenueBySource: {
-    property: 13893953,
-    sales: 3624540,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

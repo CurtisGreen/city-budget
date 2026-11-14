@@ -74,11 +74,6 @@ export const hurstInfo: CityInfo = {
       isRate: 0.083256,
     },
   ],
-  revenueBySource: {
-    property: 23090993,
-    sales: 24289712,
-    hotel: 858190,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Services Development Corporation", percent: 0.5 },

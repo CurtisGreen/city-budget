@@ -82,7 +82,6 @@ export interface CityInfo {
   category: "DFW" | "Houston Metro";
   populations: Population[];
   propertyValues: PropertyValues[];
-  revenueBySource: RevenueBySource;
   salesTaxUsage: {
     usage: string;
     percent: number;

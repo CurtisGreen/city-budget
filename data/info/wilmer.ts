@@ -64,11 +64,6 @@ export const wilmerInfo: CityInfo = {
       isRate: 0.141974,
     },
   ],
-  revenueBySource: {
-    property: 7873395,
-    sales: 6114390,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

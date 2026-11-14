@@ -74,11 +74,6 @@ export const dalworthingtonGardensInfo: CityInfo = {
       isRate: 0.083009,
     },
   ],
-  revenueBySource: {
-    property: 2635467,
-    sales: 1026140,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Street Improvement Fund", percent: 0.25 },

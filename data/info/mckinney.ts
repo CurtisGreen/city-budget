@@ -74,11 +74,6 @@ export const mckinneyInfo: CityInfo = {
       isRate: 0.136272,
     },
   ],
-  revenueBySource: {
-    property: 159252000,
-    sales: 51747000,
-    hotel: 3105407,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

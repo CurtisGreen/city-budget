@@ -26,11 +26,6 @@ export const corinthInfo: CityInfo = {
     { fiscalYear: 2025, moRate: 0.37621, isRate: 0.13779 },
     { fiscalYear: 2026, moRate: 0.39249, isRate: 0.1446 },
   ],
-  revenueBySource: {
-    property: 17454780,
-    sales: 3724346,
-    hotel: 119586,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.0 },
     { usage: "Economic Development Corporation", percent: 0.5 },

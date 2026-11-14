@@ -74,11 +74,6 @@ export const seagovilleInfo: CityInfo = {
       isRate: 0.0752,
     },
   ],
-  revenueBySource: {
-    property: 9486581,
-    sales: 4492351,
-    hotel: 39453,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },

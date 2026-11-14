@@ -74,11 +74,6 @@ export const colleyvilleInfo: CityInfo = {
       isRate: 0.017699,
     },
   ],
-  revenueBySource: {
-    property: 17904226,
-    sales: 10654186,
-    hotel: 219059,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

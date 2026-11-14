@@ -74,11 +74,6 @@ export const planoInfo: CityInfo = {
       isRate: 0.115,
     },
   ],
-  revenueBySource: {
-    property: 242281161,
-    sales: 120262825,
-    hotel: 12895296,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

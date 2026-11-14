@@ -74,11 +74,6 @@ export const lewisvilleInfo: CityInfo = {
       isRate: 0.12232,
     },
   ],
-  revenueBySource: {
-    property: 89468037,
-    sales: 53324026,
-    hotel: 2871093,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DCTA", percent: 0.5 },

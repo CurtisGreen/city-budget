@@ -74,11 +74,6 @@ export const highlandVillageInfo: CityInfo = {
       isRate: 0.078587,
     },
   ],
-  revenueBySource: {
-    property: 15869314,
-    sales: 5622168,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

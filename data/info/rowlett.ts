@@ -74,11 +74,6 @@ export const rowlettInfo: CityInfo = {
       isRate: 0.26905,
     },
   ],
-  revenueBySource: {
-    property: 55175000,
-    sales: 9809000,
-    hotel: 69515,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

@@ -74,11 +74,6 @@ export const southlakeInfo: CityInfo = {
       isRate: 0.055,
     },
   ],
-  revenueBySource: {
-    property: 43315203,
-    sales: 44830166,
-    hotel: 2403888,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Parks Development Corporation", percent: 0.5 },

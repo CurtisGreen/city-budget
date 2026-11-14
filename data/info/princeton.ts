@@ -74,11 +74,6 @@ export const princetonInfo: CityInfo = {
       isRate: 0.185917,
     },
   ],
-  revenueBySource: {
-    property: 14_521_870,
-    sales: 4_037_443,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

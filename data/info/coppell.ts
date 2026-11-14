@@ -74,11 +74,6 @@ export const coppellInfo: CityInfo = {
       isRate: 0.067978,
     },
   ],
-  revenueBySource: {
-    property: 50622199,
-    sales: 50129985,
-    hotel: 1077103,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Recreation Development Corporation", percent: 0.5 },

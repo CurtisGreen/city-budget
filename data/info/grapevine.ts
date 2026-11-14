@@ -74,11 +74,6 @@ export const grapevineInfo: CityInfo = {
       isRate: 0.102797,
     },
   ],
-  revenueBySource: {
-    property: 36531261,
-    sales: 84073115,
-    hotel: 23744468,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Crime Control Prevention District", percent: 0.5 },

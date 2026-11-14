@@ -74,11 +74,6 @@ export const fateInfo: CityInfo = {
       isRate: 0.090104,
     },
   ],
-  revenueBySource: {
-    property: 7597634,
-    sales: 4654781,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Municipal Development District", percent: 0.5 },

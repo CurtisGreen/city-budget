@@ -74,11 +74,6 @@ export const carrolltonInfo: CityInfo = {
       isRate: 0.149848,
     },
   ],
-  revenueBySource: {
-    property: 115162154,
-    sales: 49712276,
-    hotel: 577425,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

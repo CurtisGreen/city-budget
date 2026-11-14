@@ -74,11 +74,6 @@ export const haltomCityInfo: CityInfo = {
       isRate: 0.188050,
     },
   ],
-  revenueBySource: {
-    property: 22136941,
-    sales: 18351400,
-    hotel: 124918,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.375 },
     { usage: "Street Maintenance", percent: 0.375 },

@@ -74,11 +74,6 @@ export const arlingtonInfo: CityInfo = {
       isRate: 0.1852,
     },
   ],
-  revenueBySource: {
-    property: 224172000,
-    sales: 165531000,
-    hotel: 15477000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Sports venue debt", percent: 0.5 },

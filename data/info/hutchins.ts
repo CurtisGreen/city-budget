@@ -74,11 +74,6 @@ export const hutchinsInfo: CityInfo = {
       isRate: 0.201008,
     },
   ],
-  revenueBySource: {
-    property: 7763707,
-    sales: 4314064,
-    hotel: 203185,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },

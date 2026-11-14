@@ -74,11 +74,6 @@ export const northlakeInfo: CityInfo = {
       isRate: 0.133161,
     },
   ],
-  revenueBySource: {
-    property: 7954237,
-    sales: 2280421,
-    hotel: 868313,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

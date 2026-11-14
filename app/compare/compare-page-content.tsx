@@ -99,10 +99,13 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
 
   const averageMetrics = calculateDFWData(allCities);
 
-  const revenues = dfwCities.map((c) => c.info.revenueBySource);
-  const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
-  const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
-  const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
+  const latestDfw = dfwCities.map((c) => c.financialData.at(-1));
+  const property = latestDfw.reduce(
+    (acc, f) => acc + (f?.propertyTaxRevenue ?? 0),
+    0,
+  );
+  const sales = latestDfw.reduce((acc, f) => acc + (f?.salesTaxRevenue ?? 0), 0);
+  const hotel = latestDfw.reduce((acc, f) => acc + (f?.hotelTaxRevenue ?? 0), 0);
 
   return (
     <div className="min-h-screen">
@@ -220,10 +223,17 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
               </div>
               <div className="mt-6">
                 <RevenueChart
-                  revenues={selectedCities.map((c) => ({
-                    name: c.info.name,
-                    revenue: c.info.revenueBySource,
-                  }))}
+                  revenues={selectedCities.map((c) => {
+                    const latest = c.financialData.at(-1);
+                    return {
+                      name: c.info.name,
+                      revenue: {
+                        property: latest?.propertyTaxRevenue ?? 0,
+                        sales: latest?.salesTaxRevenue ?? 0,
+                        hotel: latest?.hotelTaxRevenue ?? 0,
+                      },
+                    };
+                  })}
                   average={{ property, sales, hotel }}
                 />
               </div>

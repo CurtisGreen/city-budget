@@ -74,11 +74,6 @@ export const rockwallInfo: CityInfo = {
       isRate: 0.099344,
     },
   ],
-  revenueBySource: {
-    property: 24590290,
-    sales: 27410743,
-    hotel: 1996313,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },

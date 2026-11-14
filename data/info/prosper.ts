@@ -74,11 +74,6 @@ export const prosperInfo: CityInfo = {
       isRate: 0.182946,
     },
   ],
-  revenueBySource: {
-    property: 45951000,
-    sales: 19540000,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

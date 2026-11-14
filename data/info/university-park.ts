@@ -74,11 +74,6 @@ export const universityParkInfo: CityInfo = {
       isRate: 0.0,
     },
   ],
-  revenueBySource: {
-    property: 24925555,
-    sales: 7533753,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

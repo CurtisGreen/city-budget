@@ -74,11 +74,6 @@ export const fortWorthInfo: CityInfo = {
       isRate: 0.1475,
     },
   ],
-  revenueBySource: {
-    property: 749673000,
-    sales: 353942000,
-    hotel: 59674000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Trinity Metro", percent: 0.5 },

@@ -74,11 +74,6 @@ export const kennedaleInfo: CityInfo = {
       isRate: 0.213117,
     },
   ],
-  revenueBySource: {
-    property: 8811356,
-    sales: 2285133,
-    hotel: 26133,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },

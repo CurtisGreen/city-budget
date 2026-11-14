@@ -74,11 +74,6 @@ export const northRichlandHillsInfo: CityInfo = {
       isRate: 0.150895,
     },
   ],
-  revenueBySource: {
-    property: 39174000,
-    sales: 27974000,
-    hotel: 446000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Parks and Recreation Facilities Development Corporation", percent: 0.5 },

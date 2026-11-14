@@ -74,11 +74,6 @@ export const richardsonInfo: CityInfo = {
       isRate: 0.21779,
     },
   ],
-  revenueBySource: {
-    property: 132912399,
-    sales: 53763370,
-    hotel: 5088522,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

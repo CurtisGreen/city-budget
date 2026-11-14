@@ -74,11 +74,6 @@ export const burlesonInfo: CityInfo = {
       isRate: 0.2285,
     },
   ],
-  revenueBySource: {
-    property: 37912361,
-    sales: 30091181,
-    hotel: 610872,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Services Development Corporation", percent: 0.5 },

@@ -74,11 +74,6 @@ export const littleElmInfo: CityInfo = {
       isRate: 0.108706,
     },
   ],
-  revenueBySource: {
-    property: 42342937,
-    sales: 10483808,
-    hotel: 190432,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

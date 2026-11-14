@@ -26,11 +26,6 @@ export const argyleInfo: CityInfo = {
     { fiscalYear: 2025, moRate: 0.241942, isRate: 0.101169 },
     { fiscalYear: 2026, moRate: 0.2419, isRate: 0.1012 },
   ],
-  revenueBySource: {
-    property: 4845793,
-    sales: 3580700,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Street Maintenance Fund", percent: 0.5 },

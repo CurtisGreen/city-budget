@@ -73,11 +73,6 @@ export const trophyClubInfo: CityInfo = {
       isRate: 0.1031,
     },
   ],
-  revenueBySource: {
-    property: 11858764,
-    sales: 2630932,
-    hotel: 885378,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation 4B", percent: 0.5 },

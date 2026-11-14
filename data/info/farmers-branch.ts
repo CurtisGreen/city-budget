@@ -74,11 +74,6 @@ export const farmersBranchInfo: CityInfo = {
       isRate: 0.058925,
     },
   ],
-  revenueBySource: {
-    property: 50038531,
-    sales: 24406225,
-    hotel: 3515051,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

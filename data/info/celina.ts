@@ -74,11 +74,6 @@ export const celinaInfo: CityInfo = {
       isRate: 0.3115,
     },
   ],
-  revenueBySource: {
-    property: 36490482,
-    sales: 4925187,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

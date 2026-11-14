@@ -39,7 +39,7 @@ the statistical section:
   source the missing statistical "Changes in Net Position" would have been.
 So the every-other-report cadence still works, now covering BOTH balance sheet AND flows. Capital
 note (4 gross fields) is still the roll-forward (beginning = prior, ending = current). The per-year
-property/sales SPLIT (for revenues[]) is NOT in the condensed "Taxes and fees" line — read the
+property/sales SPLIT (for `propertyTaxRevenue` / `salesTaxRevenue`) is NOT in the condensed "Taxes and fees" line — read the
 General Revenues rows (property tax, sales tax separately) of that year's government-wide
 Statement of Activities.
 - **A missing middle-year report is recoverable for FREE** from the NEXT report's MD&A 2-year
@@ -211,9 +211,8 @@ Field names and which are optional `?` come from `lib/types.ts`. Sources per fie
 
 ### Tax revenue fields (propertyTaxRevenue / salesTaxRevenue / hotelTaxRevenue, ALL years)
 > Scope: **add-city** (step 2d) writes these for a new city, every year the acfr-json covers;
-> **populate-pension-and-expenses** backfills them into a city added earlier. The FY2024 entry
-> doubles as the required `CityInfo.revenueBySource`, so copy it from there rather than
-> sourcing it twice.
+> **populate-pension-and-expenses** backfills them into a city added earlier. The latest year's
+> entry drives the revenue-mix charts (there is no `CityInfo.revenueBySource` any more).
 - `propertyTaxRevenue` = ad valorem; `salesTaxRevenue` = sales — both from the gov general-
   revenues rows of the condensed Changes-in-Net-Position table,
   every year. Cross-check property + sales + franchise == MD&A combined "Taxes".
@@ -484,9 +483,6 @@ wrong years. Workflow:
   leaves template-literal contents untouched.
 
 ## revenue fields
-- revenueBySource = the **FY2024** property/sales/hotel totals (drives the map/summary).
-  Use FY2024, not the latest available year — copy the FY2024 acfr-json entry's three tax fields.
-- revenues[] = per-year rows (FY2024, FY2025). The FY2024 row duplicates revenueBySource.
 - **Property + sales tax**: ACFR statistical "Changes in Net Position" general-revenues rows
   (per year), or — in an AFR with no statistical section — the General Revenues rows of that
   year's government-wide Statement of Activities. Verify property + sales + franchise == MD&A
@@ -497,9 +493,9 @@ wrong years. Workflow:
   booked inside discretely-presented EDC component units). Reconcile by quarter-cent units, not by
   assuming GF = 1% (Balch Springs: gov sales = 1.5% = GF 1.25% + street 0.25%; EDC A+B = 0.5%
   sit in component units — a 3× gap vs one EDC is expected, not a misread). Use the gov line
-  as-is for revenues[] (component units are excluded by convention).
+  as-is for `salesTaxRevenue` (component units are excluded by convention).
 - **Hotel-occupancy tax** — sourcing rules are under "Tax revenue fields" above (three cases; it
-  sets the fetch budget). Two extras for `revenues[]`: it is frequently mislabeled (Southlake books
+  sets the fetch budget). Two extras for `hotelTaxRevenue`: it is frequently mislabeled (Southlake books
   it under "Municipal sales tax"), and multi-year actuals also sit in the **budget book**'s Hotel
   Occupancy Tax Fund summary (FY-2 Actual / FY-1 columns) — sanity-check against the ACFR fund's
   beginning-fund-balance roll-forward. No hotel fund → hotel = 0 (sourced).

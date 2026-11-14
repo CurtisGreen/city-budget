@@ -74,11 +74,6 @@ export const allenInfo: CityInfo = {
       isRate: 0.097596,
     },
   ],
-  revenueBySource: {
-    property: 83821874,
-    sales: 31547688,
-    hotel: 2481874,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

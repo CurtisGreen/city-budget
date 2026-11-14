@@ -74,11 +74,6 @@ export const dentonInfo: CityInfo = {
       isRate: 0.26064,
     },
   ],
-  revenueBySource: {
-    property: 106556000,
-    sales: 57075000,
-    hotel: 2965000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: 'DCTA', percent: 0.5 },

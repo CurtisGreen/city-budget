@@ -74,11 +74,6 @@ export const richlandHillsInfo: CityInfo = {
       isRate: 0.134314,
     },
   ],
-  revenueBySource: {
-    property: 4913654,
-    sales: 10476231,
-    hotel: 250237,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Crime Control and Prevention District", percent: 0.375 },

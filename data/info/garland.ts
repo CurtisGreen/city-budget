@@ -74,11 +74,6 @@ export const garlandInfo: CityInfo = {
       isRate: 0.401089,
     },
   ],
-  revenueBySource: {
-    property: 163692333,
-    sales: 46641936,
-    hotel: 1764356,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

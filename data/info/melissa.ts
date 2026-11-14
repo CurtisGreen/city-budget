@@ -74,11 +74,6 @@ export const melissaInfo: CityInfo = {
       isRate: 0.136028,
     },
   ],
-  revenueBySource: {
-    property: 14_680_643,
-    sales: 4_553_482,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community & Economic Development Corporation", percent: 0.5 },

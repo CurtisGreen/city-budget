@@ -74,11 +74,6 @@ export const lancasterInfo: CityInfo = {
       isRate: 0.178635,
     },
   ],
-  revenueBySource: {
-    property: 34020989,
-    sales: 14491661,
-    hotel: 370823,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.25 },
     { usage: "Recreational Development Corporation", percent: 0.5 },

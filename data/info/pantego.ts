@@ -74,11 +74,6 @@ export const pantegoInfo: CityInfo = {
       isRate: 0.170231,
     },
   ],
-  revenueBySource: {
-    property: 2499166,
-    sales: 2314948,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Relief", percent: 0.25 },

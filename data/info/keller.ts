@@ -74,11 +74,6 @@ export const kellerInfo: CityInfo = {
       isRate: 0.04198,
     },
   ],
-  revenueBySource: {
-    property: 23747476,
-    sales: 18881959,
-    hotel: 233794,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Park Development Corporation", percent: 0.5 },

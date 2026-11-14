@@ -74,11 +74,6 @@ export const forestHillInfo: CityInfo = {
       isRate: 0,
     },
   ],
-  revenueBySource: {
-    property: 6847310,
-    sales: 4289259,
-    hotel: 625374,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

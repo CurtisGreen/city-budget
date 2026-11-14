@@ -74,11 +74,6 @@ export const fairviewInfo: CityInfo = {
       isRate: 0.077483,
     },
   ],
-  revenueBySource: {
-    property: 9447921,
-    sales: 2138552,
-    hotel: 250076,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

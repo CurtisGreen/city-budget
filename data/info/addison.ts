@@ -109,11 +109,6 @@ export const addisonInfo: CityInfo = {
       // averageSFHTaxableValue: 501878,
     },
   ],
-  revenueBySource: {
-    property: 35679220,
-    sales: 17298041,
-    hotel: 5374881,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

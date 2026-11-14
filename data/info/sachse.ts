@@ -74,11 +74,6 @@ export const sachseInfo: CityInfo = {
       isRate: 0.194207,
     },
   ],
-  revenueBySource: {
-    property: 28198987,
-    sales: 3866139,
-    hotel: 15924,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

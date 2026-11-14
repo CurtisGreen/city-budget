@@ -74,11 +74,6 @@ export const balchSpringsInfo: CityInfo = {
       isRate: 0.0312,
     },
   ],
-  revenueBySource: {
-    property: 14651191,
-    sales: 8891822,
-    hotel: 277495,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Rebate", percent: 0.25 },

@@ -74,11 +74,6 @@ export const forneyInfo: CityInfo = {
       isRate: 0.070494,
     },
   ],
-  revenueBySource: {
-    property: 19210348,
-    sales: 12356036,
-    hotel: 179341,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Reduction", percent: 0.5 },

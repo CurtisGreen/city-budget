@@ -74,11 +74,6 @@ export const mansfieldInfo: CityInfo = {
       isRate: 0.22758,
     },
   ],
-  revenueBySource: {
-    property: 80163826,
-    sales: 31497759,
-    hotel: 1150419,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Park Facilities Development Corporation", percent: 0.5 },

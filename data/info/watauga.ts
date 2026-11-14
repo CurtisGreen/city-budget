@@ -74,11 +74,6 @@ export const wataugaInfo: CityInfo = {
       isRate: 0.178541,
     },
   ],
-  revenueBySource: {
-    property: 11596580,
-    sales: 7684529,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.25 },
     { usage: "Crime Control and Prevention District", percent: 0.5 },

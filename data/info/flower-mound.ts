@@ -74,11 +74,6 @@ export const flowerMoundInfo: CityInfo = {
       isRate: 0.063402,
     },
   ],
-  revenueBySource: {
-    property: 63095966,
-    sales: 37844425,
-    hotel: 734306,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.25 },

@@ -107,11 +107,6 @@ export const dallasInfo: CityInfo = {
       // averageSFHMarketValue: 381545,
     },
   ],
-  revenueBySource: {
-    property: 1415798000,
-    sales: 439666000,
-    hotel: 109446000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

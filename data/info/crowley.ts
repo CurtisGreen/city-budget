@@ -74,11 +74,6 @@ export const crowleyInfo: CityInfo = {
       isRate: 0.140348,
     },
   ],
-  revenueBySource: {
-    property: 11306065,
-    sales: 6571228,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Crime Control and Prevention District", percent: 0.5 },

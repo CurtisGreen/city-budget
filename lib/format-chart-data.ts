@@ -206,11 +206,6 @@ export function calculateDFWData(allMetroCities: CityData[]): CityData {
       category: "DFW",
       populations: calculateDFWPopulation(allCities),
       propertyValues: dfwPropertyTaxRates,
-      revenueBySource: {
-        property: sum(cities.map((c) => c.info.revenueBySource.property)),
-        sales: sum(cities.map((c) => c.info.revenueBySource.sales)),
-        hotel: sum(cities.map((c) => c.info.revenueBySource.hotel)),
-      },
       salesTaxUsage: calculateDFWSalesTaxUsage(cities),
       area: sum(allCities.map((c) => c.info.area)),
       notes: [

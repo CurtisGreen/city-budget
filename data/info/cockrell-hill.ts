@@ -54,11 +54,6 @@ export const cockrellHillInfo: CityInfo = {
       isRate: 0.24139,
     },
   ],
-  revenueBySource: {
-    property: 1697132,
-    sales: 637645,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

@@ -74,11 +74,6 @@ export const desotoInfo: CityInfo = {
       isRate: 0.182542,
     },
   ],
-  revenueBySource: {
-    property: 48642710,
-    sales: 11665423,
-    hotel: 1346468,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property Tax Abatement", percent: 0.5 },

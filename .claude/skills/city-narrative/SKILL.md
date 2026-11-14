@@ -43,7 +43,7 @@ the source of truth for interpretation; read it once if you need the plain-Engli
 ## 2. Load the context (one cheap read)
 Read `data/info/{id}.ts` for: `notes[]` (already-sourced ACFR quotes explaining the big
 jumps — these ARE your drivers, reuse them verbatim, don't re-derive), `propertyValues`
-(M&O + I&S tax-rate history — a policy lever), `revenueBySource`/`revenues` (property vs
+(M&O + I&S tax-rate history — a policy lever), `financialData[].propertyTaxRevenue` / `salesTaxRevenue` / `hotelTaxRevenue` (property vs
 sales vs hotel mix — concentration/volatility), `populations` (growth context). Cross-map the
 `metrics.ts` inflection years to `notes[]`: most standout years already have a quote.
 

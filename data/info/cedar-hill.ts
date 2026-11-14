@@ -74,11 +74,6 @@ export const cedarHillInfo: CityInfo = {
       isRate: 0.18457,
     },
   ],
-  revenueBySource: {
-    property: 40413522,
-    sales: 12808093,
-    hotel: 459215,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Community Development Corporation", percent: 0.5 },

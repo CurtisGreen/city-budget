@@ -74,11 +74,6 @@ export const benbrookInfo: CityInfo = {
       isRate: 0.0359,
     },
   ],
-  revenueBySource: {
-    property: 17531765,
-    sales: 4379798,
-    hotel: 176210,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

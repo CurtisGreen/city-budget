@@ -74,11 +74,6 @@ export const hasletInfo: CityInfo = {
       isRate: 0.032489,
     },
   ],
-  revenueBySource: {
-    property: 5008671,
-    sales: 4687658,
-    hotel: 22061,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.0 },
     { usage: "Community & Economic Development Corporation", percent: 0.5 },

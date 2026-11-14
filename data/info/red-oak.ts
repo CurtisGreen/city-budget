@@ -74,11 +74,6 @@ export const redOakInfo: CityInfo = {
       isRate: 0.238278,
     },
   ],
-  revenueBySource: {
-    property: 16693539,
-    sales: 8548167,
-    hotel: 390824,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Industrial Development Corporation", percent: 0.5 },

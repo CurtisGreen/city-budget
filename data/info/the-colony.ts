@@ -74,11 +74,6 @@ export const theColonyInfo: CityInfo = {
       isRate: 0.14866,
     },
   ],
-  revenueBySource: {
-    property: 30133000,
-    sales: 29310000,
-    hotel: 1656000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

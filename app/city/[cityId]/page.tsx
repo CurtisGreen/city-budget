@@ -116,10 +116,19 @@ export default async function CityPage({ params }: CityPageProps) {
     dfwCities.map((c) => c.info),
   );
 
-  const revenues = dfwCities.map((c) => c.info.revenueBySource);
-  const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
-  const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
-  const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);
+  const latestDfw = dfwCities.map((c) => c.financialData.at(-1));
+  const property = latestDfw.reduce(
+    (acc, f) => acc + (f?.propertyTaxRevenue ?? 0),
+    0,
+  );
+  const sales = latestDfw.reduce((acc, f) => acc + (f?.salesTaxRevenue ?? 0), 0);
+  const hotel = latestDfw.reduce((acc, f) => acc + (f?.hotelTaxRevenue ?? 0), 0);
+  const latest = cityData.financialData.at(-1);
+  const cityRevenue = {
+    property: latest?.propertyTaxRevenue ?? 0,
+    sales: latest?.salesTaxRevenue ?? 0,
+    hotel: latest?.hotelTaxRevenue ?? 0,
+  };
 
   const fullAccrualExpenses = toFullAccrualExpenseChart(
     cityData.financialData,
@@ -278,16 +287,16 @@ export default async function CityPage({ params }: CityPageProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
             <PieChart
-              title={"Revenue Mix (FY 2024)"}
-              property={cityData.info.revenueBySource.property}
-              sales={cityData.info.revenueBySource.sales}
-              hotel={cityData.info.revenueBySource.hotel}
+              title={`Revenue Mix (FY ${latest?.fiscalYear})`}
+              property={cityRevenue.property}
+              sales={cityRevenue.sales}
+              hotel={cityRevenue.hotel}
             />
             <RevenueChart
               revenues={[
                 {
                   name: cityData.info.name,
-                  revenue: cityData.info.revenueBySource,
+                  revenue: cityRevenue,
                 },
               ]}
               average={{ property, sales, hotel }}

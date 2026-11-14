@@ -74,11 +74,6 @@ export const glennHeightsInfo: CityInfo = {
       isRate: 0.067125,
     },
   ],
-  revenueBySource: {
-    property: 9363297,
-    sales: 1274335,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

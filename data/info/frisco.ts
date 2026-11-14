@@ -74,11 +74,6 @@ export const friscoInfo: CityInfo = {
       isRate: 0.132742,
     },
   ],
-  revenueBySource: {
-    property: 203270427,
-    sales: 69858143,
-    hotel: 12959430,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

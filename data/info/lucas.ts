@@ -74,11 +74,6 @@ export const lucasInfo: CityInfo = {
       isRate: 0.052793,
     },
   ],
-  revenueBySource: {
-    property: 5539197,
-    sales: 2657921,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Street Maintenance", percent: 0.5 },

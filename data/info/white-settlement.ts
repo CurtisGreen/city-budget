@@ -74,11 +74,6 @@ export const whiteSettlementInfo: CityInfo = {
       isRate: 0.125192,
     },
   ],
-  revenueBySource: {
-    property: 8413455,
-    sales: 6438074,
-    hotel: 386338,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

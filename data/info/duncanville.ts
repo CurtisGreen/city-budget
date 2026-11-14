@@ -74,11 +74,6 @@ export const duncanvilleInfo: CityInfo = {
       isRate: 0.035054,
     },
   ],
-  revenueBySource: {
-    property: 22377809,
-    sales: 10101931,
-    hotel: 1220834,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Property tax abatement", percent: 0.5 },

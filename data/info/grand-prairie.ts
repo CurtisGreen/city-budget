@@ -74,11 +74,6 @@ export const grandPrairieInfo: CityInfo = {
       isRate: 0.217575,
     },
   ],
-  revenueBySource: {
-    property: 155796752,
-    sales: 98140124,
-    hotel: 3934139,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "EPIC Center", percent: 0.25 },

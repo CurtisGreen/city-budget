@@ -74,11 +74,6 @@ export const saginawInfo: CityInfo = {
       isRate: 0.223897,
     },
   ],
-  revenueBySource: {
-    property: 15294001,
-    sales: 10147310,
-    hotel: 110360,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Crime Control and Prevention District", percent: 0.375 },

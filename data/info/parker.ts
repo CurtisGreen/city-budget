@@ -74,11 +74,6 @@ export const parkerInfo: CityInfo = {
       isRate: 0.004913,
     },
   ],
-  revenueBySource: {
-    property: 5_511_696,
-    sales: 799_745,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Street Maintenance", percent: 1 },

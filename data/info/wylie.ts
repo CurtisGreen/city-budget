@@ -74,11 +74,6 @@ export const wylieInfo: CityInfo = {
       isRate: 0.12139,
     },
   ],
-  revenueBySource: {
-    property: 41463584,
-    sales: 14993518,
-    hotel: 290247,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "Economic Development Corporation", percent: 0.5 },

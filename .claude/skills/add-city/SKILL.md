@@ -37,6 +37,14 @@ prompt is always preferable to a guessed number. When in doubt, ask.
 3 filenames and lookups. camelCase vars = `littleElmInfo` / `littleElmGeoJson` /
 `littleElmAcfr`.
 
+## 0b. Ask the metro area (REQUIRED)
+Before fetching anything, ask the user which metro area the city belongs to (AskUserQuestion;
+options = the `category` union in `lib/types.ts`, currently "DFW" or "Houston Metro"). Never infer
+it from the city name. The answer becomes `CityInfo.category`, which decides which home-page
+section lists the city and whether it counts in the DFW averages/charts. If the user names a metro
+that isn't in the union yet, add it to `CityInfo["category"]` in `lib/types.ts` (and give it a
+home-page section in `app/page.tsx`) first.
+
 ## 1. Templates — read first, never restate schema
 Read these as the source of truth for shape (do NOT copy values):
 - `lib/types.ts` (CityInfo AND CityFinancialData interfaces — the latter is the field list
@@ -191,6 +199,7 @@ h. **Do NOT create or edit the manifest.** `manifests/{id}.json` is produced by 
    create-manifest run — not this skill.
 
 ## 3. CityInfo -> data/info/{id}.ts
+- category: the metro answer from step 0b, written as the key directly below `name`.
 - populations: 1980/1990/2000/2010/2020 from Wikipedia (WebFetch), 2025 from US Census
   QuickFacts (WebFetch); label it `year: 2025` to match the other cities. QuickFacts frequently
   403s WebFetch AND curl (Cloudflare) — fall back to Data USA / Census Reporter, but ONLY if they
@@ -208,9 +217,6 @@ h. **Do NOT create or edit the manifest.** `manifests/{id}.json` is produced by 
   district's annual rates PDF: Tarrant County = `https://www.tad.org/content/rates/{taxYear}TaxRates.pdf`
   (curl-able; tax year {N} = fiscal year {N+1}; M&O + I&S must sum to the adopted total — that's
   your cross-check). See conventions "Tax rates" for the non-Tarrant equivalent.
-- revenueBySource (CityInfo): **FY2024** property/sales/hotel tax (NOT the latest year) — copy
-  the FY2024 entry's three tax fields from the acfr-json you just wrote (step 2d) so the snapshot
-  and the series can't drift. Same for the FY2024 row of `revenues[]`.
 - salesTaxUsage: the 2% local split — easiest from the **budget book** (states it plainly,
   e.g. "0.5% parks, 0.375% economic development, 0.125% crime control" + 1% General Fund).
   See percent convention in conventions.md. Entries should sum to 2.0.
@@ -275,8 +281,8 @@ GeoJSON, will NOT match until formatted:
 - GeoJSON gotcha: writing via Python `json.dump` quotes every key and escapes non-ASCII
   (e.g. `®` -> `®`). Prettier unquotes valid-identifier keys but does NOT unescape
   string contents — replace `®` etc. with the literal char to match existing files.
-- Match the existing expanded-object style: in `{id}.ts`, write each `propertyValues` /
-  `revenues` entry as a multi-line object (like hurst.ts), not single-line. Prettier
+- Match the existing expanded-object style: in `{id}.ts`, write each `propertyValues`
+  entry as a multi-line object (like hurst.ts), not single-line. Prettier
   preserves whichever you write, so author them expanded.
 
 ## 6. Verify

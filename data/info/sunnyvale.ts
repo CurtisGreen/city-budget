@@ -74,11 +74,6 @@ export const sunnyvaleInfo: CityInfo = {
       isRate: 0.14918,
     },
   ],
-  revenueBySource: {
-    property: 8298368,
-    sales: 4742175,
-    hotel: 0,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },

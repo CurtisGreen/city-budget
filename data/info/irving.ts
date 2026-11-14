@@ -74,11 +74,6 @@ export const irvingInfo: CityInfo = {
       isRate: 0.1597,
     },
   ],
-  revenueBySource: {
-    property: 223022000,
-    sales: 108213000,
-    hotel: 31981000,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },

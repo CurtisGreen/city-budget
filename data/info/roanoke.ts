@@ -74,11 +74,6 @@ export const roanokeInfo: CityInfo = {
       isRate: 0.139184,
     },
   ],
-  revenueBySource: {
-    property: 11804174,
-    sales: 19250692,
-    hotel: 177365,
-  },
   salesTaxUsage: [
     { usage: "General Fund", percent: 1 },
     {
