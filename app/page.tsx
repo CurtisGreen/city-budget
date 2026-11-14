@@ -135,10 +135,30 @@ export default function HomePage() {
       {/* City Cards */}
       <section id="cities" className="py-12">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-8 text-center">Cities</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center">DFW Cities</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             <CityCard city={dfwData} />
             {cities
+              .filter(
+                (city) => city.info.category === "DFW" || !city.info.category,
+              )
+              .toSorted(
+                (a, b) =>
+                  (b.info.populations.at(-1)?.value ?? 0) -
+                  (a.info.populations.at(-1)?.value ?? 0),
+              )
+              .map((city) => (
+                <CityCard key={city.info.id} city={city} />
+              ))}
+          </div>
+        </div>
+        <div className="container mx-auto px-4 py-12">
+          <h3 className="text-3xl font-bold mb-8 text-center">
+            Houston Metro Cities
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+            {cities
+              .filter((city) => city.info.category === "Houston Metro")
               .toSorted(
                 (a, b) =>
                   (b.info.populations.at(-1)?.value ?? 0) -

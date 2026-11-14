@@ -90,6 +90,7 @@ export interface CityInfo {
   longitude?: number;
   area: number; // Land area in square miles
   notes?: string[];
+  category?: "DFW" | "Houston Metro";
 }
 
 export interface CityData {
