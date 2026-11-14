@@ -22,8 +22,11 @@
  * See shrinkRing for why the operation order matters to that.
  *
  * Usage:
- *   node scripts/shrink-geojson.mjs           # dry run, prints savings
- *   node scripts/shrink-geojson.mjs --write   # apply
+ *   node scripts/shrink-geojson.mjs                          # dry run, all cities
+ *   node scripts/shrink-geojson.mjs --write                  # apply to all cities
+ *   node scripts/shrink-geojson.mjs --write --only houston   # apply to listed city ids only
+ *
+ * After adding a city, use --only {id}: touching every file churns unrelated diffs.
  */
 
 import { execFileSync } from "node:child_process";
@@ -109,8 +112,28 @@ function countVertices(text) {
     .length;
 }
 
-const write = process.argv.includes("--write");
-const paths = globSync("data/geojson/*.ts").sort();
+const args = process.argv.slice(2);
+const write = args.includes("--write");
+const onlyAt = args.indexOf("--only");
+const only =
+  onlyAt === -1
+    ? []
+    : args.slice(onlyAt + 1).filter((a) => !a.startsWith("--"));
+if (onlyAt !== -1 && only.length === 0) {
+  console.error("--only needs at least one city id, e.g. --only houston");
+  process.exit(2);
+}
+const allPaths = globSync("data/geojson/*.ts").sort();
+const paths = only.length
+  ? only.map((id) => {
+      const path = `data/geojson/${id}-geojson.ts`;
+      if (!allPaths.includes(path)) {
+        console.error(`no such file: ${path}`);
+        process.exit(2);
+      }
+      return path;
+    })
+  : allPaths;
 const results = [];
 
 for (const path of paths) {
@@ -140,7 +163,7 @@ for (const path of paths) {
 // pairs on one line, 80-column string wrapping, trailing commas).
 if (write) {
   for (const { path, rebuilt } of results) writeFileSync(path, rebuilt);
-  execFileSync("npx", ["--yes", PRETTIER, "--write", "data/geojson/*.ts"], {
+  execFileSync("npx", ["--yes", PRETTIER, "--write", ...paths], {
     stdio: "ignore",
   });
 }

@@ -6,10 +6,10 @@
 - Skips years that already have an archiveUrl unless --force
 
 Setup (once):
-  pip install -r scripts/requirements.txt
+  conda env create -f environment.yml     # creates the city-budget env
   cp scripts/.env.example scripts/.env    # paste keys from archive.org/account/s3.php
 
-Usage:
+Usage (activate first: conda activate city-budget):
   python scripts/upload_to_ia.py manifests/little-elm.json
   python scripts/upload_to_ia.py manifests/little-elm.json --force
   python scripts/upload_to_ia.py manifests/*.json

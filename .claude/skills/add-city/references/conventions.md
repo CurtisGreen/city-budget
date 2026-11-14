@@ -119,6 +119,22 @@ Statement of Activities.
   gross** to add right-to-use lease assets — so report N+1's beginning balance won't tie to
   report N's ending (the prior-year gross is restated upward by the new lease assets). Apply
   latest-wins. Not an error; don't chase it.
+- **Restatement rule — latest wins, CHECKED FOR EVERY YEAR (not only the years you happen to read).**
+  A report prints its prior year restated; a year you only read in its own report can be silently
+  stale (Houston: FY2018 current assets +$79M, FY2022 $75M current→capital reclass, FY2023
+  capital/liabilities all differ between the report that issued them and the next one).
+  1. In EVERY manifest report (not every-other), read the net-position table's current + prior
+     columns for the 5 balance-sheet aggregates, plus the capital note's beginning balance. This is
+     one table and one note per report, so it is cheap.
+  2. For each year N, compare report N's own value to report N+1's prior-year column (and the capital
+     note's ending(N) to beginning(N+1)). Equal → keep. Different → **use N+1's number**.
+  3. Never average, never keep the older "because it was audited first." The newest report that prints
+     the year is the record.
+  4. List every restated year-field (old → new) in the final report. A restatement gets a data-file
+     note only if it is the driver of a charted outlier (see "notes"); otherwise it is report-only.
+  5. The 10-year statistical/RSI tables already follow this: for overlapping years the NEWEST
+     report's window wins, and an older report is used only for years outside it.
+
 - **MD&A "Totals" columns can be mis-keyed — verify `gov + business == total`.** Southlake's
   FY2023 MD&A deferred-outflows/inflows Totals were off by 314,383 (the per-activity columns
   were correct). When it doesn't tie, fall back to the government-wide **Statement of Net
@@ -150,6 +166,32 @@ Statement of Activities.
 - **pdftotext layout artifacts.** Words get stray spaces (`Gov ernment`, `serv ice`,
   `I nterest`); grep loosely. Statistical tables often split row labels and year-columns
   across facing pages (labels on left page, numbers-only on right) — read by row position.
+
+## Big-city path — decided by report CONDITIONS, not by city size
+The small-city defaults above assume MD&A tables in thousands, hotel tax in a special-revenue fund,
+and a sales-tax split stated in the budget book. Size is only a proxy; check these conditions on
+the actual reports. Each one that hits replaces the default for THAT field only:
+- **MD&A tables are printed in millions** (check the table header; Houston FY2015–FY2020) → too
+  coarse for the 5 balance-sheet aggregates. This is the one case where the "MD&A is source of
+  truth" pitfall yields: source the aggregates from the audited **Statement of Net Position**
+  (thousands) for ALL years so the series is on one basis, and say so in the report. Property/sales
+  tax cross-checks against the MD&A table are still fine at millions precision.
+- **Hotel tax runs through convention/enterprise funds** → printed as a government-wide general
+  revenue (see "Tax revenue fields" big-city exception). If the report shows governmental and
+  convention-fund lines separately, the field is their SUM; state that in the report. With no
+  second source it stays unproven — flag it, don't claim it was verified.
+- **Budget book gives no sales-tax split** (Houston: 1% General Fund + 1% METRO transit authority,
+  only in a Comptroller exhibit and third-party guides) → use the best published source, name it in
+  the report, mark the split lower-confidence. Never invent a budget-book quote.
+- **The newest rate split is not in the latest ACFR** (FY2026 M&O/I&S printed only in the next
+  year's proposed budget) → take it from that document, keep the ACFR rate table for FY2015–FY2025
+  for consistency, and name the source in the report.
+- **Three or more pension plans, or plans reported `(in 000's)`** → one entry per plan per year,
+  short names, ×1000 where printed in thousands (see "pensionPlans[]").
+- **Function names drift across the series** → expect a `lib/expense-category-groups.ts` entry.
+- **`extract-statements.py` gaps seen on Houston** (RSI, funds `COLUMN_SUSPECT`, MD&A in millions,
+  Statement of Net Position and capital note not modeled): use `show-table.py` for those tables and
+  extend the extractor per add-city `SKILL.md §2` c2; hand-roll only for a genuinely exceptional format.
 
 ## Fields <- ACFR location
 Field names and which are optional `?` come from `lib/types.ts`. Sources per field:

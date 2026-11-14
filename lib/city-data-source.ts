@@ -52,6 +52,7 @@ import { bedfordInfo } from "@/data/info/bedford";
 import { theColonyInfo } from "@/data/info/the-colony";
 import { kellerInfo } from "@/data/info/keller";
 import { kennedaleInfo } from "@/data/info/kennedale";
+import { houstonInfo } from "@/data/info/houston";
 import { hurstInfo } from "@/data/info/hurst";
 import { hutchinsInfo } from "@/data/info/hutchins";
 import { lucasInfo } from "@/data/info/lucas";
@@ -132,6 +133,7 @@ const basicCityInfo = [
   theColonyInfo,
   kellerInfo,
   kennedaleInfo,
+  houstonInfo,
   hurstInfo,
   hutchinsInfo,
   lucasInfo,

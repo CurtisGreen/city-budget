@@ -48,7 +48,7 @@ export default function HomePage() {
               Making city finances easy-peasy
             </h2>
             <p className="text-xl text-muted-foreground mb-8 text-pretty">
-              Check out how cities in North Texas are doing
+              Check out how cities in Texas are doing
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="#map">
@@ -109,7 +109,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h3 className="text-3xl font-bold mb-2 text-center">
-              North Texas Financial Map
+              Texas Financial Map
             </h3>
             <p className="text-muted-foreground text-center mb-8">
               Change the dropdown on the map to see different stats, or click on

@@ -6,7 +6,7 @@
 - Unstaged targets are downloaded from the manifest url, then repointed to source:"manual"
 - Ghostscript must already be on PATH, `conda install -c conda-forge ghostscript` works
 
-Usage:
+Usage (activate first: conda activate city-budget):
   python scripts/repair_pdfs.py richland-hills:2025
   python scripts/repair_pdfs.py richland-hills:2025 keller:2019
   python scripts/repair_pdfs.py --no-repoint richland-hills:2025

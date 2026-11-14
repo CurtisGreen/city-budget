@@ -175,6 +175,15 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
     modifiedAccrualGroups: {},
     notes: {},
   },
+  houston: {
+    fullAccrualGroups: {
+      "Interest and fiscal charges": "Interest on long-term debt",
+      "Unallocated Depreciation": "Unallocated depreciation",
+      "Unallocated depreciation expense": "Unallocated depreciation",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
   dallas: {
     fullAccrualGroups: {
       "Code enforcement": "Public works",

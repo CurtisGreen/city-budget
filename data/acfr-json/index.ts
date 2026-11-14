@@ -37,6 +37,7 @@ import { haltomCityAcfr } from "./haltom-city";
 import { hasletAcfr } from "./haslet";
 import { highlandParkAcfr } from "./highland-park";
 import { highlandVillageAcfr } from "./highland-village";
+import { houstonAcfr } from "./houston";
 import { hurstAcfr } from "./hurst";
 import { hutchinsAcfr } from "./hutchins";
 import { irvingAcfr } from "./irving";
@@ -117,6 +118,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   haslet: hasletAcfr,
   "highland-park": highlandParkAcfr,
   "highland-village": highlandVillageAcfr,
+  houston: houstonAcfr,
   hurst: hurstAcfr,
   hutchins: hutchinsAcfr,
   irving: irvingAcfr,

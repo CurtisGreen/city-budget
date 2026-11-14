@@ -67,7 +67,7 @@ a. **Source PDFs come ONLY from `manifests/{id}.json`. Do NOT hunt for PDFs.** F
      path (`inbox/...`) if present → else **`url`** (the original city source) → else **`archiveUrl`**
      (the permanent Internet Archive copy). Rationale: the manual/original file is the exact
      document; the IA copy is the fallback if neither local file nor live URL is available. Read a
-     local `file` from disk; fetch a `url` with `curl_cffi impersonate="chrome"` (Akamai TLS); fetch
+     local `file` from disk; fetch a `url` with `curl_cffi impersonate="chrome"` (Akamai TLS) via `conda run -n city-budget python` (see create-manifest "Python env"); fetch
      an `archiveUrl` with plain `curl -sL`. The year range you work with = exactly the years present
      in the manifest (may be a subset of FY2015–2025).
    - **If a year is absent from the manifest, or its PDF can't be fetched/opened** (404,
@@ -105,6 +105,10 @@ b. Read strategy (minimize PDFs actually parsed), applied over the years the man
    6. Read an **in-between report only if** a value is missing, was restated (see pitfalls), or
       fails a cross-check — and only if that year is in the manifest. If a report you need is a
       manifest gap, log it (a) and proceed with what's available.
+   7. **Restatements — apply the conventions "Restatement rule" (latest wins, checked for every
+      year).** Read the prior-year column of the net-position table in EVERY manifest report, not
+      every-other; where it differs from the neighbor's own number, use the later report's and list
+      the change in the final report.
 c. Download the manifest PDFs you need (per b) to a temp dir, then extract with
    **`pdftotext -layout`** (NOT WebFetch — WebFetch's summarizer mangles financial tables and
    drops columns). `pdftotext` is at /opt/homebrew/bin. If a fetched file isn't `%PDF` or
@@ -116,6 +120,31 @@ c. Download the manifest PDFs you need (per b) to a temp dir, then extract with
    - Pull the bulk of the data from MD&A + statistical tables (see conventions.md "Fast
      sources"); they give many years at once. Only fall back to the full government-wide
      statements for fields the condensed tables omit.
+c2. **USE THE EXISTING SCRIPTS FIRST; hand-roll only as an exception.** The Houston run skipped
+   straight to six scratch parsers (SoA, net position, funds, pension, capital note) and then
+   fought bugs in each; the repo already ships the tooling in `.claude/skills/populate-pension-and-expenses/scripts/`
+   (`S=` that path). Run every script as `conda run -n city-budget python $S/<script>`:
+   1. `extract-statements.py {scratch}/{id}-fy*.txt > {scratch}/extracted.json` (ALL dumps, one
+      call) — then query the JSON; it already carries the SoA rows, funds statement, RSI schedules
+      and MD&A table with their self-checks. See populate-pension-and-expenses `SKILL.md §1`.
+   2. A table it did not find (`found: false`, `rsi: []`), a `COLUMN_SUSPECT`/`CHECK_FAIL`, or a
+      statement it does not model (**Statement of Net Position, capital-assets note**): read it with
+      `show-table.py` and transcribe the figures into the staging JSON. Custom parsing is allowed only
+      when the format is genuinely exceptional (a layout the extractor can't be taught, a one-off
+      scan): run the script first, name in the report which tables it failed on and why, and keep
+      the custom code to those tables.
+   3. If the miss is generic (it will recur on the next city), fix `extract-statements.py` and add
+      a case to `test-extract-statements.py` (run `conda run -n city-budget python
+      $S/test-extract-statements.py`) — a reusable fix lands in the repo, not a scratchpad. Houston
+      gaps to start from: RSI returned 0 schedules in all 11 reports; the funds parser raised
+      `COLUMN_SUSPECT` in all 11; the MD&A table was found in only 7 of 11 (it is printed in
+      millions).
+   4. Optional fields go **stage → `verify-extraction.py --extracted extracted.json` →
+      `write-city-fields.py`** (populate-pension-and-expenses `SKILL.md §5`), never straight into
+      the `.ts`. `write-city-fields.py` needs an existing `data/acfr-json/{id}.ts` with the base
+      fields, so write the base-field skeleton first (a short generator that reads
+      `extracted.json`/your staged values is fine — it must not re-parse the text dumps).
+   5. Finish with `audit-expenses.mjs {id}` + `audit-pension.py {id}` (step 6).
 d. Write `data/acfr-json/{id}.ts`, one entry per fiscal year:
    ```
    import type { CityFinancialData } from "@/lib/types";
@@ -254,6 +283,11 @@ curl -s -A "city-budget-data/1.0" https://overpass-api.de/api/interpreter \
   type:"Feature", properties:{ "@id":"relation/{id}", ...tags }, geometry }] };` to match
   existing files (json.dump then prepend the `export const`).
 - If the name is ambiguous (multiple TX matches), confirm the relation id with the user.
+- **Shrink only big boundaries.** Count the raw vertices (`[lon, lat]` pairs) in the new file:
+  `grep -cE '^\s*\[\s*-?[0-9.]+,' data/geojson/{id}-geojson.ts`. If **> 2,000** (raw boundaries
+  average ~1,100), run `node scripts/shrink-geojson.mjs --write --only {id}` (drop `--write` for a
+  dry run). Otherwise skip it. Always pass `--only {id}`; without it the script rewrites every
+  city's file.
 
 ## 5. Register in three files (6 edits)
 **a. `lib/city-data-source.ts`** — grep `hurstInfo` for insertion points:
@@ -289,7 +323,7 @@ GeoJSON, will NOT match until formatted:
 - Run BOTH optional-field audits from repo root — they need no PDFs and catch a bad breakdown or
   pension series immediately:
   ```bash
-  node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}; python3 .claude/skills/populate-pension-and-expenses/scripts/audit-pension.py {id}
+  node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}; conda run -n city-budget python .claude/skills/populate-pension-and-expenses/scripts/audit-pension.py {id}
   ```
   Expect full coverage (except years you reported as gaps), `reconciliation ✓`, plausible funded
   ratios, no anomalies. Exit 1 = a value you wrote is arithmetically wrong — fix it, don't ship it.

@@ -28,9 +28,11 @@ interface RevenueInput {
 export const RevenueChart = ({
   revenues,
   average,
+  year,
 }: {
   revenues: RevenueInput[];
   average: RevenueBySource;
+  year: number;
 }) => {
   const averageTotal = average.property + average.sales + average.hotel;
   const property = revenues.reduce(
@@ -40,7 +42,7 @@ export const RevenueChart = ({
       acc[r.name] = property / total;
       return acc;
     },
-    { name: "Property Tax", Average: average.property / averageTotal } as any
+    { name: "Property Tax", Average: average.property / averageTotal } as any,
   );
   const sales = revenues.reduce(
     (acc, r) => {
@@ -49,7 +51,7 @@ export const RevenueChart = ({
       acc[r.name] = sales / total;
       return acc;
     },
-    { name: "Sales Tax", Average: average.sales / averageTotal } as any
+    { name: "Sales Tax", Average: average.sales / averageTotal } as any,
   );
   const hotel = revenues.reduce(
     (acc, r) => {
@@ -58,7 +60,7 @@ export const RevenueChart = ({
       acc[r.name] = hotel / total;
       return acc;
     },
-    { name: "Hotel Tax", Average: average.hotel / averageTotal } as any
+    { name: "Hotel Tax", Average: average.hotel / averageTotal } as any,
   );
   const data = [property, sales, hotel];
 
@@ -68,7 +70,7 @@ export const RevenueChart = ({
     <Card>
       <CardHeader>
         <CardTitle className="text-lg">
-          Revenue Mix Comparison (FY 2024)
+          Revenue Mix Comparison (FY {year})
         </CardTitle>
       </CardHeader>
       <CardContent>

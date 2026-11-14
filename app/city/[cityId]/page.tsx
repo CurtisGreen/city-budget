@@ -121,8 +121,14 @@ export default async function CityPage({ params }: CityPageProps) {
     (acc, f) => acc + (f?.propertyTaxRevenue ?? 0),
     0,
   );
-  const sales = latestDfw.reduce((acc, f) => acc + (f?.salesTaxRevenue ?? 0), 0);
-  const hotel = latestDfw.reduce((acc, f) => acc + (f?.hotelTaxRevenue ?? 0), 0);
+  const sales = latestDfw.reduce(
+    (acc, f) => acc + (f?.salesTaxRevenue ?? 0),
+    0,
+  );
+  const hotel = latestDfw.reduce(
+    (acc, f) => acc + (f?.hotelTaxRevenue ?? 0),
+    0,
+  );
   const latest = cityData.financialData.at(-1);
   const cityRevenue = {
     property: latest?.propertyTaxRevenue ?? 0,
@@ -300,6 +306,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 },
               ]}
               average={{ property, sales, hotel }}
+              year={latest?.fiscalYear!}
             />
           </div>
 

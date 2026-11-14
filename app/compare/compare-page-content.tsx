@@ -104,8 +104,14 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
     (acc, f) => acc + (f?.propertyTaxRevenue ?? 0),
     0,
   );
-  const sales = latestDfw.reduce((acc, f) => acc + (f?.salesTaxRevenue ?? 0), 0);
-  const hotel = latestDfw.reduce((acc, f) => acc + (f?.hotelTaxRevenue ?? 0), 0);
+  const sales = latestDfw.reduce(
+    (acc, f) => acc + (f?.salesTaxRevenue ?? 0),
+    0,
+  );
+  const hotel = latestDfw.reduce(
+    (acc, f) => acc + (f?.hotelTaxRevenue ?? 0),
+    0,
+  );
 
   return (
     <div className="min-h-screen">
@@ -235,6 +241,7 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
                     };
                   })}
                   average={{ property, sales, hotel }}
+                  year={selectedCities[0].financialData.at(-1)?.fiscalYear!}
                 />
               </div>
             </div>

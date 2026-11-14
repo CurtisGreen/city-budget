@@ -51,6 +51,7 @@ import { bedfordGeoJson } from "@/data/geojson/bedford-geojson";
 import { theColonyGeoJson } from "@/data/geojson/the-colony-geojson";
 import { kellerGeoJson } from "@/data/geojson/keller-geojson";
 import { kennedaleGeoJson } from "@/data/geojson/kennedale-geojson";
+import { houstonGeoJson } from "@/data/geojson/houston-geojson";
 import { hurstGeoJson } from "@/data/geojson/hurst-geojson";
 import { hutchinsGeoJson } from "@/data/geojson/hutchins-geojson";
 import { lucasGeoJson } from "@/data/geojson/lucas-geojson";
@@ -131,6 +132,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...theColonyGeoJson.features,
   ...kellerGeoJson.features,
   ...kennedaleGeoJson.features,
+  ...houstonGeoJson.features,
   ...hurstGeoJson.features,
   ...hutchinsGeoJson.features,
   ...lucasGeoJson.features,

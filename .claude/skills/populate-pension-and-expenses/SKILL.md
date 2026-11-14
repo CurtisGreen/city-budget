@@ -71,7 +71,7 @@ Legend renders as `{City} - {name}`, so keep `name` short: `"TMRS"`, `"Employees
 say so and point to **add-city** (don't populate a city that doesn't exist). Then, from repo root:
 
 ```bash
-node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}; python3 .claude/skills/populate-pension-and-expenses/scripts/audit-pension.py {id}
+node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}; conda run -n city-budget python .claude/skills/populate-pension-and-expenses/scripts/audit-pension.py {id}
 ```
 
 - `audit-expenses.mjs` prints a per-year ✓/· coverage matrix for the 5 tax/expense fields, lists the
@@ -94,7 +94,7 @@ skip the other half's extraction.
 ## 1. Fetch the shared PDFs — ONCE
 
 Source PDFs come from `manifests/{id}.json`. Fetch per **validate-city §2a**: manifest `file` →
-`url` (curl_cffi `impersonate="chrome"` for Akamai/Cloudflare) → `archiveUrl`. Discovery quirks per
+`url` (curl_cffi `impersonate="chrome"` for Akamai/Cloudflare, via `conda run -n city-budget python`) → `archiveUrl`. Discovery quirks per
 **add-city `SKILL.md §2 a/a1/a2`** (verify right-city + FYE). Any city-specific access quirk is
 worth a `reference` memory note (e.g. addison-acfr-sources).
 
@@ -124,9 +124,18 @@ every dump at once — one call for the whole city, however many reports it has:
 ```bash
 S=.claude/skills/populate-pension-and-expenses/scripts
 for y in $(seq 2015 2025); do pdftotext -layout {scratch}/{id}-fy$y.pdf {scratch}/{id}-fy$y.txt; done
-python3 $S/extract-statements.py {scratch}/{id}-fy*.txt > {scratch}/extracted.json   # ALL dumps, one call
-python3 $S/extract-statements.py {scratch}/{id}-fy2025.txt --summary                  # orient on ONE report
+conda run -n city-budget python $S/extract-statements.py {scratch}/{id}-fy*.txt > {scratch}/extracted.json   # ALL dumps, one call
+conda run -n city-budget python $S/extract-statements.py {scratch}/{id}-fy2025.txt --summary                  # orient on ONE report
 ```
+
+**Use these scripts first; hand-roll only as an exception.** They are stdlib-only but still run
+through `conda run -n city-budget python` (create-manifest "Python env"). When `extract-statements.py`
+returns `found: false`, an empty `rsi`, or a `COLUMN_SUSPECT`, read that table with `show-table.py`
+and stage the numbers by hand. Custom parsing is fine when a format is genuinely exceptional, but run
+the scripts first, say in the report which tables they failed on, and when the miss is generic extend
+`extract-statements.py` and add a case to `test-extract-statements.py` so the next city doesn't repeat
+it. Houston skipped straight to scratchpad `parse_*.py` files and lost most of a session to bugs the
+tested scripts already handle.
 
 **Write the JSON to a file and query it; do not `--summary` the whole city.** `--summary` is for
 orienting yourself on ONE report — what tables that city has, which flags fire. Across a whole
@@ -198,10 +207,10 @@ statistical-section tables, hotel-fund schedules, the footnotes that drive
 
 ```bash
 S=.claude/skills/populate-pension-and-expenses/scripts
-python3 $S/show-table.py {scratch}/{id}-fy{year}.txt --list
-python3 $S/show-table.py {scratch}/{id}-fy{year}.txt --find 'Schedule of Changes in Net Pension' --occurrence 2 --lines 46 \
+conda run -n city-budget python $S/show-table.py {scratch}/{id}-fy{year}.txt --list
+conda run -n city-budget python $S/show-table.py {scratch}/{id}-fy{year}.txt --find 'Schedule of Changes in Net Pension' --occurrence 2 --lines 46 \
     --rows 'ending of year|net position - ending|% of TPL|Covered payroll'
-python3 $S/show-table.py {scratch}/{id}-fy{year}.txt --from 'Functions/Program' --to 'TOTAL PRIMARY GOVERNMENT'
+conda run -n city-budget python $S/show-table.py {scratch}/{id}-fy{year}.txt --from 'Functions/Program' --to 'TOTAL PRIMARY GOVERNMENT'
 ```
 
 Every figure and label it prints is verbatim, so it cannot change what you extract. It prints
@@ -378,7 +387,7 @@ omission), which is reported separately from a gap.
 **b. Prove, before anything is written:**
 
 ```bash
-python3 .claude/skills/populate-pension-and-expenses/scripts/verify-extraction.py {scratch}/staged.json \
+conda run -n city-budget python .claude/skills/populate-pension-and-expenses/scripts/verify-extraction.py {scratch}/staged.json \
     --extracted {scratch}/extracted.json      # run from the REPO ROOT
 ```
 
@@ -413,14 +422,14 @@ basis difference: that signature FAILs, while a merely unexplained gap reports `
 **c. Write** (refuses unless (b) passes; `--dry-run` to preview):
 
 ```bash
-python3 .claude/skills/populate-pension-and-expenses/scripts/write-city-fields.py {scratch}/staged.json
+conda run -n city-budget python .claude/skills/populate-pension-and-expenses/scripts/write-city-fields.py {scratch}/staged.json
 ```
 
 Then verify in **ONE** Bash call (format → both audits → typecheck → build), not five:
 
 ```bash
 npx prettier --write data/acfr-json/{id}.ts && npx prettier --check data/acfr-json/{id}.ts
-node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}; python3 .claude/skills/populate-pension-and-expenses/scripts/audit-pension.py {id}
+node .claude/skills/populate-pension-and-expenses/scripts/audit-expenses.mjs {id}; conda run -n city-budget python .claude/skills/populate-pension-and-expenses/scripts/audit-pension.py {id}
 npx tsc --noEmit 2>&1 | grep -iE "{id}|acfr-json"; npm run build 2>&1 | tail -5
 ```
 

@@ -23,8 +23,31 @@ Only include a year whose PDF you actually downloaded and verified (bytes start 
 is the RIGHT city + RIGHT fiscal year). A wrong-city/wrong-year entry is worse than a gap. Small towns
 genuinely lack some years — a documented gap is fine; a fabricated URL is not.
 
+## Python env — ALWAYS use the `city-budget` conda env
+Define: `environment.yml` (repo root). Create once: `conda env create -f environment.yml`;
+update after requirements change: `conda env update -f environment.yml --prune`.
+Interactive shell: `conda activate city-budget`. From Claude/non-interactive: prefix every script
+with `conda run -n city-budget python …` (never bare `python`/`python3`).
+
+**When handing a script to the user to run themselves** (e.g. `scripts/upload_to_ia.py`, which
+publishes to Internet Archive, so the user runs it): say in the same message that they must first
+`conda activate city-budget`, and give the command in that order:
+```bash
+conda activate city-budget
+python scripts/upload_to_ia.py manifests/{id}.json
+```
+**When the user directs you to run a script**, run it yourself with
+`conda run -n city-budget python …` — activate/use the env, never fall back to bare `python`.
+
+Why: the `(base)` env can have a broken `curl_cffi` (macOS 27.2: `ImportError: symbol not found
+'_CFArrayAppendValue'`), and an env without `cryptography` makes pypdf fail on encrypted PDFs
+("cryptography>=3.1 is required for AES algorithm"), so every PDF is silently rejected as a GAP.
+Preflight (2s): `conda run -n city-budget python -c "import curl_cffi, pypdf, cryptography"`.
+**A year rejected with no obvious reason = suspect the env first** (run pypdf on the file by hand
+and read the exception) before concluding the PDF is bad.
+
 ## Method — follow the discovery ladder, then run the harvester
-1. **READ the playbook first:** `~/.claude/projects/-Users-curtis-Documents-city-budget/memory/acfr-source-discovery-playbook.md`
+1. **READ the playbook first:** `~/.claude/projects/-Users-curtis-Documents-other-city-budget/memory/acfr-source-discovery-playbook.md`
    — the tier-ordered method (structured API → WebSearch dedicated page → curl+grep → browser+expand
    → probe IDs → Wayback → manual) and per-CMS recipes. Also read `memory/{id}-acfr-sources.md` if it
    exists (city-specific quirks/URLs). Fetch everything with **curl_cffi impersonate="chrome"** — plain
@@ -38,13 +61,19 @@ genuinely lack some years — a documented gap is fine; a fabricated URL is not.
    not the label), maps year→url, and MERGES into `manifests/{id}.json` without clobbering uploaded
    entries. Pick the mode that fits the CMS:
    - Dedicated ACFR / finance page (CivicPlus DocumentCenter, showpublisheddocument, static links):
-     `python scripts/harvest_manifest.py --id {id} --city "{City}" --page {URL}`
+     `conda run -n city-budget python scripts/harvest_manifest.py --id {id} --city "{City}" --page {URL}`
    - CivicPlus **ArchiveCenter** category (holds all years): `--amid {…/Archive.aspx?AMID=n}`
    - Static filename pattern: `--pattern "…/report-{year}.pdf" --years 2015-2025`
    - **JS-rendered list** (raw HTML has no doc links — DocBox/`docbox.js`, SharePoint `.aspx`,
      finalsite, some CivicPlus): open the page in the **browser pane**, expand any collapsed
      accordions/dropdowns FIRST (click `[aria-expanded="false"]` toggles — NOT nav links), read the
      rendered anchors, then pass them: `--urls URL1 URL2 …`
+
+   - **Static HTML list** (raw HTML has direct `.pdf` hrefs, e.g. Houston): plain `curl -sL` the page,
+     `grep -o 'href="[^"]*pdf"'`, then pass the URLs with `--urls`. Big cities publish 5–30 MB PDFs
+     (a run of ~10 takes minutes, a single year ~2s each); when a city offers a "printer friendly"
+     and a full-graphics PDF of the same year, prefer whichever the harvester verifies (Houston
+     FY2015–17: only `…printerfriendly.pdf` works).
 
 4. **Fill gaps** the harvester reports (`GAPS [...]`), cheapest first:
    - older years often live in the ArchiveCenter (`--amid`) even when the page shows only recent ones;

@@ -5,7 +5,7 @@
 - curl_cffi impersonate=chrome beats Akamai TLS fingerprinting, retries unverified on a bad cert
 - JS-rendered lists have no links in raw HTML, read them in a browser, pass via --urls
 
-Usage (pick one source mode):
+Usage (activate first: conda activate city-budget) (pick one source mode):
   --page    https://city.gov/finance    scrape DocumentCenter/showpublisheddocument/Archive links
   --amid    .../Archive.aspx?AMID=40    CivicPlus ArchiveCenter category (all years)
   --urls    URL1 URL2 ...               explicit URLs, e.g. read off a JS-rendered page

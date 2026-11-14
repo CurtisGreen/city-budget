@@ -55,7 +55,7 @@ the source PDF and decide: **real event → quote it; mis-keyed → fix it.**
 
 ### 2a. Get the source PDF (manifest only)
 From `manifests/{id}.json`, per entry prefer `source:"manual"` `file` (`inbox/...`) → else `url`
-(fetch with `curl_cffi impersonate="chrome"`, Akamai TLS) → else `archiveUrl` (fetch with plain
+(fetch with `curl_cffi impersonate="chrome"` via `conda run -n city-budget python`, Akamai TLS) → else `archiveUrl` (fetch with plain
 `curl -sL`). Extract with `pdftotext -layout` (NOT WebFetch — it mangles financial tables). If the
 year you need is absent from the manifest or its PDF won't fetch/open, that suspect is
 UNCONFIRMABLE — log it for the report; do NOT search the city site, Wayback, or Google, and do NOT
