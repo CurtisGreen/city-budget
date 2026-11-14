@@ -1,0 +1,72 @@
+{
+  "id": "austin",
+  "city": "Austin",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/zqqsdx5rtj/comprehensive_annual_financial_report_2015.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/dxkojhgxai/comprehensive_annual_financial_report_2016.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/3hvyz83ghk/comprehensive_annual_financial_report_2017.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/yoy7g3l3oj/comprehensive_annual_financial_report_2018.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/mybpjagxpf/comprehensive_annual_financial_report_2019.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/jbc7n4ga9u/comprehensive_annual_financial_report_2020.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/hp0lghlmvz/annual_comprehensive_financial_report_2021.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/xu2sucurlm/annual_comprehensive_financial_report_2022.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/s4wwfnr06r/AnnualComprehensivelFinancialReport2023.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://austin.widen.net/view/pdf/etv0g3zthq/FY2024-City-of-Austin-ACFR.pdf?t.download=true",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://austin.widen.net/s/xwlcncltpm/fy2025-annual-comprehensive-financial-report",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-austin/austin-acfr-FY2025.pdf"
+    }
+  ]
+}

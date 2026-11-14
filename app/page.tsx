@@ -167,6 +167,23 @@ export default function HomePage() {
               ))}
           </div>
         </div>
+        <div className="container mx-auto px-4 py-12">
+          <h3 className="text-3xl font-bold mb-8 text-center">
+            Austin Metro Cities
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+            {cities
+              .filter((city) => city.info.category === "Austin Metro")
+              .toSorted(
+                (a, b) =>
+                  (b.info.populations.at(-1)?.value ?? 0) -
+                  (a.info.populations.at(-1)?.value ?? 0),
+              )
+              .map((city) => (
+                <CityCard key={city.info.id} city={city} />
+              ))}
+          </div>
+        </div>
       </section>
 
       <Footer />

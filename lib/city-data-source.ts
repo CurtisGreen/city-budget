@@ -5,6 +5,7 @@ import { dallasInfo } from "@/data/info/dallas";
 import { dalworthingtonGardensInfo } from "@/data/info/dalworthington-gardens";
 import { arlingtonInfo } from "@/data/info/arlington";
 import { argyleInfo } from "@/data/info/argyle";
+import { austinInfo } from "@/data/info/austin";
 import { planoInfo } from "@/data/info/plano";
 import { irvingInfo } from "@/data/info/irving";
 import { garlandInfo } from "@/data/info/garland";
@@ -87,6 +88,7 @@ const basicCityInfo = [
   planoInfo,
   arlingtonInfo,
   argyleInfo,
+  austinInfo,
   irvingInfo,
   garlandInfo,
   addisonInfo,

@@ -5,37 +5,103 @@ export interface ExpenseCategoryGroup {
   notes: Record<string, string>;
 }
 
-export function mapDFWExpenseGroups(name: string, groups: Record<string, string>) {
+export function mapDFWExpenseGroups(
+  name: string,
+  groups: Record<string, string>,
+) {
   const mappedName = groups[name] ?? name;
   const n = mappedName.toLowerCase();
 
-  if (name.toLowerCase().includes("court") || name.toLowerCase().includes("judicial")) return "Public safety"
+  if (
+    name.toLowerCase().includes("court") ||
+    name.toLowerCase().includes("judicial")
+  )
+    return "Public safety";
 
-  if (n.includes("public safety") || n.includes("police") || n.includes("fire") || n.includes("emergency")) return "Public safety"
-  if (n.includes("public works") || n.includes("street") || n.includes("public services") || n.includes("transport") || n.includes("infrastructure")) return "Public works"
-  if (n.includes("culture") || n.includes("recreation") || n.includes("parks") || n.includes("librar") || n.includes("leisure")) return "Parks, culture, and recreation"
-  if (n.includes("general government") || n.includes("admin") || n.includes("equipment and building") || n.includes("fleet") || n.includes("facilities management")) return "General government"
-  if (n.includes("interest") || n.includes("bond issuance")) return "Interest on long-term debt"
-  if (n.includes("animal")) return "Animal services"
-  if (n.includes("development") || n.includes("inspect") || n.includes("planning") || n.includes("code")) return "Development services"
-  if (n.includes("technolog") || n.includes("information")) return "Technology"
-  if (n.includes("health") || n.includes("welfare") || n.includes("human services") || n.includes("environment")) return "Health, welfare, and environmental services"
-  if (n.includes("financ")) return "Finance"
-  if (n.includes("community")) return "Community services"
-  if (n.includes("human resources")) return "Human resources"
-  if (n.includes("visit") || n.includes("touris") || n.includes("convention")) return "Visitor services"
+  if (
+    n.includes("public safety") ||
+    n.includes("police") ||
+    n.includes("fire") ||
+    n.includes("emergency")
+  )
+    return "Public safety";
+  if (
+    n.includes("public works") ||
+    n.includes("street") ||
+    n.includes("public services") ||
+    n.includes("transport") ||
+    n.includes("infrastructure")
+  )
+    return "Public works";
+  if (
+    n.includes("culture") ||
+    n.includes("recreation") ||
+    n.includes("parks") ||
+    n.includes("librar") ||
+    n.includes("leisure")
+  )
+    return "Parks, culture, and recreation";
+  if (
+    n.includes("general government") ||
+    n.includes("admin") ||
+    n.includes("equipment and building") ||
+    n.includes("fleet") ||
+    n.includes("facilities management")
+  )
+    return "General government";
+  if (n.includes("interest") || n.includes("bond issuance"))
+    return "Interest on long-term debt";
+  if (n.includes("animal")) return "Animal services";
+  if (
+    n.includes("development") ||
+    n.includes("inspect") ||
+    n.includes("planning") ||
+    n.includes("code")
+  )
+    return "Development services";
+  if (n.includes("technolog") || n.includes("information")) return "Technology";
+  if (
+    n.includes("health") ||
+    n.includes("welfare") ||
+    n.includes("human services") ||
+    n.includes("environment")
+  )
+    return "Health, welfare, and environmental services";
+  if (n.includes("financ")) return "Finance";
+  if (n.includes("community")) return "Community services";
+  if (n.includes("human resources")) return "Human resources";
+  if (n.includes("visit") || n.includes("touris") || n.includes("convention"))
+    return "Visitor services";
   return mappedName;
 }
 
 export function mapDFWSalesTaxUsage(usage: string) {
   const n = usage.toLowerCase();
 
-  if (n.includes("general fund")) return "General fund"
-  if (n.includes("crime") || n.includes("fire")) return "Public Safety"
-  if (n.includes("dart") || n.includes("dcta") || n.includes("trinity metro") || n.includes("texrail")) return "Mass transit"
-  if (n.includes("property tax")) return "Property tax relief"
-  if (n.includes("street") || n.includes("road") || n.includes("infrastructure")) return "Streets and infrastructure"
-  if (n.includes("corporation") || n.includes("development") || n.includes("park") || n.includes("library") || n.includes("epic")) return "Economic and community development corporation"
+  if (n.includes("general fund")) return "General fund";
+  if (n.includes("crime") || n.includes("fire")) return "Public Safety";
+  if (
+    n.includes("dart") ||
+    n.includes("dcta") ||
+    n.includes("trinity metro") ||
+    n.includes("texrail")
+  )
+    return "Mass transit";
+  if (n.includes("property tax")) return "Property tax relief";
+  if (
+    n.includes("street") ||
+    n.includes("road") ||
+    n.includes("infrastructure")
+  )
+    return "Streets and infrastructure";
+  if (
+    n.includes("corporation") ||
+    n.includes("development") ||
+    n.includes("park") ||
+    n.includes("library") ||
+    n.includes("epic")
+  )
+    return "Economic and community development corporation";
   return usage;
 }
 
@@ -173,6 +239,14 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
       Interest: "Interest and fiscal charges",
     },
     modifiedAccrualGroups: {},
+    notes: {},
+  },
+  austin: {
+    fullAccrualGroups: {},
+    modifiedAccrualGroups: {
+      "Transportation, planning and sustainability":
+        "Transportation, planning, and sustainability",
+    },
     notes: {},
   },
   houston: {

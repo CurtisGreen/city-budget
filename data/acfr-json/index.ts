@@ -3,6 +3,7 @@ import { addisonAcfr } from "./addison";
 import { allenAcfr } from "./allen";
 import { arlingtonAcfr } from "./arlington";
 import { argyleAcfr } from "./argyle";
+import { austinAcfr } from "./austin";
 import { balchSpringsAcfr } from "./balch-springs";
 import { bedfordAcfr } from "./bedford";
 import { benbrookAcfr } from "./benbrook";
@@ -84,6 +85,7 @@ export const acfrData: Record<string, CityFinancialData[]> = {
   allen: allenAcfr,
   arlington: arlingtonAcfr,
   argyle: argyleAcfr,
+  austin: austinAcfr,
   "balch-springs": balchSpringsAcfr,
   bedford: bedfordAcfr,
   benbrook: benbrookAcfr,

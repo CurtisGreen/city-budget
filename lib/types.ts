@@ -79,7 +79,7 @@ export interface PropertyValues {
 export interface CityInfo {
   id: string;
   name: string;
-  category: "DFW" | "Houston Metro";
+  category: "DFW" | "Houston Metro" | "Austin Metro";
   populations: Population[];
   propertyValues: PropertyValues[];
   salesTaxUsage: {
