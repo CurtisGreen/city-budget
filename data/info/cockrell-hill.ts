@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const cockrellHillInfo: CityInfo = {
   id: "cockrell-hill",
   name: "Cockrell Hill",
+  category: "DFW",
   populations: [
     { year: 1980, value: 3262 },
     { year: 1990, value: 3746 },

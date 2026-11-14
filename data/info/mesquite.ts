@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const mesquiteInfo: CityInfo = {
   id: "mesquite",
   name: "Mesquite",
+  category: "DFW",
   populations: [
     { year: 1980, value: 67053 },
     { year: 1990, value: 101484 },

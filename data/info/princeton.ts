@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const princetonInfo: CityInfo = {
   id: "princeton",
   name: "Princeton",
+  category: "DFW",
   populations: [
     { year: 1980, value: 3408 },
     { year: 1990, value: 2321 },

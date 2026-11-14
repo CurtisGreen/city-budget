@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const forestHillInfo: CityInfo = {
   id: "forest-hill",
   name: "Forest Hill",
+  category: "DFW",
   populations: [
     { year: 1980, value: 11684 },
     { year: 1990, value: 11482 },

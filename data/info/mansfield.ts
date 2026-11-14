@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const mansfieldInfo: CityInfo = {
   id: "mansfield",
   name: "Mansfield",
+  category: "DFW",
   populations: [
     { year: 1980, value: 8102 },
     { year: 1990, value: 15607 },

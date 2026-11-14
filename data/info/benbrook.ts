@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const benbrookInfo: CityInfo = {
   id: "benbrook",
   name: "Benbrook",
+  category: "DFW",
   populations: [
     { year: 1980, value: 13579 },
     { year: 1990, value: 19564 },

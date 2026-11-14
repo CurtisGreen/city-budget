@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const hurstInfo: CityInfo = {
   id: "hurst",
   name: "Hurst",
+  category: "DFW",
   populations: [
     { year: 1980, value: 31420 },
     { year: 1990, value: 33574 },

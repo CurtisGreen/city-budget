@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const haltomCityInfo: CityInfo = {
   id: "haltom-city",
   name: "Haltom City",
+  category: "DFW",
   populations: [
     { year: 1980, value: 29014 },
     { year: 1990, value: 32856 },

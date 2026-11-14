@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const hasletInfo: CityInfo = {
   id: "haslet",
   name: "Haslet",
+  category: "DFW",
   populations: [
     { year: 1980, value: 262 },
     { year: 1990, value: 795 },

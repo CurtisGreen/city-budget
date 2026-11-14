@@ -139,9 +139,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             <CityCard city={dfwData} />
             {cities
-              .filter(
-                (city) => city.info.category === "DFW" || !city.info.category,
-              )
+              .filter((city) => city.info.category === "DFW")
               .toSorted(
                 (a, b) =>
                   (b.info.populations.at(-1)?.value ?? 0) -

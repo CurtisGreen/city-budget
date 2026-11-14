@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const northRichlandHillsInfo: CityInfo = {
   id: "north-richland-hills",
   name: "North Richland Hills",
+  category: "DFW",
   populations: [
     { year: 1980, value: 30592 },
     { year: 1990, value: 45895 },

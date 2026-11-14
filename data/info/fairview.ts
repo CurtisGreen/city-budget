@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const fairviewInfo: CityInfo = {
   id: "fairview",
   name: "Fairview",
+  category: "DFW",
   populations: [
     { year: 1980, value: 893 },
     { year: 1990, value: 1554 },

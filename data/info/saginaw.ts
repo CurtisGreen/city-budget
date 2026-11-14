@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const saginawInfo: CityInfo = {
   id: "saginaw",
   name: "Saginaw",
+  category: "DFW",
   populations: [
     { year: 1980, value: 5736 },
     { year: 1990, value: 8551 },

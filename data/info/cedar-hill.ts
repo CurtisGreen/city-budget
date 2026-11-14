@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const cedarHillInfo: CityInfo = {
   id: "cedar-hill",
   name: "Cedar Hill",
+  category: "DFW",
   populations: [
     { year: 1980, value: 6849 },
     { year: 1990, value: 19976 },

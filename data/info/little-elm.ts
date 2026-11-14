@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const littleElmInfo: CityInfo = {
   id: "little-elm",
   name: "Little Elm",
+  category: "DFW",
   populations: [
     { year: 1980, value: 926 },
     { year: 1990, value: 1255 },

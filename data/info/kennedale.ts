@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const kennedaleInfo: CityInfo = {
   id: "kennedale",
   name: "Kennedale",
+  category: "DFW",
   populations: [
     { year: 1980, value: 2594 },
     { year: 1990, value: 4096 },

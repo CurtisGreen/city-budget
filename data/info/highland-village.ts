@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const highlandVillageInfo: CityInfo = {
   id: "highland-village",
   name: "Highland Village",
+  category: "DFW",
   populations: [
     { year: 1980, value: 3246 },
     { year: 1990, value: 7027 },

@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const pantegoInfo: CityInfo = {
   id: "pantego",
   name: "Pantego",
+  category: "DFW",
   populations: [
     { year: 1980, value: 2431 },
     { year: 1990, value: 2371 },

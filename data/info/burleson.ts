@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const burlesonInfo: CityInfo = {
   id: "burleson",
   name: "Burleson",
+  category: "DFW",
   populations: [
     { year: 1980, value: 11734 },
     { year: 1990, value: 16113 },

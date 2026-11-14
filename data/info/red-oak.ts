@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const redOakInfo: CityInfo = {
   id: "red-oak",
   name: "Red Oak",
+  category: "DFW",
   populations: [
     { year: 1980, value: 1882 },
     { year: 1990, value: 3124 },

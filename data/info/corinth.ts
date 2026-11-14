@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const corinthInfo: CityInfo = {
   id: "corinth",
   name: "Corinth",
+  category: "DFW",
   populations: [
     { year: 1980, value: 1264 },
     { year: 1990, value: 3944 },

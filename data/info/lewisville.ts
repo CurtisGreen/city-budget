@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const lewisvilleInfo: CityInfo = {
   id: "lewisville",
   name: "Lewisville",
+  category: "DFW",
   populations: [
     { year: 1980, value: 24273 },
     { year: 1990, value: 46521 },

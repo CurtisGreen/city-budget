@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const trophyClubInfo: CityInfo = {
   id: "trophy-club",
   name: "Trophy Club",
+  category: "DFW",
   populations: [
     { year: 1990, value: 3922 },
     { year: 2000, value: 6350 },

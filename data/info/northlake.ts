@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const northlakeInfo: CityInfo = {
   id: "northlake",
   name: "Northlake",
+  category: "DFW",
   populations: [
     { year: 1980, value: 143 },
     { year: 1990, value: 250 },

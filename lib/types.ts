@@ -79,6 +79,7 @@ export interface PropertyValues {
 export interface CityInfo {
   id: string;
   name: string;
+  category: "DFW" | "Houston Metro";
   populations: Population[];
   propertyValues: PropertyValues[];
   revenueBySource: RevenueBySource;
@@ -90,7 +91,6 @@ export interface CityInfo {
   longitude?: number;
   area: number; // Land area in square miles
   notes?: string[];
-  category?: "DFW" | "Houston Metro";
 }
 
 export interface CityData {

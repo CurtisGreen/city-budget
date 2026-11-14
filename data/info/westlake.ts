@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const westlakeInfo: CityInfo = {
   id: "westlake",
   name: "Westlake",
+  category: "DFW",
   populations: [
     { year: 1980, value: 214 },
     { year: 1990, value: 185 },

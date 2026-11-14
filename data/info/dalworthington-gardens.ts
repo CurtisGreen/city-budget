@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const dalworthingtonGardensInfo: CityInfo = {
   id: "dalworthington-gardens",
   name: "Dalworthington Gardens",
+  category: "DFW",
   populations: [
     { year: 1980, value: 1100 },
     { year: 1990, value: 1758 },

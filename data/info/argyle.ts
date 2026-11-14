@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const argyleInfo: CityInfo = {
   id: "argyle",
   name: "Argyle",
+  category: "DFW",
   populations: [
     { year: 1980, value: 1111 },
     { year: 1990, value: 1575 },

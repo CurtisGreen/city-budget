@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const grapevineInfo: CityInfo = {
   id: "grapevine",
   name: "Grapevine",
+  category: "DFW",
   populations: [
     { year: 1980, value: 11801 },
     { year: 1990, value: 29202 },

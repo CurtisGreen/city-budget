@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const rockwallInfo: CityInfo = {
   id: "rockwall",
   name: "Rockwall",
+  category: "DFW",
   populations: [
     { year: 1980, value: 5939 },
     { year: 1990, value: 10486 },

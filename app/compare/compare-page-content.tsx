@@ -51,6 +51,7 @@ const metricConfigs: {
 ];
 
 export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
+  const dfwCities = allCities.filter((c) => c.info.category === "DFW");
   const getCityData = (cityId: string) =>
     allCities.find((city) => city.info.id === cityId);
   const searchParams = useSearchParams();
@@ -93,12 +94,12 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
   }));
 
   const averagePopulationDensityData = calculateAveragePopulationDensity(
-    allCities.map((c) => c.info),
+    dfwCities.map((c) => c.info),
   );
 
   const averageMetrics = calculateDFWData(allCities);
 
-  const revenues = allCities.map((c) => c.info.revenueBySource);
+  const revenues = dfwCities.map((c) => c.info.revenueBySource);
   const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
   const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
   const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);

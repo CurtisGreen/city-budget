@@ -48,6 +48,7 @@ export async function generateStaticParams() {
 export default async function CityPage({ params }: CityPageProps) {
   const { cityId } = await params;
   const allCities = getAllCities();
+  const dfwCities = allCities.filter((c) => c.info.category === "DFW");
   const isDfw = cityId === "dfw";
   const dfwData = calculateDFWData(allCities);
   const cityData = isDfw ? dfwData : getCityData(cityId);
@@ -112,10 +113,10 @@ export default async function CityPage({ params }: CityPageProps) {
   };
 
   const averagePopulationDensity = calculateAveragePopulationDensity(
-    allCities.map((c) => c.info),
+    dfwCities.map((c) => c.info),
   );
 
-  const revenues = allCities.map((c) => c.info.revenueBySource);
+  const revenues = dfwCities.map((c) => c.info.revenueBySource);
   const property = revenues.reduce((acc, cur) => acc + cur.property, 0);
   const sales = revenues.reduce((acc, cur) => acc + cur.sales, 0);
   const hotel = revenues.reduce((acc, cur) => acc + cur.hotel, 0);

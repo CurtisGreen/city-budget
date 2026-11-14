@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const garlandInfo: CityInfo = {
   id: "garland",
   name: "Garland",
+  category: "DFW",
   populations: [
     { year: 1980, value: 138857 },
     { year: 1990, value: 180650 },

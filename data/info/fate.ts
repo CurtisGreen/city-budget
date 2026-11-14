@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const fateInfo: CityInfo = {
   id: "fate",
   name: "Fate",
+  category: "DFW",
   populations: [
     { year: 1980, value: 263 },
     { year: 1990, value: 475 },

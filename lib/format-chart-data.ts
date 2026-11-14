@@ -56,7 +56,8 @@ export function calculateACFRMetrics(data: CityFinancialData): CityMetrics {
   };
 }
 
-export function calculateDFWData(allCities: CityData[]): CityData {
+export function calculateDFWData(allMetroCities: CityData[]): CityData {
+  const allCities = allMetroCities.filter((c) => c.info.category === "DFW");
   const years = new Set(
     allCities.flatMap((c) => c.financialData.map((f) => f.fiscalYear)),
   );
@@ -202,6 +203,7 @@ export function calculateDFWData(allCities: CityData[]): CityData {
     info: {
       id: "dfw",
       name: "DFW",
+      category: "DFW",
       populations: calculateDFWPopulation(allCities),
       propertyValues: dfwPropertyTaxRates,
       revenueBySource: {

@@ -3,6 +3,7 @@ import { CityInfo } from "@/lib/types";
 export const balchSpringsInfo: CityInfo = {
   id: "balch-springs",
   name: "Balch Springs",
+  category: "DFW",
   populations: [
     { year: 1980, value: 13746 },
     { year: 1990, value: 17406 },
