@@ -83,8 +83,6 @@ export const irvingInfo: CityInfo = {
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },
   ],
-  latitude: 32.816667,
-  longitude: -96.95,
   area: 66.98,
   notes: [
     `FY 2018 ACFR: "During the fiscal year over $90 million was contributed to the city by the developer of the Entertainment Center."`,

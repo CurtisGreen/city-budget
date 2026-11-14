@@ -85,8 +85,6 @@ export const forneyInfo: CityInfo = {
     { usage: "Economic Development Corporation", percent: 0.25 },
     { usage: "Crime Control and Prevention District", percent: 0.25 },
   ],
-  latitude: 32.75194,
-  longitude: -96.45583,
   area: 15.8,
   notes: [
     `ACFR 2024: "the City received $25,455,316 of infrastructure donated by developers. [...] 

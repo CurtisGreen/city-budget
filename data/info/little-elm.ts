@@ -85,8 +85,6 @@ export const littleElmInfo: CityInfo = {
     { usage: "Street Maintenance", percent: 0.25 },
     { usage: "Community Development Corporation", percent: 0.25 },
   ],
-  latitude: 33.16389,
-  longitude: -96.93028,
   area: 17.99,
   notes: [
     `ACFR 2021: "the Town of Little Elm's governmental funds reported a combined ending fund balance of $110,882,921,

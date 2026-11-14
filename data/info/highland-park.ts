@@ -83,7 +83,5 @@ export const highlandParkInfo: CityInfo = {
     { usage: "General Fund", percent: 1 },
     { usage: "DART (until 2029)", percent: 1 },
   ],
-  latitude: 32.830278,
-  longitude: -96.801111,
   area: 2.24,
 };

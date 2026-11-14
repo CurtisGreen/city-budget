@@ -84,8 +84,6 @@ export const colleyvilleInfo: CityInfo = {
     { usage: "Economic Development Corporation", percent: 0.5 },
     { usage: "Crime Control and Prevention District", percent: 0.5 },
   ],
-  latitude: 32.88056,
-  longitude: -97.14722,
   area: 13.12,
   notes: [
     `ACFR 2022: "Fiscal year 2022 governmental activities resulted in a $7,839,211 increase in net position. That increase was due to higher revenue intake, including approximately $3.356 million in Federal Coronavirus State and Local Fiscal Recovery funds, and continued investment in the City's capital assets."`,

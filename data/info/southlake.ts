@@ -88,7 +88,5 @@ export const southlakeInfo: CityInfo = {
     },
     { usage: "Crime Control and Prevention District", percent: 0.125 },
   ],
-  latitude: 32.94667,
-  longitude: -97.14528,
   area: 21.83,
 };

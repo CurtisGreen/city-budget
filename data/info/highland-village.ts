@@ -84,8 +84,6 @@ export const highlandVillageInfo: CityInfo = {
     { usage: "Community Development Corporation", percent: 0.5 },
     { usage: "DCTA", percent: 0.5 },
   ],
-  latitude: 33.0897,
-  longitude: -97.06139,
   area: 5.53,
   notes: [
     `FY 2022 ACFR: The City of Highland Village's total debt increased by $9,115,000 during the

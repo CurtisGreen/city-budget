@@ -200,8 +200,6 @@ h. **Do NOT create or edit the manifest.** `manifests/{id}.json` is produced by 
   worse than a missing one. **Verify the place geoid** (from Census Reporter / Data Commons) — a
   wrong FIPS silently returns a different city (Colleyville = 4815988, NOT 4816432 = Conroe).
 - area: land area sq mi from Wikipedia.
-- Do NOT set latitude/longitude — the fields are optional and unused by the app (only the
-  dead `components/city-map.tsx` reads them). Omit both keys.
 - propertyValues: M&O (moRate) + I&S (isRate) rates per fiscal year. FY2015–2025 from ACFR
   "overlapping rates"/"property tax rates" table; FY2026 from the city's 2026 budget
   (total rate − debt-service rate = M&O). Rates are decimals (per $100). See conventions.

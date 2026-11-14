@@ -83,8 +83,6 @@ export const planoInfo: CityInfo = {
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },
   ],
-  latitude: 33.050278,
-  longitude: -96.698889,
   area: 71.69,
   notes: [
     `FY 2025 budget: [...] a policy which continues to add to the budgetary challenge is a senior tax freeze which is

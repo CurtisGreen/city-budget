@@ -85,8 +85,6 @@ export const sachseInfo: CityInfo = {
     { usage: "Street Maintenance Sales and Use Tax", percent: 0.25 },
     { usage: "Municipal Development District", percent: 0.25 },
   ],
-  latitude: 32.976389,
-  longitude: -96.586111,
   area: 9.77,
   notes: [
     `FY 2024 ACFR: The government's net position decreased by $11,435,251 during the current fiscal year. 

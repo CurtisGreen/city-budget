@@ -85,8 +85,6 @@ export const coppellInfo: CityInfo = {
     { usage: "Infrastructure Maintenance", percent: 0.25 },
     { usage: "Crime Control and Prevention District", percent: 0.25 },
   ],
-  latitude: 32.963056,
-  longitude: -96.997222,
   area: 14.73,
   notes: [
     `2025 ACFR: [...] the City continues to budget expenditures as if the change to Sales Tax Rule 3.334, 

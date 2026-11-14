@@ -85,8 +85,6 @@ export const grapevineInfo: CityInfo = {
     { usage: "TEXRail", percent: 0.375 },
     { usage: "Economic Development Corporation", percent: 0.125 },
   ],
-  latitude: 32.935,
-  longitude: -97.085833,
   area: 32.14,
   notes: [
     `FY 2024 ACFR: Two-thirds of the airport [DFW International Airport] properties are located within Grapevine city limits, 

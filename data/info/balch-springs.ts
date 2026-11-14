@@ -86,8 +86,6 @@ export const balchSpringsInfo: CityInfo = {
     { usage: "Community and Economic Development Corporation", percent: 0.25 },
     { usage: "Street Maintenance", percent: 0.25 },
   ],
-  latitude: 32.72,
-  longitude: -96.62361,
   area: 9.02,
   notes: [
     `ACFR 2025: "As of September 30, 2025, the City's total outstanding debt has increased by $12.4 million, or 97% from

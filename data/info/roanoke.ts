@@ -87,8 +87,6 @@ export const roanokeInfo: CityInfo = {
     },
     { usage: "Crime Control & Prevention District", percent: 0.5 },
   ],
-  latitude: 33.005,
-  longitude: -97.22639,
   area: 6.89,
   notes: [
     `ACFR 2023: "Contributions from the Roanoke Economic Development Corporations is responsible for the operating contributions. These contributions increased $10,489,231 from prior year."`,

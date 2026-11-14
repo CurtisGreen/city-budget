@@ -84,8 +84,6 @@ export const fortWorthInfo: CityInfo = {
     { usage: "Trinity Metro", percent: 0.5 },
     { usage: "Crime Control and Prevention District", percent: 0.5 },
   ],
-  latitude: 32.756389,
-  longitude: -97.3325,
   area: 347.28,
   notes: [
     `FY 2020 ACFR: The governmental activities' unrestricted net deficit balance decreased by

@@ -118,8 +118,6 @@ export const addisonInfo: CityInfo = {
     { usage: "General Fund", percent: 1 },
     { usage: "DART", percent: 1 },
   ],
-  latitude: 32.957778,
-  longitude: -96.835,
   area: 4.35,
   notes: [
     `FY 2017 ACFR: Governmental activities increased the Town of Addison's net position by $25,518 [000s] primarily due to a $3.2 million

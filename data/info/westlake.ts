@@ -84,7 +84,5 @@ export const westlakeInfo: CityInfo = {
     { usage: "Economic Development Corporation", percent: 0.5 },
     { usage: "Property Tax Rebate", percent: 0.5 },
   ],
-  latitude: 32.99722,
-  longitude: -97.20833,
   area: 6.74,
 };

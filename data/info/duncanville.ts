@@ -84,7 +84,5 @@ export const duncanvilleInfo: CityInfo = {
     { usage: "Property tax abatement", percent: 0.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },
   ],
-  latitude: 32.634722,
-  longitude: -96.906667,
   area: 11.2,
 };

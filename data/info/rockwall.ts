@@ -83,7 +83,5 @@ export const rockwallInfo: CityInfo = {
     { usage: "General Fund", percent: 1.5 },
     { usage: "Economic Development Corporation", percent: 0.5 },
   ],
-  latitude: 32.91694,
-  longitude: -96.4375,
   area: 22.3,
 };

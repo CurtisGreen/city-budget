@@ -84,7 +84,5 @@ export const mckinneyInfo: CityInfo = {
     { usage: "Economic Development Corporation", percent: 0.5 },
     { usage: "Community Development Corporation", percent: 0.5 },
   ],
-  latitude: 33.197222,
-  longitude: -96.639722,
   area: 66.96,
 };

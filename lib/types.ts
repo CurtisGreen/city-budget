@@ -87,8 +87,6 @@ export interface CityInfo {
     usage: string;
     percent: number;
   }[];
-  latitude?: number;
-  longitude?: number;
   area: number; // Land area in square miles
   notes?: string[];
 }

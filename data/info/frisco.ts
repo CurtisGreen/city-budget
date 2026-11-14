@@ -84,8 +84,6 @@ export const friscoInfo: CityInfo = {
     { usage: "Economic Development Corporation", percent: 0.5 },
     { usage: "Community Development Corporation", percent: 0.5 },
   ],
-  latitude: 33.141667,
-  longitude: -96.821667,
   area: 68.64,
   notes: [
     `FY 2016 ACFR: In June 2016, the City issued General Obligation Refunding and Improvement Bonds, Series 2016, 
