@@ -579,6 +579,13 @@ export const expenseCategoryGroups: Record<string, ExpenseCategoryGroup> = {
         "FY2015 is the one year the Statement of Activities prints 'Bond issuance costs' as its own governmental function row; it is grouped here because the City's own ten-year statistical table reports the two lines combined on the interest row",
     },
   },
+  "round-rock": {
+    fullAccrualGroups: {
+      "Issuance costs": "Interest on long-term debt",
+    },
+    modifiedAccrualGroups: {},
+    notes: {},
+  },
   melissa: {
     fullAccrualGroups: {
       "General Government": "General government",

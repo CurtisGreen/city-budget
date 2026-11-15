@@ -1,0 +1,72 @@
+{
+  "id": "round-rock",
+  "city": "Round Rock",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "manual",
+      "file": "inbox/round-rock-FY2015.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2014/12/FY2016-CAFR_Issued-01272017.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2018/02/2016-2017-CAFR-Final.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2019/03/2017-2018-CAFR-Final-02.08.19-Revised.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2020/02/2018-2019-CAFR-02.11.20_Web_Version-1.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2021/02/2020-CAFR_WEB-VERSION.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2022/02/FY21-ACFR-FINAL-REPORT.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2023/03/Annual-Comprehensive-Financial-Report-Final-FY-2022.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2024/02/Annual-Comprehensive-Financial-Report-FY23-FINAL.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2025/02/2025-02-10-FINAL-ACFR.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.roundrocktexas.gov/wp-content/uploads/2026/02/FY25-CORR-Audit-Report.pdf",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-round-rock/round-rock-acfr-FY2025.pdf"
+    }
+  ]
+}

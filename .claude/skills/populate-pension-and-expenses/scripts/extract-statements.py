@@ -273,8 +273,13 @@ def parse_general_revenues(lines, after):
         if re.match(r"total\s+general\s+revenue|change\s+in\s+net\s+position", label or "", re.I):
             break
         for key, pat in GENREV:
-            if re.search(pat, l, re.I) and key not in direct and n:
-                direct[key] = int(n[0])
+            if re.search(pat, l, re.I) and n:
+                # Round Rock prints property tax as TWO rows (general purpose + debt service); the
+                # tax field is their sum, so property accumulates while every other key is first-wins.
+                if key == "property":
+                    direct[key] = direct.get(key, 0) + int(n[0])
+                elif key not in direct:
+                    direct[key] = int(n[0])
     for l in win:
         label, cells = split_row(l)
         n = nums(cells)

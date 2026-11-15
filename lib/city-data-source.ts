@@ -82,6 +82,7 @@ import { parkerInfo } from "@/data/info/parker";
 import { crowleyInfo } from "@/data/info/crowley";
 import { northlakeInfo } from "@/data/info/northlake";
 import { melissaInfo } from "@/data/info/melissa";
+import { roundRockInfo } from "@/data/info/round-rock";
 
 const basicCityInfo = [
   dallasInfo,
@@ -165,6 +166,7 @@ const basicCityInfo = [
   crowleyInfo,
   northlakeInfo,
   melissaInfo,
+  roundRockInfo,
 ];
 
 // Calculate metrics for each city

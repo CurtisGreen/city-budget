@@ -241,6 +241,23 @@ check("the match is PROVEN by the printed total, not by position", "_proof" in g
 # sums to its own total -- the exact coincidence that mapped property tax to a negative net expense.
 check("NEGATIVE the net-(expense) block above is not mistaken for the revenues",
       gr.get("property", 0) > 0, str(gr))
+# POSITIVE: property tax printed as two rows (general purpose + debt service) is the SUM of both
+TWOPROP = """\
+Functions/Programs                       Expenses      Services
+Governmental Activities:
+   General Government                 $  1,000,000       100,000
+          Total Governmental Activities  1,000,000       100,000
+General revenues:
+ Taxes:
+  Property taxes, levied for general purpose   6,000,000      -     6,000,000
+  Property taxes, levied for debt service      2,000,000      -     2,000,000
+  Sales taxes                                  3,000,000      -     3,000,000
+  Total general revenues and transfers        11,000,000      -    11,000,000
+  Change in net position                      10,100,000      -    10,100,000
+"""
+gr2 = es.parse_soa(TWOPROP.split("\n"))["generalRevenues"]
+check("property tax printed as general-purpose + debt-service rows is summed",
+      (gr2.get("property"), gr2.get("sales")) == (8000000, 3000000), str(gr2))
 # NEGATIVE: a tax name elsewhere on the page (a fund balance) must not be harvested
 FUNDBAL = FACING + """
  Fund Balances:
