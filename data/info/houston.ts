@@ -81,7 +81,8 @@ export const houstonInfo: CityInfo = {
   area: 640.44,
   notes: [
     `FY 2017 ACFR: "the current year impact of the Pension Reform resulted in a decrease in pension expense by $1.09 billion, part of the total decrease of governmental activities expenses of $1.962 billion."`,
-    `FY 2021 ACFR: "The net position of governmental activities increased by $877 million. The increase is primarily attributed to reductions in the pension liability."`,
-    `FY 2022 ACFR: "Governmental activities increased the City’s net position from FY2021 by approximately $1.1 billion."`,
+    `FY 2021 ACFR: "Of the $404.8 million of CARES Act funds the City received in quarter four of Fiscal Year 2020 from the Federal Government,
+     $393 million has been spent."`,
+    `FY 2022 ACFR: "Governmental activities increased the City's net position from FY2021 by approximately $1.1 billion."`,
   ],
 };
