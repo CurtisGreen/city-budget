@@ -1,0 +1,72 @@
+{
+  "id": "bellaire",
+  "city": "Bellaire",
+  "pdfs": [
+    {
+      "year": 2015,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/18125/FY-2015-CAFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2015.pdf"
+    },
+    {
+      "year": 2016,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/19863/FY-2016-CAFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2016.pdf"
+    },
+    {
+      "year": 2017,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/21253/FY-2017-CAFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2017.pdf"
+    },
+    {
+      "year": 2018,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/22663/FY-2018-CAFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2018.pdf"
+    },
+    {
+      "year": 2019,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/25275/FY-2019-CAFR-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2019.pdf"
+    },
+    {
+      "year": 2020,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/26820/FY-2020-Comprehensive-Annual-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2020.pdf"
+    },
+    {
+      "year": 2021,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/28707/FY-2021-Annual-Comprehensive-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2021.pdf"
+    },
+    {
+      "year": 2022,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/30599/FY-2022-Annual-Comprehensive-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2022.pdf"
+    },
+    {
+      "year": 2023,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/32472/FY-2023-Annual-Comprehensive-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2023.pdf"
+    },
+    {
+      "year": 2024,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/33656/FY-2024-Annual-Comprehensive-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2024.pdf"
+    },
+    {
+      "year": 2025,
+      "source": "url",
+      "url": "https://www.bellairetx.gov/DocumentCenter/View/35194/FY-2025-Annual-Comprehensive-Financial-Report-PDF",
+      "archiveUrl": "https://archive.org/download/city-budget-acfr-bellaire/bellaire-acfr-FY2025.pdf"
+    }
+  ]
+}

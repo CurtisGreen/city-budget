@@ -16,6 +16,7 @@ import { corinthGeoJson } from "@/data/geojson/corinth-geojson";
 import { hasletGeoJson } from "@/data/geojson/haslet-geojson";
 import { trophyClubGeoJson } from "@/data/geojson/trophy-club-geojson";
 import { benbrookGeoJson } from "@/data/geojson/benbrook-geojson";
+import { bellaireGeoJson } from "@/data/geojson/bellaire-geojson";
 import { burlesonGeoJson } from "@/data/geojson/burleson-geojson";
 import { cockrellHillGeoJson } from "@/data/geojson/cockrell-hill-geojson";
 import { colleyvilleGeoJson } from "@/data/geojson/colleyville-geojson";
@@ -98,6 +99,7 @@ export const geoJsonFeatures: GeoJSONFeature[] = [
   ...hasletGeoJson.features,
   ...trophyClubGeoJson.features,
   ...benbrookGeoJson.features,
+  ...bellaireGeoJson.features,
   ...burlesonGeoJson.features,
   ...cockrellHillGeoJson.features,
   ...colleyvilleGeoJson.features,

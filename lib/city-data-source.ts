@@ -22,6 +22,7 @@ import { corinthInfo } from "@/data/info/corinth";
 import { hasletInfo } from "@/data/info/haslet";
 import { trophyClubInfo } from "@/data/info/trophy-club";
 import { benbrookInfo } from "@/data/info/benbrook";
+import { bellaireInfo } from "@/data/info/bellaire";
 import { burlesonInfo } from "@/data/info/burleson";
 import { cockrellHillInfo } from "@/data/info/cockrell-hill";
 import { colleyvilleInfo } from "@/data/info/colleyville";
@@ -104,6 +105,7 @@ const basicCityInfo = [
   hasletInfo,
   trophyClubInfo,
   benbrookInfo,
+  bellaireInfo,
   burlesonInfo,
   cockrellHillInfo,
   colleyvilleInfo,
