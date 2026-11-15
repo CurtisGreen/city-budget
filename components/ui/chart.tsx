@@ -3,13 +3,31 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Tooltip } from "recharts";
+
+type TooltipItem = {
+  name?: string;
+  value: number;
+  color?: string;
+  dataKey?: string | number;
+  payload?: unknown;
+};
+
+type ChartTooltipContentProps = React.ComponentProps<"div"> & {
+  payload?: TooltipItem[];
+  formatter?: (
+    value: number,
+    name: string,
+    item: TooltipItem,
+    index: number,
+    payload: unknown,
+  ) => React.ReactNode;
+};
 
 export function ChartTooltipContent({
   payload,
   className,
   formatter,
-}: React.ComponentProps<typeof Tooltip> & React.ComponentProps<"div">) {
+}: ChartTooltipContentProps) {
   if (!payload?.length) return null;
 
   return (
