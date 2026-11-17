@@ -115,7 +115,6 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -132,7 +131,6 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
         </div>
       </header>
 
-      {/* Page Header */}
       <section className="bg-gradient-to-b from-muted/50 to-background py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-2">Compare Cities</h2>
@@ -143,7 +141,6 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
         </div>
       </section>
 
-      {/* City Selection */}
       <section className="pb-4">
         <div className="container mx-auto px-4">
           <div className="max-w-xl">
@@ -166,17 +163,14 @@ export function ComparePageContent({ allCities }: { allCities: CityData[] }) {
         </div>
       </section>
 
-      {/* Comparison Content */}
       {selectedCities.length >= 2 ? (
         <>
-          {/* Comparison Table */}
           <section className="py-8">
             <div className="container mx-auto px-4">
               <ComparisonTable cities={selectedCities} />
             </div>
           </section>
 
-          {/* Comparison Charts */}
           <section className="py-8 bg-muted/30">
             <div className="container mx-auto px-4">
               <h3 className="text-2xl font-bold mb-6">

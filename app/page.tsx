@@ -1,8 +1,5 @@
 import { CityCard } from "@/components/city-card";
-import { Button } from "@/components/ui/button";
 import { getAllCities } from "@/lib/city-data-source";
-import Link from "next/link";
-import { Map, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { HomeNavbarMenu } from "@/components/home-navbar-menu";
 import { LazyMap } from "@/components/lazy-map";
@@ -14,106 +11,20 @@ export const dynamic = "force-static";
 export default function HomePage() {
   const cities = getAllCities();
   const dfwData = calculateDFWData(cities);
-  const totalAssets = cities.reduce((sum, city) => {
-    const latestFinancialData = city.financialData.at(-1);
-    const capitalAssets = latestFinancialData?.capitalAssets ?? 0;
-    const currentAndOtherAssets =
-      latestFinancialData?.currentAndOtherAssets ?? 0;
-    return sum + capitalAssets + currentAndOtherAssets;
-  }, 0);
-  const formattedTotalAssets = Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: 1,
-  }).format(totalAssets);
-  const totalPopulation = cities.reduce(
-    (sum, city) => sum + (city.info.populations.at(-1)?.value || 0),
-    0,
-  );
-  const formattedTotalPopulation = Intl.NumberFormat("en-US", {
-    notation: "compact",
-    maximumFractionDigits: 1,
-  }).format(totalPopulation);
 
   return (
     <div className="min-h-screen">
       <HomeNavbarMenu />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-muted/50 to-background py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-              Making city finances easy-peasy
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8 text-pretty">
-              Check out how cities in Texas are doing
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="#map">
-                <Button size="lg" className="gap-2 cursor-pointer">
-                  <Map className="h-5 w-5" />
-                  Explore Map
-                </Button>
-              </Link>
-              <Link href="#cities">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="gap-2 bg-transparent cursor-pointer"
-                >
-                  <TrendingUp className="h-5 w-5 text-green-700" />
-                  View Cities
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Metrics Overview */}
-      <section className="pb-12 border-b">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">
-                {cities.length}
-              </div>
-              <div className="text-muted-foreground">Cities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">
-                {formattedTotalPopulation}
-              </div>
-              <div className="text-muted-foreground">Residents</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">
-                {formattedTotalAssets}
-              </div>
-              <div className="text-muted-foreground">Assets</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">
-                {cities[0].financialData.length}
-              </div>
-              <div className="text-muted-foreground">Years of Data</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Map */}
       <section id="map" className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h3 className="text-3xl font-bold mb-2 text-center">
+            <h2 className="text-3xl font-bold mb-2 text-center">
               Texas Financial Map
-            </h3>
+            </h2>
             <p className="text-muted-foreground text-center mb-8">
-              Change the dropdown on the map to see different stats, or click on
-              a city to visit their page
+              Change the dropdown to see different stats, or click on a city to
+              visit their page
             </p>
             <div className="m-auto">
               <LazyMap cities={cities} />
@@ -122,22 +33,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Leaderboard */}
       <section id="leaderboard" className="py-12">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center">
             Financial Leaders
-          </h3>
+          </h2>
           <CityLeaderboard cities={cities} />
         </div>
       </section>
 
-      {/* City Cards */}
       <section id="cities" className="py-12">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-8 text-center">DFW Cities</h3>
+          <h2 className="text-3xl font-bold mb-8 text-center">DFW Cities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
-            <CityCard city={dfwData} />
+            <CityCard city={dfwData} highlight />
             {cities
               .filter((city) => city.info.category === "DFW")
               .toSorted(
@@ -151,9 +60,9 @@ export default function HomePage() {
           </div>
         </div>
         <div className="container mx-auto px-4 py-12">
-          <h3 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center">
             Houston Metro Cities
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             {cities
               .filter((city) => city.info.category === "Houston Metro")
@@ -168,9 +77,9 @@ export default function HomePage() {
           </div>
         </div>
         <div className="container mx-auto px-4 py-12">
-          <h3 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center">
             Austin Metro Cities
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             {cities
               .filter((city) => city.info.category === "Austin Metro")

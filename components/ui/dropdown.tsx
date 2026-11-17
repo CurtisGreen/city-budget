@@ -39,10 +39,10 @@ export function Dropdown({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full min-w-0 justify-between bg-transparent"
+          className="w-full min-w-0 justify-between cursor-pointer border-gray-400 font-medium"
         >
           <span className="truncate">{selectedOption}</span>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">

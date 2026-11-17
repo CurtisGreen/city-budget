@@ -140,7 +140,6 @@ export default function LeafletMap({ cities }: { cities: CityData[] }) {
 
   return (
     <div className="relative w-full md:w-[700px] lg:w-[900px] mx-auto">
-      {/* Legend */}
       <Card className="p-4 mb-[-10px] w-full gap-2 relative z-1000 md:absolute md:top-2 md:right-2 md:mb-0 md:w-fit md:max-w-[calc(100%-1rem)]">
         <Dropdown
           options={[

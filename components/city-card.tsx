@@ -9,12 +9,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import type { CityData } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 interface CityCardProps {
   city: CityData;
+  highlight?: boolean;
 }
 
-export function CityCard({ city }: CityCardProps) {
+export function CityCard({ city, highlight = false }: CityCardProps) {
   const latestYear = city.financialData[city.financialData.length - 1] || {};
   const latestMetrics = city.metrics[city.metrics.length - 1] || {};
 
@@ -36,7 +38,9 @@ export function CityCard({ city }: CityCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200">
       <CardHeader>
-        <CardTitle className="text-lg">{city.info.name}</CardTitle>
+        <CardTitle className={cn("text-lg", highlight && "text-green-700")}>
+          {city.info.name}
+        </CardTitle>
         <CardDescription>Population: {population}</CardDescription>
       </CardHeader>
       <CardContent>
@@ -75,7 +79,7 @@ export function CityCard({ city }: CityCardProps) {
 
           <Link href={`/city/${city.info.id}`}>
             <Button
-              className="w-full mt-4 bg-transparent cursor-pointer"
+              className="w-full mt-4 cursor-pointer"
               variant="outline"
             >
               View Details

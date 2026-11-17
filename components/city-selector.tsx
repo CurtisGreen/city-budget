@@ -63,7 +63,7 @@ export function CitySelector({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between bg-transparent"
+          className="w-full justify-between"
         >
           {selectedCityNames || "Select cities..."}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 text-green-700" />

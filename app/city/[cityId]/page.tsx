@@ -153,7 +153,6 @@ export default async function CityPage({ params }: CityPageProps) {
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -168,7 +167,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <Link href={`/compare?cities=${cityId}`}>
                 <Button
                   variant="outline"
-                  className="bg-transparent cursor-pointer"
+                  className="cursor-pointer"
                 >
                   <GitCompare className="mr-2 h-4 w-4 text-green-700" />
                   Compare
@@ -179,7 +178,6 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </header>
 
-      {/* City Header */}
       <section className="bg-gradient-to-b from-muted/50 to-background pt-12 pb-6">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-2">{cityData.info.name}</h2>
@@ -187,14 +185,12 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* City Info */}
       <section className="py-8">
         <div className="container mx-auto px-4">
           <CityInfoCard cityData={cityData} />
         </div>
       </section>
 
-      {/* Charts Grid */}
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="flex mb-6">
@@ -252,7 +248,6 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Other metrics */}
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6">Other Metrics</h3>
@@ -347,7 +342,6 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
           )}
 
-          {/* Revenue and Expenditures vs Time */}
           {modifiedAccrualExpenditures.data.length > 0 && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
               <TaxRevenueChart financialData={cityData.financialData} />
@@ -360,7 +354,6 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Notes */}
       {cityData.info.notes && (
         <section className="py-8">
           <div className="container mx-auto px-4">
