@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { HomeNavbarMenu } from "@/components/home-navbar-menu";
 import Link from "next/link";
 
 export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+  title: "Budget.City - About",
+};
 
 export default function About() {
   return (

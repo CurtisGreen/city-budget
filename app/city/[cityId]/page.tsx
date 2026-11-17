@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -43,6 +44,15 @@ export async function generateStaticParams() {
     cityId: city.info.id,
   }));
   return cityIds.concat([{ cityId: "dfw" }]);
+}
+
+export async function generateMetadata({
+  params,
+}: CityPageProps): Promise<Metadata> {
+  const { cityId } = await params;
+  const cityName = cityId === "dfw" ? "DFW" : getCityData(cityId)?.info.name;
+
+  return cityName ? { title: `Budget.City - ${cityName}` } : {};
 }
 
 export default async function CityPage({ params }: CityPageProps) {
@@ -165,10 +175,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 </Button>
               </Link>
               <Link href={`/compare?cities=${cityId}`}>
-                <Button
-                  variant="outline"
-                  className="cursor-pointer"
-                >
+                <Button variant="outline" className="cursor-pointer">
                   <GitCompare className="mr-2 h-4 w-4 text-green-700" />
                   Compare
                 </Button>
